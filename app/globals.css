@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Premium Blue Accent Palette */
+  --accent-blue: #2563eb;
+  --accent-blue-soft: #3b82f6;
+  --accent-blue-light: #eff6ff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* =========================================
+   ✨ SUBTLE PREMIUM BACKGROUND PATTERN
+========================================= */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(37, 99, 235, 0.05) 1px, transparent 0);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Soft Ambient Blue Glow */
+body::after {
+  content: "";
+  position: fixed;
+  top: -200px;
+  right: -200px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.08), transparent 70%);
+  filter: blur(120px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* =========================================
+   ✨ PREMIUM ANIMATIONS
+========================================= */
+
+/* Animated Gradient Divider */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.animate-gradientMove {
+  background-size: 200% auto;
+  animation: gradientMove 6s linear infinite;
+}
+
+/* Soft Blue Pulse Glow */
+@keyframes pulseSlow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.animate-pulseSlow {
+  animation: pulseSlow 6s ease-in-out infinite;
+}
+
+/* Smooth Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* Animation Delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+
+/* =========================================
+   ✨ HOVER EFFECTS (PREMIUM BLUISH)
+========================================= */
+
+/* Animated Hover Lift (for columns/cards) */
+.hover-lift {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(37, 99, 235, 0.12);
+}
+
+/* Subtle Link Hover Background */
+.hover-soft-bg {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.hover-soft-bg:hover {
+  background: var(--accent-blue-light);
+  color: var(--accent-blue);
+}
+
+/* Unique Glowing Blue Underline */
+.link-glow {
+  position: relative;
+  display: inline-block;
+}
+
+.link-glow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent-blue-soft),
+    transparent
+  );
+  transition: width 0.4s ease;
+  filter: drop-shadow(0 0 6px rgba(37, 99, 235, 0.6));
+}
+
+.link-glow:hover::after {
+  width: 100%;
+}
+
+/* =========================================
+   ✨ ULTRA-SUBTLE PREMIUM SMOOTHING
+========================================= */
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
