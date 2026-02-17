@@ -12,31 +12,31 @@ export default function ProductBannerGrid() {
       category: "BIPAP MACHINES",
       title: "Resmed Lumis 100 VPAP ST",
       price: "₹49,900.00",
-      image: "/images/product2.png",
+      image: "/images/product2.jpg",
     },
     {
       category: "BIPAP MACHINES",
       title: "Resmed Lumis™ 150 VPAP ST",
       price: "₹69,000.00",
-      image: "/images/product3.png",
+      image: "/images/product3.webp",
     },
     {
       category: "CPAP MACHINES",
       title: "AirMini™ AutoSet CPAP Device",
       price: "₹49,900.00",
-      image: "/images/product4.png",
+      image: "/images/product4.webp",
     },
     {
       category: "CPAP MACHINES",
       title: "AirSense™ 11 AutoSet™ 4G- Tripack",
       price: "₹79,000.00",
-      image: "/images/product5.png",
+      image: "/images/product5.webp",
     },
     {
       category: "CPAP MACHINES",
       title: "AirSense™ 11 AutoSet™ (Single Pack)",
       price: "₹69,000.00",
-      image: "/images/product6.png",
+      image: "/images/product6.jpg",
     },
   ]
 
