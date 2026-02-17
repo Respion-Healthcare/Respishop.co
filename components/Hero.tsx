@@ -21,8 +21,8 @@ export default function Hero() {
   }, [])
 
   return (
-    <div className="w-full pt-[95px]">
-      {/* padding so it stays below fixed header */}
+    <section className="pt-[95px]">
+      {/* Offset for fixed header */}
 
       <div className="relative w-full h-[90vh] overflow-hidden">
         
@@ -50,7 +50,7 @@ export default function Hero() {
             <button
               key={index}
               onClick={() => setCurrent(index)}
-              className={`w-3 h-3 rounded-full ${
+              className={`w-3 h-3 rounded-full transition ${
                 index === current ? "bg-blue-600" : "bg-white"
               }`}
             />
@@ -58,6 +58,6 @@ export default function Hero() {
         </div>
 
       </div>
-    </div>
+    </section>
   )
 }

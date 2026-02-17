@@ -44,8 +44,9 @@ export default function ReviewsSection() {
   }
 
   return (
-    <section className="bg-white py-20 px-6 relative">
-      <div className="max-w-7xl mx-auto text-center mb-12">
+    <section className="bg-white py-14 px-6 relative">
+      {/* Section Heading */}
+      <div className="max-w-7xl mx-auto text-center mb-10">
         <h2 className="text-4xl font-bold text-blue-600">
           What Our Customers Say
         </h2>

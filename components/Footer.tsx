@@ -5,7 +5,7 @@ import { Facebook, Instagram, Youtube } from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer className="relative mt-14 overflow-hidden bg-[#f8fbff] border-t border-blue-100">
+    <footer className="relative overflow-hidden bg-[#f8fbff] border-t border-blue-100">
 
       {/* Soft Ambient Blue */}
       <div className="absolute -top-40 -left-40 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[140px]"></div>
@@ -36,37 +36,65 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Links Sections */}
-          {[
-            {
-              title: "Quick Links",
-              links: ["About Us", "BIPAP Machines", "CPAP Masks", "Accessories", "Contact Us"]
-            },
-            {
-              title: "Our Company",
-              links: ["Terms & Conditions", "Privacy Policy", "Shipping Policy", "Our Blogs", "Sitemap"]
-            }
-          ].map((section, i) => (
-            <div key={i}>
-              <h3 className="text-lg font-semibold text-blue-800 mb-3 tracking-wide">
-                {section.title}
-              </h3>
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold text-blue-800 mb-3 tracking-wide">
+              Quick Links
+            </h3>
 
-              <ul className="space-y-2 text-sm">
-                {section.links.map((item, idx) => (
-                  <li key={idx}>
-                    <Link
-                      href="#"
-                      className="block px-2 py-1 rounded-md text-gray-600 transition-all duration-300
-                                 hover:text-blue-700 hover:bg-blue-50"
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/about" className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/products" className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300">
+                  BIPAP Machines
+                </Link>
+              </li>
+              <li>
+                <Link href="/products" className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300">
+                  CPAP Masks
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300">
+                  Contact Us
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Our Company */}
+          <div>
+            <h3 className="text-lg font-semibold text-blue-800 mb-3 tracking-wide">
+              Our Company
+            </h3>
+
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/terms" className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300">
+                  Terms & Conditions
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy" className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/shipping" className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300">
+                  Shipping Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/blogs" className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300">
+                  Our Blogs
+                </Link>
+              </li>
+            </ul>
+          </div>
 
           {/* Contact */}
           <div>
