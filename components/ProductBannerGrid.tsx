@@ -24,13 +24,13 @@ export default function ProductBannerGrid() {
       category: "CPAP MACHINES",
       title: "AirMini™ AutoSet CPAP Device",
       price: "₹49,900.00",
-      image: "/images/product4.webp",
+      image: "/images/Product4.webp",
     },
     {
       category: "CPAP MACHINES",
       title: "AirSense™ 11 AutoSet™ 4G- Tripack",
       price: "₹79,000.00",
-      image: "/images/product5.webp",
+      image: "/images/Product5.webp",
     },
     {
       category: "CPAP MACHINES",

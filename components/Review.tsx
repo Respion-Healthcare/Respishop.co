@@ -35,7 +35,7 @@ export default function ReviewsSection() {
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
-      const scrollAmount = 350
+      const scrollAmount = 400
       scrollRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",
@@ -44,28 +44,29 @@ export default function ReviewsSection() {
   }
 
   return (
-    <section className="bg-white py-14 px-6 relative">
-      {/* Section Heading */}
-      <div className="max-w-7xl mx-auto text-center mb-10">
-        <h2 className="text-4xl font-bold text-blue-600">
+    <section className="w-full px-10 lg:px-20 py-20 bg-gray-50 relative">
+
+      {/* Heading */}
+      <div className="text-center mb-14">
+        <h2 className="text-4xl font-semibold text-gray-800">
           What Our Customers Say
         </h2>
-        <p className="text-gray-500 mt-3">
-          Real reviews from real people who love our products.
+        <p className="text-gray-500 mt-4">
+          Real reviews from real people who trust our products.
         </p>
       </div>
 
       {/* Arrows */}
       <button
         onClick={() => scroll("left")}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white shadow-lg p-3 rounded-full hover:bg-gray-100 transition z-10"
+        className="absolute left-6 top-1/2 -translate-y-1/2 bg-white shadow-md p-3 rounded-full hover:scale-110 transition z-10"
       >
         <ChevronLeft />
       </button>
 
       <button
         onClick={() => scroll("right")}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white shadow-lg p-3 rounded-full hover:bg-gray-100 transition z-10"
+        className="absolute right-6 top-1/2 -translate-y-1/2 bg-white shadow-md p-3 rounded-full hover:scale-110 transition z-10"
       >
         <ChevronRight />
       </button>
@@ -73,13 +74,14 @@ export default function ReviewsSection() {
       {/* Scrollable Reviews */}
       <div
         ref={scrollRef}
-        className="flex gap-8 overflow-x-auto scroll-smooth no-scrollbar max-w-7xl mx-auto"
+        className="flex gap-12 overflow-x-auto scroll-smooth no-scrollbar"
       >
         {reviews.map((item, index) => (
           <div
             key={index}
-            className="min-w-[320px] bg-[#f9f9f9] p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2"
+            className="min-w-[350px] bg-white p-10 rounded-2xl shadow-md hover:shadow-xl transition duration-300 transform hover:-translate-y-2"
           >
+            {/* Stars */}
             <div className="flex mb-4">
               {[...Array(item.rating)].map((_, i) => (
                 <Star
@@ -89,14 +91,18 @@ export default function ReviewsSection() {
               ))}
             </div>
 
-            <p className="text-gray-600 mb-6 leading-relaxed">
+            {/* Review */}
+            <p className="text-gray-600 mb-6 leading-relaxed text-base">
               “{item.review}”
             </p>
 
-            <h4 className="font-semibold text-lg text-blue-600">
+            {/* Name */}
+            <h4 className="font-semibold text-lg text-blue-700">
               {item.name}
             </h4>
-            <p className="text-sm text-gray-400">Verified Buyer</p>
+            <p className="text-sm text-gray-400 mt-1">
+              Verified Buyer
+            </p>
           </div>
         ))}
       </div>
