@@ -9,7 +9,7 @@ const products = [
     price: "₹79,000.00",
     oldPrice: "₹93,800.00",
     discount: "-16%",
-    image: "/p1.png",
+    image: "/images/p1.jpg",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const products = [
     price: "₹69,000.00",
     oldPrice: "₹79,700.00",
     discount: "-13%",
-    image: "/p2.png",
+    image: "/images/p2.png",
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const products = [
     price: "₹49,900.00",
     oldPrice: "₹67,300.00",
     discount: "-26%",
-    image: "/p3.png",
+    image: "/images/p3.png",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const products = [
     price: "₹49,000.00",
     oldPrice: "₹86,200.00",
     discount: "-43%",
-    image: "/p4.png",
+    image: "/images/p4.png",
   },
   {
     id: 5,
@@ -41,7 +41,7 @@ const products = [
     price: "₹25,900.00",
     oldPrice: "₹50,900.00",
     discount: "-49%",
-    image: "/p5.png",
+    image: "/images/p5.png",
   },
   {
     id: 6,
@@ -49,7 +49,7 @@ const products = [
     price: "₹45,000.00",
     oldPrice: "₹65,000.00",
     discount: "-31%",
-    image: "/p6.png",
+    image: "/images/p6.png",
   },
   {
     id: 7,
@@ -57,7 +57,7 @@ const products = [
     price: "₹5,900.00",
     oldPrice: "₹9,000.00",
     discount: "-34%",
-    image: "/p7.png",
+    image: "/images/p7.png",
   },
   {
     id: 8,
@@ -65,7 +65,7 @@ const products = [
     price: "₹2,200.00",
     oldPrice: "₹3,500.00",
     discount: "-37%",
-    image: "/p8.png",
+    image: "/images/p8.png",
   },
   {
     id: 9,
@@ -73,7 +73,7 @@ const products = [
     price: "₹3,900.00",
     oldPrice: "₹6,000.00",
     discount: "-35%",
-    image: "/p9.png",
+    image: "/images/p9.png",
   },
   {
     id: 10,
@@ -81,7 +81,7 @@ const products = [
     price: "₹4,500.00",
     oldPrice: "₹7,500.00",
     discount: "-40%",
-    image: "/p10.png",
+    image: "/images/p10.png",
   },
 ]
 
