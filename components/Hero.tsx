@@ -21,37 +21,37 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="pt-[95px]">
-      {/* Offset for fixed header */}
+    <section className="bg-white">
+      <div className="relative w-full h-[40vh] sm:h-[55vh] md:h-[70vh] lg:h-[85vh] overflow-hidden flex items-center justify-center">
 
-      <div className="relative w-full h-[90vh] overflow-hidden">
-        
-        {/* Slides */}
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === current ? "opacity-100" : "opacity-0"
+            className={`absolute inset-0 flex items-center justify-center transition-opacity duration-700 ${
+              index === current ? "opacity-100 z-10" : "opacity-0 z-0"
             }`}
           >
             <Image
               src={slide}
-              alt={`Slide ${index}`}
+              alt={`Hero Slide ${index + 1}`}
               fill
-              priority
-              className="object-cover"
+              priority={index === 0}
+              sizes="100vw"
+              className="object-contain"
             />
           </div>
         ))}
 
         {/* Dots */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3">
+        <div className="absolute bottom-3 sm:bottom-5 left-1/2 -translate-x-1/2 flex gap-2 z-20">
           {slides.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrent(index)}
-              className={`w-3 h-3 rounded-full transition ${
-                index === current ? "bg-blue-600" : "bg-white"
+              className={`rounded-full transition-all duration-300 ${
+                index === current
+                  ? "bg-blue-600 w-5 h-2"
+                  : "bg-gray-400 w-2 h-2"
               }`}
             />
           ))}

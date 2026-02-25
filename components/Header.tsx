@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { Search, Heart, ShoppingBag, User, Menu, ChevronDown } from "lucide-react"
 
 export default function Header() {
@@ -27,6 +26,10 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  const closeMobileMenu = () => {
+    setMobileOpen(false)
+  }
 
   return (
     <header
@@ -55,12 +58,9 @@ export default function Header() {
               <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
             </button>
 
-            {/* Dropdown */}
             <div className="absolute left-0 top-full w-[900px] bg-white shadow-xl rounded-xl border p-8 opacity-0 scale-y-95 pointer-events-none transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 group-hover:pointer-events-auto">
-              
               <div className="grid grid-cols-4 gap-10 text-sm">
 
-                {/* Column 1 */}
                 <div className="space-y-4">
                   <h3 className="font-semibold text-blue-700">
                     Resmed BIPAP/CPAP Devices
@@ -88,7 +88,6 @@ export default function Header() {
                   </ul>
                 </div>
 
-                {/* Column 2 */}
                 <div className="space-y-4">
                   <h3 className="font-semibold text-blue-700">
                     Accessories
@@ -106,7 +105,6 @@ export default function Header() {
                   </ul>
                 </div>
 
-                {/* Column 3 */}
                 <div className="space-y-4">
                   <h3 className="font-semibold text-blue-700">
                     Hot & Best Selling Products
@@ -141,55 +139,58 @@ export default function Header() {
           </Link>
         </nav>
 
-       {/* Search */}
-<div className="hidden md:flex items-center bg-gray-100 rounded-full px-5 h-[44px] w-[320px]">
-  <input
-    type="text"
-    placeholder="Search..."
-    className="flex-1 bg-transparent outline-none text-sm text-black placeholder:text-black"
-  />
-  <Search className="w-4 h-4 text-black" />
-</div>
-
-
-       {/* Icons */}
-<div className="flex items-center gap-6 text-black">
-  <Link href="/wishlist">
-    <Heart className="w-6 h-6 text-black hover:text-blue-600 transition" />
-  </Link>
-
-  <Link href="/cart">
-    <div className="relative">
-      <ShoppingBag className="w-6 h-6 text-black hover:text-blue-600 transition" />
-      <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
-        0
-      </span>
-    </div>
-  </Link>
-
-  <Link href="/account">
-    <User className="w-6 h-6 text-black hover:text-blue-600 transition" />
-  </Link>
-
-
-          <button onClick={() => setMobileOpen(!mobileOpen)}>
-            <Menu className="w-6 h-6 lg:hidden" />
-          </button>
+        {/* Desktop Search */}
+        <div className="hidden lg:flex items-center bg-gray-100 border border-black rounded-full px-5 h-[44px] w-[320px]">
+          <input
+            type="text"
+            placeholder="Search..."
+            className="flex-1 bg-transparent outline-none text-sm text-black placeholder:text-black"
+          />
+          <Search className="w-4 h-4 text-black" />
         </div>
+
+        {/* Desktop Icons */}
+        <div className="hidden lg:flex items-center gap-6 text-black">
+          <Link href="/wishlist">
+            <Heart className="w-6 h-6 text-black hover:text-blue-600 transition" />
+          </Link>
+
+          <Link href="/cart">
+            <div className="relative">
+              <ShoppingBag className="w-6 h-6 text-black hover:text-blue-600 transition" />
+              <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                0
+              </span>
+            </div>
+          </Link>
+
+          <Link href="/account">
+            <User className="w-6 h-6 text-black hover:text-blue-600 transition" />
+          </Link>
+        </div>
+
+        {/* Mobile Hamburger Only */}
+        <button
+          className="lg:hidden"
+          onClick={() => setMobileOpen(!mobileOpen)}
+        >
+          <Menu className="w-7 h-7 text-black" />
+        </button>
+
       </div>
 
-      {/* Mobile Dropdown */}
+      {/* Mobile Menu */}
       <div
         className={`lg:hidden bg-white border-t transition-all duration-300 ${
           mobileOpen ? "max-h-[500px] p-6" : "max-h-0 overflow-hidden"
         }`}
       >
         <div className="flex flex-col gap-4 text-gray-700">
-          <Link href="/">Home</Link>
-          <Link href="/product">Products</Link>
-          <Link href="/about">About</Link>
-          <Link href="/contact">Contact</Link>
-          <Link href="/blogs">Blogs</Link>
+          <Link href="/" onClick={closeMobileMenu}>Home</Link>
+          <Link href="/product" onClick={closeMobileMenu}>Products</Link>
+          <Link href="/about" onClick={closeMobileMenu}>About</Link>
+          <Link href="/contact" onClick={closeMobileMenu}>Contact</Link>
+          <Link href="/blogs" onClick={closeMobileMenu}>Blogs</Link>
         </div>
       </div>
     </header>

@@ -9,9 +9,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="m-0 p-0">
         <Header />
-        {children}
+        {/* Only offset content — NOT body */}
+        <div className="pt-[70px] lg:pt-[95px]">
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
