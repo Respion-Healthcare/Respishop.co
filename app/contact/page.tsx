@@ -43,7 +43,7 @@ export default function ContactPage() {
 
           {/* CONTACT */}
           <a
-            href="tel:+917077720507"
+            href="tel:+919148733700"
             className="flex items-start gap-4 group hover:bg-white p-4 rounded-xl transition"
           >
             <Phone className="text-blue-500 w-7 h-7 mt-1 group-hover:scale-110 transition" />
@@ -54,7 +54,7 @@ export default function ContactPage() {
               <p className="text-gray-600 group-hover:text-gray-800">
                 Mobile:{" "}
                 <span className="font-medium text-gray-800 underline underline-offset-4">
-                  +91 7077720507
+                  +91 9148733700
                 </span>
               </p>
             </div>

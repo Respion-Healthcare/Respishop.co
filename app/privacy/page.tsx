@@ -37,7 +37,7 @@ export default function PrivacyPage() {
                   "@type": "ContactPoint",
                   contactType: "Customer Support",
                   email: "respishop.in@gmail.com",
-                  telephone: "+91-7077720507",
+                  telephone: "+91-9148733700",
                   areaServed: "IN",
                 },
               },
@@ -197,7 +197,7 @@ export default function PrivacyPage() {
               </h2>
               <p><strong>Company:</strong> Respishop</p>
               <p><strong>Email:</strong> respishop.in@gmail.com</p>
-              <p><strong>Phone:</strong> +91 7077720507</p>
+              <p><strong>Phone:</strong> +91 9148733700</p>
               <p><strong>Working Hours:</strong> Monday – Friday (09:00 AM – 06:00 PM)</p>
               <p><strong>Website:</strong> https://respishop.in</p>
             </section>

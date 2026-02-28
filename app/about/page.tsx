@@ -112,7 +112,7 @@ return (
             areaServed: "India",
             contactPoint: {
               "@type": "ContactPoint",
-              telephone: "+91-7077720507",
+              telephone: "+91-9148733700",
               contactType: "Customer Support",
               areaServed: "IN",
             },
@@ -355,7 +355,7 @@ return (
                     hover:shadow-xl hover:-translate-y-1">
       <p className="text-blue-600 text-sm font-medium">Call for help</p>
       <p className="text-xl font-semibold text-gray-800">
-        +91 7077720507
+        +91 9148733700
       </p>
     </div>
 

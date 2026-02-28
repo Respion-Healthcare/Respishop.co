@@ -37,7 +37,7 @@ export default function ShippingPage() {
                   "@type": "ContactPoint",
                   contactType: "Customer Support",
                   email: "respishop.in@gmail.com",
-                  telephone: "+91-7077720507",
+                  telephone: "+91-9148733700",
                   areaServed: "IN",
                 },
               },
@@ -136,7 +136,7 @@ export default function ShippingPage() {
                 📩 Contact Information
               </h2>
               <p><strong>Email:</strong> respishop.in@gmail.com</p>
-              <p><strong>Phone:</strong> +91 7077720507</p>
+              <p><strong>Phone:</strong> +91 9148733700</p>
               <p><strong>Website:</strong> https://respishop.in</p>
               <p className="mt-4 text-sm text-gray-600">
                 For vendor-specific shipping inquiries, please refer to your order confirmation details.

@@ -179,7 +179,7 @@ export default function TermsPage() {
             <p>
               <strong>Respishop</strong> <br />
               Email: respishop.in@gmail.com <br />
-              Phone: +91 7077720507 <br />
+              Phone: +91 9148733700 <br />
               Website: https://respishop.in <br />
               Working Hours: Monday – Friday (09:00 AM – 06:00 PM)
             </p>
