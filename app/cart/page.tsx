@@ -12,7 +12,7 @@ export default function CartPage() {
           </p>
 
           <a
-            href="/product"
+            href="/products"
             className="inline-block mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
           >
             Continue Shopping
