@@ -7,6 +7,7 @@ import { Search, Heart, ShoppingBag, User, Menu, ChevronDown } from "lucide-reac
 export default function Header() {
   const [visible, setVisible] = useState(true)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [accessoryOpen, setAccessoryOpen] = useState(false)
 
   useEffect(() => {
     let lastScrollY = window.scrollY
@@ -59,40 +60,62 @@ export default function Header() {
             </button>
 
             <div className="absolute left-0 top-full w-[900px] bg-white shadow-xl rounded-xl border p-8 opacity-0 scale-y-95 pointer-events-none transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 group-hover:pointer-events-auto">
-              <div className="grid grid-cols-4 gap-10 text-sm">
 
+              <div className="grid grid-cols-2 grid-rows-2 gap-10 text-sm">
+
+                {/* 1️⃣ CPAP & BIPAP Masks */}
                 <div className="space-y-4">
                   <h3 className="font-semibold text-blue-700">
-                    Resmed BIPAP/CPAP Devices
-                  </h3>
-                  <ul className="space-y-2 text-gray-600">
-                    <li><Link href="#">BIPAP Machines</Link></li>
-                    <li><Link href="#">CPAP Machines</Link></li>
-                    <li><Link href="#">Oxygen Machine</Link></li>
-                  </ul>
-
-                  <h3 className="font-semibold text-blue-700 pt-4">
                     CPAP & BIPAP Masks
                   </h3>
+
                   <ul className="space-y-2 text-gray-600">
                     <li><Link href="#">Nasal Mask</Link></li>
                     <li><Link href="#">Nasal Pillow Mask</Link></li>
                     <li><Link href="#">Full Face Mask</Link></li>
                   </ul>
+                </div>
 
-                  <h3 className="font-semibold text-blue-700 pt-4">
+                {/* 2️⃣ Resmed BIPAP/CPAP Devices */}
+                <div className="space-y-4">
+                  <h3 className="font-semibold text-blue-700">
+                    Resmed BIPAP/CPAP Devices
+                  </h3>
+
+                  <ul className="space-y-2 text-gray-600">
+                    <li><Link href="#">BIPAP Machines</Link></li>
+                    <li><Link href="#">CPAP Machines</Link></li>
+                    <li><Link href="#">Oxygen Machine</Link></li>
+                  </ul>
+                </div>
+
+                {/* 3️⃣ Rental Products */}
+                <div className="space-y-4">
+                  <h3 className="font-semibold text-blue-700">
                     Rental Products
                   </h3>
+
                   <ul className="space-y-2 text-gray-600">
                     <li><Link href="#">CPAP & BIPAP Rental</Link></li>
                   </ul>
                 </div>
 
+                {/* 4️⃣ Accessories with dropdown */}
                 <div className="space-y-4">
-                  <h3 className="font-semibold text-blue-700">
+
+                  <button
+                    onClick={() => setAccessoryOpen(!accessoryOpen)}
+                    className="font-semibold text-blue-700 flex items-center gap-1"
+                  >
                     Accessories
-                  </h3>
-                  <ul className="space-y-2 text-gray-600">
+                    <ChevronDown
+                      className={`w-4 h-4 transition-transform ${
+                        accessoryOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  <ul className={`space-y-2 text-gray-600 ${accessoryOpen ? "block" : "hidden"}`}>
                     <li><Link href="#">Hose Pipes & Tubes</Link></li>
                     <li><Link href="#">Filters & Cleaners</Link></li>
                     <li><Link href="#">Humidifiers & Bottles</Link></li>
@@ -103,26 +126,30 @@ export default function Header() {
                     <li><Link href="#">AirSense 11 Accessories</Link></li>
                     <li><Link href="#">AirMini Accessories</Link></li>
                   </ul>
-                </div>
 
-                <div className="space-y-4">
-                  <h3 className="font-semibold text-blue-700">
-                    Hot & Best Selling Products
-                  </h3>
-                  <ul className="space-y-2 text-gray-600">
-                    <li><Link href="#">Resmed Airfit N20 Nasal Mask</Link></li>
-                    <li><Link href="#">Resmed AirSense 10 Autoset Tripack</Link></li>
-                    <li><Link href="#">Resmed Airstart10 Auto CPAP</Link></li>
-                    <li><Link href="#">Resmed AirFit™ F20 Full Face Mask</Link></li>
-                    <li><Link href="#">Resmed Lumis 100 VPAP ST</Link></li>
-                    <li><Link href="#">Resmed Lumis™ 150 VPAP ST</Link></li>
-                    <li><Link href="#">AirMini™ AutoSet CPAP</Link></li>
-                    <li><Link href="#">AirSense™ 11 AutoSet™ 4G- Tripack</Link></li>
-                    <li><Link href="#">AirSense™ 11 AutoSet™ (Single Pack)</Link></li>
-                  </ul>
                 </div>
 
               </div>
+
+              {/* Best Selling Section */}
+              <div className="pt-8 border-t mt-8">
+                <h3 className="font-semibold text-blue-700 mb-4">
+                  Hot & Best Selling Products
+                </h3>
+
+                <ul className="grid grid-cols-3 gap-3 text-gray-600 text-sm">
+                  <li><Link href="#">Resmed Airfit N20 Nasal Mask</Link></li>
+                  <li><Link href="#">Resmed AirSense 10 Autoset Tripack</Link></li>
+                  <li><Link href="#">Resmed Airstart10 Auto CPAP</Link></li>
+                  <li><Link href="#">Resmed AirFit™ F20 Full Face Mask</Link></li>
+                  <li><Link href="#">Resmed Lumis 100 VPAP ST</Link></li>
+                  <li><Link href="#">Resmed Lumis™ 150 VPAP ST</Link></li>
+                  <li><Link href="#">AirMini™ AutoSet CPAP</Link></li>
+                  <li><Link href="#">AirSense™ 11 AutoSet™ 4G Tripack</Link></li>
+                  <li><Link href="#">AirSense™ 11 AutoSet™ (Single Pack)</Link></li>
+                </ul>
+              </div>
+
             </div>
           </div>
 
@@ -137,6 +164,7 @@ export default function Header() {
           <Link href="/blogs" className="hover:text-blue-600 transition">
             Blogs
           </Link>
+
         </nav>
 
         {/* Desktop Search */}
@@ -152,12 +180,12 @@ export default function Header() {
         {/* Desktop Icons */}
         <div className="hidden lg:flex items-center gap-6 text-black">
           <Link href="/wishlist">
-            <Heart className="w-6 h-6 text-black hover:text-blue-600 transition" />
+            <Heart className="w-6 h-6 hover:text-blue-600 transition" />
           </Link>
 
           <Link href="/cart">
             <div className="relative">
-              <ShoppingBag className="w-6 h-6 text-black hover:text-blue-600 transition" />
+              <ShoppingBag className="w-6 h-6 hover:text-blue-600 transition" />
               <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
                 0
               </span>
@@ -165,15 +193,12 @@ export default function Header() {
           </Link>
 
           <Link href="/account">
-            <User className="w-6 h-6 text-black hover:text-blue-600 transition" />
+            <User className="w-6 h-6 hover:text-blue-600 transition" />
           </Link>
         </div>
 
-        {/* Mobile Hamburger Only */}
-        <button
-          className="lg:hidden"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
+        {/* Mobile Hamburger */}
+        <button className="lg:hidden" onClick={() => setMobileOpen(!mobileOpen)}>
           <Menu className="w-7 h-7 text-black" />
         </button>
 
@@ -187,12 +212,13 @@ export default function Header() {
       >
         <div className="flex flex-col gap-4 text-gray-700">
           <Link href="/" onClick={closeMobileMenu}>Home</Link>
-          <Link href="/product" onClick={closeMobileMenu}>Products</Link>
+          <Link href="/products" onClick={closeMobileMenu}>Products</Link>
           <Link href="/about" onClick={closeMobileMenu}>About</Link>
           <Link href="/contact" onClick={closeMobileMenu}>Contact</Link>
           <Link href="/blogs" onClick={closeMobileMenu}>Blogs</Link>
         </div>
       </div>
+
     </header>
   )
 }
