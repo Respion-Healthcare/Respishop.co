@@ -18,7 +18,9 @@ export const products: Product[] = [
     name: "Resmed Airfit N20 Nasal Mask",
     price: 4500,
     description: "Comfortable nasal mask for CPAP users.",
-    images: ["/products/p1.jpg"],
+    images: ["/images/banner1.webp",
+      "/images/P9.png"
+    ],
     specifications: [
       { label: "Brand", value: "ResMed" },
       { label: "Category", value: "Mask" }
@@ -54,7 +56,7 @@ export const products: Product[] = [
     name: "Resmed AirFit F20 Full Face Mask",
     price: 6500,
     description: "Full face CPAP mask with superior comfort.",
-    images: ["/products/p4.jpg"],
+    images: ["/images/P6.webp"],
     specifications: [
       { label: "Brand", value: "ResMed" },
       { label: "Category", value: "Full Face Mask" }
