@@ -138,16 +138,16 @@ export default function Header() {
                 </h3>
 
                 <ul className="grid grid-cols-3 gap-3 text-gray-600 text-sm">
-                  <li><Link href="#">Resmed Airfit N20 Nasal Mask</Link></li>
-                  <li><Link href="#">Resmed AirSense 10 Autoset Tripack</Link></li>
-                  <li><Link href="#">Resmed Airstart10 Auto CPAP</Link></li>
-                  <li><Link href="#">Resmed AirFit™ F20 Full Face Mask</Link></li>
-                  <li><Link href="#">Resmed Lumis 100 VPAP ST</Link></li>
-                  <li><Link href="#">Resmed Lumis™ 150 VPAP ST</Link></li>
-                  <li><Link href="#">AirMini™ AutoSet CPAP</Link></li>
-                  <li><Link href="#">AirSense™ 11 AutoSet™ 4G Tripack</Link></li>
-                  <li><Link href="#">AirSense™ 11 AutoSet™ (Single Pack)</Link></li>
-                </ul>
+  <li><Link href="/products/resmed-airfit-n20-nasal-mask">Resmed Airfit N20 Nasal Mask</Link></li>
+  <li><Link href="/products/resmed-airsense-10-autoset-tripack">Resmed AirSense 10 AutoSet Tripack</Link></li>
+  <li><Link href="/products/resmed-airstart10-auto-cpap">Resmed Airstart10 Auto CPAP</Link></li>
+  <li><Link href="/products/resmed-airfit-f20-full-face-mask">Resmed AirFit F20 Full Face Mask</Link></li>
+  <li><Link href="/products/resmed-lumis-100-vpap-st">Resmed Lumis 100 VPAP ST</Link></li>
+  <li><Link href="/products/resmed-lumis-150-vpap-st">Resmed Lumis 150 VPAP ST</Link></li>
+  <li><Link href="/products/airmini-autoset-cpap">AirMini AutoSet CPAP</Link></li>
+  <li><Link href="/products/airsense-11-autoset-4g-tripack">AirSense 11 AutoSet 4G Tripack</Link></li>
+  <li><Link href="/products/airsense-11-autoset-single-pack">AirSense 11 AutoSet (Single Pack)</Link></li>
+</ul>
               </div>
 
             </div>
