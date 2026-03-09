@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation"
 import { products } from "@/lib/products"
 import ImageSlider from "./ImageSlider"
+import AddToCartButton from "@/components/AddToCartButton"
 
 export default async function ProductPage({
   params,
@@ -57,9 +58,7 @@ export default async function ProductPage({
               ₹{product.price.toLocaleString()}
             </p>
 
-            <button className="w-full bg-yellow-400 py-3 rounded-lg font-semibold hover:bg-yellow-500">
-              Add to Cart
-            </button>
+            <AddToCartButton product={product} />
           </div>
         </div>
 

@@ -3,11 +3,24 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Search, Heart, ShoppingBag, User, Menu, ChevronDown } from "lucide-react"
+import { useCart } from "@/context/CartContext"
 
 export default function Header() {
   const [visible, setVisible] = useState(true)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [accessoryOpen, setAccessoryOpen] = useState(false)
+
+  // Products dropdown
+  const [productsOpen, setProductsOpen] = useState(false)
+
+  // ✅ Cart context
+  const { cart } = useCart()
+
+  // ✅ Total cart items
+  const cartCount = cart.reduce(
+    (total, item) => total + item.quantity,
+    0
+  )
 
   useEffect(() => {
     let lastScrollY = window.scrollY
@@ -54,16 +67,25 @@ export default function Header() {
 
           {/* Products Dropdown */}
           <div className="relative group">
-            <button className="flex items-center gap-1 hover:text-blue-600 transition">
+
+            <button
+              onClick={() => setProductsOpen(!productsOpen)}
+              className="flex items-center gap-1 hover:text-blue-600 transition"
+            >
               Products
               <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
             </button>
 
-            <div className="absolute left-0 top-full w-[900px] bg-white shadow-xl rounded-xl border p-8 opacity-0 scale-y-95 pointer-events-none transition-all duration-300 origin-top group-hover:opacity-100 group-hover:scale-y-100 group-hover:pointer-events-auto">
+            <div
+              className={`absolute left-0 top-full w-[900px] bg-white shadow-xl rounded-xl border p-8 transition-all duration-300 origin-top ${
+                productsOpen
+                  ? "opacity-100 scale-y-100 pointer-events-auto"
+                  : "opacity-0 scale-y-95 pointer-events-none"
+              }`}
+            >
 
               <div className="grid grid-cols-2 grid-rows-2 gap-10 text-sm">
 
-                {/* 1️⃣ CPAP & BIPAP Masks */}
                 <div className="space-y-4">
                   <h3 className="font-semibold text-blue-700">
                     CPAP & BIPAP Masks
@@ -76,7 +98,6 @@ export default function Header() {
                   </ul>
                 </div>
 
-                {/* 2️⃣ Resmed BIPAP/CPAP Devices */}
                 <div className="space-y-4">
                   <h3 className="font-semibold text-blue-700">
                     Resmed BIPAP/CPAP Devices
@@ -89,7 +110,6 @@ export default function Header() {
                   </ul>
                 </div>
 
-                {/* 3️⃣ Rental Products */}
                 <div className="space-y-4">
                   <h3 className="font-semibold text-blue-700">
                     Rental Products
@@ -100,7 +120,6 @@ export default function Header() {
                   </ul>
                 </div>
 
-                {/* 4️⃣ Accessories with dropdown */}
                 <div className="space-y-4">
 
                   <button
@@ -131,23 +150,23 @@ export default function Header() {
 
               </div>
 
-              {/* Best Selling Section */}
+              {/* Best Selling */}
               <div className="pt-8 border-t mt-8">
                 <h3 className="font-semibold text-blue-700 mb-4">
                   Hot & Best Selling Products
                 </h3>
 
                 <ul className="grid grid-cols-3 gap-3 text-gray-600 text-sm">
-  <li><Link href="/products/resmed-airfit-n20-nasal-mask">Resmed Airfit N20 Nasal Mask</Link></li>
-  <li><Link href="/products/resmed-airsense-10-autoset-tripack">Resmed AirSense 10 AutoSet Tripack</Link></li>
-  <li><Link href="/products/resmed-airstart10-auto-cpap">Resmed Airstart10 Auto CPAP</Link></li>
-  <li><Link href="/products/resmed-airfit-f20-full-face-mask">Resmed AirFit F20 Full Face Mask</Link></li>
-  <li><Link href="/products/resmed-lumis-100-vpap-st">Resmed Lumis 100 VPAP ST</Link></li>
-  <li><Link href="/products/resmed-lumis-150-vpap-st">Resmed Lumis 150 VPAP ST</Link></li>
-  <li><Link href="/products/airmini-autoset-cpap">AirMini AutoSet CPAP</Link></li>
-  <li><Link href="/products/airsense-11-autoset-4g-tripack">AirSense 11 AutoSet 4G Tripack</Link></li>
-  <li><Link href="/products/airsense-11-autoset-single-pack">AirSense 11 AutoSet (Single Pack)</Link></li>
-</ul>
+                  <li><Link href="/products/resmed-airfit-n20-nasal-mask" onClick={() => setProductsOpen(false)}>Resmed Airfit N20 Nasal Mask</Link></li>
+                  <li><Link href="/products/resmed-airsense-10-autoset-tripack" onClick={() => setProductsOpen(false)}>Resmed AirSense 10 AutoSet Tripack</Link></li>
+                  <li><Link href="/products/resmed-airstart10-auto-cpap" onClick={() => setProductsOpen(false)}>Resmed Airstart10 Auto CPAP</Link></li>
+                  <li><Link href="/products/resmed-airfit-f20-full-face-mask" onClick={() => setProductsOpen(false)}>Resmed AirFit F20 Full Face Mask</Link></li>
+                  <li><Link href="/products/resmed-lumis-100-vpap-st" onClick={() => setProductsOpen(false)}>Resmed Lumis 100 VPAP ST</Link></li>
+                  <li><Link href="/products/resmed-lumis-150-vpap-st" onClick={() => setProductsOpen(false)}>Resmed Lumis 150 VPAP ST</Link></li>
+                  <li><Link href="/products/airmini-autoset-cpap" onClick={() => setProductsOpen(false)}>AirMini AutoSet CPAP</Link></li>
+                  <li><Link href="/products/airsense-11-autoset-4g-tripack" onClick={() => setProductsOpen(false)}>AirSense 11 AutoSet 4G Tripack</Link></li>
+                  <li><Link href="/products/airsense-11-autoset-single-pack" onClick={() => setProductsOpen(false)}>AirSense 11 AutoSet (Single Pack)</Link></li>
+                </ul>
               </div>
 
             </div>
@@ -179,6 +198,7 @@ export default function Header() {
 
         {/* Desktop Icons */}
         <div className="hidden lg:flex items-center gap-6 text-black">
+
           <Link href="/wishlist">
             <Heart className="w-6 h-6 hover:text-blue-600 transition" />
           </Link>
@@ -186,15 +206,21 @@ export default function Header() {
           <Link href="/cart">
             <div className="relative">
               <ShoppingBag className="w-6 h-6 hover:text-blue-600 transition" />
-              <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
-                0
-              </span>
+
+              {/* ✅ Cart Notification */}
+              {cartCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                  {cartCount}
+                </span>
+              )}
+
             </div>
           </Link>
 
           <Link href="/account">
             <User className="w-6 h-6 hover:text-blue-600 transition" />
           </Link>
+
         </div>
 
         {/* Mobile Hamburger */}

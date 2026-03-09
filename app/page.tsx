@@ -4,6 +4,7 @@ import DealOfTheDay from "@/components/DealOfTheDaySection"
 import Hero from "@/components/Hero"
 import ProductBannerGrid from "@/components/ProductBannerGrid"
 import ReviewsSection from "@/components/Review"
+import Footer from "@/components/Footer"
 
 export const metadata: Metadata = {
   title: "Buy CPAP & BiPAP Machines in India | Respishop",
@@ -31,6 +32,7 @@ export default function Home() {
       <BestSellingSection />
       <DealOfTheDay />
       <ReviewsSection />
+      <Footer />
     </>
   )
 }
