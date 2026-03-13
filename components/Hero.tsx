@@ -2,11 +2,21 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
+import Link from "next/link"
 
 const slides = [
-  "/images/hero1.jpg",
-  "/images/hero2.png",
-  "/images/hero3.png",
+  {
+    image: "/images/hero1.jpg",
+    link: "/products/resmed-airsense-10-autoset-tripack",
+  },
+  {
+    image: "/images/hero2.png",
+    link: "/products/resmed-airfit-n20-nasal-mask",
+  },
+  {
+    image: "/images/hero3.png",
+    link: "/products/resmed-airstart10-auto-cpap",
+  },
 ]
 
 export default function Hero() {
@@ -25,21 +35,22 @@ export default function Hero() {
       <div className="relative w-full h-[40vh] sm:h-[55vh] md:h-[70vh] lg:h-[85vh] overflow-hidden flex items-center justify-center">
 
         {slides.map((slide, index) => (
-          <div
+          <Link
             key={index}
+            href={slide.link}
             className={`absolute inset-0 flex items-center justify-center transition-opacity duration-700 ${
               index === current ? "opacity-100 z-10" : "opacity-0 z-0"
             }`}
           >
             <Image
-              src={slide}
+              src={slide.image}
               alt={`Hero Slide ${index + 1}`}
               fill
               priority={index === 0}
               sizes="100vw"
-              className="object-contain"
+              className="object-contain cursor-pointer hover:scale-[1.02] transition-transform duration-500"
             />
-          </div>
+          </Link>
         ))}
 
         {/* Dots */}

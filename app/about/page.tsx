@@ -148,7 +148,7 @@ return (
             </h2>
 
             <p className="text-gray-600 leading-relaxed mb-6">
-              Founded in Bhubaneswar in July 2021, Respishop was created to improve
+              Founded in July 2021, Respishop was created to improve
               respiratory healthcare in Eastern India. We partner with global leaders
               like ResMed to deliver advanced sleep therapy solutions across Odisha,
               Jharkhand, Bihar, and Bengaluru.

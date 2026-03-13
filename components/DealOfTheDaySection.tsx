@@ -1,12 +1,14 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { useRef, useEffect, useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const deals = [
   {
     id: 1,
+    slug: "oxymed-portable-oxygen-concentrator",
     name: "Oxymed Portable Oxygen Concentrator",
     price: "₹139,690.00",
     oldPrice: "₹160,000.00",
@@ -15,6 +17,7 @@ const deals = [
   },
   {
     id: 2,
+    slug: "oxymed-oxygen-concentrator-5lpm",
     name: "OxyMed Oxygen Concentrator Machine 5LPM",
     price: "₹34,900.00",
     oldPrice: "₹75,000.00",
@@ -23,6 +26,7 @@ const deals = [
   },
   {
     id: 3,
+    slug: "oxymed-10ltr-oxygen-concentrator",
     name: "OxyMed 10 Ltr Oxygen Concentrator",
     price: "₹51,550.00",
     oldPrice: "₹85,000.00",
@@ -31,6 +35,7 @@ const deals = [
   },
   {
     id: 4,
+    slug: "philips-everflo-oxygen-concentrator",
     name: "Philips EverFlo Home Oxygen (5 LPM)",
     price: "₹59,000.00",
     oldPrice: "₹68,000.00",
@@ -39,6 +44,7 @@ const deals = [
   },
   {
     id: 5,
+    slug: "resmed-airmini-f30-setup-pack",
     name: "Resmed AirMini F30 Setup Pack",
     price: "₹2,900.00",
     oldPrice: "₹5,000.00",
@@ -110,7 +116,6 @@ export default function DealOfTheDay() {
 
           <div className="relative">
 
-            {/* Arrows Hidden on Mobile */}
             <button
               onClick={() => scroll("left")}
               className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-md p-2 rounded-full z-10"
@@ -130,101 +135,112 @@ export default function DealOfTheDay() {
               className="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar"
             >
               {deals.map((item) => (
-                <div
+                <Link
                   key={item.id}
-                  className="flex-shrink-0 w-[85%] sm:w-[48%] h-[380px] bg-white rounded-2xl p-5 relative shadow-md flex flex-col"
+                  href={`/products/${item.slug}`}
+                  className="flex-shrink-0 w-[85%] sm:w-[48%] h-[380px]"
                 >
-                  <span className="absolute top-4 left-4 bg-red-500 text-white text-xs px-3 py-1 rounded-full">
-                    {item.discount}
-                  </span>
+                  <div className="bg-white rounded-2xl p-5 relative shadow-md flex flex-col h-full">
 
-                  <div className="border border-gray-200 rounded-xl p-4 h-[180px] flex justify-center items-center">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      width={160}
-                      height={160}
-                      className="object-contain max-h-[150px]"
-                    />
-                  </div>
+                    <span className="absolute top-4 left-4 bg-red-500 text-white text-xs px-3 py-1 rounded-full">
+                      {item.discount}
+                    </span>
 
-                  <div className="mt-4">
-                    <h2 className="text-sm md:text-base font-semibold text-gray-800 mb-3 leading-snug">
-                      {item.name}
-                    </h2>
-
-                    <div className="flex gap-2 items-center">
-                      <span className="text-red-500 font-semibold text-sm md:text-base">
-                        {item.price}
-                      </span>
-                      <span className="text-gray-400 line-through text-xs md:text-sm">
-                        {item.oldPrice}
-                      </span>
+                    <div className="border border-gray-200 rounded-xl p-4 h-[180px] flex justify-center items-center">
+                      <Image
+                        src={item.image}
+                        alt={item.name}
+                        width={160}
+                        height={160}
+                        className="object-contain max-h-[150px]"
+                      />
                     </div>
+
+                    <div className="mt-4">
+                      <h2 className="text-sm md:text-base font-semibold text-gray-800 mb-3 leading-snug">
+                        {item.name}
+                      </h2>
+
+                      <div className="flex gap-2 items-center">
+                        <span className="text-red-500 font-semibold text-sm md:text-base">
+                          {item.price}
+                        </span>
+                        <span className="text-gray-400 line-through text-xs md:text-sm">
+                          {item.oldPrice}
+                        </span>
+                      </div>
+                    </div>
+
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
 
           </div>
         </div>
 
-        {/* RIGHT SIDE */}
-        <div className="lg:w-2/5 flex flex-col gap-6 lg:gap-12">
+       
+       {/* RIGHT SIDE */}
+<div className="lg:w-2/5 flex flex-col gap-6 lg:gap-12">
 
-          {/* Banner 1 */}
-          <div className="bg-gradient-to-r from-blue-300 to-blue-200 rounded-2xl p-6 md:p-10 flex flex-col sm:flex-row justify-between items-center gap-6">
-            <div>
-              <p className="text-xs uppercase mb-2 text-gray-600">
-                CPAP MASKS
-              </p>
-              <h3 className="text-base md:text-lg font-semibold mb-2">
-                Resmed AirFit™ N20 Nasal Mask
-              </h3>
-              <p className="text-red-500 font-semibold mb-3">
-                ₹2,900.00
-              </p>
-              <button className="bg-blue-700 text-white px-5 py-2 rounded-full text-sm">
-                Shop now
-              </button>
-            </div>
+  <Link
+    href="/products/resmed-airfit-n20-nasal-mask"
+    className="bg-gradient-to-r from-blue-300 to-blue-200 rounded-2xl p-6 md:p-10 flex flex-col sm:flex-row justify-between items-center gap-6 hover:shadow-lg transition"
+  >
+    <div>
+      <p className="text-xs uppercase mb-2 text-gray-600">
+        CPAP MASKS
+      </p>
+      <h3 className="text-base md:text-lg font-semibold mb-2">
+        Resmed AirFit™ N20 Nasal Mask
+      </h3>
+      <p className="text-red-500 font-semibold mb-3">
+        ₹2,900.00
+      </p>
+      <span className="bg-blue-700 text-white px-5 py-2 rounded-full text-sm inline-block">
+        Shop now
+      </span>
+    </div>
 
-            <Image
-              src="/images/banner1.webp"
-              alt="banner1"
-              width={130}
-              height={120}
-              className="object-contain"
-            />
-          </div>
+    <Image
+      src="/images/banner1.webp"
+      alt="banner1"
+      width={130}
+      height={120}
+      className="object-contain"
+    />
+  </Link>
 
-          {/* Banner 2 */}
-          <div className="bg-gradient-to-r from-blue-300 to-blue-200 rounded-2xl p-6 md:p-10 flex flex-col sm:flex-row justify-between items-center gap-6">
-            <div>
-              <p className="text-xs uppercase mb-2 text-gray-600">
-                CPAP MACHINES
-              </p>
-              <h3 className="text-base md:text-lg font-semibold mb-2">
-                AirSense™ 10 Autoset Tripack
-              </h3>
-              <p className="text-red-500 font-semibold mb-3">
-                ₹49,900.00
-              </p>
-              <button className="bg-blue-700 text-white px-5 py-2 rounded-full text-sm">
-                Shop now
-              </button>
-            </div>
 
-            <Image
-              src="/images/banner2.jpg"
-              alt="banner2"
-              width={140}
-              height={120}
-              className="object-contain"
-            />
-          </div>
+  <Link
+    href="/products/resmed-airsense-10-autoset-tripack"
+    className="bg-gradient-to-r from-blue-300 to-blue-200 rounded-2xl p-6 md:p-10 flex flex-col sm:flex-row justify-between items-center gap-6 hover:shadow-lg transition"
+  >
+    <div>
+      <p className="text-xs uppercase mb-2 text-gray-600">
+        CPAP MACHINES
+      </p>
+      <h3 className="text-base md:text-lg font-semibold mb-2">
+        AirSense™ 10 Autoset Tripack
+      </h3>
+      <p className="text-red-500 font-semibold mb-3">
+        ₹49,900.00
+      </p>
+      <span className="bg-blue-700 text-white px-5 py-2 rounded-full text-sm inline-block">
+        Shop now
+      </span>
+    </div>
 
-        </div>
+    <Image
+      src="/images/banner2.jpg"
+      alt="banner2"
+      width={140}
+      height={120}
+      className="object-contain"
+    />
+  </Link>
+
+</div>
       </div>
     </section>
   )
