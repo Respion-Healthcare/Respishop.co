@@ -20,7 +20,7 @@ export default function AboutPage() {
     },
     {
       name: "Debasis Jena",
-      text: "Honest pricing and no unnecessary sales pressure. Highly recommended in Bhubaneswar for sleep therapy support."
+      text: "Honest pricing and no unnecessary sales pressure. Highly recommended in India for sleep therapy support."
     },
     {
       name: "Satyajit Mishra",
@@ -74,7 +74,7 @@ return (
       />
       <meta
         name="keywords"
-        content="Respishop, CPAP provider India, sleep therapy Bhubaneswar, respiratory care India, ResMed partner Odisha"
+        content="Respishop, CPAP provider India, sleep therapy India, respiratory care India, ResMed partner Odisha"
       />
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href="https://respishop.in/about" />

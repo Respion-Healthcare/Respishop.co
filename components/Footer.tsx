@@ -14,7 +14,6 @@ export default function Footer() {
       {/* Thin Divider */}
       <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-blue-600 to-transparent"></div>
 
-      {/* Content */}
       <div className="relative w-full px-10 lg:px-24 py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
@@ -30,9 +29,34 @@ export default function Footer() {
             </p>
 
             <div className="flex gap-5 pt-2">
-              <Facebook className="w-5 h-5 text-gray-500 hover:text-blue-600 hover:scale-110 transition duration-300 cursor-pointer" />
-              <Youtube className="w-5 h-5 text-gray-500 hover:text-blue-600 hover:scale-110 transition duration-300 cursor-pointer" />
-              <Instagram className="w-5 h-5 text-gray-500 hover:text-blue-600 hover:scale-110 transition duration-300 cursor-pointer" />
+
+              {/* Facebook */}
+              <a
+                href="https://facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Facebook className="w-5 h-5 text-gray-500 hover:text-blue-600 hover:scale-110 transition duration-300 cursor-pointer" />
+              </a>
+
+              {/* Youtube */}
+              <a
+                href="https://youtube.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Youtube className="w-5 h-5 text-gray-500 hover:text-blue-600 hover:scale-110 transition duration-300 cursor-pointer" />
+              </a>
+
+              {/* Instagram */}
+              <a
+                href="https://instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram className="w-5 h-5 text-gray-500 hover:text-blue-600 hover:scale-110 transition duration-300 cursor-pointer" />
+              </a>
+
             </div>
           </div>
 
@@ -107,6 +131,7 @@ export default function Footer() {
                 702, 13th Cross Rd, 1st Phase, J.P Nagar,
                 Bengaluru, Karnataka, 560078
               </li>
+
               <li>
                 <a
                   href="mailto:respishop.in@gmail.com"
@@ -115,6 +140,7 @@ export default function Footer() {
                   respishop.in@gmail.com
                 </a>
               </li>
+
               <li>
                 <a
                   href="tel:+919148733700"

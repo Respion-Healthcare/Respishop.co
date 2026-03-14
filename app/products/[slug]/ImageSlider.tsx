@@ -3,48 +3,45 @@
 import { useState } from "react"
 import Image from "next/image"
 
-export default function ImageSlider({
-  images,
-  name,
-}: {
-  images: string[]
-  name: string
-}) {
-  const [selectedImage, setSelectedImage] = useState(images[0])
+export default function ImageSlider({images,name}:any){
 
-  return (
-    <div className="flex gap-4">
+const [active,setActive] = useState(0)
 
-      {/* Thumbnails */}
-      <div className="flex flex-col gap-3">
-        {images.map((img, index) => (
-          <Image
-            key={index}
-            src={img}
-            alt="thumbnail"
-            width={80}
-            height={80}
-            onClick={() => setSelectedImage(img)}
-            className={`cursor-pointer border rounded-md p-1 ${
-              selectedImage === img
-                ? "border-black"
-                : "border-gray-300"
-            }`}
-          />
-        ))}
-      </div>
+return(
 
-      {/* Main Image */}
-      <div>
-        <Image
-          src={selectedImage}
-          alt={name}
-          width={450}
-          height={450}
-          className="rounded-xl border"
-        />
-      </div>
+<div>
 
-    </div>
-  )
+<div className="border rounded-lg overflow-hidden">
+
+<Image
+src={images[active]}
+alt={name}
+width={500}
+height={500}
+className="w-full h-[420px] object-contain hover:scale-110 transition"
+/>
+
+</div>
+
+<div className="flex gap-3 mt-4">
+
+{images.map((img:any,i:number)=>(
+<Image
+key={i}
+src={img}
+alt=""
+width={80}
+height={80}
+onClick={()=>setActive(i)}
+className={`border cursor-pointer p-1 ${
+active===i?"border-black":""
+}`}
+/>
+))}
+
+</div>
+
+</div>
+
+)
 }

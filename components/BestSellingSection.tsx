@@ -171,9 +171,12 @@ export default function BestSellingSection() {
         <h2 className="text-4xl font-semibold text-gray-800">
           Best selling items
         </h2>
-        <a href="#" className="text-gray-600 hover:text-blue-600 transition">
-          View all products →
-        </a>
+        <Link
+  href="/products"
+  className="text-gray-600 hover:text-blue-600 transition"
+>
+  View all products →
+</Link>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
