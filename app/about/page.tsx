@@ -148,10 +148,9 @@ return (
             </h2>
 
             <p className="text-gray-600 leading-relaxed mb-6">
-              Founded in July 2021, Respishop was created to improve
-              respiratory healthcare in Eastern India. We partner with global leaders
-              like ResMed to deliver advanced sleep therapy solutions across Odisha,
-              Jharkhand, Bihar, and Bengaluru.
+              Founded in July 2025, Respishop was created to improve
+              respiratory healthcare in India. We partner with global leaders
+              like ResMed to deliver advanced sleep therapy solutions across India.
             </p>
 
             <p className="text-gray-600 leading-relaxed mb-10">
