@@ -70,7 +70,7 @@ return (
       <title>About Respishop | Sleep Therapy & CPAP Experts in India</title>
       <meta
         name="description"
-        content="Learn about Respishop — a trusted sleep therapy and CPAP solutions provider serving Odisha, Jharkhand, Bihar, and Bengaluru since 2021."
+        content="Learn about Respishop — a trusted sleep therapy and CPAP solutions provider serving India since 2025."
       />
       <meta
         name="keywords"
@@ -83,7 +83,7 @@ return (
       <meta property="og:title" content="About Respishop | Sleep Therapy Experts" />
       <meta
         property="og:description"
-        content="Trusted sleep therapy and CPAP provider serving Eastern India since 2021."
+        content="Trusted sleep therapy and CPAP provider serving Eastern India since 2025."
       />
       <meta property="og:url" content="https://respishop.in/about" />
       <meta property="og:type" content="website" />
@@ -107,8 +107,8 @@ return (
             name: "Respishop",
             url: "https://respishop.in",
             description:
-              "Respishop provides sleep therapy and CPAP solutions across Odisha, Jharkhand, Bihar, and Bengaluru.",
-            foundingDate: "2021",
+              "Respishop provides sleep therapy and CPAP solutions across India.",
+            foundingDate: "2025",
             areaServed: "India",
             contactPoint: {
               "@type": "ContactPoint",
@@ -210,7 +210,7 @@ return (
 
           {/* Floating Badge */}
           <div className="absolute top-6 left-6 z-20 bg-blue-600 text-white px-6 py-2 rounded-full shadow-lg text-sm font-semibold animate-bounce">
-            Trusted Since 2021
+            Trusted Since 2025
           </div>
 
           {/* Parallax Hover Image */}
