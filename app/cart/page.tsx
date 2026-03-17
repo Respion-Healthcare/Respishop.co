@@ -111,11 +111,12 @@ export default function CartPage() {
               <span>₹{total.toLocaleString()}</span>
             </div>
 
-            <button
-              className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
-            >
-              Proceed to Checkout
-            </button>
+           <Link
+  href="/checkout"
+  className="block w-full text-center bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
+>
+  Proceed to Checkout
+</Link>
 
           </div>
 
