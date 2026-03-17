@@ -201,5 +201,119 @@ export const products: Product[] = [
     { label: "Brand", value: "ResMed" },
     { label: "Category", value: "CPAP Accessory" }
   ]
+},
+{
+  id: 16,
+  slug: "nasal-pillow-mask",
+  name: "Nasal Pillow Mask",
+  price: 3500,
+  description: "Lightweight nasal pillow CPAP mask.",
+  images: ["/images/default.jpg"],
+  specifications: [
+    { label: "Category", value: "Mask" }
+  ]
+},
+{
+  id: 17,
+  slug: "oxygen-machines",
+  name: "Oxygen machines",
+  price: 500,
+  description: "Standard oxygen mask for respiratory therapy.",
+  images: ["/images/default.jpg"],
+  specifications: [
+    { label: "Category", value: "Oxygen Accessory" }
+  ]
+},
+{
+  id: 18,
+  slug: "cpap-bipap-rental",
+  name: "CPAP & BIPAP Rental Service",
+  price: 0,
+  description: "Rental service for CPAP & BIPAP machines.",
+  images: ["/images/default.jpg"],
+  specifications: [
+    { label: "Type", value: "Rental" }
+  ]
+},
+{
+  id: 19,
+  slug: "cpap-hose-pipe",
+  name: "CPAP Hose Pipe",
+  price: 1200,
+  description: "Durable hose pipe for CPAP machines.",
+  images: ["/images/default.jpg"],
+  specifications: [{ label: "Category", value: "Accessory" }]
+},
+{
+  id: 20,
+  slug: "cpap-filter",
+  name: "CPAP Filter",
+  price: 300,
+  description: "High-quality CPAP air filters.",
+  images: ["/images/default.jpg"],
+  specifications: [{ label: "Category", value: "Accessory" }]
+},
+{
+  id: 21,
+  slug: "humidifier-bottle",
+  name: "Humidifier Bottle",
+  price: 1500,
+  description: "Humidifier bottle for oxygen concentrators.",
+  images: ["/images/default.jpg"],
+  specifications: [{ label: "Category", value: "Accessory" }]
+},
+{
+  id: 22,
+  slug: "mask-headgear",
+  name: "Mask Headgear",
+  price: 800,
+  description: "Adjustable CPAP mask headgear.",
+  images: ["/images/default.jpg"],
+  specifications: [{ label: "Category", value: "Accessory" }]
+},
+{
+  id: 23,
+  slug: "mask-cushion",
+  name: "Mask Cushion",
+  price: 900,
+  description: "Comfortable CPAP mask cushion.",
+  images: ["/images/default.jpg"],
+  specifications: [{ label: "Category", value: "Accessory" }]
+},
+{
+  id: 24,
+  slug: "mask-clips",
+  name: "Mask Clips",
+  price: 400,
+  description: "Replacement clips for CPAP masks.",
+  images: ["/images/default.jpg"],
+  specifications: [{ label: "Category", value: "Accessory" }]
+},
+{
+  id: 25,
+  slug: "mask-frame",
+  name: "Mask Frame & Vents",
+  price: 1100,
+  description: "Mask frame with air vents.",
+  images: ["/images/default.jpg"],
+  specifications: [{ label: "Category", value: "Accessory" }]
+},
+{
+  id: 26,
+  slug: "airsense-11-accessories",
+  name: "AirSense 11 Accessories",
+  price: 2000,
+  description: "Accessories compatible with AirSense 11.",
+  images: ["/images/default.jpg"],
+  specifications: [{ label: "Category", value: "Accessory" }]
+},
+{
+  id: 27,
+  slug: "airmini-accessories",
+  name: "AirMini Accessories",
+  price: 1800,
+  description: "Accessories for AirMini CPAP.",
+  images: ["/images/default.jpg"],
+  specifications: [{ label: "Category", value: "Accessory" }]
 }
 ]
