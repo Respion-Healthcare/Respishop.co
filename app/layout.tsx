@@ -48,13 +48,13 @@ export default function RootLayout({
         {/* Cart Provider Added */}
         <CartProvider>
 
-          <Header />
+          {/* <Header /> */}
 
           {/* Only offset content — NOT body */}
           <div className="pt-[70px] lg:pt-[95px]">
             {children}
           </div>
-{/* 
+          {/* 
           <Footer /> */}
 
         </CartProvider>

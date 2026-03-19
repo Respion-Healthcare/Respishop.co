@@ -4,39 +4,72 @@
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 
-export default function RegisterPage(){
+export default function RegisterPage() {
 
   const router = useRouter()
 
-  const [form,setForm] = useState({
-    name:"",
-    email:"",
-    phone:"",
-    password:"",
-    confirmPassword:""
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    password: "",
+    confirmPassword: ""
   })
 
-  const handleChange = (e:any)=>{
-    setForm({...form,[e.target.name]:e.target.value})
+  const handleChange = (e: any) => {
+    setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  const handleRegister = (e:any)=>{
+  // const handleRegister = (e:any)=>{
 
-    e.preventDefault()
+  //   e.preventDefault()
 
-    if(form.password !== form.confirmPassword){
-      alert("Passwords do not match")
-      return
+  //   if(form.password !== form.confirmPassword){
+  //     alert("Passwords do not match")
+  //     return
+  //   }
+
+  //   localStorage.setItem("user",JSON.stringify(form))
+  //   alert("Account created successfully")
+
+  //   router.push("/account/login")
+
+  // }
+
+
+  const handleRegister = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (form.password !== form.confirmPassword) {
+      alert("Passwords do not match");
+      return;
     }
 
-    localStorage.setItem("user",JSON.stringify(form))
-    alert("Account created successfully")
+    try {
+      const res = await fetch("/api/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "main-api-key": process.env.NEXT_PUBLIC_API_KEY || "",
+        },
+        body: JSON.stringify(form),
+      });
 
-    router.push("/account/login")
+      const data: { error?: string; success?: boolean } = await res.json();
 
-  }
+      if (res.ok) {
+        alert("Account created successfully");
+        router.push("/account/login");
+      } else {
+        alert(data.error || "Registration failed");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong");
+    }
+  };
 
-  return(
+  return (
 
     <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
 
