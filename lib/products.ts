@@ -16,9 +16,13 @@ export const products: Product[] = [
     id: 1,
     slug: "resmed-airfit-n20-nasal-mask",
     name: "Resmed Airfit N20 Nasal Mask",
-    price: 4500,
+    price: 5600,
     description: "Comfortable nasal mask for CPAP users.",
-    images: ["/images/banner1.webp", "/images/P9.png"],
+    images: ["/images/banner1.webp",
+       "/images/Mask/Resmed AirFit™ N20 Nasal Mask/1.webp",
+       "/images/Mask/Resmed AirFit™ N20 Nasal Mask/2.webp",
+       "/images/Mask/Resmed AirFit™ N20 Nasal Mask/3.webp"
+      ],
     specifications: [
       { label: "Brand", value: "ResMed" },
       { label: "Category", value: "Mask" }
@@ -57,7 +61,11 @@ export const products: Product[] = [
     name: "Resmed AirFit F20 Full Face Mask",
     price: 6500,
     description: "Full face CPAP mask with superior comfort.",
-    images: ["/images/Product1.jpg"],
+    images: ["/images/Product1.jpg",
+      "/images/Mask/Resmed AirTouch™ F20 Full Face Mask.webp",
+      "/images/Mask/Resmed AirFit™ F20 Full Face Mask.webp",
+      "/images/All.webp"
+    ],
     specifications: [
       { label: "Brand", value: "ResMed" },
       { label: "Category", value: "Full Face Mask" }
@@ -70,7 +78,11 @@ export const products: Product[] = [
     name: "Resmed Lumis 100 VPAP ST",
     price: 120000,
     description: "Bi-level ventilation support device.",
-    images: ["/images/Product2.jpg"],
+    images: ["/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/1.webp",
+      "/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/2.webp",
+      "/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/3.webp",
+      "/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/4.webp"
+    ],
     specifications: [
       { label: "Brand", value: "ResMed" },
       { label: "Type", value: "VPAP" }
@@ -83,7 +95,10 @@ export const products: Product[] = [
     name: "Resmed Lumis 150 VPAP ST",
     price: 150000,
     description: "Advanced VPAP ST device with backup rate.",
-    images: ["/images/Product3.webp"],
+    images: ["/images/Devices/Resmed Lumis™ 150 VPAP ST Non‑Invasive Ventilator – Tripack 4G/1.webp",
+      "/images/Devices/Resmed Lumis™ 150 VPAP ST Non‑Invasive Ventilator – Tripack 4G/2.webp",
+      "/images/Devices/Resmed Lumis™ 150 VPAP ST Non‑Invasive Ventilator – Tripack 4G/3.webp",
+      "/images/Devices/Resmed Lumis™ 150 VPAP ST Non‑Invasive Ventilator – Tripack 4G/4.webp"],
     specifications: [
       { label: "Brand", value: "ResMed" },
       { label: "Type", value: "VPAP ST" }

@@ -64,7 +64,7 @@ export default async function ProductPage({
             </span>
 
             <span className="text-green-600 ml-3">
-              10% OFF
+              25% OFF
             </span>
 
           </div>
