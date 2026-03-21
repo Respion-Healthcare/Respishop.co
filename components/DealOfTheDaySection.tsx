@@ -4,6 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useRef, useEffect, useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import { motion } from "framer-motion"
 
 const deals = [
   {
@@ -57,6 +58,7 @@ export default function DealOfTheDay() {
   const scrollRef = useRef<HTMLDivElement>(null)
   const [timeLeft, setTimeLeft] = useState(36000)
 
+  // ⏱ TIMER
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0))
@@ -68,6 +70,7 @@ export default function DealOfTheDay() {
   const minutes = String(Math.floor((timeLeft % 3600) / 60)).padStart(2, "0")
   const seconds = String(timeLeft % 60).padStart(2, "0")
 
+  // 🔁 AUTO SLIDE
   useEffect(() => {
     const autoSlide = setInterval(() => {
       if (scrollRef.current) {
@@ -86,161 +89,135 @@ export default function DealOfTheDay() {
     return () => clearInterval(autoSlide)
   }, [])
 
-  const scroll = (direction: "left" | "right") => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: direction === "left" ? -300 : 300,
-        behavior: "smooth",
-      })
-    }
+  // 👉 MANUAL SCROLL
+  const scroll = (dir: "left" | "right") => {
+    scrollRef.current?.scrollBy({
+      left: dir === "left" ? -300 : 300,
+      behavior: "smooth",
+    })
   }
 
   return (
-    <section className="w-full px-4 md:px-10 lg:px-20 py-12 lg:py-20 bg-gray-50">
+    <section className="w-full px-6 lg:px-20 py-16 bg-gray-50">
 
       {/* HEADER */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-10">
-        <h2 className="text-2xl md:text-4xl font-semibold text-gray-800 text-center md:text-left">
-          Daily Deals Of The Day
-        </h2>
+      <div className="flex justify-between items-center mb-10">
+        <h2 className="text-3xl font-semibold">Daily Deals Of The Day</h2>
 
-        <div className="bg-orange-500 text-white px-5 py-2 rounded-full font-medium text-sm md:text-base">
-          Ends in: {hours} : {minutes} : {seconds}
+        <div className="bg-orange-500 text-white px-5 py-2 rounded-full text-sm">
+          {hours}:{minutes}:{seconds}
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+      <div className="flex flex-col lg:flex-row gap-10">
 
-        {/* LEFT SIDE */}
-        <div className="lg:w-3/5 bg-gradient-to-r from-blue-300 to-blue-200 rounded-2xl p-6 md:p-10">
+        {/* LEFT SLIDER */}
+        <div className="lg:w-3/5 bg-gradient-to-r from-blue-300 to-blue-200 rounded-3xl p-6">
 
           <div className="relative">
 
-            <button
-              onClick={() => scroll("left")}
-              className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-md p-2 rounded-full z-10"
-            >
-              <ChevronLeft size={18} />
+            <button onClick={() => scroll("left")}
+              className="absolute left-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow z-10">
+              <ChevronLeft />
             </button>
 
-            <button
-              onClick={() => scroll("right")}
-              className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 bg-white shadow-md p-2 rounded-full z-10"
-            >
-              <ChevronRight size={18} />
+            <button onClick={() => scroll("right")}
+              className="absolute right-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow z-10">
+              <ChevronRight />
             </button>
 
-            <div
-              ref={scrollRef}
-              className="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar"
-            >
+            <div ref={scrollRef} className="flex gap-6 overflow-x-auto no-scrollbar">
+
               {deals.map((item) => (
-                <Link
+                <motion.div
                   key={item.id}
-                  href={`/products/${item.slug}`}
-                  className="flex-shrink-0 w-[85%] sm:w-[48%] h-[380px]"
+                  whileHover={{ y: -8 }}
+                  transition={{ duration: 0.3 }}
+                  className="min-w-[280px]"
                 >
-                  <div className="bg-white rounded-2xl p-5 relative shadow-md flex flex-col h-full">
+                  <Link href={`/products/${item.slug}`}>
 
-                    <span className="absolute top-4 left-4 bg-red-500 text-white text-xs px-3 py-1 rounded-full">
-                      {item.discount}
-                    </span>
+                    <div className="bg-white rounded-2xl p-4 shadow-md hover:shadow-xl transition-all relative">
 
-                    <div className="border border-gray-200 rounded-xl p-4 h-[180px] flex justify-center items-center">
-                      <Image
-                        src={item.image}
-                        alt={item.name}
-                        width={160}
-                        height={160}
-                        className="object-contain max-h-[150px]"
-                      />
-                    </div>
+                      <span className="absolute top-3 left-3 bg-red-500 text-white text-xs px-3 py-1 rounded-full">
+                        {item.discount}
+                      </span>
 
-                    <div className="mt-4">
-                      <h2 className="text-sm md:text-base font-semibold text-gray-800 mb-3 leading-snug">
+                      {/* ✅ IMAGE FIXED */}
+                      <div className="mt-4 bg-gray-100 rounded-xl h-[200px] flex items-center justify-center overflow-hidden">
+                        <motion.div
+                          whileHover={{ scale: 1.08 }}
+                          className="flex items-center justify-center w-full h-full"
+                        >
+                          <Image
+                            src={item.image}
+                            alt={item.name}
+                            width={200}
+                            height={200}
+                            className="object-contain max-h-[180px]"
+                          />
+                        </motion.div>
+                      </div>
+
+                      <h3 className="mt-4 text-sm font-semibold">
                         {item.name}
-                      </h2>
+                      </h3>
 
-                      <div className="flex gap-2 items-center">
-                        <span className="text-red-500 font-semibold text-sm md:text-base">
+                      <div className="flex gap-2 mt-2 items-center">
+                        <span className="text-red-500 font-semibold">
                           {item.price}
                         </span>
-                        <span className="text-gray-400 line-through text-xs md:text-sm">
+                        <span className="text-gray-400 line-through text-sm">
                           {item.oldPrice}
                         </span>
                       </div>
+
                     </div>
 
-                  </div>
-                </Link>
+                  </Link>
+                </motion.div>
               ))}
-            </div>
 
+            </div>
           </div>
         </div>
 
-       
-       {/* RIGHT SIDE */}
-<div className="lg:w-2/5 flex flex-col gap-6 lg:gap-12">
+        {/* RIGHT SIDE */}
+        <div className="lg:w-2/5 flex flex-col gap-6">
 
-  <Link
-    href="/products/resmed-airfit-n20-nasal-mask"
-    className="bg-gradient-to-r from-blue-300 to-blue-200 rounded-2xl p-6 md:p-10 flex flex-col sm:flex-row justify-between items-center gap-6 hover:shadow-lg transition"
-  >
-    <div>
-      <p className="text-xs uppercase mb-2 text-gray-600">
-        CPAP MASKS
-      </p>
-      <h3 className="text-base md:text-lg font-semibold mb-2">
-        Resmed AirFit™ N20 Nasal Mask
-      </h3>
-      <p className="text-red-500 font-semibold mb-3">
-        ₹2,900.00
-      </p>
-      <span className="bg-blue-700 text-white px-5 py-2 rounded-full text-sm inline-block">
-        Shop now
-      </span>
-    </div>
+          <motion.div whileHover={{ scale: 1.02 }}>
+            <Link href="/products/resmed-airfit-n20-nasal-mask"
+              className="flex justify-between items-center bg-gradient-to-r from-blue-300 to-blue-200 rounded-2xl p-6">
 
-    <Image
-      src="/images/banner1.webp"
-      alt="banner1"
-      width={130}
-      height={120}
-      className="object-contain"
-    />
-  </Link>
+              <div>
+                <p className="text-xs text-gray-600">CPAP MASKS</p>
+                <h3 className="font-semibold">AirFit N20 Mask</h3>
+                <p className="text-red-500 font-semibold">₹2,900</p>
+              </div>
 
+              <motion.div whileHover={{ rotate: 5 }} className="bg-white p-3 rounded-xl">
+                <Image src="/images/banner1.webp" alt="" width={120} height={100} className="object-contain" />
+              </motion.div>
+            </Link>
+          </motion.div>
 
-  <Link
-    href="/products/resmed-airsense-10-autoset-tripack"
-    className="bg-gradient-to-r from-blue-300 to-blue-200 rounded-2xl p-6 md:p-10 flex flex-col sm:flex-row justify-between items-center gap-6 hover:shadow-lg transition"
-  >
-    <div>
-      <p className="text-xs uppercase mb-2 text-gray-600">
-        CPAP MACHINES
-      </p>
-      <h3 className="text-base md:text-lg font-semibold mb-2">
-        AirSense™ 10 Autoset Tripack
-      </h3>
-      <p className="text-red-500 font-semibold mb-3">
-        ₹49,900.00
-      </p>
-      <span className="bg-blue-700 text-white px-5 py-2 rounded-full text-sm inline-block">
-        Shop now
-      </span>
-    </div>
+          <motion.div whileHover={{ scale: 1.02 }}>
+            <Link href="/products/resmed-airsense-10-autoset-tripack"
+              className="flex justify-between items-center bg-gradient-to-r from-blue-300 to-blue-200 rounded-2xl p-6">
 
-    <Image
-      src="/images/banner2.jpg"
-      alt="banner2"
-      width={140}
-      height={120}
-      className="object-contain"
-    />
-  </Link>
+              <div>
+                <p className="text-xs text-gray-600">CPAP MACHINES</p>
+                <h3 className="font-semibold">AirSense 10</h3>
+                <p className="text-red-500 font-semibold">₹49,900</p>
+              </div>
 
-</div>
+              <motion.div whileHover={{ rotate: -5 }} className="bg-white p-3 rounded-xl">
+                <Image src="/images/banner2.jpg" alt="" width={120} height={100} className="object-contain" />
+              </motion.div>
+            </Link>
+          </motion.div>
+
+        </div>
       </div>
     </section>
   )

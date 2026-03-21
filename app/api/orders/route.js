@@ -2,7 +2,8 @@ import { NextResponse } from "next/server";
 import connectToDatabase from "../../../lib/Connection";
 import Order from "../../../models/Order";
 import jwt from "jsonwebtoken";
-
+import User from "../../../models/User";
+import { sendOrderMail } from "../../../lib/sendMail";
 
 
 export async function POST(req) {
@@ -22,14 +23,21 @@ export async function POST(req) {
 
         const { items, total, address, paymentMethod, notes } = body;
 
-        const order = await Order.create({
-            user: decoded.id, // MongoDB reference to User
-            items,
-            total,
-            address,
-            notes,
-            paymentMethod,
-        });
+            const order = await Order.create({
+                user: decoded.id,
+                items,
+                total,
+                address,
+                notes,
+                paymentMethod,
+            });
+
+            const user = await User.findById(decoded.id);
+
+            sendOrderMail({
+                ...order.toObject(),
+                email: user.email,
+            });
 
         // Send back order _id as unique identifier
         return NextResponse.json({ success: true, orderId: order._id, order });

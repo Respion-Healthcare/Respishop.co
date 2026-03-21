@@ -6,12 +6,15 @@ import { CartProvider } from "@/context/CartContext"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://respishop.co.in"),
+
   title: {
     default: "Respishop | CPAP, BiPAP & Sleep Apnea Machines India",
     template: "%s | Respishop",
   },
+
   description:
     "Respishop provides CPAP machines, BiPAP machines, oxygen concentrators and sleep apnea equipment online in India.",
+
   keywords: [
     "CPAP Machine India",
     "BiPAP Machine India",
@@ -19,6 +22,13 @@ export const metadata: Metadata = {
     "Oxygen Concentrator India",
     "Respishop",
   ],
+
+  // ✅ FAVICON + ICONS ADDED HERE
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
 
   openGraph: {
     title: "Respishop - CPAP & BiPAP Machines",
@@ -45,17 +55,16 @@ export default function RootLayout({
     <html lang="en">
       <body className="m-0 p-0">
 
-        {/* Cart Provider Added */}
         <CartProvider>
 
           <Header />
 
-          {/* Only offset content — NOT body */}
           <div className="pt-[70px] lg:pt-[95px]">
             {children}
           </div>
-          {/* 
-          <Footer /> */}
+
+          {/* Uncomment if needed */}
+          {/* <Footer /> */}
 
         </CartProvider>
 

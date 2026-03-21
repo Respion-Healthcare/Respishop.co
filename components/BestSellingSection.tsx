@@ -112,7 +112,6 @@ const products = [
 export default function BestSellingSection() {
 
   const { addToCart } = useCart()
-
   const [wishlist, setWishlist] = useState<any[]>([])
 
   useEffect(() => {
@@ -158,28 +157,25 @@ export default function BestSellingSection() {
     }
 
     wishlistItems.push(product)
-
     localStorage.setItem("wishlist", JSON.stringify(wishlistItems))
 
     alert("Added to wishlist")
   }
 
   return (
-    <section className="w-full px-10 lg:px-20 py-20 bg-gray-50">
+    <section className="w-full px-6 lg:px-20 py-20 bg-gray-50">
 
       <div className="flex justify-between items-center mb-12">
-        <h2 className="text-4xl font-semibold text-gray-800">
+        <h2 className="text-3xl md:text-4xl font-semibold text-gray-800">
           Best selling items
         </h2>
-        <Link
-  href="/products"
-  className="text-gray-600 hover:text-blue-600 transition"
->
-  View all products →
-</Link>
+
+        <Link href="/products" className="text-gray-600 hover:text-blue-600 transition">
+          View all products →
+        </Link>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
 
         {products.map((product) => (
 
@@ -188,50 +184,55 @@ export default function BestSellingSection() {
             className="group transition-transform duration-300 hover:-translate-y-2"
           >
 
-            <div className="relative bg-white rounded-lg p-8 flex justify-center items-center hover:shadow-lg transition overflow-hidden">
+            <div className="relative bg-white rounded-xl p-4 flex justify-center items-center hover:shadow-lg transition overflow-hidden">
 
-              <span className="absolute top-4 left-4 bg-red-500 text-white text-sm px-3 py-1 rounded z-10">
+              {/* Discount */}
+              <span className="absolute top-3 left-3 bg-red-500 text-white text-xs px-2 py-1 rounded z-10">
                 {product.discount}
               </span>
 
+              {/* Wishlist */}
               <button
                 onClick={(e)=>addToWishlist(product,e)}
-                className="absolute top-4 right-4 text-gray-400 hover:text-red-500 transition z-20"
+                className="absolute top-3 right-3 text-gray-400 hover:text-red-500 transition z-20"
               >
-                <Heart size={20} />
+                <Heart size={18} />
               </button>
 
-              <Link href={`/products/${product.slug}`} className="flex justify-center items-center">
+              {/* ✅ BIG IMAGE CONTAINER */}
+              <Link href={`/products/${product.slug}`} className="w-full">
+                <div className="relative w-full h-52">
 
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  width={260}
-                  height={220}
-                  className="object-contain h-[180px] transition duration-300 group-hover:opacity-0"
-                />
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-cover transition duration-300 group-hover:opacity-0"
+                  />
 
-                <Image
-                  src={product.hoverImage}
-                  alt={product.name}
-                  width={260}
-                  height={220}
-                  className="object-contain h-[180px] absolute transition duration-300 opacity-0 group-hover:opacity-100"
-                />
+                  <Image
+                    src={product.hoverImage}
+                    alt={product.name}
+                    fill
+                    className="object-cover absolute inset-0 transition duration-300 opacity-0 group-hover:opacity-100"
+                  />
 
+                </div>
               </Link>
 
+              {/* Cart */}
               <button
                 onClick={(e)=>handleAddToCart(product,e)}
-                className="absolute bottom-4 right-4 bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition z-20"
+                className="absolute bottom-3 right-3 bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition z-20"
               >
-                <ShoppingCart size={18} />
+                <ShoppingCart size={16} />
               </button>
 
             </div>
 
             <Link href={`/products/${product.slug}`}>
-              <div className="mt-6 space-y-2 cursor-pointer">
+              <div className="mt-4 space-y-1 cursor-pointer">
+
                 <p className="text-xs text-gray-400 uppercase tracking-wide">
                   Best Selling Products
                 </p>
@@ -240,14 +241,15 @@ export default function BestSellingSection() {
                   {product.name}
                 </h3>
 
-                <div className="flex items-center gap-3 mt-2">
-                  <span className="text-red-500 font-semibold text-lg">
+                <div className="flex items-center gap-2 mt-1">
+                  <span className="text-red-500 font-semibold">
                     {product.price}
                   </span>
-                  <span className="text-gray-400 line-through text-sm">
+                  <span className="text-gray-400 line-through text-xs">
                     {product.oldPrice}
                   </span>
                 </div>
+
               </div>
             </Link>
 
