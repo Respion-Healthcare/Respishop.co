@@ -1,18 +1,44 @@
-import type { MetadataRoute } from "next";
+import type { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
+  const baseUrl = "https://respishop.co.in"
+
+  // ✅ Existing pages
+  const staticPages = [
     {
-      url: "https://respishop.co.in",
+      url: `${baseUrl}`,
       lastModified: new Date(),
     },
     {
-      url: "https://respishop.co.in/products",
+      url: `${baseUrl}/products`,
       lastModified: new Date(),
     },
     {
-      url: "https://respishop.co.in/contact",
+      url: `${baseUrl}/contact`,
       lastModified: new Date(),
     },
-  ];
+  ]
+
+  // ✅ SEO dynamic pages
+  const products = [
+    "cpap-machine",
+    "bipap-machine",
+    "oxygen-concentrator",
+  ]
+
+  const locations = [
+    "india",
+    "bhubaneswar",
+    "ranchi",
+    "patna",
+  ]
+
+  const seoPages = products.flatMap((product) =>
+    locations.map((location) => ({
+      url: `${baseUrl}/${product}/${location}`,
+      lastModified: new Date(),
+    }))
+  )
+
+  return [...staticPages, ...seoPages]
 }
