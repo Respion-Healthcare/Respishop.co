@@ -7,36 +7,36 @@ import Link from "next/link"
 const blogs = [
   {
     id: 1,
-    slug: "understanding-sleep-apnea-causes-treatment",
-    title: "Understanding Sleep Apnea: Causes & Treatment",
-    category: "Sleep Therapy",
-    date: "March 12, 2024",
-    readTime: "5 min read",
+    slug: "best-cpap-machine-in-india",
+    title: "Best CPAP Machine in India (2026) – Price, Features & Buying Guide",
+    category: "CPAP Guide",
+    date: "March 2026",
+    readTime: "7 min read",
     image: "/images/SleepTherapy.jpg",
     excerpt:
-      "Sleep apnea is a serious sleep disorder that affects breathing during sleep. Learn its causes, symptoms, and modern treatment options.",
+      "Looking for the best CPAP machine in India? Compare top models, features, prices, and find the right one for your needs.",
   },
   {
     id: 2,
-    slug: "how-cpap-machines-improve-sleep-quality",
-    title: "How CPAP Machines Improve Your Sleep Quality",
-    category: "CPAP Guide",
-    date: "March 5, 2024",
-    readTime: "4 min read",
+    slug: "cpap-machine-price-in-bhubaneswar",
+    title: "CPAP Machine Price in Bhubaneswar – Where to Buy?",
+    category: "Local SEO",
+    date: "March 2026",
+    readTime: "5 min read",
     image: "/images/blog2.webp",
     excerpt:
-      "CPAP therapy is one of the most effective treatments for sleep apnea. Discover how it works and why it improves overall health.",
+      "Find the latest CPAP machine price in Bhubaneswar and where to buy authentic devices with best offers.",
   },
   {
     id: 3,
-    slug: "signs-you-might-need-a-sleep-study",
-    title: "Signs You Might Need a Sleep Study",
-    category: "Health Awareness",
-    date: "February 20, 2024",
+    slug: "oxygen-concentrator-price-in-india",
+    title: "Oxygen Concentrator Price in India (2026 Guide)",
+    category: "Oxygen Therapy",
+    date: "March 2026",
     readTime: "6 min read",
     image: "/images/sleepstudy.jpg",
     excerpt:
-      "Snoring, daytime fatigue, headaches? These could be signs that you need a professional sleep study evaluation.",
+      "Check oxygen concentrator prices in India, features, and buying tips to choose the best device.",
   },
 ]
 
@@ -58,7 +58,7 @@ export default function BlogPage() {
           property="og:description"
           content="Expert articles on sleep apnea, CPAP therapy, and respiratory wellness."
         />
-        <meta property="og:url" content="https://respishop.in/blog" />
+        <meta property="og:url" content="https://respishop.co.in/blog" />
         <meta property="og:type" content="website" />
 
         {/* Twitter Card */}
@@ -151,7 +151,7 @@ export default function BlogPage() {
                   </p>
 
                   <Link
-                    href={`/blog/${blog.slug}`}
+                    href={`/blogs/${blog.slug}`}
                     className="text-blue-600 font-medium hover:underline"
                     aria-label={`Read more about ${blog.title}`}
                   >

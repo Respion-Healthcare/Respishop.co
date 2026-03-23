@@ -106,7 +106,7 @@ const faqData = [
 export async function generateMetadata(
   { params }: { params: PageParams }
 ): Promise<Metadata> {
-  const productName = products[params.product]
+const productName = params?.product
   const locationName = params.location
 
   return {
@@ -117,9 +117,9 @@ export async function generateMetadata(
 
 // ✅ Page Component
 export default function Page({ params }: { params: PageParams }) {
-  const productName = products[params.product]
+  const productName = params?.product
 
-  const locationKey = params.location.toLowerCase()
+const locationKey = params?.location?.toLowerCase() || "india"
   const content = contentMap[locationKey] || contentMap["india"]
 
   if (!productName) {
