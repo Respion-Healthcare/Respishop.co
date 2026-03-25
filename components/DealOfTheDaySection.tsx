@@ -5,58 +5,21 @@ import Link from "next/link"
 import { useRef, useEffect, useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { motion } from "framer-motion"
-
-const deals = [
-  {
-    id: 1,
-    slug: "oxymed-portable-oxygen-concentrator",
-    name: "Oxymed Portable Oxygen Concentrator",
-    price: "₹139,690.00",
-    oldPrice: "₹160,000.00",
-    discount: "-13%",
-    image: "/images/deal1.jpg",
-  },
-  {
-    id: 2,
-    slug: "oxymed-oxygen-concentrator-5lpm",
-    name: "OxyMed Oxygen Concentrator Machine 5LPM",
-    price: "₹34,900.00",
-    oldPrice: "₹75,000.00",
-    discount: "-53%",
-    image: "/images/deal2.jpg",
-  },
-  {
-    id: 3,
-    slug: "oxymed-10ltr-oxygen-concentrator",
-    name: "OxyMed 10 Ltr Oxygen Concentrator",
-    price: "₹51,550.00",
-    oldPrice: "₹85,000.00",
-    discount: "-39%",
-    image: "/images/deal3.jpg",
-  },
-  {
-    id: 4,
-    slug: "philips-everflo-oxygen-concentrator",
-    name: "Philips EverFlo Home Oxygen (5 LPM)",
-    price: "₹59,000.00",
-    oldPrice: "₹68,000.00",
-    discount: "-13%",
-    image: "/images/deal4.webp",
-  },
-  {
-    id: 5,
-    slug: "resmed-airmini-f30-setup-pack",
-    name: "Resmed AirMini F30 Setup Pack",
-    price: "₹2,900.00",
-    oldPrice: "₹5,000.00",
-    discount: "-42%",
-    image: "/images/deal5.webp",
-  },
-]
+import { products as allProducts } from "@/lib/products"
+import { getFinalPrice } from "@/lib/pricing"
 
 export default function DealOfTheDay() {
   const scrollRef = useRef<HTMLDivElement>(null)
   const [timeLeft, setTimeLeft] = useState(36000)
+
+  // ✅ ONLY SLUGS (NO DUPLICATE DATA)
+  const dealSlugs = [
+    "oxymed-portable-oxygen-concentrator",
+    "oxymed-oxygen-concentrator-5lpm",
+    "oxymed-10ltr-oxygen-concentrator",
+    "philips-everflo-oxygen-concentrator",
+    "resmed-airmini-f30-setup-pack",
+  ]
 
   // ⏱ TIMER
   useEffect(() => {
@@ -128,55 +91,75 @@ export default function DealOfTheDay() {
 
             <div ref={scrollRef} className="flex gap-6 overflow-x-auto no-scrollbar">
 
-              {deals.map((item) => (
-                <motion.div
-                  key={item.id}
-                  whileHover={{ y: -8 }}
-                  transition={{ duration: 0.3 }}
-                  className="min-w-[280px]"
-                >
-                  <Link href={`/products/${item.slug}`}>
+              {dealSlugs.map((slug) => {
+                const product = allProducts.find(p => p.slug === slug)
+                if (!product) return null
 
-                    <div className="bg-white rounded-2xl p-4 shadow-md hover:shadow-xl transition-all relative">
+                const finalPrice = getFinalPrice(product)
 
-                      <span className="absolute top-3 left-3 bg-red-500 text-white text-xs px-3 py-1 rounded-full">
-                        {item.discount}
-                      </span>
+                return (
+                  <motion.div
+                    key={product.id}
+                    whileHover={{ y: -8 }}
+                    transition={{ duration: 0.3 }}
+                    className="min-w-[280px]"
+                  >
+                    <Link href={`/products/${product.slug}`}>
 
-                      {/* ✅ IMAGE FIXED */}
-                      <div className="mt-4 bg-gray-100 rounded-xl h-[200px] flex items-center justify-center overflow-hidden">
-                        <motion.div
-                          whileHover={{ scale: 1.08 }}
-                          className="flex items-center justify-center w-full h-full"
-                        >
-                          <Image
-                            src={item.image}
-                            alt={item.name}
-                            width={200}
-                            height={200}
-                            className="object-contain max-h-[180px]"
-                          />
-                        </motion.div>
+                      <div className="bg-white rounded-2xl p-4 shadow-md hover:shadow-xl transition-all relative">
+
+                        {/* ✅ DISCOUNT BADGE */}
+                        {product.offer?.type === "percentage" && (
+                          <span className="absolute top-3 left-3 bg-red-500 text-white text-xs px-3 py-1 rounded-full">
+                            {product.offer.value}% OFF
+                          </span>
+                        )}
+
+                        {product.offer?.type === "flat" && (
+                          <span className="absolute top-3 left-3 bg-red-500 text-white text-xs px-3 py-1 rounded-full">
+                            ₹{product.offer.value} OFF
+                          </span>
+                        )}
+
+                        {/* IMAGE */}
+                        <div className="mt-4 bg-gray-100 rounded-xl h-[200px] flex items-center justify-center overflow-hidden">
+                          <motion.div
+                            whileHover={{ scale: 1.08 }}
+                            className="flex items-center justify-center w-full h-full"
+                          >
+                            <Image
+                              src={product.images[0]}
+                              alt={product.name}
+                              width={200}
+                              height={200}
+                              className="object-contain max-h-[180px]"
+                            />
+                          </motion.div>
+                        </div>
+
+                        <h3 className="mt-4 text-sm font-semibold">
+                          {product.name}
+                        </h3>
+
+                        {/* ✅ PRICE */}
+                        <div className="flex gap-2 mt-2 items-center">
+                          <span className="text-red-500 font-semibold">
+                            ₹{finalPrice.toLocaleString()}
+                          </span>
+
+                          {product.offer && (
+                            <span className="text-gray-400 line-through text-sm">
+                              ₹{product.price.toLocaleString()}
+                            </span>
+                          )}
+                        </div>
+
                       </div>
 
-                      <h3 className="mt-4 text-sm font-semibold">
-                        {item.name}
-                      </h3>
-
-                      <div className="flex gap-2 mt-2 items-center">
-                        <span className="text-red-500 font-semibold">
-                          {item.price}
-                        </span>
-                        <span className="text-gray-400 line-through text-sm">
-                          {item.oldPrice}
-                        </span>
-                      </div>
-
-                    </div>
-
-                  </Link>
-                </motion.div>
-              ))}
+                    </Link>
+                  </motion.div>
+                )
+              })}
 
             </div>
           </div>
@@ -185,37 +168,37 @@ export default function DealOfTheDay() {
         {/* RIGHT SIDE */}
         <div className="lg:w-2/5 flex flex-col gap-6">
 
-          <motion.div whileHover={{ scale: 1.02 }}>
-            <Link href="/products/resmed-airfit-n20-nasal-mask"
-              className="flex justify-between items-center bg-gradient-to-r from-blue-300 to-blue-200 rounded-2xl p-6">
+          {["resmed-airfit-n20-nasal-mask", "resmed-airsense-10-autoset-tripack"].map((slug, i) => {
+            const product = allProducts.find(p => p.slug === slug)
+            if (!product) return null
 
-              <div>
-                <p className="text-xs text-gray-600">CPAP MASKS</p>
-                <h3 className="font-semibold">AirFit N20 Mask</h3>
-                <p className="text-red-500 font-semibold">₹2,900</p>
-              </div>
+            return (
+              <motion.div key={slug} whileHover={{ scale: 1.02 }}>
+                <Link href={`/products/${slug}`}
+                  className="flex justify-between items-center bg-gradient-to-r from-blue-300 to-blue-200 rounded-2xl p-6">
 
-              <motion.div whileHover={{ rotate: 5 }} className="bg-white p-3 rounded-xl">
-                <Image src="/images/banner1.webp" alt="" width={120} height={100} className="object-contain" />
+                  <div>
+                    <p className="text-xs text-gray-600">{product.category}</p>
+                    <h3 className="font-semibold">{product.name}</h3>
+                    <p className="text-red-500 font-semibold">
+                      ₹{getFinalPrice(product).toLocaleString()}
+                    </p>
+                  </div>
+
+                  <motion.div whileHover={{ rotate: i === 0 ? 5 : -5 }} className="bg-white p-3 rounded-xl">
+                    <Image
+                      src={product.images[0]}
+                      alt={product.name}
+                      width={120}
+                      height={100}
+                      className="object-contain"
+                    />
+                  </motion.div>
+
+                </Link>
               </motion.div>
-            </Link>
-          </motion.div>
-
-          <motion.div whileHover={{ scale: 1.02 }}>
-            <Link href="/products/resmed-airsense-10-autoset-tripack"
-              className="flex justify-between items-center bg-gradient-to-r from-blue-300 to-blue-200 rounded-2xl p-6">
-
-              <div>
-                <p className="text-xs text-gray-600">CPAP MACHINES</p>
-                <h3 className="font-semibold">AirSense 10</h3>
-                <p className="text-red-500 font-semibold">₹49,900</p>
-              </div>
-
-              <motion.div whileHover={{ rotate: -5 }} className="bg-white p-3 rounded-xl">
-                <Image src="/images/banner2.jpg" alt="" width={120} height={100} className="object-contain" />
-              </motion.div>
-            </Link>
-          </motion.div>
+            )
+          })}
 
         </div>
       </div>

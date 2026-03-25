@@ -5,7 +5,14 @@ export type Product = {
   price: number
   description: string
   images: string[]
-  category: string // ✅ ADDED
+  category: string 
+
+  // ✅ ADDED (no changes to existing fields)
+  offer?: {
+    type: "percentage" | "flat"
+    value: number
+  }
+
   specifications: {
     label: string
     value: string
@@ -18,6 +25,13 @@ export const products: Product[] = [
     slug: "resmed-airfit-n20-nasal-mask",
     name: "Resmed Airfit N20 Nasal Mask",
     price: 5600,
+
+    // ✅ Example offer added
+    offer: {
+      type: "percentage",
+      value: 10
+    },
+
     category: "face-mask",
     description: "Comfortable nasal mask for CPAP users.",
     images: ["/images/banner1.webp",
@@ -36,6 +50,10 @@ export const products: Product[] = [
     slug: "resmed-airsense-10-autoset-tripack",
     name: "Resmed AirSense 10 AutoSet Tripack",
     price: 85000,
+    offer: {
+      type: "flat",
+      value: 5000
+    },
     category: "cpap-machine",
     description: "Advanced CPAP machine with humidifier.",
     images: ["/images/Product5.webp"],
@@ -44,12 +62,15 @@ export const products: Product[] = [
       { label: "Type", value: "Auto CPAP" }
     ]
   },
-
   {
     id: 3,
     slug: "resmed-airstart10-auto-cpap",
     name: "Resmed Airstart10 Auto CPAP",
     price: 55000,
+    offer: {
+      type: "flat",
+      value: 5000
+    },
     category: "cpap-machine",
     description: "Reliable auto CPAP therapy device.",
     images: ["/images/Product4.webp"],
@@ -64,6 +85,10 @@ export const products: Product[] = [
     slug: "resmed-airfit-f20-full-face-mask",
     name: "Resmed AirFit F20 Full Face Mask",
     price: 6500,
+    offer: {
+      type: "percentage",
+      value: 10
+    },
     category: "face-mask",
     description: "Full face CPAP mask with superior comfort.",
     images: ["/images/Product1.jpg",
@@ -102,10 +127,10 @@ export const products: Product[] = [
     price: 150000,
     category: "cpap-machine",
     description: "Advanced VPAP ST device.",
-    images: ["/images/Devices/Resmed Lumis™ 150 VPAP ST Non-Invasive Ventilator – Tripack 4G/1.webp",
-      "/images/Devices/Resmed Lumis™ 150 VPAP ST Non-Invasive Ventilator – Tripack 4G/2.webp",
-      "/images/Devices/Resmed Lumis™ 150 VPAP ST Non-Invasive Ventilator – Tripack 4G/3.webp",
-      "/images/Devices/Resmed Lumis™ 150 VPAP ST Non-Invasive Ventilator – Tripack 4G/4.webp"
+    images: ["/images/Devices/Resmed Lumis™ 150 VPAP ST/2.webp",
+      "/images/Devices/Resmed Lumis™ 150 VPAP ST/1.webp",
+      "/images/Devices/Resmed Lumis™ 150 VPAP ST/3.webp",
+      "/images/Devices/Resmed Lumis™ 150 VPAP ST/4.webp"
     ],
     specifications: [
       { label: "Brand", value: "ResMed" },

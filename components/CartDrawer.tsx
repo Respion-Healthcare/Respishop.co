@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useCart } from "@/context/CartContext"
-
+// import { getFinalPrice } from "@/lib/pricing"
 export default function CartDrawer({ open, setOpen }: any) {
 
   const { cart } = useCart()
@@ -61,7 +61,7 @@ export default function CartDrawer({ open, setOpen }: any) {
                     {item.name}
                   </p>
                   <p className="text-gray-600 text-sm">
-                    ₹{item.price}
+                    ₹{item.price.toLocaleString()}
                   </p>
                   <p className="text-xs text-gray-500">
                     Qty: {item.quantity}

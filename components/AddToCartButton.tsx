@@ -4,6 +4,7 @@ import { useCart } from "@/context/CartContext"
 import { useState } from "react"
 import CartDrawer from "./CartDrawer"
 import AddToCartPopup from "./AddToCartPopup"
+import { getFinalPrice } from "@/lib/pricing"
 
 export default function AddToCartButton({ product }: any) {
 
@@ -17,7 +18,7 @@ export default function AddToCartButton({ product }: any) {
     addToCart({
       id: product.id,
       name: product.name,
-      price: product.price,
+      price: getFinalPrice(product),
       image: product.images[0],
       quantity: 1,
     })

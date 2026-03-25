@@ -1,18 +1,14 @@
+"use client"
+
 import Image from "next/image"
+import { getFinalPrice } from "@/lib/pricing"
+import { Product } from "@/lib/products"
 
 interface Props {
-  category: string
-  title: string
-  price: string
-  image: string
+  product: Product
 }
 
-export default function ProductBannerCard({
-  category,
-  title,
-  price,
-  image,
-}: Props) {
+export default function ProductBannerCard({ product }: Props) {
   return (
     <div className="group bg-white rounded-3xl shadow-md 
                     hover:shadow-xl transition duration-300
@@ -22,16 +18,25 @@ export default function ProductBannerCard({
       {/* Left Content */}
       <div className="max-w-[40%]">
         <p className="text-xs uppercase tracking-wide text-gray-400 mb-2">
-          {category}
+          {product.category}
         </p>
 
         <h3 className="text-lg font-semibold text-gray-900 leading-snug">
-          {title}
+          {product.name}
         </h3>
 
-        <p className="text-lg font-bold text-blue-700 mt-3">
-          {price}
-        </p>
+        {/* ✅ DYNAMIC PRICE */}
+        <div className="mt-3">
+          <p className="text-lg font-bold text-blue-700">
+            ₹{getFinalPrice(product).toLocaleString()}
+          </p>
+
+          {product.offer && (
+            <p className="text-sm text-gray-400 line-through">
+              ₹{product.price.toLocaleString()}
+            </p>
+          )}
+        </div>
 
         <button className="mt-4 bg-blue-700 hover:bg-blue-800 
                            text-white text-sm px-5 py-2 rounded-full
@@ -40,11 +45,11 @@ export default function ProductBannerCard({
         </button>
       </div>
 
-      {/* Right Image (Same Structure, Just Border Added) */}
+      {/* Right Image */}
       <div className="flex justify-end w-[60%]">
         <Image
-          src={image}
-          alt={title}
+          src={product.images[0]}
+          alt={product.name}
           width={380}
           height={320}
           className="object-contain drop-shadow-2xl 

@@ -5,7 +5,7 @@ import Link from "next/link"
 
 const categories = [
   {
-    name: "Sleep Apnea Machiene",
+    name: "Sleep Apnea Machine",
     image: "/images/aboutus.webp",
     link: "/category/cpap-machine",
   },

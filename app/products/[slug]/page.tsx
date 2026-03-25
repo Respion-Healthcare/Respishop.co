@@ -8,6 +8,7 @@ import AddToCartButton from "@/components/AddToCartButton"
 import ReviewSection from "@/components/ReviewSection"
 import ProductOptions from "@/components/ProductOptions"
 import type { Metadata } from "next"
+import { getFinalPrice } from "@/lib/pricing"
 
 export async function generateMetadata({ params }: any): Promise<Metadata> {
   const { slug } = await params
@@ -40,7 +41,7 @@ export default async function ProductPage({
 
   if (!product) return notFound()
 
-  const offerPrice = Math.floor(product.price * 0.9)
+ const finalPrice = getFinalPrice(product)
 
   /* Related products */
   const relatedProducts = products
@@ -76,16 +77,22 @@ return (
         <div className="mt-4">
 
           <span className="text-3xl font-bold text-red-600">
-            ₹{offerPrice.toLocaleString()}
-          </span>
+  ₹{finalPrice.toLocaleString()}
+</span>
 
-          <span className="line-through text-gray-400 ml-3">
-            ₹{product.price.toLocaleString()}
-          </span>
+{product.offer && (
+  <>
+    <span className="line-through text-gray-400 ml-3">
+      ₹{product.price.toLocaleString()}
+    </span>
 
-          <span className="text-green-600 ml-3">
-            25% OFF
-          </span>
+    <span className="text-green-600 ml-3">
+      {product.offer.type === "percentage"
+        ? `${product.offer.value}% OFF`
+        : `₹${product.offer.value} OFF`}
+    </span>
+  </>
+)}
 
         </div>
 
@@ -225,7 +232,7 @@ return (
             </h3>
 
             <p className="text-red-600 font-semibold mt-2">
-              ₹{item.price.toLocaleString()}
+             ₹{getFinalPrice(item).toLocaleString()}
             </p>
 
           </Link>
@@ -279,7 +286,7 @@ return (
           offers: {
             "@type": "Offer",
             priceCurrency: "INR",
-            price: product.price,
+           price: getFinalPrice(product),
             availability: "https://schema.org/InStock",
           },
         }),
@@ -288,4 +295,4 @@ return (
 
   </div>
 )
-}
+} 

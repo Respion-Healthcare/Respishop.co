@@ -3,6 +3,7 @@
 import { useCart } from "@/context/CartContext"
 import Image from "next/image"
 import Link from "next/link"
+import { getFinalPrice } from "@/lib/pricing"
 
 export default function CartPage() {
 
@@ -72,7 +73,7 @@ export default function CartPage() {
                   </h2>
 
                   <p className="text-red-500 font-semibold mt-1">
-                    ₹{item.price}
+                   ₹{item.price.toLocaleString()}
                   </p>
 
                   <p className="text-sm text-gray-500 mt-1">

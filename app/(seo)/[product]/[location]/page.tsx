@@ -10,7 +10,7 @@ const products = {
 type ProductKey = keyof typeof products
 
 type PageParams = {
-  product: ProductKey
+  product: string
   location: string
 }
 
@@ -104,27 +104,32 @@ const faqData = [
 
 // ✅ Metadata
 export async function generateMetadata(
-  { params }: { params: PageParams }
+  { params }: { params: Promise<PageParams> }
 ): Promise<Metadata> {
-const productName = params?.product
-  const locationName = params.location
+
+  const { product, location } = await params
 
   return {
-    title: `Buy ${productName} in ${locationName} | Best Price | Respishop`,
-    description: `Get ${productName} in ${locationName} at best price with fast delivery and expert support.`,
+    title: `Buy ${product} in ${location} | Best Price | Respishop`,
+    description: `Get ${product} in ${location} at best price with fast delivery and expert support.`,
   }
 }
 
 // ✅ Page Component
-export default function Page({ params }: { params: PageParams }) {
-  const productName = params?.product
+export default async function Page({ params }: { params: Promise<PageParams> }) {
 
-const locationKey = params?.location?.toLowerCase() || "india"
-  const content = contentMap[locationKey] || contentMap["india"]
+  const { product, location } = await params
 
-  if (!productName) {
+  const productKey = product as ProductKey
+
+  if (!products[productKey]) {
     return notFound()
   }
+
+  const productName = products[productKey]
+
+  const locationKey = location?.toLowerCase() || "india"
+  const content = contentMap[locationKey] || contentMap["india"]
 
   // ✅ FAQ SCHEMA
   const faqSchema = {

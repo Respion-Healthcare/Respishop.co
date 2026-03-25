@@ -1,40 +1,15 @@
-
 "use client"
 
 import { useSearchParams } from "next/navigation"
 import Link from "next/link"
-
-const products = [
-  {
-    id: 1,
-    name: "ResMed AirSense 11 AutoSet CPAP Machine",
-    price: "₹69,000",
-    slug: "airsense-11-autoset-single-pack",
-  },
-  {
-    id: 2,
-    name: "ResMed Lumis 100 VPAP ST BiPAP Machine",
-    price: "₹95,000",
-    slug: "resmed-lumis-100-vpap-st",
-  },
-  {
-    id: 3,
-    name: "ResMed Lumis 150 VPAP ST BiPAP Machine",
-    price: "₹1,05,000",
-    slug: "resmed-lumis-150-vpap-st",
-  },
-  {
-    id: 4,
-    name: "ResMed AirFit F20 Full Face Mask",
-    price: "₹12,000",
-    slug: "resmed-airfit-f20-full-face-mask",
-  },
-]
+import { products } from "@/lib/products"
+import { getFinalPrice } from "@/lib/pricing"
 
 export default function SearchPage() {
   const searchParams = useSearchParams()
   const query = searchParams.get("q") || ""
 
+  // ✅ FILTER FROM MAIN PRODUCTS
   const filteredProducts = products.filter((product) =>
     product.name.toLowerCase().includes(query.toLowerCase())
   )
@@ -55,24 +30,36 @@ export default function SearchPage() {
       ) : (
         <div className="grid grid-cols-4 gap-6">
 
-          {filteredProducts.map((product) => (
+          {filteredProducts.map((product) => {
 
-            <Link
-              key={product.id}
-              href={`/products/${product.slug}`}
-              className="border p-5 rounded-lg hover:shadow-md transition"
-            >
-              <h2 className="font-semibold mb-2">
-                {product.name}
-              </h2>
+            const finalPrice = getFinalPrice(product)
 
-              <p className="text-blue-600 font-medium">
-                {product.price}
-              </p>
+            return (
+              <Link
+                key={product.id}
+                href={`/products/${product.slug}`}
+                className="border p-5 rounded-lg hover:shadow-md transition"
+              >
+                <h2 className="font-semibold mb-2">
+                  {product.name}
+                </h2>
 
-            </Link>
+                {/* ✅ PRICE FIXED */}
+                <div className="flex items-center gap-2">
+                  <p className="text-blue-600 font-medium">
+                    ₹{finalPrice.toLocaleString()}
+                  </p>
 
-          ))}
+                  {product.offer && (
+                    <p className="text-gray-400 line-through text-sm">
+                      ₹{product.price.toLocaleString()}
+                    </p>
+                  )}
+                </div>
+
+              </Link>
+            )
+          })}
 
         </div>
       )}
