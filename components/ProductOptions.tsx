@@ -24,6 +24,7 @@ export default function ProductOptions({ product }: any) {
         />
         {wish ? "Wishlisted" : "Add to Wishlist"}
       </button>
+      
 
       {/* Size */}
       <div className="mt-6">

@@ -7,7 +7,6 @@ export type Product = {
   images: string[]
   category: string 
 
-  // ✅ ADDED (no changes to existing fields)
   offer?: {
     type: "percentage" | "flat"
     value: number

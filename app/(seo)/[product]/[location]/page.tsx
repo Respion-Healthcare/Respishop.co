@@ -38,21 +38,21 @@ const contentMap: Record<string, {
   bhubaneswar: {
     title: "CPAP Machine in Bhubaneswar – Best Price & Home Delivery",
     intro:
-      "Buy CPAP machine in Bhubaneswar with fast delivery and expert support. Get top-quality CPAP and oxygen concentrators at affordable prices.",
+      "Buy CPAP machine in Bhubaneswar with fast delivery and expert support.",
     points: [
-      "Same-day or fast delivery in Bhubaneswar",
+      "Same-day delivery in Bhubaneswar",
       "Affordable pricing",
-      "Expert consultation available",
+      "Expert consultation",
       "100% genuine products",
     ],
     paragraph:
-      "Respishop is a trusted supplier of CPAP machines in Bhubaneswar. We provide high-quality devices for sleep apnea and respiratory care with doorstep delivery.",
+      "Respishop provides CPAP machines in Bhubaneswar including Patia, Khandagiri, and Rasulgarh with fast delivery and expert support.",
   },
 
   ranchi: {
     title: "CPAP Machine in Ranchi – Best Deals & Quick Delivery",
     intro:
-      "Looking for CPAP machines in Ranchi? Get the best deals on CPAP, BiPAP, and oxygen concentrators with fast delivery.",
+      "Looking for CPAP machines in Ranchi? Get the best deals with fast delivery.",
     points: [
       "Fast delivery in Ranchi",
       "Best price guarantee",
@@ -60,13 +60,13 @@ const contentMap: Record<string, {
       "Customer support available",
     ],
     paragraph:
-      "We supply high-quality CPAP machines in Ranchi for effective sleep apnea treatment.",
+      "We deliver CPAP machines across Ranchi including Harmu, Doranda, and Lalpur with reliable service.",
   },
 
   patna: {
     title: "CPAP Machine in Patna – Affordable Price & Fast Delivery",
     intro:
-      "Buy CPAP machine in Patna at the best price. We provide high-quality machines with quick delivery and full support.",
+      "Buy CPAP machine in Patna at the best price with quick delivery.",
     points: [
       "Quick delivery in Patna",
       "Affordable pricing",
@@ -74,7 +74,7 @@ const contentMap: Record<string, {
       "Easy ordering process",
     ],
     paragraph:
-      "Respishop offers CPAP machines in Patna with reliable service and genuine products.",
+      "Respishop offers CPAP machines in Patna including Kankarbagh, Boring Road, and nearby areas with reliable service.",
   },
 }
 
@@ -83,22 +83,17 @@ const faqData = [
   {
     question: "What is a CPAP machine?",
     answer:
-      "A CPAP machine is a device used to treat sleep apnea by providing continuous air pressure to keep airways open.",
+      "A CPAP machine is used to treat sleep apnea by maintaining continuous airflow.",
   },
   {
     question: "What is the price of CPAP machine in India?",
     answer:
-      "CPAP machine prices in India range from ₹25,000 to ₹80,000 depending on features.",
+      "CPAP machine prices range from ₹25,000 to ₹80,000 depending on features.",
   },
   {
     question: "Do you deliver across India?",
     answer:
-      "Yes, we deliver across India including Bhubaneswar, Ranchi, and Patna.",
-  },
-  {
-    question: "Where can I buy CPAP machine?",
-    answer:
-      "You can buy CPAP machines online from Respishop with fast delivery and expert support.",
+      "Yes, we deliver across India including major cities with fast shipping.",
   },
 ]
 
@@ -111,7 +106,7 @@ export async function generateMetadata(
 
   return {
     title: `Buy ${product} in ${location} | Best Price | Respishop`,
-    description: `Get ${product} in ${location} at best price with fast delivery and expert support.`,
+    description: `Get ${product} in ${location} at best price with fast delivery.`,
   }
 }
 
@@ -154,6 +149,7 @@ export default async function Page({ params }: { params: Promise<PageParams> }) 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
+      {/* 🔥 MAIN */}
       <h1 className="text-3xl font-bold mb-4">
         {content.title}
       </h1>
@@ -172,6 +168,20 @@ export default async function Page({ params }: { params: Promise<PageParams> }) 
         {content.paragraph}
       </p>
 
+      {/* 🔥 NEW UNIQUE CONTENT (INDEX FIX) */}
+      <h2 className="text-2xl font-semibold mb-3">
+        About {productName} in {location}
+      </h2>
+
+      <p className="text-gray-700 mb-4">
+        If you are searching for {productName} in {location}, Respishop provides reliable and affordable solutions with fast delivery and expert guidance.
+      </p>
+
+      <p className="text-gray-700 mb-6">
+        We ensure quick service in {location} and nearby areas, helping patients get the right treatment for sleep apnea and respiratory care.
+      </p>
+
+      {/* 🔥 WHY US */}
       <h2 className="text-2xl font-semibold mb-3">
         Why Choose Respishop?
       </h2>
@@ -183,19 +193,20 @@ export default async function Page({ params }: { params: Promise<PageParams> }) 
         <li>Expert Customer Support</li>
       </ul>
 
+      {/* 🔥 CTA */}
       <div className="mt-8 p-4 border rounded-xl bg-gray-50">
         <h3 className="text-xl font-semibold mb-2">
           Need Help Choosing the Right {productName}?
         </h3>
         <p className="mb-3">
-          Contact us on WhatsApp or call now for expert guidance.
+          Contact us for expert guidance and support.
         </p>
         <button className="bg-green-600 text-white px-4 py-2 rounded-lg">
           Chat on WhatsApp
         </button>
       </div>
 
-      {/* ✅ FAQ SECTION */}
+      {/* 🔥 FAQ */}
       <h2 className="text-2xl font-semibold mt-10 mb-4">
         Frequently Asked Questions
       </h2>

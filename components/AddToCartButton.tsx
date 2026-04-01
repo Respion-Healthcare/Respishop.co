@@ -6,7 +6,7 @@ import CartDrawer from "./CartDrawer"
 import AddToCartPopup from "./AddToCartPopup"
 import { getFinalPrice } from "@/lib/pricing"
 
-export default function AddToCartButton({ product }: any) {
+export default function AddToCartButton({ product, quantity, size }: any) {
 
   const { addToCart } = useCart()
 
@@ -20,13 +20,12 @@ export default function AddToCartButton({ product }: any) {
       name: product.name,
       price: getFinalPrice(product),
       image: product.images[0],
-      quantity: 1,
+      quantity: quantity,
+      size: size,
     })
 
-    // Show popup first
     setShowPopup(true)
 
-    // Open cart drawer after delay
     setTimeout(() => {
       setDrawerOpen(true)
     }, 800)
@@ -35,19 +34,20 @@ export default function AddToCartButton({ product }: any) {
   return (
     <>
       <button
-        onClick={handleAdd}
-        className="w-full bg-yellow-400 py-3 rounded-lg font-semibold hover:bg-yellow-500"
-      >
-        Add to Cart
-      </button>
+  onClick={handleAdd}
+  disabled={!size}
+  className={`w-full py-3 rounded-lg font-semibold ${
+    !size ? "bg-gray-300 cursor-not-allowed" : "bg-yellow-400 hover:bg-yellow-500"
+  }`}
+>
+  {size ? "Add to Cart" : "Select Size First"}
+</button>
 
-      {/* Popup */}
       <AddToCartPopup
         show={showPopup}
         onClose={() => setShowPopup(false)}
       />
 
-      {/* Drawer */}
       <CartDrawer open={drawerOpen} setOpen={setDrawerOpen} />
     </>
   )

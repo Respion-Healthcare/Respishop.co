@@ -23,34 +23,39 @@ export async function POST(req) {
 
         const { items, total, address, paymentMethod, notes } = body;
 
-            const order = await Order.create({
-                user: decoded.id,
-                items,
-                total,
-                address,
-                notes,
-                paymentMethod,
-            });
+        // ✅ ADDED VALIDATION (IMPORTANT)
+        for (const item of items) {
+            if (!item.size) {
+                return NextResponse.json(
+                    { error: `Size is required for product: ${item.name}` },
+                    { status: 400 }
+                );
+            }
+        }
 
-            const user = await User.findById(decoded.id);
+        const order = await Order.create({
+            user: decoded.id,
+            items,
+            total,
+            address,
+            notes,
+            paymentMethod,
+        });
 
-            sendOrderMail({
-                ...order.toObject(),
-                email: user.email,
-            });
+        const user = await User.findById(decoded.id);
 
-        // Send back order _id as unique identifier
+        sendOrderMail({
+            ...order.toObject(),
+            email: user.email,
+        });
+
         return NextResponse.json({ success: true, orderId: order._id, order });
+
     } catch (err) {
         console.error(err);
         return NextResponse.json({ error: "Server error" }, { status: 500 });
     }
 }
-
-
-
-
-
 // export async function GET(req) {
 //     try {
 //         await connectToDatabase();
