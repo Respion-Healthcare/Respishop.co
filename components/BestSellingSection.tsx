@@ -28,6 +28,7 @@ export default function BestSellingSection() {
       price: getFinalPrice(product), // ✅ FINAL PRICE
       image: product.images[0], // ✅ FIXED
       quantity: 1,
+     size: "standard"
     })
 
     alert("Added to cart")
