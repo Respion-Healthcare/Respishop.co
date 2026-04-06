@@ -47,7 +47,7 @@ export default function SearchPage() {
                 {/* ✅ PRICE FIXED */}
                 <div className="flex items-center gap-2">
                   <p className="text-blue-600 font-medium">
-                    ₹{finalPrice.toLocaleString()}
+               ₹{finalPrice.toLocaleString('en-IN')}
                   </p>
 
                   {product.offer && (

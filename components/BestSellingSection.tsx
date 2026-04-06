@@ -151,7 +151,7 @@ export default function BestSellingSection() {
                 <div className="flex items-center gap-2 mt-1">
 
                   <span className="text-red-500 font-semibold">
-                    ₹{getFinalPrice(product).toLocaleString()}
+  ₹{getFinalPrice(product).toLocaleString('en-IN')}
                   </span>
 
                   {product.offer && (

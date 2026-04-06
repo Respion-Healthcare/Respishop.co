@@ -33,7 +33,7 @@ export default function ProductsPage() {
               {/* ✅ UPDATED PRICE DISPLAY */}
               <div className="mt-2">
                 <p className="text-blue-600 font-bold">
-                  ₹{finalPrice.toLocaleString()}
+                 ₹{finalPrice.toLocaleString('en-IN')}
                 </p>
 
                 {product.offer && (

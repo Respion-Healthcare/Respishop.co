@@ -143,9 +143,9 @@ export default function DealOfTheDay() {
 
                         {/* ✅ PRICE */}
                         <div className="flex gap-2 mt-2 items-center">
-                          <span className="text-red-500 font-semibold">
-                            ₹{finalPrice.toLocaleString()}
-                          </span>
+                         <span className="text-red-500 font-semibold">
+  ₹{finalPrice.toLocaleString('en-IN')}
+</span>
 
                           {product.offer && (
                             <span className="text-gray-400 line-through text-sm">
@@ -180,9 +180,9 @@ export default function DealOfTheDay() {
                   <div>
                     <p className="text-xs text-gray-600">{product.category}</p>
                     <h3 className="font-semibold">{product.name}</h3>
-                    <p className="text-red-500 font-semibold">
-                      ₹{getFinalPrice(product).toLocaleString()}
-                    </p>
+                   <p className="text-lg font-bold text-blue-700">
+  ₹{getFinalPrice(product).toLocaleString('en-IN')}
+</p>
                   </div>
 
                   <motion.div whileHover={{ rotate: i === 0 ? 5 : -5 }} className="bg-white p-3 rounded-xl">

@@ -1,6 +1,26 @@
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
 
+export const dynamic = 'force-static'
+
+const areaMap: Record<string, string[]> = {
+  bhubaneswar: ["Patia", "Khandagiri", "Rasulgarh", "Nayapalli"],
+  patna: ["Kankarbagh", "Boring Road", "Danapur", "Rajendra Nagar"],
+  ranchi: ["Harmu", "Doranda", "Lalpur", "Morabadi"],
+}
+
+export async function generateStaticParams() {
+  const locations = ['bhubaneswar', 'patna', 'ranchi']
+  const productKeys = ['cpap-machine', 'bipap-machine', 'oxygen-concentrator']
+
+  return locations.flatMap((location) =>
+    productKeys.map((product) => ({
+      product,
+      location,
+    }))
+  )
+}
+
 const products = {
   "cpap-machine": "CPAP Machine",
   "bipap-machine": "BiPAP Machine",
@@ -14,7 +34,6 @@ type PageParams = {
   location: string
 }
 
-// ✅ SEO Content Map
 const contentMap: Record<string, {
   title: string
   intro: string
@@ -32,7 +51,7 @@ const contentMap: Record<string, {
       "Trusted brands like ResMed",
     ],
     paragraph:
-      "We provide genuine CPAP machines across India with warranty and expert support. Whether you need treatment for sleep apnea or oxygen support, we ensure quick delivery and reliable service.",
+      "We provide genuine CPAP machines across India with warranty and expert support.",
   },
 
   bhubaneswar: {
@@ -46,7 +65,7 @@ const contentMap: Record<string, {
       "100% genuine products",
     ],
     paragraph:
-      "Respishop provides CPAP machines in Bhubaneswar including Patia, Khandagiri, and Rasulgarh with fast delivery and expert support.",
+      "Respishop provides CPAP machines in Bhubaneswar including Patia, Khandagiri, and Rasulgarh.",
   },
 
   ranchi: {
@@ -60,7 +79,7 @@ const contentMap: Record<string, {
       "Customer support available",
     ],
     paragraph:
-      "We deliver CPAP machines across Ranchi including Harmu, Doranda, and Lalpur with reliable service.",
+      "We deliver CPAP machines across Ranchi including Harmu, Doranda, and Lalpur.",
   },
 
   patna: {
@@ -74,63 +93,60 @@ const contentMap: Record<string, {
       "Easy ordering process",
     ],
     paragraph:
-      "Respishop offers CPAP machines in Patna including Kankarbagh, Boring Road, and nearby areas with reliable service.",
+      "Respishop offers CPAP machines in Patna including Kankarbagh, Boring Road.",
   },
 }
 
-// ✅ FAQ DATA
-const faqData = [
-  {
-    question: "What is a CPAP machine?",
-    answer:
-      "A CPAP machine is used to treat sleep apnea by maintaining continuous airflow.",
-  },
-  {
-    question: "What is the price of CPAP machine in India?",
-    answer:
-      "CPAP machine prices range from ₹25,000 to ₹80,000 depending on features.",
-  },
-  {
-    question: "Do you deliver across India?",
-    answer:
-      "Yes, we deliver across India including major cities with fast shipping.",
-  },
-]
-
-// ✅ Metadata
 export async function generateMetadata(
   { params }: { params: Promise<PageParams> }
 ): Promise<Metadata> {
 
   const { product, location } = await params
 
+  const productName =
+    products[product as keyof typeof products] || product
+
   return {
-    title: `Buy ${product} in ${location} | Best Price | Respishop`,
-    description: `Get ${product} in ${location} at best price with fast delivery.`,
+    title: `${productName} in ${location} – Price, Rental & Home Delivery | Respishop`,
+    description: `Get ${productName} in ${location} with best price, fast delivery, and expert support.`,
   }
 }
 
-// ✅ Page Component
+// ✅ PAGE
 export default async function Page({ params }: { params: Promise<PageParams> }) {
 
   const { product, location } = await params
 
   const productKey = product as ProductKey
-
-  if (!products[productKey]) {
-    return notFound()
-  }
+  if (!products[productKey]) return notFound()
 
   const productName = products[productKey]
 
   const locationKey = location?.toLowerCase() || "india"
   const content = contentMap[locationKey] || contentMap["india"]
 
-  // ✅ FAQ SCHEMA
+  const formattedLocation =
+    location.charAt(0).toUpperCase() + location.slice(1)
+
+  const dynamicFaq = [
+    {
+      question: `Do you deliver ${productName} in ${formattedLocation}?`,
+      answer: `Yes, we provide fast delivery of ${productName} in ${formattedLocation} including nearby areas.`,
+    },
+    {
+      question: `What is the price of ${productName} in ${formattedLocation}?`,
+      answer: `${productName} price in ${formattedLocation} depends on the model and features.`,
+    },
+    {
+      question: `Is same-day delivery available in ${formattedLocation}?`,
+      answer: `Yes, same-day or next-day delivery is available in most areas of ${formattedLocation}.`,
+    },
+  ]
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqData.map((faq) => ({
+    mainEntity: dynamicFaq.map((faq) => ({
       "@type": "Question",
       name: faq.question,
       acceptedAnswer: {
@@ -143,79 +159,73 @@ export default async function Page({ params }: { params: Promise<PageParams> }) 
   return (
     <div className="p-6 max-w-5xl mx-auto">
 
-      {/* ✅ SCHEMA */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      {/* 🔥 MAIN */}
       <h1 className="text-3xl font-bold mb-4">
         {content.title}
       </h1>
 
-      <p className="mb-4 text-gray-700">
-        {content.intro}
-      </p>
+      <p className="mb-4">{content.intro}</p>
 
-      <ul className="list-disc ml-6 mb-6 text-gray-700">
-        {content.points.map((point, index) => (
-          <li key={index}>{point}</li>
+      <ul className="list-disc ml-6 mb-6">
+        {content.points.map((point, i) => (
+          <li key={i}>{point}</li>
         ))}
       </ul>
 
-      <p className="mb-6 text-gray-700">
-        {content.paragraph}
-      </p>
+      <p className="mb-6">{content.paragraph}</p>
 
-      {/* 🔥 NEW UNIQUE CONTENT (INDEX FIX) */}
+      {/* ABOUT */}
       <h2 className="text-2xl font-semibold mb-3">
-        About {productName} in {location}
+        About {productName} in {formattedLocation}
       </h2>
 
-      <p className="text-gray-700 mb-4">
-        If you are searching for {productName} in {location}, Respishop provides reliable and affordable solutions with fast delivery and expert guidance.
+      <p className="mb-4">
+        Respishop provides reliable {productName} solutions in {formattedLocation} with fast delivery and expert support.
       </p>
 
-      <p className="text-gray-700 mb-6">
-        We ensure quick service in {location} and nearby areas, helping patients get the right treatment for sleep apnea and respiratory care.
-      </p>
-
-      {/* 🔥 WHY US */}
-      <h2 className="text-2xl font-semibold mb-3">
-        Why Choose Respishop?
+      {/* SERVICES */}
+      <h2 className="text-2xl font-semibold mt-8 mb-3">
+        {productName} Services in {formattedLocation}
       </h2>
 
-      <ul className="list-disc ml-6 text-gray-700">
-        <li>100% Genuine Products</li>
-        <li>Best Price Guarantee</li>
-        <li>Fast Delivery Across India</li>
-        <li>Expert Customer Support</li>
+      <p className="mb-4">
+        We offer sales, rental, and after-sales service for {productName} across {formattedLocation}.
+      </p>
+
+      {/* AREAS */}
+      <h2 className="text-2xl font-semibold mt-8 mb-3">
+        Areas We Serve in {formattedLocation}
+      </h2>
+
+      <p className="mb-6">
+        We deliver in {areaMap[locationKey]?.join(", ") || formattedLocation}.
+      </p>
+
+      {/* INTERNAL LINKS */}
+      <h2 className="text-xl font-semibold mt-10 mb-3">
+        Explore Other Cities
+      </h2>
+
+      <ul className="list-disc ml-6">
+        <li><a href="/cpap-machine/patna">Patna</a></li>
+        <li><a href="/cpap-machine/ranchi">Ranchi</a></li>
+        <li><a href="/cpap-machine/bhubaneswar">Bhubaneswar</a></li>
       </ul>
 
-      {/* 🔥 CTA */}
-      <div className="mt-8 p-4 border rounded-xl bg-gray-50">
-        <h3 className="text-xl font-semibold mb-2">
-          Need Help Choosing the Right {productName}?
-        </h3>
-        <p className="mb-3">
-          Contact us for expert guidance and support.
-        </p>
-        <button className="bg-green-600 text-white px-4 py-2 rounded-lg">
-          Chat on WhatsApp
-        </button>
-      </div>
-
-      {/* 🔥 FAQ */}
+      {/* FAQ */}
       <h2 className="text-2xl font-semibold mt-10 mb-4">
         Frequently Asked Questions
       </h2>
 
       <div className="space-y-4">
-        {faqData.map((faq, index) => (
-          <div key={index} className="border p-4 rounded-lg">
+        {dynamicFaq.map((faq, i) => (
+          <div key={i} className="border p-4 rounded-lg">
             <h3 className="font-semibold">{faq.question}</h3>
-            <p className="text-gray-700 mt-1">{faq.answer}</p>
+            <p>{faq.answer}</p>
           </div>
         ))}
       </div>

@@ -75,9 +75,8 @@ return (
 
         {/* Price */}
         <div className="mt-4">
-
-          <span className="text-3xl font-bold text-red-600">
-  ₹{finalPrice.toLocaleString()}
+<span className="text-red-500 font-semibold">
+  ₹{finalPrice.toLocaleString('en-IN')}
 </span>
 
 {product.offer && (

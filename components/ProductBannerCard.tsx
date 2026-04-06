@@ -27,9 +27,9 @@ export default function ProductBannerCard({ product }: Props) {
 
         {/* ✅ DYNAMIC PRICE */}
         <div className="mt-3">
-          <p className="text-lg font-bold text-blue-700">
-            ₹{getFinalPrice(product).toLocaleString()}
-          </p>
+         <p className="text-lg font-bold text-blue-700">
+  ₹{getFinalPrice(product).toLocaleString('en-IN')}
+</p>
 
           {product.offer && (
             <p className="text-sm text-gray-400 line-through">
