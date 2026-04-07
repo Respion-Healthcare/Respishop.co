@@ -3,6 +3,22 @@ import { products } from "@/lib/products"
 import Link from "next/link"
 import Image from "next/image"
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await params
+  const safeSlug = slug?.toLowerCase() || ""
+
+  const title = safeSlug.replace(/-/g, " ")
+
+  return {
+    title: `${title} | Respishop`,
+    description: `Read about ${title}. Get latest prices, buying guide, and best products in India.`,
+  }
+}
+
 export default async function BlogDetail({
   params,
 }: {
@@ -11,7 +27,7 @@ export default async function BlogDetail({
   const { slug } = await params
   const safeSlug = slug?.toLowerCase()
 
-  const blogContent: any = {
+  const blogContent: Record<string, any> = {
     "best-cpap-machine-in-india": {
       title: "Best CPAP Machine in India (2026)",
       image: "/images/SleepTherapy.jpg",
@@ -66,7 +82,6 @@ export default async function BlogDetail({
   return (
     <div className="bg-gray-50 min-h-screen">
 
-      {/* 🔥 HERO FIXED */}
       <div className="relative w-full h-[320px] md:h-[420px] overflow-hidden">
         <Image
           src={blog.image}
@@ -89,13 +104,9 @@ export default async function BlogDetail({
         </div>
       </div>
 
-      {/* CONTENT */}
       <div className="max-w-7xl mx-auto px-6 py-12 mt-6 grid md:grid-cols-3 gap-12">
 
-        {/* MAIN */}
         <div className="md:col-span-2">
-
-          {/* ✅ FIXED CONTENT WRAPPER */}
           <div className="overflow-hidden">
             <div
               className="prose prose-lg max-w-none
@@ -112,7 +123,6 @@ export default async function BlogDetail({
             />
           </div>
 
-          {/* CTA */}
           <div className="mt-10 bg-blue-600 text-white p-6 rounded-2xl shadow-lg">
             <h3 className="text-xl font-semibold mb-2">
               Need Help Choosing a CPAP Machine?
@@ -127,13 +137,9 @@ export default async function BlogDetail({
               View CPAP Machines →
             </Link>
           </div>
-
         </div>
 
-        {/* SIDEBAR */}
         <div className="space-y-6 sticky top-24 h-fit">
-
-          {/* TOC */}
           <div className="bg-white p-5 rounded-xl shadow">
             <h3 className="font-semibold mb-3">
               Quick Navigation
@@ -146,7 +152,6 @@ export default async function BlogDetail({
             </ul>
           </div>
 
-          {/* PRODUCTS */}
           <div className="bg-white p-5 rounded-xl shadow">
             <h3 className="font-semibold mb-4">
               Related Products
@@ -173,11 +178,9 @@ export default async function BlogDetail({
               ))}
             </div>
           </div>
-
         </div>
       </div>
 
-      {/* FAQ */}
       <div className="max-w-4xl mx-auto px-6 pb-16">
         <h2 className="text-2xl font-semibold mb-6">
           Frequently Asked Questions

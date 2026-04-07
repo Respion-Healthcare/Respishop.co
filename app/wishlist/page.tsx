@@ -83,16 +83,16 @@ export default function WishlistPage() {
                   {product.price}
                 </p>
 
-                <Link
-  key={p.slug}
-  href={`/products/${p.slug}`}
+<Link
+  key={product.slug}
+  href={`/products/${product.slug}`}
   className="flex items-center gap-3 border rounded-lg p-3 hover:shadow-md transition"
 >
   <div className="w-16 h-16 bg-gray-100 rounded-lg" />
 
   <div>
     <p className="text-sm font-medium line-clamp-2">
-      {p.name}
+      {product.name}
     </p>
     <p className="text-xs text-blue-600 mt-1">
       View Product →
