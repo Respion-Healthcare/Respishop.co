@@ -3,12 +3,7 @@ import { notFound } from "next/navigation"
 
 export const dynamic = 'force-static'
 
-const allCities = [
-  "delhi", "mumbai", "kolkata", "chennai", "bangalore",
-  "hyderabad", "pune", "ahmedabad", "jaipur", "lucknow",
-  "kanpur", "nagpur", "indore", "bhopal", "visakhapatnam",
-  "vadodara", "ludhiana", "agra", "nashik", "faridabad"
-]
+const allowedCities = ["india", "delhi", "mumbai", "bangalore", "kolkata"]
 
 const areaMap: Record<string, string[]> = {
   bhubaneswar: ["Patia", "Saheed Nagar", "Rasulgarh", "Nayapalli"],
@@ -28,19 +23,7 @@ const areaMap: Record<string, string[]> = {
 }
 
 export async function generateStaticParams() {
-  const locations = [
-    'india',
-    'bhubaneswar', 'patna',
-    'delhi', 'mumbai', 'kolkata', 'chennai', 'bangalore', 'hyderabad',
-    'pune', 'ahmedabad', 'jaipur', 'lucknow', 'kanpur',
-    'nagpur', 'indore', 'bhopal', 'visakhapatnam', 'vadodara',
-    'ludhiana', 'agra', 'nashik', 'faridabad', 'meerut',
-    'rajkot', 'varanasi', 'srinagar', 'aurangabad', 'dhanbad',
-    'amritsar', 'allahabad', 'ranchi', 'howrah', 'coimbatore',
-    'jabalpur', 'gwalior', 'vijayawada', 'jodhpur', 'madurai',
-    'raipur', 'kota', 'guwahati', 'chandigarh', 'solapur',
-    'hubli', 'tiruchirappalli', 'bareilly', 'mysore', 'tiruppur'
-  ]
+  const locations = ["india", "delhi", "mumbai", "bangalore", "kolkata"]
 
   const productKeys = ['cpap-machine', 'bipap-machine', 'oxygen-concentrator']
 
@@ -171,7 +154,9 @@ export default async function Page({ params }: { params: Promise<PageParams> }) 
   const productName = products[productKey]
 
   const locationKey = location?.toLowerCase() || "india"
-
+ if (!allowedCities.includes(locationKey)) {
+    notFound()
+  }
   const content =
     contentMap[locationKey] ||
     generateDynamicContent(locationKey, productName)
@@ -264,16 +249,15 @@ export default async function Page({ params }: { params: Promise<PageParams> }) 
       </h2>
 
       <ul className="list-disc ml-6">
-        {allCities
-          .filter((c) => c !== locationKey)
-          .slice(0, 10)
-          .map((city) => (
-            <li key={city}>
-              <a href={`/${product}/${city}`}>
-                {city.charAt(0).toUpperCase() + city.slice(1)}
-              </a>
-            </li>
-          ))}
+        {allowedCities
+  .filter((c) => c !== locationKey)
+  .map((city) => (
+    <li key={city}>
+      <a href={`/${product}/${city}`}>
+        {city.charAt(0).toUpperCase() + city.slice(1)}
+      </a>
+    </li>
+))}
       </ul>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">

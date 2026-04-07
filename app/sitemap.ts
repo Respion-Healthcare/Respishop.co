@@ -8,19 +8,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     {
       url: `${baseUrl}`,
-      lastModified: new Date(),
+      lastModified: new Date().toISOString(),
       changeFrequency: "daily" as const,
       priority: 1,
     },
     {
       url: `${baseUrl}/products`,
-      lastModified: new Date(),
+      lastModified: new Date().toISOString(),
       changeFrequency: "weekly" as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date(),
+      lastModified: new Date().toISOString(),
       changeFrequency: "monthly" as const,
       priority: 0.6,
     },
@@ -33,26 +33,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "oxygen-concentrator",
   ]
 
-  // 🔥 EXPANDED LOCATIONS (50+ cities)
-  const locations = [
-    "india",
-    "bhubaneswar", "patna", "ranchi",
-    "delhi", "mumbai", "kolkata", "chennai", "bangalore", "hyderabad",
-    "pune", "ahmedabad", "jaipur", "lucknow", "kanpur",
-    "nagpur", "indore", "bhopal", "visakhapatnam", "vadodara",
-    "ludhiana", "agra", "nashik", "faridabad", "meerut",
-    "rajkot", "varanasi", "srinagar", "aurangabad", "dhanbad",
-    "amritsar", "allahabad", "howrah", "coimbatore",
-    "jabalpur", "gwalior", "vijayawada", "jodhpur", "madurai",
-    "raipur", "kota", "guwahati", "chandigarh", "solapur",
-    "hubli", "tiruchirappalli", "bareilly", "mysore", "tiruppur"
-  ]
+const locations = ["india", "delhi", "mumbai", "bangalore", "kolkata"]
 
   // ✅ SEO PAGES (150+ URLs)
   const seoPages = products.flatMap((product) =>
     locations.map((location) => ({
       url: `${baseUrl}/${product}/${location}`,
-      lastModified: new Date(),
+      lastModified: new Date().toISOString(),
       changeFrequency: "weekly" as const,
       priority: location === "india" ? 1 : 0.8,
     }))
@@ -61,7 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // ✅ PRODUCT PAGES
   const productPages = allProducts.map((p) => ({
     url: `${baseUrl}/products/${p.slug}`,
-    lastModified: new Date(),
+    lastModified: new Date().toISOString(),
     changeFrequency: "weekly" as const,
     priority: 0.9,
   }))
@@ -71,7 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const categoryPages = categories.map((cat) => ({
     url: `${baseUrl}/category/${cat}`,
-    lastModified: new Date(),
+    lastModified: new Date().toISOString(),
     changeFrequency: "weekly" as const,
     priority: 0.8,
   }))
@@ -85,7 +72,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogPages = blogSlugs.map((slug) => ({
     url: `${baseUrl}/blogs/${slug}`,
-    lastModified: new Date(),
+    lastModified: new Date().toISOString(),
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }))
