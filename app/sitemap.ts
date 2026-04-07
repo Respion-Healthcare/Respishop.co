@@ -9,42 +9,61 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}`,
       lastModified: new Date(),
+      changeFrequency: "daily" as const,
+      priority: 1,
     },
     {
       url: `${baseUrl}/products`,
       lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/contact`,
       lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
     },
   ]
 
-  // ✅ SEO dynamic pages (your existing logic)
+  // ✅ PRODUCTS
   const products = [
     "cpap-machine",
     "bipap-machine",
     "oxygen-concentrator",
   ]
 
+  // 🔥 EXPANDED LOCATIONS (50+ cities)
   const locations = [
     "india",
-    "bhubaneswar",
-    "ranchi",
-    "patna",
+    "bhubaneswar", "patna", "ranchi",
+    "delhi", "mumbai", "kolkata", "chennai", "bangalore", "hyderabad",
+    "pune", "ahmedabad", "jaipur", "lucknow", "kanpur",
+    "nagpur", "indore", "bhopal", "visakhapatnam", "vadodara",
+    "ludhiana", "agra", "nashik", "faridabad", "meerut",
+    "rajkot", "varanasi", "srinagar", "aurangabad", "dhanbad",
+    "amritsar", "allahabad", "howrah", "coimbatore",
+    "jabalpur", "gwalior", "vijayawada", "jodhpur", "madurai",
+    "raipur", "kota", "guwahati", "chandigarh", "solapur",
+    "hubli", "tiruchirappalli", "bareilly", "mysore", "tiruppur"
   ]
 
+  // ✅ SEO PAGES (150+ URLs)
   const seoPages = products.flatMap((product) =>
     locations.map((location) => ({
       url: `${baseUrl}/${product}/${location}`,
       lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: location === "india" ? 1 : 0.8,
     }))
   )
 
-  // ✅ PRODUCT PAGES (IMPORTANT)
+  // ✅ PRODUCT PAGES
   const productPages = allProducts.map((p) => ({
     url: `${baseUrl}/products/${p.slug}`,
     lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.9,
   }))
 
   // ✅ CATEGORY PAGES
@@ -53,6 +72,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const categoryPages = categories.map((cat) => ({
     url: `${baseUrl}/category/${cat}`,
     lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
   }))
 
   // ✅ BLOG PAGES
@@ -65,6 +86,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogPages = blogSlugs.map((slug) => ({
     url: `${baseUrl}/blogs/${slug}`,
     lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
   }))
 
   // ✅ FINAL RETURN

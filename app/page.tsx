@@ -8,6 +8,7 @@ import ProductBannerGrid from "@/components/ProductBannerGrid"
 import ReviewsSection from "@/components/Review"
 import Footer from "@/components/Footer"
 import ShopCategories from "@/components/ShopCategories"
+import LocationSEOSection from "@/components/LocationSEOSection"
 
 export const metadata: Metadata = {
   title: "Buy CPAP & BiPAP Machines in India | Respishop",
@@ -35,39 +36,8 @@ export default function Home() {
       <ShopCategories />
       <BestSellingSection />
       <DealOfTheDay />
-
-      {/* 🔥 NEW SEO SECTION (VERY IMPORTANT) */}
-      <section className="p-6 max-w-6xl mx-auto">
-        <h2 className="text-2xl font-bold mb-4">
-          CPAP Machines Near You
-        </h2>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          
-          <Link
-            href="/cpap-machine/bhubaneswar"
-            className="border p-4 rounded-lg hover:shadow transition"
-          >
-            CPAP Machine in Bhubaneswar
-          </Link>
-
-          <Link
-            href="/cpap-machine/ranchi"
-            className="border p-4 rounded-lg hover:shadow transition"
-          >
-            CPAP Machine in Ranchi
-          </Link>
-
-          <Link
-            href="/cpap-machine/patna"
-            className="border p-4 rounded-lg hover:shadow transition"
-          >
-            CPAP Machine in Patna
-          </Link>
-
-        </div>
-      </section>
-
+<LocationSEOSection />
+      
       <ReviewsSection />
       <Footer />
     </>

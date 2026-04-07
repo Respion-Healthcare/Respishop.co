@@ -84,11 +84,21 @@ export default function WishlistPage() {
                 </p>
 
                 <Link
-                  href={`/products/${product.slug}`}
-                  className="block mt-4 text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
-                >
-                  View Product
-                </Link>
+  key={p.slug}
+  href={`/products/${p.slug}`}
+  className="flex items-center gap-3 border rounded-lg p-3 hover:shadow-md transition"
+>
+  <div className="w-16 h-16 bg-gray-100 rounded-lg" />
+
+  <div>
+    <p className="text-sm font-medium line-clamp-2">
+      {p.name}
+    </p>
+    <p className="text-xs text-blue-600 mt-1">
+      View Product →
+    </p>
+  </div>
+</Link>
 
               </div>
 

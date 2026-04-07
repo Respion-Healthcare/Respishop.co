@@ -3,14 +3,45 @@ import { notFound } from "next/navigation"
 
 export const dynamic = 'force-static'
 
+const allCities = [
+  "delhi", "mumbai", "kolkata", "chennai", "bangalore",
+  "hyderabad", "pune", "ahmedabad", "jaipur", "lucknow",
+  "kanpur", "nagpur", "indore", "bhopal", "visakhapatnam",
+  "vadodara", "ludhiana", "agra", "nashik", "faridabad"
+]
+
 const areaMap: Record<string, string[]> = {
-  bhubaneswar: ["Patia", "Khandagiri", "Rasulgarh", "Nayapalli"],
+  bhubaneswar: ["Patia", "Saheed Nagar", "Rasulgarh", "Nayapalli"],
   patna: ["Kankarbagh", "Boring Road", "Danapur", "Rajendra Nagar"],
   ranchi: ["Harmu", "Doranda", "Lalpur", "Morabadi"],
+
+  delhi: ["Karol Bagh", "Dwarka", "Saket", "Rohini"],
+  mumbai: ["Andheri", "Dadar", "Borivali", "Navi Mumbai"],
+  kolkata: ["Salt Lake", "Howrah", "Park Street", "Dum Dum"],
+  bangalore: ["Whitefield", "BTM", "Indiranagar", "Electronic City"],
+  hyderabad: ["Banjara Hills", "Gachibowli", "Madhapur", "Kukatpally"],
+  chennai: ["T Nagar", "Velachery", "Anna Nagar", "Tambaram"],
+  pune: ["Hinjewadi", "Kothrud", "Viman Nagar", "Wakad"],
+  ahmedabad: ["Navrangpura", "Maninagar", "Satellite", "Bopal"],
+  jaipur: ["Malviya Nagar", "Vaishali Nagar", "Mansarovar", "C Scheme"],
+  lucknow: ["Gomti Nagar", "Aliganj", "Hazratganj", "Indira Nagar"],
 }
 
 export async function generateStaticParams() {
-  const locations = ['bhubaneswar', 'patna', 'ranchi']
+  const locations = [
+    'india',
+    'bhubaneswar', 'patna',
+    'delhi', 'mumbai', 'kolkata', 'chennai', 'bangalore', 'hyderabad',
+    'pune', 'ahmedabad', 'jaipur', 'lucknow', 'kanpur',
+    'nagpur', 'indore', 'bhopal', 'visakhapatnam', 'vadodara',
+    'ludhiana', 'agra', 'nashik', 'faridabad', 'meerut',
+    'rajkot', 'varanasi', 'srinagar', 'aurangabad', 'dhanbad',
+    'amritsar', 'allahabad', 'ranchi', 'howrah', 'coimbatore',
+    'jabalpur', 'gwalior', 'vijayawada', 'jodhpur', 'madurai',
+    'raipur', 'kota', 'guwahati', 'chandigarh', 'solapur',
+    'hubli', 'tiruchirappalli', 'bareilly', 'mysore', 'tiruppur'
+  ]
+
   const productKeys = ['cpap-machine', 'bipap-machine', 'oxygen-concentrator']
 
   return locations.flatMap((location) =>
@@ -97,6 +128,23 @@ const contentMap: Record<string, {
   },
 }
 
+function generateDynamicContent(location: string, productName: string) {
+  const formatted =
+    location.charAt(0).toUpperCase() + location.slice(1)
+
+  return {
+    title: `${productName} in ${formatted} – Best Price & Fast Delivery`,
+    intro: `Looking to buy ${productName} in ${formatted}? Respishop offers best prices, fast delivery, and expert support near you.`,
+    points: [
+      `Fast delivery in ${formatted}`,
+      `Affordable ${productName} pricing`,
+      `Trusted medical brands`,
+      `Easy ordering & support`,
+    ],
+    paragraph: `Respishop provides genuine ${productName} in ${formatted} with warranty, installation support, and quick service across all major areas.`,
+  }
+}
+
 export async function generateMetadata(
   { params }: { params: Promise<PageParams> }
 ): Promise<Metadata> {
@@ -107,8 +155,8 @@ export async function generateMetadata(
     products[product as keyof typeof products] || product
 
   return {
-    title: `${productName} in ${location} – Price, Rental & Home Delivery | Respishop`,
-    description: `Get ${productName} in ${location} with best price, fast delivery, and expert support.`,
+    title: `${productName} in ${location} – Price, Rental, Near Me & Home Delivery | Respishop`,
+    description: `Buy ${productName} in ${location} near you. Best price, rental options, and fast home delivery available.`,
   }
 }
 
@@ -123,10 +171,15 @@ export default async function Page({ params }: { params: Promise<PageParams> }) 
   const productName = products[productKey]
 
   const locationKey = location?.toLowerCase() || "india"
-  const content = contentMap[locationKey] || contentMap["india"]
+
+  const content =
+    contentMap[locationKey] ||
+    generateDynamicContent(locationKey, productName)
 
   const formattedLocation =
-    location.charAt(0).toUpperCase() + location.slice(1)
+    location
+      ? location.charAt(0).toUpperCase() + location.slice(1)
+      : "India"
 
   const dynamicFaq = [
     {
@@ -165,7 +218,7 @@ export default async function Page({ params }: { params: Promise<PageParams> }) 
       />
 
       <h1 className="text-3xl font-bold mb-4">
-        {content.title}
+        {content.title} | Respishop
       </h1>
 
       <p className="mb-4">{content.intro}</p>
@@ -178,7 +231,6 @@ export default async function Page({ params }: { params: Promise<PageParams> }) 
 
       <p className="mb-6">{content.paragraph}</p>
 
-      {/* ABOUT */}
       <h2 className="text-2xl font-semibold mb-3">
         About {productName} in {formattedLocation}
       </h2>
@@ -187,7 +239,6 @@ export default async function Page({ params }: { params: Promise<PageParams> }) 
         Respishop provides reliable {productName} solutions in {formattedLocation} with fast delivery and expert support.
       </p>
 
-      {/* SERVICES */}
       <h2 className="text-2xl font-semibold mt-8 mb-3">
         {productName} Services in {formattedLocation}
       </h2>
@@ -196,27 +247,35 @@ export default async function Page({ params }: { params: Promise<PageParams> }) 
         We offer sales, rental, and after-sales service for {productName} across {formattedLocation}.
       </p>
 
-      {/* AREAS */}
       <h2 className="text-2xl font-semibold mt-8 mb-3">
         Areas We Serve in {formattedLocation}
       </h2>
 
       <p className="mb-6">
-        We deliver in {areaMap[locationKey]?.join(", ") || formattedLocation}.
+        {locationKey === "india"
+          ? "We deliver across all major cities in India."
+          : areaMap[locationKey]
+          ? `We deliver in ${areaMap[locationKey].join(", ")} and nearby areas in ${formattedLocation}.`
+          : `We provide fast delivery across ${formattedLocation} and nearby locations.`}
       </p>
 
-      {/* INTERNAL LINKS */}
       <h2 className="text-xl font-semibold mt-10 mb-3">
         Explore Other Cities
       </h2>
 
       <ul className="list-disc ml-6">
-        <li><a href="/cpap-machine/patna">Patna</a></li>
-        <li><a href="/cpap-machine/ranchi">Ranchi</a></li>
-        <li><a href="/cpap-machine/bhubaneswar">Bhubaneswar</a></li>
+        {allCities
+          .filter((c) => c !== locationKey)
+          .slice(0, 10)
+          .map((city) => (
+            <li key={city}>
+              <a href={`/${product}/${city}`}>
+                {city.charAt(0).toUpperCase() + city.slice(1)}
+              </a>
+            </li>
+          ))}
       </ul>
 
-      {/* FAQ */}
       <h2 className="text-2xl font-semibold mt-10 mb-4">
         Frequently Asked Questions
       </h2>

@@ -24,11 +24,9 @@ export const products: Product[] = [
     slug: "resmed-airfit-n20-nasal-mask",
     name: "Resmed Airfit N20 Nasal Mask",
     price: 5600,
-
-    // ✅ Example offer added
     offer: {
       type: "percentage",
-      value: 10
+      value: 25
     },
 
     category: "face-mask",
@@ -48,10 +46,10 @@ export const products: Product[] = [
     id: 2,
     slug: "resmed-airsense-10-autoset-tripack",
     name: "Resmed AirSense 10 AutoSet Tripack",
-    price: 85000,
+    price: 88200,
     offer: {
       type: "flat",
-      value: 5000
+      value: 2000
     },
     category: "cpap-machine",
     description: "Advanced CPAP machine with humidifier.",
@@ -65,7 +63,7 @@ export const products: Product[] = [
     id: 3,
     slug: "resmed-airstart10-auto-cpap",
     name: "Resmed Airstart10 Auto CPAP",
-    price: 55000,
+    price: 59000,
     offer: {
       type: "flat",
       value: 5000
@@ -83,10 +81,10 @@ export const products: Product[] = [
     id: 4,
     slug: "resmed-airfit-f20-full-face-mask",
     name: "Resmed AirFit F20 Full Face Mask",
-    price: 6500,
+    price: 7300,
     offer: {
       type: "percentage",
-      value: 10
+      value: 25
     },
     category: "face-mask",
     description: "Full face CPAP mask with superior comfort.",
@@ -105,7 +103,7 @@ export const products: Product[] = [
     id: 5,
     slug: "resmed-lumis-100-vpap-st",
     name: "Resmed Lumis 100 VPAP ST",
-    price: 120000,
+    price: 105000,
     category: "cpap-machine",
     description: "Bi-level ventilation support device.",
     images: ["/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/1.webp",
@@ -123,7 +121,7 @@ export const products: Product[] = [
     id: 6,
     slug: "resmed-lumis-150-vpap-st",
     name: "Resmed Lumis 150 VPAP ST",
-    price: 150000,
+    price: 143000,
     category: "cpap-machine",
     description: "Advanced VPAP ST device.",
     images: ["/images/Devices/Resmed Lumis™ 150 VPAP ST/2.webp",
@@ -141,7 +139,11 @@ export const products: Product[] = [
     id: 7,
     slug: "airmini-autoset-cpap",
     name: "AirMini AutoSet CPAP",
-    price: 70000,
+    price: 67300,
+    offer: {
+      type: "percentage",
+      value: 19.76
+    },
     category: "cpap-machine",
     description: "Compact and travel-friendly CPAP device.",
     images: ["/images/Product4.webp"],
@@ -155,7 +157,11 @@ export const products: Product[] = [
     id: 8,
     slug: "airsense-11-autoset-4g-tripack",
     name: "AirSense 11 AutoSet 4G Tripack",
-    price: 95000,
+    price: 103100,
+    offer: {
+      type: "percentage",
+      value: 18.23
+    },
     category: "cpap-machine",
     description: "Next-generation CPAP device.",
     images: ["/images/Product5.webp",
@@ -173,7 +179,7 @@ export const products: Product[] = [
     id: 9,
     slug: "airsense-11-autoset-single-pack",
     name: "AirSense 11 AutoSet (Single Pack)",
-    price: 90000,
+    price: 79700,
     category: "cpap-machine",
     description: "Latest AirSense 11 CPAP.",
     images: ["/images/Devices/AirSense™ 11 AutoSet™ (Single Pack)/1.webp",
@@ -191,7 +197,11 @@ export const products: Product[] = [
     id: 10,
     slug: "airmini-autoset-cpap-device",
     name: "AirMini™ AutoSet CPAP Device",
-    price: 49900,
+    price: 67300,
+    offer: {
+      type: "percentage",
+      value: 19.76
+    },
     category: "cpap-machine",
     description: "Portable CPAP device.",
     images: ["/images/Product4.webp",
@@ -210,7 +220,7 @@ export const products: Product[] = [
     id: 11,
     slug: "oxymed-portable-oxygen-concentrator",
     name: "Oxymed Portable Oxygen Concentrator",
-    price: 139690,
+    price: 132690,
     category: "oxygen-concentrator",
     description: "Portable oxygen concentrator.",
     images: ["/images/deal1.jpg"],
