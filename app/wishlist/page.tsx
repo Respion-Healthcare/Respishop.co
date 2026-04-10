@@ -85,7 +85,7 @@ export default function WishlistPage() {
 
 <Link
   key={product.slug}
-  href={`/products/${product.slug}`}
+  href={`/products/${product.category}/${product.slug}`}
   className="flex items-center gap-3 border rounded-lg p-3 hover:shadow-md transition"
 >
   <div className="w-16 h-16 bg-gray-100 rounded-lg" />

@@ -104,7 +104,7 @@ export default function DealOfTheDay() {
                     transition={{ duration: 0.3 }}
                     className="min-w-[280px]"
                   >
-                    <Link href={`/products/${product.slug}`}>
+                    <Link href={`/products/${product.category}/${product.slug}`}>
 
                       <div className="bg-white rounded-2xl p-4 shadow-md hover:shadow-xl transition-all relative">
 
@@ -143,13 +143,13 @@ export default function DealOfTheDay() {
 
                         {/* ✅ PRICE */}
                         <div className="flex gap-2 mt-2 items-center">
-                         <span className="text-red-500 font-semibold">
-  ₹{finalPrice.toLocaleString('en-IN')}
-</span>
+                          <span className="text-red-500 font-semibold">
+                            ₹{finalPrice.toLocaleString('en-IN')}
+                          </span>
 
                           {product.offer && (
                             <span className="text-gray-400 line-through text-sm">
-                              ₹{product.price.toLocaleString()}
+                              ₹{product.price.toLocaleString("en-IN")}
                             </span>
                           )}
                         </div>
@@ -174,18 +174,25 @@ export default function DealOfTheDay() {
 
             return (
               <motion.div key={slug} whileHover={{ scale: 1.02 }}>
-                <Link href={`/products/${slug}`}
-                  className="flex justify-between items-center bg-gradient-to-r from-blue-300 to-blue-200 rounded-2xl p-6">
+
+                {/* ✅ FIXED LINK */}
+                <Link
+                  href={`/products/${product.category}/${product.slug}`}
+                  className="flex justify-between items-center bg-gradient-to-r from-blue-300 to-blue-200 rounded-2xl p-6"
+                >
 
                   <div>
                     <p className="text-xs text-gray-600">{product.category}</p>
                     <h3 className="font-semibold">{product.name}</h3>
-                   <p className="text-lg font-bold text-blue-700">
-  ₹{getFinalPrice(product).toLocaleString('en-IN')}
-</p>
+                    <p className="text-lg font-bold text-blue-700">
+                      ₹{getFinalPrice(product).toLocaleString('en-IN')}
+                    </p>
                   </div>
 
-                  <motion.div whileHover={{ rotate: i === 0 ? 5 : -5 }} className="bg-white p-3 rounded-xl">
+                  <motion.div
+                    whileHover={{ rotate: i === 0 ? 5 : -5 }}
+                    className="bg-white p-3 rounded-xl"
+                  >
                     <Image
                       src={product.images[0]}
                       alt={product.name}
@@ -196,6 +203,7 @@ export default function DealOfTheDay() {
                   </motion.div>
 
                 </Link>
+
               </motion.div>
             )
           })}

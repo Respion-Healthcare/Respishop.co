@@ -1,21 +1,21 @@
 import Link from "next/link"
 import Image from "next/image"
 import { products } from "@/lib/products"
-import { getFinalPrice } from "@/lib/pricing" // ✅ ADD THIS
+import { getFinalPrice } from "@/lib/pricing"
 
 export default function ProductsPage() {
   return (
-    <div className="max-w-7xl mx-auto px-6 py-10">
+    <div className="w-full px-4 sm:px-6 lg:max-w-7xl lg:mx-auto">
       <h1 className="text-3xl font-bold mb-10">All Products</h1>
 
       <div className="grid md:grid-cols-3 gap-8">
         {products.map((product) => {
-          const finalPrice = getFinalPrice(product) // ✅ ADD THIS
+          const finalPrice = getFinalPrice(product)
 
           return (
             <Link
               key={product.id}
-              href={`/products/${product.slug}`}
+              href={`/products/${product.category}/${product.slug}`}
               className="border rounded-xl p-4 hover:shadow-lg transition"
             >
               <Image
@@ -38,7 +38,7 @@ export default function ProductsPage() {
 
                 {product.offer && (
                   <p className="text-gray-500 line-through text-sm">
-                    ₹{product.price.toLocaleString()}
+                      ₹{product.price.toLocaleString("en-IN")}
                   </p>
                 )}
               </div>

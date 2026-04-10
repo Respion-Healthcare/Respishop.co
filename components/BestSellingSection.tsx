@@ -106,7 +106,7 @@ export default function BestSellingSection() {
               </button>
 
               {/* IMAGE */}
-              <Link href={`/products/${product.slug}`} className="w-full">
+              <Link href={`/products/${product.category}/${product.slug}`} className="w-full">
                 <div className="relative w-full h-52">
 
                   <Image
@@ -136,7 +136,7 @@ export default function BestSellingSection() {
 
             </div>
 
-            <Link href={`/products/${product.slug}`}>
+            <Link href={`/products/${product.category}/${product.slug}`}>
               <div className="mt-4 space-y-1 cursor-pointer">
 
                 <p className="text-xs text-gray-400 uppercase tracking-wide">
@@ -156,7 +156,7 @@ export default function BestSellingSection() {
 
                   {product.offer && (
                     <span className="text-gray-400 line-through text-xs">
-                      ₹{product.price.toLocaleString()}
+                        ₹{product.price.toLocaleString("en-IN")}
                     </span>
                   )}
 

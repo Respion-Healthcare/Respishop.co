@@ -4,18 +4,19 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 
+
 const slides = [
   {
     image: "/images/hero1.jpg",
-    link: "/products/resmed-airsense-10-autoset-tripack",
+    link: "/products/cpap/resmed-airsense-10-autoset-tripack",
   },
   {
     image: "/images/hero2.png",
-    link: "/products/resmed-airfit-n20-nasal-mask",
+    link: "/products/masks/resmed-airfit-n20-nasal-mask",
   },
   {
     image: "/images/hero3.png",
-    link: "/products/resmed-airstart10-auto-cpap",
+    link: "/products/cpap/resmed-airstart10-auto-cpap",
   },
 ]
 

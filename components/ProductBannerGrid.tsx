@@ -28,7 +28,7 @@ export default function ProductBannerGrid() {
           return (
             <Link
               key={index}
-              href={`/products/${slug}`}
+             href={`/products/${product.category}/${product.slug}`}
               className="block"
             >
               <ProductBannerCard product={product} />

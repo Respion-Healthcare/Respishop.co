@@ -37,7 +37,7 @@ export default function SearchPage() {
             return (
               <Link
                 key={product.id}
-                href={`/products/${product.slug}`}
+                href={`/products/${product.category}/${product.slug}`}
                 className="border p-5 rounded-lg hover:shadow-md transition"
               >
                 <h2 className="font-semibold mb-2">
@@ -52,7 +52,7 @@ export default function SearchPage() {
 
                   {product.offer && (
                     <p className="text-gray-400 line-through text-sm">
-                      ₹{product.price.toLocaleString()}
+                        ₹{product.price.toLocaleString("en-IN")}
                     </p>
                   )}
                 </div>

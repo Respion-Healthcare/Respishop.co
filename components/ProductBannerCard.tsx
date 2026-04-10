@@ -33,7 +33,7 @@ export default function ProductBannerCard({ product }: Props) {
 
           {product.offer && (
             <p className="text-sm text-gray-400 line-through">
-              ₹{product.price.toLocaleString()}
+                ₹{product.price.toLocaleString("en-IN")}
             </p>
           )}
         </div>

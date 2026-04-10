@@ -63,8 +63,7 @@ export default function RootLayout({
             {children}
           </div>
 
-          {/* Uncomment if needed */}
-          {/* <Footer /> */}
+         
 
         </CartProvider>
 

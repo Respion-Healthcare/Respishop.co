@@ -18,8 +18,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
 
   return {
     title: `${product.name} Price in India | Buy Online`,
-    description: `Buy ${product.name} at best price in India. Check features, specifications, reviews & latest offers.`,
-    alternates: {
+    description: `Buy ${product.name} online in India. Best device for sleep apnea, CPAP therapy & respiratory care. Fast delivery from Respishop.`,    alternates: {
       canonical: `https://www.respishop.co.in/products/${product.slug}`,
     },
     openGraph: {
@@ -49,7 +48,7 @@ export default async function ProductPage({
     .slice(0, 3)
 
 return (
-  <div className="max-w-7xl mx-auto px-6 py-10">
+  <div className="w-full px-4 sm:px-6 lg:max-w-7xl lg:mx-auto">
 
     <div className="grid md:grid-cols-3 gap-10">
 
@@ -82,7 +81,7 @@ return (
 {product.offer && (
   <>
     <span className="line-through text-gray-400 ml-3">
-      ₹{product.price.toLocaleString()}
+        ₹{product.price.toLocaleString("en-IN")}
     </span>
 
     <span className="text-green-600 ml-3">
@@ -98,9 +97,9 @@ return (
         {/* PRODUCT OPTIONS */}
         <ProductOptions product={product} />
 
-        <p className="mt-6 text-gray-600">
-          {product.description}
-        </p>
+      <p className="mt-6 text-gray-600 leading-relaxed">
+  {product.description}
+</p>
 
       </div>
 
@@ -241,32 +240,73 @@ return (
     </div>
 
     {/* ✅ SEO CONTENT (ADDED) */}
-    <div className="mt-20 max-w-4xl">
-      <h2 className="text-2xl font-semibold mb-4">
-        {product.name} Price in India
-      </h2>
+   <div className="mt-20 max-w-4xl text-gray-700">
 
-      <p className="text-gray-700 mb-4">
-        Buy {product.name} online in India at the best price. This product is widely used for CPAP therapy, oxygen support, and respiratory care. It ensures comfort and effective treatment.
-      </p>
+  <h2 className="text-2xl font-semibold mb-4">
+    {product.name} Price in India & Full Details
+  </h2>
 
-      <h3 className="text-lg font-semibold mt-6 mb-2">
-        Features of {product.name}
-      </h3>
-      <ul className="list-disc pl-5 text-gray-700">
-        <li>High-quality and durable design</li>
-        <li>Easy to use at home</li>
-        <li>Trusted brand in India</li>
-        <li>Suitable for long-term therapy</li>
-      </ul>
+  <p className="mb-4">
+    Buy {product.name} online in India at the best price from Respishop. This product is designed for effective respiratory care and is widely used for CPAP therapy and breathing support. It ensures comfort, durability, and reliable performance for long-term use.
+  </p>
 
-      <h3 className="text-lg font-semibold mt-6 mb-2">
-        Who should use this?
-      </h3>
-      <p className="text-gray-700">
-        Ideal for patients with sleep apnea or breathing issues.
-      </p>
-    </div>
+  <p className="mb-4">
+    If you are looking for a trusted solution for sleep apnea or oxygen therapy, this product offers advanced features and user-friendly functionality. It helps improve sleep quality, reduce breathing issues, and supports overall health.
+  </p>
+
+  <h3 className="text-lg font-semibold mt-6 mb-2">
+    Key Benefits of {product.name}
+  </h3>
+  <ul className="list-disc pl-5 mb-4">
+    <li>Improves breathing during sleep</li>
+    <li>Reduces snoring and sleep disturbances</li>
+    <li>Easy to use and maintain</li>
+    <li>Suitable for home and clinical use</li>
+  </ul>
+
+  <h3 className="text-lg font-semibold mt-6 mb-2">
+    Who Should Use {product.name}?
+  </h3>
+  <p className="mb-4">
+    This product is ideal for individuals suffering from sleep apnea, respiratory issues, or requiring consistent airflow support during sleep or therapy.
+  </p>
+
+  <h3 className="text-lg font-semibold mt-6 mb-2">
+    How to Use
+  </h3>
+  <p className="mb-4">
+    Follow the instructions provided with the product. Ensure proper fitting and settings for optimal performance and comfort.
+  </p>
+
+  <h3 className="text-lg font-semibold mt-6 mb-2">
+    FAQs
+  </h3>
+
+  <p><strong>Is this product safe for daily use?</strong><br/>
+  Yes, it is designed for safe and long-term use.</p>
+
+  <p><strong>Does it help with sleep apnea?</strong><br/>
+  Yes, it helps maintain proper airflow and reduces apnea symptoms.</p>
+
+  <p><strong>Can beginners use it easily?</strong><br/>
+  Yes, it is user-friendly and easy to operate.</p>
+ 
+ <p className="mt-4">
+  Explore more options in our{" "}
+  <Link href="/category/cpap-machine" className="text-blue-600 underline">
+    CPAP Machines category
+  </Link>.
+</p>
+
+<p className="mt-4">
+  Read our guide on{" "}
+  <Link href="/blogs/what-is-cpap-machine" className="text-blue-600 underline">
+    what is a CPAP machine
+  </Link>{" "}
+  to understand how this product works.
+</p>
+
+   </div>
 
     {/* ✅ SCHEMA (ADDED) */}
     <script

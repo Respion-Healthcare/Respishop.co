@@ -70,10 +70,9 @@ export default function Header() {
 
   return (
 
-    <header className={`fixed top-0 left-0 w-full z-50 bg-white border-b transition-transform duration-300 ${visible ? "translate-y-0" : "-translate-y-full"}`}>
+   <header className={`fixed top-0 left-0 w-full z-50 bg-white border-b`}>
 
-      <div className="max-w-7xl mx-auto px-6 h-[95px] flex items-center justify-between">
-
+    <div className="max-w-7xl mx-auto px-4 h-[70px] flex items-center justify-between">
         <Link href="/" className="text-4xl font-serif font-semibold text-blue-700">
           Respishop
         </Link>
@@ -100,28 +99,27 @@ export default function Header() {
                   <div className="space-y-4">
                     <h3 className="font-semibold text-blue-700">CPAP & BIPAP Masks</h3>
                     <ul className="space-y-2 text-gray-600">
-                      <li><Link href="/products/resmed-airfit-n20-nasal-mask">Nasal Mask</Link></li>
-                 <li><Link href="/products/nasal-pillow-mask">Nasal Pillow Mask</Link></li>
-                      <li><Link href="/products/resmed-airfit-f20-full-face-mask">Full Face Mask</Link></li>
+                      <li><Link href="/products/nasal-mask">Nasal Mask</Link></li>
+                      <li><Link href="/products/nasal-pillow-mask">Nasal Pillow Mask</Link></li>
+                      <li><Link href="/products/full-face-mask">Full Face Mask</Link></li>
                     </ul>
                   </div>
 
                   {/* Devices */}
                   <div className="space-y-4">
                     <h3 className="font-semibold text-blue-700">Resmed BIPAP/CPAP Devices</h3>
-                    <ul className="space-y-2 text-gray-600">
-                      <li><Link href="/products/resmed-lumis-100-vpap-st">BIPAP Machines</Link></li>
-                      <li><Link href="/products/resmed-airsense-10-autoset-tripack">CPAP Machines</Link></li>
-                      <li><Link href="/products/oxygen-machines">Oxygen Machines</Link></li>
-
-                    </ul>
+                   <ul className="space-y-2 text-gray-600">
+                    <li><Link href="/products/cpap-machine">BIPAP Machines</Link></li>
+                    <li><Link href="/products/cpap-machine">CPAP Machines</Link></li>
+                    <li><Link href="/products/oxygen-concentrator">Oxygen Machines</Link></li>
+                  </ul>
                   </div>
 
                   {/* Rental */}
                   <div className="space-y-4">
                     <h3 className="font-semibold text-blue-700">Rental Products</h3>
                     <ul className="space-y-2 text-gray-600">
-                      <li><Link href="/products/cpap-bipap-rental">CPAP & BIPAP Rental</Link></li>
+                     <li><Link href="/products/rental">CPAP & BIPAP Rental</Link></li>
                     </ul>
                   </div>
 
@@ -134,31 +132,28 @@ export default function Header() {
                     </button>
 
                     {accessoryOpen && (
-                      <ul className="space-y-2 text-gray-600">
-                        <li><Link href="/products/cpap-hose-pipe">Hose Pipes & Tubes</Link></li>
-                        <li><Link href="/products/cpap-filter">Filters & Cleaners</Link></li>
-                        <li><Link href="/products/humidifier-bottle">Humidifiers & Bottles</Link></li>
-                        <li><Link href="/products/mask-headgear">Frames & Headgear</Link></li>
-                        <li><Link href="/products/mask-cushion">Mask Cushions</Link></li>
-                        <li><Link href="/products/mask-clips">Mask Pad & Clips</Link></li>
-                        <li><Link href="/products/mask-frame">Mask Frame & Vents</Link></li>
-                        <li><Link href="/products/airsense-11-accessories">AirSense 11 Accessories</Link></li>
-                        <li><Link href="/products/airmini-accessories">AirMini Accessories</Link></li>
-                      </ul>
+                     <ul className="space-y-2 text-gray-600">
+                    <li><Link href="/products/hose-pipes-tubes">Hose Pipes & Tubes</Link></li>
+                    <li><Link href="/products/filters-cleaners">Filters & Cleaners</Link></li>
+                    <li><Link href="/products/humidifier-bottle">Humidifiers & Bottles</Link></li>
+                    <li><Link href="/products/mask-headgear">Frames & Headgear</Link></li>
+                    <li><Link href="/products/mask-cushion">Mask Cushions</Link></li>
+                    <li><Link href="/products/mask-clips">Mask Pad & Clips</Link></li>
+                    <li><Link href="/products/mask-frame">Mask Frame & Vents</Link></li>
+                    <li><Link href="/products/airsense-11-accessories">AirSense 11 Accessories</Link></li>
+                    <li><Link href="/products/airmini-accessories">AirMini Accessories</Link></li>
+                  </ul>
                     )}
 
                   </div>
 
                 </div>
-
                 {/* BEST SELLING */}
                 <div className="pt-8 border-t mt-8">
                   <h3 className="font-semibold text-blue-700 mb-4">
                     Hot & Best Selling Products
                   </h3>
-
                   <ul className="grid grid-cols-3 gap-3 text-gray-600 text-sm">
-
                     <li><Link href="/products/resmed-airfit-n20-nasal-mask">Resmed Airfit N20 Nasal Mask</Link></li>
                     <li><Link href="/products/resmed-airsense-10-autoset-tripack">Resmed AirSense 10 AutoSet Tripack</Link></li>
                     <li><Link href="/products/resmed-airstart10-auto-cpap">Resmed Airstart10 Auto CPAP</Link></li>
@@ -223,7 +218,73 @@ export default function Header() {
         </button>
 
       </div>
+  {mobileOpen && (
+  <div className="lg:hidden fixed top-[70px] left-0 w-full bg-white z-50 shadow-lg border-t">
 
+    <div className="px-4 py-4 space-y-5">
+
+      {/* SEARCH */}
+      <div className="flex items-center bg-gray-100 rounded-full px-4 h-[40px]">
+        <input
+          type="text"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+          placeholder="Search products..."
+          className="flex-1 bg-transparent outline-none text-sm"
+        />
+        <Search onClick={handleSearch} className="w-4 h-4 text-gray-500" />
+      </div>
+
+      {/* LINKS */}
+      <div className="flex flex-col text-[15px] font-medium text-gray-800">
+
+        <Link href="/" onClick={closeMobileMenu} className="py-2 border-b">Home</Link>
+        {/* PRODUCTS */}
+        <div className="py-2 border-b">
+          <button
+            onClick={() => setProductsOpen(!productsOpen)}
+            className="flex items-center justify-between w-full"
+          >
+            Products
+            <ChevronDown className={`w-4 h-4 ${productsOpen ? "rotate-180" : ""}`} />
+          </button>
+
+          {productsOpen && (
+            <div className="mt-3 pl-3 space-y-2 text-sm text-gray-600">
+              <Link href="/products/nasal-mask" onClick={closeMobileMenu}>Nasal Mask</Link>
+              <Link href="/products/full-face-mask" onClick={closeMobileMenu}>Full Face Mask</Link>
+              <Link href="/products/cpap-machine" onClick={closeMobileMenu}>CPAP Machines</Link>
+            </div>
+          )}
+        </div>
+
+        <Link href="/about" onClick={closeMobileMenu} className="py-2 border-b">About</Link>
+        <Link href="/contact" onClick={closeMobileMenu} className="py-2 border-b">Contact</Link>
+        <Link href="/blogs" onClick={closeMobileMenu} className="py-2">Blogs</Link>
+
+      </div>
+
+      {/* ICONS */}
+      <div className="flex justify-around pt-4 border-t">
+        <Link href="/wishlist"><Heart className="w-5 h-5" /></Link>
+
+        <Link href="/cart" className="relative">
+          <ShoppingBag className="w-5 h-5" />
+          {cartCount > 0 && (
+            <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs px-1 rounded-full">
+              {cartCount}
+            </span>
+          )}
+        </Link>
+
+        <Link href="/account"><User className="w-5 h-5" /></Link>
+      </div>
+
+    </div>
+
+  </div>
+)}
     </header>
   )
 }

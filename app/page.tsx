@@ -36,8 +36,7 @@ export default function Home() {
       <ShopCategories />
       <BestSellingSection />
       <DealOfTheDay />
-<LocationSEOSection />
-      
+      <LocationSEOSection />
       <ReviewsSection />
       <Footer />
     </>
