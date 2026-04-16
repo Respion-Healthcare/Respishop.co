@@ -3,7 +3,20 @@ import { notFound } from "next/navigation"
 
 export const dynamic = 'force-static'
 
-const allowedCities = ["india", "delhi", "mumbai", "bangalore", "kolkata"]
+// ✅ SINGLE SOURCE OF TRUTH
+const cities = [
+  "india",
+  "delhi",
+  "mumbai",
+  "bangalore",
+  "kolkata",
+  "bhubaneswar",
+  "patna",
+  "ranchi"
+]
+
+// ✅ KEEPING YOUR STRUCTURE
+const allowedCities = cities
 
 const areaMap: Record<string, string[]> = {
   bhubaneswar: ["Patia", "Saheed Nagar", "Rasulgarh", "Nayapalli"],
@@ -22,12 +35,11 @@ const areaMap: Record<string, string[]> = {
   lucknow: ["Gomti Nagar", "Aliganj", "Hazratganj", "Indira Nagar"],
 }
 
+// ✅ USE SAME SOURCE HERE
 export async function generateStaticParams() {
-  const locations = ["india", "delhi", "mumbai", "bangalore", "kolkata"]
-
   const productKeys = ['cpap-machine', 'bipap-machine', 'oxygen-concentrator']
 
-  return locations.flatMap((location) =>
+  return cities.flatMap((location) =>
     productKeys.map((product) => ({
       product,
       location,
@@ -46,6 +58,12 @@ type ProductKey = keyof typeof products
 type PageParams = {
   product: string
   location: string
+}
+
+// ✅ HELPER (BETTER FORMATTING)
+function formatLocation(location: string) {
+  if (!location) return "India"
+  return location.charAt(0).toUpperCase() + location.slice(1)
 }
 
 const contentMap: Record<string, {
@@ -112,8 +130,7 @@ const contentMap: Record<string, {
 }
 
 function generateDynamicContent(location: string, productName: string) {
-  const formatted =
-    location.charAt(0).toUpperCase() + location.slice(1)
+  const formatted = formatLocation(location)
 
   return {
     title: `${productName} in ${formatted} – Best Price & Fast Delivery`,
@@ -128,6 +145,7 @@ function generateDynamicContent(location: string, productName: string) {
   }
 }
 
+// ✅ SEO METADATA (IMPROVED)
 export async function generateMetadata(
   { params }: { params: Promise<PageParams> }
 ): Promise<Metadata> {
@@ -137,9 +155,16 @@ export async function generateMetadata(
   const productName =
     products[product as keyof typeof products] || product
 
+  const formattedLocation = formatLocation(location)
+
   return {
-    title: `${productName} in ${location} – Price, Rental, Near Me & Home Delivery | Respishop`,
-    description: `Buy ${productName} in ${location} near you. Best price, rental options, and fast home delivery available.`,
+    title: `${productName} in ${formattedLocation} – Price, Rental, Near Me & Home Delivery | Respishop`,
+    description: `Buy ${productName} in ${formattedLocation} near you. Best price, rental options, and fast home delivery available.`,
+
+    // ✅ IMPORTANT SEO FIX
+    alternates: {
+      canonical: `https://respishop.co.in/${product}/${location}`,
+    },
   }
 }
 
@@ -154,17 +179,16 @@ export default async function Page({ params }: { params: Promise<PageParams> }) 
   const productName = products[productKey]
 
   const locationKey = location?.toLowerCase() || "india"
- if (!allowedCities.includes(locationKey)) {
+
+  if (!allowedCities.includes(locationKey)) {
     notFound()
   }
+
   const content =
     contentMap[locationKey] ||
     generateDynamicContent(locationKey, productName)
 
-  const formattedLocation =
-    location
-      ? location.charAt(0).toUpperCase() + location.slice(1)
-      : "India"
+  const formattedLocation = formatLocation(location)
 
   const dynamicFaq = [
     {
@@ -250,14 +274,14 @@ export default async function Page({ params }: { params: Promise<PageParams> }) 
 
       <ul className="list-disc ml-6">
         {allowedCities
-  .filter((c) => c !== locationKey)
-  .map((city) => (
-    <li key={city}>
-      <a href={`/${product}/${city}`}>
-        {city.charAt(0).toUpperCase() + city.slice(1)}
-      </a>
-    </li>
-))}
+          .filter((c) => c !== locationKey)
+          .map((city) => (
+            <li key={city}>
+              <a href={`/${product}/${city}`}>
+                {formatLocation(city)}
+              </a>
+            </li>
+        ))}
       </ul>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4">
