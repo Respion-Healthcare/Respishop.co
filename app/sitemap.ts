@@ -2,44 +2,51 @@ import type { MetadataRoute } from "next"
 import { products as allProducts } from "@/lib/products"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.respishop.co.in"
+  const baseUrl = "https://respishop.in"
 
-  // ✅ Existing static pages
+  const currentDate = new Date()
+
+  // ✅ STATIC PAGES
   const staticPages = [
     {
       url: `${baseUrl}`,
-      lastModified: new Date().toISOString(),
+      lastModified: currentDate,
       changeFrequency: "daily" as const,
       priority: 1,
     },
     {
       url: `${baseUrl}/products`,
-      lastModified: new Date().toISOString(),
+      lastModified: currentDate,
       changeFrequency: "weekly" as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date().toISOString(),
+      lastModified: currentDate,
       changeFrequency: "monthly" as const,
       priority: 0.6,
     },
   ]
 
-  // ✅ PRODUCTS
+  // ✅ PRODUCTS + LOCATIONS (SEO PAGES)
   const products = [
     "cpap-machine",
     "bipap-machine",
     "oxygen-concentrator",
   ]
 
-const locations = ["india", "delhi", "mumbai", "bangalore", "kolkata"]
+  const locations = [
+    "india",
+    "delhi",
+    "mumbai",
+    "bangalore",
+    "kolkata",
+  ]
 
-  // ✅ SEO PAGES (150+ URLs)
   const seoPages = products.flatMap((product) =>
     locations.map((location) => ({
       url: `${baseUrl}/${product}/${location}`,
-      lastModified: new Date().toISOString(),
+      lastModified: currentDate,
       changeFrequency: "weekly" as const,
       priority: location === "india" ? 1 : 0.8,
     }))
@@ -48,7 +55,7 @@ const locations = ["india", "delhi", "mumbai", "bangalore", "kolkata"]
   // ✅ PRODUCT PAGES
   const productPages = allProducts.map((p) => ({
     url: `${baseUrl}/products/${p.slug}`,
-    lastModified: new Date().toISOString(),
+    lastModified: currentDate,
     changeFrequency: "weekly" as const,
     priority: 0.9,
   }))
@@ -58,7 +65,7 @@ const locations = ["india", "delhi", "mumbai", "bangalore", "kolkata"]
 
   const categoryPages = categories.map((cat) => ({
     url: `${baseUrl}/category/${cat}`,
-    lastModified: new Date().toISOString(),
+    lastModified: currentDate,
     changeFrequency: "weekly" as const,
     priority: 0.8,
   }))
@@ -72,12 +79,12 @@ const locations = ["india", "delhi", "mumbai", "bangalore", "kolkata"]
 
   const blogPages = blogSlugs.map((slug) => ({
     url: `${baseUrl}/blogs/${slug}`,
-    lastModified: new Date().toISOString(),
+    lastModified: currentDate,
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }))
 
-  // ✅ FINAL RETURN
+  // ✅ FINAL SITEMAP
   return [
     ...staticPages,
     ...seoPages,

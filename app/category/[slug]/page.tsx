@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
       description:
         "Shop CPAP machines online in India for sleep apnea treatment. Improve sleep quality and breathing with trusted devices.",
       alternates: {
-        canonical: `https://www.respishop.co.in/category/${slug}`,
+        canonical: `https://www.respishop.in/category/${slug}`,
       },
     }
   }
@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
     title: `${categoryName} Price in India | Buy Online`,
     description: `Buy ${categoryName} online in India at best price from Respishop.`,
     alternates: {
-      canonical: `https://www.respishop.co.in/category/${slug}`,
+      canonical: `https://www.respishop.in/category/${slug}`,
     },
   }
 }
@@ -160,7 +160,7 @@ export default async function CategoryPage({
           "@context": "https://schema.org",
           "@type": "CollectionPage",
           name: slug,
-          url: `https://www.respishop.co.in/category/${slug}`,
+          url: `https://www.respishop.in/category/${slug}`,
           description: `Buy ${slug} online in India at best price`,
         }),
       }}

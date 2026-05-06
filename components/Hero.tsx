@@ -135,6 +135,8 @@ export default function Hero() {
               { id: 2, img: "/images/hero13.png", cls: "top-[260px] left-0 w-[320px] h-[260px]", tilt: tilt2 },
               { id: 3, img: "/images/hero11.png", cls: "top-[200px] left-[240px] w-[420px] h-[520px]", tilt: tilt3 },
               { id: 4, img: "/images/hero14.png", cls: "bottom-0 right-10 w-[360px] h-[240px]", tilt: tilt4 },
+            // { id: 5, img: "/images/hero14.png", cls: "bottom-3 left-0 w-[500px] h-[280px]", tilt: tilt4 },
+            
             ].map(({ id, img, cls, tilt }) => (
               <motion.div
                 key={id}

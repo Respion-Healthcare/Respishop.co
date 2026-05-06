@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
   return {
     title: `${product.name} Price in India | Buy Online`,
     description: `Buy ${product.name} online in India. Best device for sleep apnea, CPAP therapy & respiratory care. Fast delivery from Respishop.`,    alternates: {
-      canonical: `https://www.respishop.co.in/products/${product.slug}`,
+      canonical: `https://www.respishop.in/products/${product.slug}`,
     },
     openGraph: {
       title: product.name,

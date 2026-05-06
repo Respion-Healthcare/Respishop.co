@@ -163,7 +163,7 @@ export async function generateMetadata(
 
     // ✅ IMPORTANT SEO FIX
     alternates: {
-      canonical: `https://respishop.co.in/${product}/${location}`,
+      canonical: `https://respishop.in/${product}/${location}`,
     },
   }
 }
