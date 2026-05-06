@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <>
+    <main className="bg-gradient-to-b from-blue-50 via-white to-blue-100 min-h-screen">
       <Hero />
       <ProductBannerGrid />
       <ShopCategories />
@@ -39,6 +39,6 @@ export default function Home() {
       <LocationSEOSection />
       <ReviewsSection />
       <Footer />
-    </>
+    </main>
   )
 }
