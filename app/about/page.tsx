@@ -16,45 +16,48 @@ export default function AboutPage() {
   const testimonials = [
     {
       name: "Manaswini Mohapatra",
-      text: "The remote monitoring service is fantastic. They call me if they see issues in my sleep data. It feels reassuring knowing someone is monitoring my health."
+      text: "The remote monitoring service is fantastic. They call me if they see issues in my sleep data. It feels reassuring knowing someone is monitoring my health.",
     },
     {
       name: "Debasis Jena",
-      text: "Honest pricing and no unnecessary sales pressure. Highly recommended in India for sleep therapy support."
+      text: "Honest pricing and no unnecessary sales pressure. Highly recommended in India for sleep therapy support.",
     },
     {
       name: "Satyajit Mishra",
-      text: "They set up the machine at home and explained everything in Odia. My father felt comfortable and confident."
+      text: "They set up the machine at home and explained everything in Odia. My father felt comfortable and confident.",
     },
     {
       name: "Anjali Panigrahi",
-      text: "Delivered my CPAP mask to Puri the next day. Genuine service and polite staff."
-    }
+      text: "Delivered my CPAP mask to Puri the next day. Genuine service and polite staff.",
+    },
   ]
 
-  /* Testimonial Auto Slider */
+  /* TESTIMONIAL AUTO SLIDER */
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTestimonial((prev) =>
         prev === testimonials.length - 1 ? 0 : prev + 1
       )
-    }, 4000)
+    }, 4500)
 
     return () => clearInterval(interval)
   }, [])
 
-  /* Animated Counter */
+  /* COUNTER */
   useEffect(() => {
     let start = 0
+
     const interval = setInterval(() => {
       start += 1
 
       if (start <= 4) {
         setCounts((prev) => ({ ...prev, locations: start }))
       }
+
       if (start <= 12) {
         setCounts((prev) => ({ ...prev, staff: start }))
       }
+
       if (start <= 3) {
         setCounts((prev) => ({ ...prev, trust: start }))
       }
@@ -64,329 +67,461 @@ export default function AboutPage() {
 
     return () => clearInterval(interval)
   }, [])
-return (
-  <>
-    <Head>
-      <title>About Respishop | Sleep Therapy & CPAP Experts in India</title>
-      <meta
-        name="description"
-        content="Learn about Respishop — a trusted sleep therapy and CPAP solutions provider serving India since 2025."
-      />
-      <meta
-        name="keywords"
-        content="Respishop, CPAP provider India, sleep therapy India, respiratory care India, ResMed partner Odisha"
-      />
-      <meta name="robots" content="index, follow" />
-      <link rel="canonical" href="https://respishop.in/about" />
 
-      {/* OpenGraph */}
-      <meta property="og:title" content="About Respishop | Sleep Therapy Experts" />
-      <meta
-        property="og:description"
-        content="Trusted sleep therapy and CPAP provider serving Eastern India since 2025."
-      />
-      <meta property="og:url" content="https://respishop.in/about" />
-      <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Respishop" />
+  return (
+    <>
+      <Head>
+        <title>
+          About Respishop | CPAP, BiPAP & Sleep Therapy Experts in India
+        </title>
 
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="About Respishop" />
-      <meta
-        name="twitter:description"
-        content="Respishop — improving respiratory healthcare across India."
-      />
+        <meta
+          name="description"
+          content="Respishop is a trusted provider of CPAP, BiPAP, oxygen concentrators, sleep study services, and respiratory healthcare solutions across India."
+        />
 
-      {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
-            name: "Respishop",
-            url: "https://respishop.in",
-            description:
-              "Respishop provides sleep therapy and CPAP solutions across India.",
-            foundingDate: "2025",
-            areaServed: "India",
-            contactPoint: {
-              "@type": "ContactPoint",
+        <meta
+          name="keywords"
+          content="Respishop, CPAP India, BiPAP India, sleep therapy India, oxygen concentrator India, respiratory care India"
+        />
+
+        <meta name="robots" content="index, follow" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="canonical" href="https://respishop.in/about" />
+
+        {/* OPEN GRAPH */}
+        <meta
+          property="og:title"
+          content="About Respishop | Sleep Therapy Experts"
+        />
+
+        <meta
+          property="og:description"
+          content="Trusted CPAP, BiPAP, and respiratory healthcare provider serving patients across India."
+        />
+
+        <meta
+          property="og:image"
+          content="https://respishop.in/images/aboutus.webp"
+        />
+
+        <meta property="og:url" content="https://respishop.in/about" />
+
+        <meta property="og:type" content="website" />
+
+        {/* STRUCTURED DATA */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "MedicalBusiness",
+              name: "Respishop",
+              image: "https://respishop.in/images/aboutus.webp",
+              url: "https://respishop.in",
               telephone: "+91-9148733700",
-              contactType: "Customer Support",
-              areaServed: "IN",
-            },
-            address: {
-              "@type": "PostalAddress",
-              streetAddress:
-                "702, 13th Cross Rd, 1st Phase, J.P Nagar",
-              addressLocality: "Bengaluru",
-              addressRegion: "Karnataka",
-              postalCode: "560078",
-              addressCountry: "IN",
-            },
-          }),
-        }}
-      />
-    </Head>
+              email: "respishop.in@gmail.com",
+              description:
+                "Respishop provides CPAP, BiPAP, oxygen concentrators and respiratory healthcare solutions across India.",
+            }),
+          }}
+        />
+      </Head>
 
-    <main className="pt-[120px] bg-white overflow-hidden">
+    <main className="relative overflow-hidden bg-gradient-to-b from-[#f4fbff] via-[#eef7ff] to-white pt-[20px]">        {/* ANIMATIONS */}
+        <style jsx>{`
+          @keyframes float {
+            0% {
+              transform: translateY(0px);
+            }
+            50% {
+              transform: translateY(-8px);
+            }
+            100% {
+              transform: translateY(0px);
+            }
+          }
 
-      {/* ABOUT SECTION */}
-      <section className="relative max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-20 items-stretch">
+          @keyframes pulseGlow {
+            0% {
+              opacity: 0.45;
+              transform: scale(1);
+            }
+            50% {
+              opacity: 0.7;
+              transform: scale(1.03);
+            }
+            100% {
+              opacity: 0.45;
+              transform: scale(1);
+            }
+          }
 
-        {/* LEFT SIDE */}
-        <div className="flex flex-col justify-between">
+          .float-animation {
+            animation: float 6s ease-in-out infinite;
+          }
 
-          <div>
-            <h1 className="text-4xl font-bold text-gray-800 mb-6">
-              About Respishop
-            </h1>
+          .pulse-glow {
+            animation: pulseGlow 8s ease-in-out infinite;
+          }
+        `}</style>
 
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-              3+ Years of Excellence in Sleep Therapy
-            </h2>
+        {/* BACKGROUND GLOWS */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
 
-            <p className="text-gray-600 leading-relaxed mb-6">
-              Founded in July 2025, Respishop was created to improve
-              respiratory healthcare in India. We partner with global leaders
-              like ResMed to deliver advanced sleep therapy solutions across India.
-            </p>
+          <div className="absolute top-0 left-[-120px] w-[350px] h-[350px] bg-blue-200/40 rounded-full blur-[120px] pulse-glow" />
 
-            <p className="text-gray-600 leading-relaxed mb-10">
-              We are more than a supplier — we are a team dedicated to helping
-              patients breathe easier and live healthier lives.
-            </p>
-          </div>
+          <div className="absolute top-[450px] right-[-120px] w-[400px] h-[400px] bg-cyan-200/40 rounded-full blur-[120px] pulse-glow" />
 
-          {/* GLASSMORPHISM STATS */}
-          <div className="backdrop-blur-xl bg-white/40 border border-white/30 shadow-xl rounded-3xl p-10 grid grid-cols-2 gap-8">
-
-            <div className="text-center">
-              <h3 className="text-3xl font-bold text-blue-600">
-                {counts.locations}
-              </h3>
-              <p className="text-gray-700 text-sm mt-1">
-                Regional Locations
-              </p>
-            </div>
-
-            <div className="text-center">
-              <h3 className="text-3xl font-bold text-blue-600">
-                {counts.staff}+
-              </h3>
-              <p className="text-gray-700 text-sm mt-1">
-                Dedicated Staff
-              </p>
-            </div>
-
-            <div className="text-center">
-              <h3 className="text-3xl font-bold text-blue-600">
-                100%
-              </h3>
-              <p className="text-gray-700 text-sm mt-1">
-                Authorized Partner
-              </p>
-            </div>
-
-            <div className="text-center">
-              <h3 className="text-3xl font-bold text-blue-600">
-                {counts.trust}+
-              </h3>
-              <p className="text-gray-700 text-sm mt-1">
-                Years of Trust
-              </p>
-            </div>
-
-          </div>
+          <div className="absolute bottom-0 left-1/3 w-[300px] h-[300px] bg-sky-100/40 rounded-full blur-[120px] pulse-glow" />
 
         </div>
 
-        {/* RIGHT SIDE IMAGE */}
-        <div className="relative group">
+        {/* HERO SECTION */}
+<section className="relative w-full min-h-screen px-10 md:px-16 lg:px-20 xl:px-24 pt-6 pb-10 flex items-start">        <div className="grid lg:grid-cols-2 gap-10 items-center w-full mt-6">
 
-          {/* Gradient Glow */}
-          <div className="absolute -inset-6 bg-gradient-to-tr from-blue-100 via-blue-50 to-white rounded-3xl blur-2xl opacity-60"></div>
+            {/* LEFT */}
+            <div>
 
-          {/* Floating Badge */}
-          <div className="absolute top-6 left-6 z-20 bg-blue-600 text-white px-6 py-2 rounded-full shadow-lg text-sm font-semibold animate-bounce">
-            Trusted Since 2025
-          </div>
-
-          {/* Parallax Hover Image */}
-          <div className="relative h-[550px] rounded-3xl overflow-hidden shadow-2xl transform transition-transform duration-700 group-hover:scale-105">
-            <Image
-              src="/images/aboutus.webp"
-              alt="Respishop Team"
-              fill
-              className="object-cover"
-            />
-          </div>
-
-        </div>
-
-      </section>
-
-
-      {/* VISION / MISSION / PROMISE */}
-    <section className="relative max-w-6xl mx-auto px-6 py-24">
-
-  {/* Soft Blue Background Glow */}
-  <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[600px] h-[300px] 
-                  bg-blue-100 rounded-full blur-[120px] opacity-50"></div>
-
-  <div className="relative grid md:grid-cols-3 gap-10">
-
-    {/* CARD 1 */}
-    <div className="group relative p-8 rounded-3xl 
-                    bg-white/70 backdrop-blur-xl 
-                    border border-blue-100 
-                    shadow-lg transition-all duration-500
-                    hover:shadow-blue-200 hover:-translate-y-2">
-
-      {/* Subtle Gradient Border Effect */}
-      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br 
-                      from-blue-100/40 to-transparent opacity-0 
-                      group-hover:opacity-100 transition duration-500"></div>
-
-      <div className="relative">
-        <h3 className="text-xl font-bold mb-4 text-gray-800 relative inline-block">
-          Our Vision
-          <span className="absolute -bottom-2 left-0 w-10 h-1 bg-blue-600 rounded-full"></span>
-        </h3>
-
-        <p className="text-gray-600 leading-relaxed">
-          To become India's most trusted name in sleep therapy,
-          raising healthcare standards through awareness and accessibility.
-        </p>
-      </div>
-    </div>
-
-
-    {/* CARD 2 */}
-    <div className="group relative p-8 rounded-3xl 
-                    bg-white/70 backdrop-blur-xl 
-                    border border-blue-100 
-                    shadow-lg transition-all duration-500
-                    hover:shadow-blue-200 hover:-translate-y-2">
-
-      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br 
-                      from-blue-100/40 to-transparent opacity-0 
-                      group-hover:opacity-100 transition duration-500"></div>
-
-      <div className="relative">
-        <h3 className="text-xl font-bold mb-4 text-gray-800 relative inline-block">
-          Our Promise
-          <span className="absolute -bottom-2 left-0 w-10 h-1 bg-blue-600 rounded-full"></span>
-        </h3>
-
-        <p className="text-gray-600 leading-relaxed">
-          We treat every customer like family with transparent pricing
-          and honest advice.
-        </p>
-      </div>
-    </div>
-
-
-    {/* CARD 3 */}
-    <div className="group relative p-8 rounded-3xl 
-                    bg-white/70 backdrop-blur-xl 
-                    border border-blue-100 
-                    shadow-lg transition-all duration-500
-                    hover:shadow-blue-200 hover:-translate-y-2">
-
-      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br 
-                      from-blue-100/40 to-transparent opacity-0 
-                      group-hover:opacity-100 transition duration-500"></div>
-
-      <div className="relative">
-        <h3 className="text-xl font-bold mb-4 text-gray-800 relative inline-block">
-          Our Mission
-          <span className="absolute -bottom-2 left-0 w-10 h-1 bg-blue-600 rounded-full"></span>
-        </h3>
-
-        <p className="text-gray-600 leading-relaxed">
-          Deliver reliable sleep therapy solutions backed by
-          responsive service and continuous support.
-        </p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-      {/* TESTIMONIAL + CONTACT */}
-      <section className="py-20 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-stretch">
-
-          {/* TESTIMONIAL */}
-          <div className="bg-blue-600 text-white rounded-3xl p-12 shadow-2xl flex flex-col justify-center">
-            <h2 className="text-3xl font-bold mb-10 text-center">
-              What Our Clients Say
-            </h2>
-
-            <div className="bg-white text-gray-700 p-8 rounded-2xl shadow-lg min-h-[220px] transition-all duration-500">
-              <p className="text-lg italic mb-6 text-center">
-                "{testimonials[currentTestimonial].text}"
-              </p>
-
-              <div className="text-center">
-                <h4 className="font-semibold text-gray-800">
-                  {testimonials[currentTestimonial].name}
-                </h4>
-                <p className="text-sm text-gray-500">Respishop Client</p>
+              <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-xs font-semibold mb-5">
+                Trusted Respiratory Healthcare
               </div>
+
+              <h1 className="text-4xl md:text-5xl xl:text-6xl font-black leading-tight text-gray-900 mb-5">
+
+                Transforming
+
+                <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                  {" "}
+                  Sleep Therapy
+                </span>
+
+                <br />
+
+                Across India
+
+              </h1>
+
+              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8 max-w-2xl">
+                Respishop delivers premium CPAP, BiPAP, oxygen concentrators,
+                sleep study services, and respiratory care solutions with
+                trusted support and advanced expertise.
+              </p>
+
+              {/* STATS */}
+              <div className="flex flex-wrap gap-4">
+
+                <div className="bg-white/70 backdrop-blur-xl border border-white/50 shadow-xl rounded-2xl px-6 py-5 min-w-[150px] hover:-translate-y-1 transition duration-500">
+
+                  <h3 className="text-3xl font-black text-blue-600">
+                    {counts.locations}
+                  </h3>
+
+                  <p className="text-gray-600 mt-1 text-sm">
+                    Regional Locations
+                  </p>
+
+                </div>
+
+                <div className="bg-white/70 backdrop-blur-xl border border-white/50 shadow-xl rounded-2xl px-6 py-5 min-w-[150px] hover:-translate-y-1 transition duration-500">
+
+                  <h3 className="text-3xl font-black text-blue-600">
+                    {counts.staff}+
+                  </h3>
+
+                  <p className="text-gray-600 mt-1 text-sm">
+                    Healthcare Experts
+                  </p>
+
+                </div>
+
+                <div className="bg-white/70 backdrop-blur-xl border border-white/50 shadow-xl rounded-2xl px-6 py-5 min-w-[150px] hover:-translate-y-1 transition duration-500">
+
+                  <h3 className="text-3xl font-black text-blue-600">
+                    {counts.trust}+
+                  </h3>
+
+                  <p className="text-gray-600 mt-1 text-sm">
+                    Years of Trust
+                  </p>
+
+                </div>
+
+              </div>
+
             </div>
+
+            {/* RIGHT IMAGE */}
+            <div className="relative group float-animation">
+
+              <div className="absolute -inset-5 bg-gradient-to-tr from-blue-200/60 via-cyan-100/50 to-white rounded-[35px] blur-3xl opacity-80"></div>
+
+              <div className="absolute top-5 left-5 z-20 bg-white/90 backdrop-blur-xl text-blue-700 px-5 py-2 rounded-full shadow-xl text-xs font-bold border border-white">
+                Trusted Since 2025
+              </div>
+
+              <div className="relative h-[560px] rounded-[35px] overflow-hidden shadow-[0_20px_80px_rgba(59,130,246,0.20)]">
+
+                <Image
+                  src="/images/aboutus.webp"
+                  alt="Respishop Sleep Therapy Team"
+                  fill
+                  priority
+                  className="object-cover transition-transform duration-[2500ms] group-hover:scale-105"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+
+              </div>
+
+            </div>
+
           </div>
 
-          {/* CONTACT */}
-       <div className="bg-white rounded-3xl p-12 shadow-2xl flex flex-col justify-center">
-  <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
-    Get in Touch
-  </h2>
+        </section>
 
-  <div className="space-y-6 text-center">
-    
-    {/* CALL */}
-    <div className="bg-gradient-to-r from-blue-50 to-blue-100 
-                    rounded-2xl p-6 shadow-md 
-                    transition-all duration-300 
-                    hover:shadow-xl hover:-translate-y-1">
-      <p className="text-blue-600 text-sm font-medium">Call for help</p>
-      <p className="text-xl font-semibold text-gray-800">
-        +91 9148733700
-      </p>
-    </div>
+        {/* ABOUT + CONTACT */}
+   <section className="relative w-full min-h-[78vh] px-10 md:px-16 lg:px-20 xl:px-24 pt-0 pb-2 -mt-6 flex items-start">         
+     <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 w-full items-stretch">
 
-    {/* EMAIL */}
-    <div className="bg-gradient-to-r from-blue-50 to-blue-100 
-                    rounded-2xl p-6 shadow-md 
-                    transition-all duration-300 
-                    hover:shadow-xl hover:-translate-y-1">
-      <p className="text-blue-600 text-sm font-medium">Email</p>
-      <p className="text-lg font-medium text-gray-800">
-        respishop.in@gmail.com
-      </p>
-    </div>
+            {/* LEFT */}
+            <div className="bg-white/70 backdrop-blur-2xl border border-white/60 rounded-[35px] p-7 md:p-9 shadow-[0_20px_70px_rgba(0,0,0,0.05)] flex flex-col justify-between">
 
-    {/* ADDRESS */}
-    <div className="bg-gradient-to-r from-blue-50 to-blue-100 
-                    rounded-2xl p-6 shadow-md 
-                    transition-all duration-300 
-                    hover:shadow-xl hover:-translate-y-1">
-      <p className="text-blue-600 text-sm font-medium">Address</p>
-      <p className="text-gray-700">
-        702, 13th Cross Rd, 1st Phase,<br />
-        J.P Nagar, Bengaluru,<br />
-        Karnataka - 560078
-      </p>
-    </div>
-  </div>
-</div>
-        </div>
-      </section>
+              <div>
 
-    </main>
+                <div className="inline-flex bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-xs font-semibold mb-5">
+                  About Respishop
+                </div>
+
+                <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-5">
+                  Building Better
+                  <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                    {" "}
+                    Respiratory Care
+                  </span>
+                </h2>
+
+                <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
+  Founded in 2025, Respishop was created to improve respiratory
+  healthcare accessibility across India with genuine equipment,
+  compassionate support, and long-term care.
+
+  <br />
+  <br />
+
+  We specialize in CPAP, BiPAP, oxygen concentrators, sleep study
+  services, and advanced respiratory therapy solutions designed to
+  improve quality of life for patients suffering from sleep apnea
+  and breathing disorders.
+
+  <br />
+  <br />
+
+  Our focus goes beyond simply supplying devices — we aim to provide
+  personalized guidance, trusted after-sales support, and continuous
+  patient care that builds long-term confidence and comfort.
+</p>
+              </div>
+
+              <div className="grid gap-4">
+
+                {/* CARD */}
+                <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-white p-5 border border-blue-100 hover:-translate-y-1 transition duration-500 hover:shadow-xl">
+
+                  <div className="flex gap-4 items-start">
+
+                    <div className="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center text-2xl shrink-0">
+                      🎯
+                    </div>
+
+                    <div>
+
+                      <h3 className="text-xl font-bold text-gray-800 mb-2">
+                        Our Vision
+                      </h3>
+
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        To become India's most trusted sleep therapy brand
+                        through awareness and accessibility.
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                {/* CARD */}
+                <div className="rounded-2xl bg-gradient-to-r from-cyan-50 to-white p-5 border border-cyan-100 hover:-translate-y-1 transition duration-500 hover:shadow-xl">
+
+                  <div className="flex gap-4 items-start">
+
+                    <div className="w-14 h-14 rounded-2xl bg-cyan-100 flex items-center justify-center text-2xl shrink-0">
+                      🤝
+                    </div>
+
+                    <div>
+
+                      <h3 className="text-xl font-bold text-gray-800 mb-2">
+                        Our Promise
+                      </h3>
+
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        Transparent pricing, genuine products, and patient-first support.
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                {/* CARD */}
+                <div className="rounded-2xl bg-gradient-to-r from-sky-50 to-white p-5 border border-sky-100 hover:-translate-y-1 transition duration-500 hover:shadow-xl">
+
+                  <div className="flex gap-4 items-start">
+
+                    <div className="w-14 h-14 rounded-2xl bg-sky-100 flex items-center justify-center text-2xl shrink-0">
+                      💙
+                    </div>
+
+                    <div>
+
+                      <h3 className="text-xl font-bold text-gray-800 mb-2">
+                        Our Mission
+                      </h3>
+
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        Deliver reliable respiratory healthcare solutions with
+                        responsive service and long-term support.
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            {/* RIGHT */}
+            <div className="flex flex-col gap-6">
+
+              {/* TESTIMONIAL */}
+              <div className="relative overflow-hidden rounded-[35px] bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-500 p-8 shadow-[0_20px_70px_rgba(59,130,246,0.30)] flex-1">
+
+                <div className="absolute top-0 right-0 w-56 h-56 bg-white/10 rounded-full blur-3xl"></div>
+
+                <div className="relative z-10 flex flex-col h-full">
+
+                  <div className="mb-6">
+
+                    <div className="inline-flex bg-white/15 backdrop-blur-xl text-white px-4 py-2 rounded-full text-xs font-semibold mb-4">
+                      Patient Testimonials
+                    </div>
+
+                    <h2 className="text-3xl md:text-4xl font-black text-white">
+                      What Our Clients Say
+                    </h2>
+
+                  </div>
+
+                  <div className="bg-white/95 backdrop-blur-xl rounded-[28px] p-7 shadow-xl flex-1 flex flex-col justify-center transition-all duration-700">
+
+                    <p className="text-lg italic text-gray-700 leading-relaxed text-center mb-8">
+                      “{testimonials[currentTestimonial].text}”
+                    </p>
+
+                    <div className="text-center">
+
+                      <h4 className="text-xl font-bold text-gray-900">
+                        {testimonials[currentTestimonial].name}
+                      </h4>
+
+                      <p className="text-gray-500 mt-2 text-sm">
+                        Verified Respishop Client
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              {/* CONTACT */}
+              <div className="bg-white/75 backdrop-blur-2xl border border-white/60 rounded-[35px] p-8 shadow-[0_20px_70px_rgba(0,0,0,0.05)]">
+
+                <div className="mb-6">
+
+                  <div className="inline-flex bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-xs font-semibold mb-4">
+                    Contact Information
+                  </div>
+
+                  <h2 className="text-3xl md:text-4xl font-black text-gray-900">
+                    Get in Touch
+                  </h2>
+
+                </div>
+
+                <div className="space-y-4">
+
+                  <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 p-5">
+
+                    <p className="text-blue-600 font-semibold mb-2 text-sm">
+                      Call Us
+                    </p>
+
+                    <p className="text-xl font-black text-gray-900">
+                      +91 9148733700
+                    </p>
+
+                  </div>
+
+                  <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 p-5">
+
+                    <p className="text-blue-600 font-semibold mb-2 text-sm">
+                      Email
+                    </p>
+
+                    <p className="text-base font-semibold text-gray-800 break-all">
+                      respishop.in@gmail.com
+                    </p>
+
+                  </div>
+
+                  <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 p-5">
+
+                    <p className="text-blue-600 font-semibold mb-2 text-sm">
+                      Address
+                    </p>
+
+                    <p className="text-sm text-gray-700 leading-relaxed">
+                      702, 13th Cross Rd, 1st Phase,
+                      <br />
+                      J.P Nagar, Bengaluru,
+                      <br />
+                      Karnataka - 560078
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      </main>
     </>
   )
 }

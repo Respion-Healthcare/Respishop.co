@@ -18,9 +18,8 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
 
   return {
     title: `${product.name} Price in India | Buy Online`,
-    description: `Buy ${product.name} online in India. Best device for sleep apnea, CPAP therapy & respiratory care. Fast delivery from Respishop.`,    alternates: {
-      canonical: `https://www.respishop.in/products/${product.slug}`,
-    },
+   description: `Buy ${product.name} CPAP machine online in India at the best price with warranty, sleep apnea support and fast delivery from Respishop.`,    alternates: {
+      canonical: `https://www.respishop.in/products/${product.category}/${product.slug}`,    },
     openGraph: {
       title: product.name,
       description: product.description,
@@ -214,7 +213,7 @@ return (
         {relatedProducts.map((item) => (
           <Link
             key={item.slug}
-            href={`/products/${item.slug}`}
+href={`/products/${item.category}/${item.slug}`}
             className="border rounded-xl p-4 hover:shadow-lg transition"
           >
             <Image
@@ -253,6 +252,10 @@ return (
   <p className="mb-4">
     If you are looking for a trusted solution for sleep apnea or oxygen therapy, this product offers advanced features and user-friendly functionality. It helps improve sleep quality, reduce breathing issues, and supports overall health.
   </p>
+
+  <p className="mb-4">
+  The ResMed AirSense 10 AutoSet Tripack is one of the most trusted automatic CPAP machines for sleep apnea therapy in India. Its intelligent AutoSet technology adjusts airflow pressure automatically for comfortable and effective treatment.
+  </p> 
 
   <h3 className="text-lg font-semibold mt-6 mb-2">
     Key Benefits of {product.name}
@@ -331,6 +334,42 @@ return (
         }),
       }}
     />
+
+    <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Is this product safe for daily use?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, it is designed for safe and long-term use.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Does it help with sleep apnea?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, it helps maintain proper airflow and reduces apnea symptoms.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can beginners use it easily?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, it is user-friendly and easy to operate.",
+          },
+        },
+      ],
+    }),
+  }}
+/>
 
   </div>
 )
