@@ -10,54 +10,55 @@ interface Props {
 
 export default function ProductBannerCard({ product }: Props) {
   return (
-    <div className="group bg-white rounded-3xl shadow-md 
-                    hover:shadow-xl transition duration-300
-                    px-8 py-6 flex items-center justify-between
-                    min-h-[260px]">
+    <div className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden">
 
-      {/* Left Content */}
-      <div className="max-w-[40%]">
-        <p className="text-xs uppercase tracking-wide text-gray-400 mb-2">
-          {product.category}
-        </p>
+      <div className="flex flex-col lg:flex-row">
 
-        <h3 className="text-lg font-semibold text-gray-900 leading-snug">
-          {product.name}
-        </h3>
-
-        {/* ✅ DYNAMIC PRICE */}
-        <div className="mt-3">
-         <p className="text-lg font-bold text-blue-700">
-  ₹{getFinalPrice(product).toLocaleString('en-IN')}
-</p>
-
-          {product.offer && (
-            <p className="text-sm text-gray-400 line-through">
-                ₹{product.price.toLocaleString("en-IN")}
-            </p>
-          )}
+        {/* IMAGE (TOP on mobile, RIGHT on desktop) */}
+        <div className="relative w-full h-[160px] sm:h-[200px] lg:h-auto lg:w-[60%] flex justify-center items-center bg-white">
+          <Image
+            src={product.images[0]}
+            alt={product.name}
+            width={380}
+            height={320}
+            className="object-contain p-4 transition duration-500 group-hover:scale-105"
+          />
         </div>
 
-        <button className="mt-4 bg-blue-700 hover:bg-blue-800 
-                           text-white text-sm px-5 py-2 rounded-full
-                           transition">
-          Shop now
-        </button>
-      </div>
+        {/* CONTENT */}
+        <div className="p-3 sm:p-4 lg:p-6 flex flex-col justify-center lg:w-[40%]">
 
-      {/* Right Image */}
-      <div className="flex justify-end w-[60%]">
-        <Image
-          src={product.images[0]}
-          alt={product.name}
-          width={380}
-          height={320}
-          className="object-contain drop-shadow-2xl 
-                     border-2 border-gray-200 rounded-2xl
-                     transition duration-500 
-                     group-hover:scale-105 
-                     group-hover:border-blue-500"
-        />
+          {/* CATEGORY */}
+          <p className="text-[10px] sm:text-xs uppercase tracking-wide text-gray-400 mb-1">
+            {product.category}
+          </p>
+
+          {/* NAME */}
+          <h3 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-900 leading-snug line-clamp-2">
+            {product.name}
+          </h3>
+
+          {/* PRICE */}
+          <div className="mt-2">
+            <p className="text-blue-700 font-bold text-sm sm:text-base">
+              ₹{getFinalPrice(product).toLocaleString("en-IN")}
+            </p>
+
+            {product.offer && (
+              <p className="text-xs text-gray-400 line-through">
+                ₹{product.price.toLocaleString("en-IN")}
+              </p>
+            )}
+          </div>
+
+          {/* BUTTON (smaller on mobile) */}
+          <button className="mt-3 lg:mt-4 bg-blue-700 hover:bg-blue-800 
+                             text-white text-xs sm:text-sm px-4 py-2 rounded-full
+                             transition w-fit">
+            Shop now
+          </button>
+
+        </div>
       </div>
     </div>
   )

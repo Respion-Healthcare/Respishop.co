@@ -6,8 +6,17 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
+        disallow: [
+          "/*/feed/",
+          "/tag/",
+          "/cart/",
+          "/checkout/",
+          "/my-account/",
+          "/search/",
+        ],
       },
     ],
     sitemap: "https://respishop.in/sitemap.xml",
+    host: "https://respishop.in",
   };
 }

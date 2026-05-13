@@ -73,107 +73,148 @@ export default function Hero() {
   const tilt2 = useTilt()
   const tilt3 = useTilt()
   const tilt4 = useTilt()
+  const tilt5 = useTilt()
 
   const glow = useGlow()
 
   return (
-    <section className="relative bg-gradient-to-br from-blue-50 via-white to-blue-100 min-h-screen w-full flex items-center overflow-hidden">
+    <section className="relative bg-gradient-to-br from-blue-50 via-white to-blue-100 w-full overflow-visible">
 
-      {/* 🔵 SOFT BACKGROUND BLOBS */}
-      <div className="absolute top-20 right-20 w-[500px] h-[500px] bg-blue-300 blur-[140px] opacity-30 rounded-full" />
-      <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-blue-200 blur-[120px] opacity-30 rounded-full" />
+      {/* BACKGROUND BLOBS */}
+      <div className="absolute top-10 right-10 w-[250px] sm:w-[500px] h-[250px] sm:h-[500px] bg-blue-300 blur-[120px] opacity-30 rounded-full" />
+      <div className="absolute bottom-10 left-10 w-[200px] sm:w-[400px] h-[200px] sm:h-[400px] bg-blue-200 blur-[100px] opacity-30 rounded-full" />
 
-      <div className="w-full grid lg:grid-cols-2 items-center relative z-10">
+      <div className="max-w-[1400px] xl:max-w-[1600px] mx-auto px-6 sm:px-12 lg:px-16 xl:px-20 py-16 lg:py-24 grid lg:grid-cols-[1.1fr_1.4fr] gap-16 items-center">
 
         {/* LEFT */}
-        <div className="px-6 sm:px-12 lg:px-24 py-12 flex flex-col justify-center">
-
+        <div className="flex flex-col justify-center">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-serif text-blue-600 leading-[1.05] -mt-16"
+            className="text-3xl sm:text-5xl lg:text-7xl xl:text-8xl font-serif text-blue-600 leading-tight"
           >
             Respishop <br /> Healthcare
           </motion.h1>
 
-          {/* TYPEWRITER */}
-          <p className="mt-6 text-gray-600 text-lg lg:text-xl max-w-md leading-relaxed min-h-[80px]">
+          <p className="mt-6 text-gray-600 text-base sm:text-lg lg:text-xl max-w-md leading-relaxed min-h-[80px]">
             {typedText}
             <span className="animate-pulse">|</span>
           </p>
 
-          {/* IMAGE */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="mt-12"
+            className="mt-10 w-full flex justify-center lg:justify-start"
           >
             <Image
               src="/images/hero1.jpg"
               alt="Medical Equipment"
               width={420}
               height={380}
-              className="rounded-2xl shadow-xl hover:scale-105 transition"
+              className="w-full max-w-xs sm:max-w-sm md:max-w-md rounded-2xl shadow-xl hover:scale-105 transition"
             />
           </motion.div>
 
           <Link
             href="/products/cpap/resmed-airsense-10-autoset-tripack"
-            className="mt-6 w-fit bg-blue-600 text-white px-8 py-4 rounded-full hover:scale-105 hover:bg-blue-700 transition shadow-lg"
+            className="mt-6 w-fit bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:scale-105 hover:bg-blue-700 transition shadow-lg"
           >
             Explore Now
           </Link>
         </div>
 
-        {/* RIGHT */}
-        <div className="relative w-full h-[100vh] flex items-center justify-center">
+      {/* RIGHT */}
+<div className="relative w-full">
 
-          <div className="relative w-[780px] h-[820px]">
+{/* ✅ MOBILE VIEW */}
+{/* <div className="lg:hidden mt-10 flex justify-center">
+  <div className="grid grid-cols-2 gap-3 w-full max-w-sm">
 
-            {[
-              { id: 1, img: "/images/hero12.png", cls: "top-0 left-16 w-[500px] h-[280px]", tilt: tilt1 },
-              { id: 2, img: "/images/hero13.png", cls: "top-[260px] left-0 w-[320px] h-[260px]", tilt: tilt2 },
-              { id: 3, img: "/images/hero11.png", cls: "top-[200px] left-[240px] w-[420px] h-[520px]", tilt: tilt3 },
-              { id: 4, img: "/images/hero14.png", cls: "bottom-0 right-10 w-[360px] h-[240px]", tilt: tilt4 },
-            // { id: 5, img: "/images/hero14.png", cls: "bottom-3 left-0 w-[500px] h-[280px]", tilt: tilt4 },
-            
-            ].map(({ id, img, cls, tilt }) => (
-              <motion.div
-                key={id}
-                onMouseEnter={() => setActiveCard(id)}
-                onMouseLeave={() => {
-                  setActiveCard(null)
-                  tilt.reset()
-                }}
-                onMouseMove={(e) => {
-                  tilt.handleMouseMove(e)
-                  glow.handleMove(e)
-                }}
-                style={{ rotateX: tilt.rotateX, rotateY: tilt.rotateY }}
-                animate={{ y: [0, -12 - id * 2, 0] }}
-                transition={{ duration: 4 + id, repeat: Infinity }}
-                className={`absolute ${cls} rounded-3xl overflow-hidden shadow-2xl transition-all will-change-transform
-                  ${activeCard === id ? "z-50 scale-105" : "z-20"}
-                `}
-              >
+    <div className="col-span-2 relative h-[170px] rounded-2xl overflow-hidden shadow-lg">
+      <Image src="/images/hero12.png" fill alt="" className="object-cover" />
+    </div>
 
-                {/* GLOW */}
-                {activeCard === id && (
-                  <motion.div
-                    className="pointer-events-none absolute inset-0"
-                    style={{
-                      background: `radial-gradient(450px circle at ${glow.x.get()}px ${glow.y.get()}px, rgba(37,99,235,0.25), transparent 70%)`,
-                    }}
-                  />
-                )}
+    <div className="relative h-[120px] rounded-2xl overflow-hidden shadow-lg">
+      <Image src="/images/hero13.png" fill alt="" className="object-cover" />
+    </div>
 
-                <Image src={img} fill alt="" className="object-cover" />
-              </motion.div>
-            ))}
+    <div className="relative h-[120px] rounded-2xl overflow-hidden shadow-lg">
+      <Image src="/images/hero11.png" fill alt="" className="object-cover" />
+    </div>
 
-          </div>
-        </div>
+    <div className="relative h-[120px] rounded-2xl overflow-hidden shadow-lg">
+      <Image src="/images/hero14.png" fill alt="" className="object-cover" />
+    </div>
 
+    <div className="relative h-[120px] rounded-2xl overflow-hidden shadow-lg">
+      <Image src="/images/hero14.png" fill alt="" className="object-cover" />
+    </div>
+
+  </div>
+</div> */}
+
+  {/* ✅ DESKTOP VIEW */}
+  <div className="hidden lg:flex relative h-[820px] items-center justify-center">
+
+    <div className="relative w-[780px] h-[820px]">
+
+      {[
+        { id: 1, img: "/images/hero12.png", cls: "top-0 left-16 w-[500px] h-[280px]", tilt: tilt1 },
+        { id: 2, img: "/images/hero13.png", cls: "top-[260px] left-0 w-[320px] h-[260px]", tilt: tilt2 },
+        { id: 3, img: "/images/hero11.png", cls: "top-[200px] left-[240px] w-[420px] h-[520px]", tilt: tilt3 },
+        { id: 4, img: "/images/hero14.png", cls: "bottom-0 right-10 w-[360px] h-[240px]", tilt: tilt4 },
+
+        // ✅ BIG BACKGROUND RECTANGLE
+        {
+          id: 5,
+          img: "/images/hero14.png",
+          cls: "top-[140px] right-[-120px] w-[600px] h-[360px]",
+          tilt: tilt5,
+        },
+
+      ].map(({ id, img, cls, tilt }) => (
+        <motion.div
+          key={id}
+          onMouseEnter={() => setActiveCard(id)}
+          onMouseLeave={() => {
+            setActiveCard(null)
+            tilt.reset()
+          }}
+          onMouseMove={(e) => {
+            tilt.handleMouseMove(e)
+            glow.handleMove(e)
+          }}
+          style={{ rotateX: tilt.rotateX, rotateY: tilt.rotateY }}
+          animate={{ y: [0, -12 - id * 2, 0] }}
+          transition={{ duration: 4 + id, repeat: Infinity }}
+          className={`absolute ${cls} rounded-3xl overflow-hidden shadow-2xl transition-all
+            ${
+              activeCard === id
+                ? "z-50 scale-105"
+                : id === 5
+                ? "z-10 opacity-95"
+                : "z-20"
+            }
+          `}
+        >
+
+          {/* GLOW */}
+          {activeCard === id && (
+            <motion.div
+              className="pointer-events-none absolute inset-0"
+              style={{
+                background: `radial-gradient(450px circle at ${glow.x.get()}px ${glow.y.get()}px, rgba(37,99,235,0.25), transparent 70%)`,
+              }}
+            />
+          )}
+
+          <Image src={img} fill alt="" className="object-cover" />
+        </motion.div>
+      ))}
+
+    </div>
+  </div>
+</div>
       </div>
     </section>
   )

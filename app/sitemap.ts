@@ -37,8 +37,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const locations = [
     "india",
-    "delhi",
-    "mumbai",
     "bangalore",
     "kolkata",
   ]
@@ -48,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/${product}/${location}`,
       lastModified: currentDate,
       changeFrequency: "weekly" as const,
-      priority: location === "india" ? 1 : 0.8,
+     priority: location === "india" ? 0.9 : 0.7,
     }))
   )
 
