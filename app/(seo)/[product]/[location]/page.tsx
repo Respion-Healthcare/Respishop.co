@@ -1,43 +1,31 @@
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
+import Link from "next/link"
 
-export const dynamic = 'force-static'
+export const dynamic = "force-static"
 
-// ✅ SINGLE SOURCE OF TRUTH
+// ✅ ALLOWED SEO CITIES
 const cities = [
   "india",
-  "delhi",
-  "mumbai",
   "bangalore",
   "kolkata",
-  "bhubaneswar",
-  "patna",
-  "ranchi"
 ]
 
-// ✅ KEEPING YOUR STRUCTURE
 const allowedCities = cities
 
+// ✅ AREA MAP
 const areaMap: Record<string, string[]> = {
-  bhubaneswar: ["Patia", "Saheed Nagar", "Rasulgarh", "Nayapalli"],
-  patna: ["Kankarbagh", "Boring Road", "Danapur", "Rajendra Nagar"],
-  ranchi: ["Harmu", "Doranda", "Lalpur", "Morabadi"],
-
-  delhi: ["Karol Bagh", "Dwarka", "Saket", "Rohini"],
-  mumbai: ["Andheri", "Dadar", "Borivali", "Navi Mumbai"],
   kolkata: ["Salt Lake", "Howrah", "Park Street", "Dum Dum"],
   bangalore: ["Whitefield", "BTM", "Indiranagar", "Electronic City"],
-  hyderabad: ["Banjara Hills", "Gachibowli", "Madhapur", "Kukatpally"],
-  chennai: ["T Nagar", "Velachery", "Anna Nagar", "Tambaram"],
-  pune: ["Hinjewadi", "Kothrud", "Viman Nagar", "Wakad"],
-  ahmedabad: ["Navrangpura", "Maninagar", "Satellite", "Bopal"],
-  jaipur: ["Malviya Nagar", "Vaishali Nagar", "Mansarovar", "C Scheme"],
-  lucknow: ["Gomti Nagar", "Aliganj", "Hazratganj", "Indira Nagar"],
 }
 
-// ✅ USE SAME SOURCE HERE
+// ✅ STATIC PARAMS
 export async function generateStaticParams() {
-  const productKeys = ['cpap-machine', 'bipap-machine', 'oxygen-concentrator']
+  const productKeys = [
+    "cpap-machine",
+    "bipap-machine",
+    "oxygen-concentrator",
+  ]
 
   return cities.flatMap((location) =>
     productKeys.map((product) => ({
@@ -47,6 +35,7 @@ export async function generateStaticParams() {
   )
 }
 
+// ✅ PRODUCTS
 const products = {
   "cpap-machine": "CPAP Machine",
   "bipap-machine": "BiPAP Machine",
@@ -60,18 +49,23 @@ type PageParams = {
   location: string
 }
 
-// ✅ HELPER (BETTER FORMATTING)
+// ✅ LOCATION FORMATTER
 function formatLocation(location: string) {
   if (!location) return "India"
+
   return location.charAt(0).toUpperCase() + location.slice(1)
 }
 
-const contentMap: Record<string, {
-  title: string
-  intro: string
-  points: string[]
-  paragraph: string
-}> = {
+// ✅ CONTENT MAP
+const contentMap: Record<
+  string,
+  {
+    title: string
+    intro: string
+    points: string[]
+    paragraph: string
+  }
+> = {
   india: {
     title: "CPAP Machine in India – Best Prices & Fast Delivery",
     intro:
@@ -85,51 +79,13 @@ const contentMap: Record<string, {
     paragraph:
       "We provide genuine CPAP machines across India with warranty and expert support.",
   },
-
-  bhubaneswar: {
-    title: "CPAP Machine in Bhubaneswar – Best Price & Home Delivery",
-    intro:
-      "Buy CPAP machine in Bhubaneswar with fast delivery and expert support.",
-    points: [
-      "Same-day delivery in Bhubaneswar",
-      "Affordable pricing",
-      "Expert consultation",
-      "100% genuine products",
-    ],
-    paragraph:
-      "Respishop provides CPAP machines in Bhubaneswar including Patia, Khandagiri, and Rasulgarh.",
-  },
-
-  ranchi: {
-    title: "CPAP Machine in Ranchi – Best Deals & Quick Delivery",
-    intro:
-      "Looking for CPAP machines in Ranchi? Get the best deals with fast delivery.",
-    points: [
-      "Fast delivery in Ranchi",
-      "Best price guarantee",
-      "Top medical brands",
-      "Customer support available",
-    ],
-    paragraph:
-      "We deliver CPAP machines across Ranchi including Harmu, Doranda, and Lalpur.",
-  },
-
-  patna: {
-    title: "CPAP Machine in Patna – Affordable Price & Fast Delivery",
-    intro:
-      "Buy CPAP machine in Patna at the best price with quick delivery.",
-    points: [
-      "Quick delivery in Patna",
-      "Affordable pricing",
-      "Trusted CPAP brands",
-      "Easy ordering process",
-    ],
-    paragraph:
-      "Respishop offers CPAP machines in Patna including Kankarbagh, Boring Road.",
-  },
 }
 
-function generateDynamicContent(location: string, productName: string) {
+// ✅ DYNAMIC CONTENT
+function generateDynamicContent(
+  location: string,
+  productName: string
+) {
   const formatted = formatLocation(location)
 
   return {
@@ -145,7 +101,7 @@ function generateDynamicContent(location: string, productName: string) {
   }
 }
 
-// ✅ SEO METADATA (IMPROVED)
+// ✅ SEO METADATA
 export async function generateMetadata(
   { params }: { params: Promise<PageParams> }
 ): Promise<Metadata> {
@@ -159,29 +115,44 @@ export async function generateMetadata(
 
   return {
     title: `${productName} in ${formattedLocation} – Price, Rental, Near Me & Home Delivery | Respishop`,
+
     description: `Buy ${productName} in ${formattedLocation} near you. Best price, rental options, and fast home delivery available.`,
 
-    // ✅ IMPORTANT SEO FIX
     alternates: {
       canonical: `https://respishop.in/${product}/${location}`,
+    },
+
+    openGraph: {
+      title: `${productName} in ${formattedLocation}`,
+      description: `Buy ${productName} in ${formattedLocation} with fast delivery.`,
+      url: `https://respishop.in/${product}/${location}`,
+      siteName: "Respishop",
+      type: "website",
     },
   }
 }
 
 // ✅ PAGE
-export default async function Page({ params }: { params: Promise<PageParams> }) {
+export default async function Page({
+  params,
+}: {
+  params: Promise<PageParams>
+}) {
 
   const { product, location } = await params
 
   const productKey = product as ProductKey
-  if (!products[productKey]) return notFound()
+
+  if (!products[productKey]) {
+    return notFound()
+  }
 
   const productName = products[productKey]
 
   const locationKey = location?.toLowerCase() || "india"
 
   if (!allowedCities.includes(locationKey)) {
-    notFound()
+    return notFound()
   }
 
   const content =
@@ -190,6 +161,7 @@ export default async function Page({ params }: { params: Promise<PageParams> }) 
 
   const formattedLocation = formatLocation(location)
 
+  // ✅ FAQS
   const dynamicFaq = [
     {
       question: `Do you deliver ${productName} in ${formattedLocation}?`,
@@ -205,6 +177,7 @@ export default async function Page({ params }: { params: Promise<PageParams> }) 
     },
   ]
 
+  // ✅ FAQ SCHEMA
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -221,41 +194,57 @@ export default async function Page({ params }: { params: Promise<PageParams> }) 
   return (
     <div className="p-6 max-w-5xl mx-auto">
 
+      {/* FAQ SCHEMA */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
       />
 
+      {/* TITLE */}
       <h1 className="text-3xl font-bold mb-4">
         {content.title} | Respishop
       </h1>
 
-      <p className="mb-4">{content.intro}</p>
+      {/* INTRO */}
+      <p className="mb-4">
+        {content.intro}
+      </p>
 
+      {/* POINTS */}
       <ul className="list-disc ml-6 mb-6">
         {content.points.map((point, i) => (
           <li key={i}>{point}</li>
         ))}
       </ul>
 
-      <p className="mb-6">{content.paragraph}</p>
+      {/* PARAGRAPH */}
+      <p className="mb-6">
+        {content.paragraph}
+      </p>
 
+      {/* ABOUT */}
       <h2 className="text-2xl font-semibold mb-3">
         About {productName} in {formattedLocation}
       </h2>
 
       <p className="mb-4">
-        Respishop provides reliable {productName} solutions in {formattedLocation} with fast delivery and expert support.
+        Respishop provides reliable {productName} solutions in{" "}
+        {formattedLocation} with fast delivery and expert support.
       </p>
 
+      {/* SERVICES */}
       <h2 className="text-2xl font-semibold mt-8 mb-3">
         {productName} Services in {formattedLocation}
       </h2>
 
       <p className="mb-4">
-        We offer sales, rental, and after-sales service for {productName} across {formattedLocation}.
+        We offer sales, rental, and after-sales service for{" "}
+        {productName} across {formattedLocation}.
       </p>
 
+      {/* AREAS */}
       <h2 className="text-2xl font-semibold mt-8 mb-3">
         Areas We Serve in {formattedLocation}
       </h2>
@@ -264,10 +253,13 @@ export default async function Page({ params }: { params: Promise<PageParams> }) 
         {locationKey === "india"
           ? "We deliver across all major cities in India."
           : areaMap[locationKey]
-          ? `We deliver in ${areaMap[locationKey].join(", ")} and nearby areas in ${formattedLocation}.`
+          ? `We deliver in ${areaMap[
+              locationKey
+            ].join(", ")} and nearby areas in ${formattedLocation}.`
           : `We provide fast delivery across ${formattedLocation} and nearby locations.`}
       </p>
 
+      {/* INTERNAL LINKS */}
       <h2 className="text-xl font-semibold mt-10 mb-3">
         Explore Other Cities
       </h2>
@@ -277,26 +269,32 @@ export default async function Page({ params }: { params: Promise<PageParams> }) 
           .filter((c) => c !== locationKey)
           .map((city) => (
             <li key={city}>
-              <a href={`/${product}/${city}`}>
+              <Link href={`/${product}/${city}`}>
                 {formatLocation(city)}
-              </a>
+              </Link>
             </li>
-        ))}
+          ))}
       </ul>
 
+      {/* FAQ */}
       <h2 className="text-2xl font-semibold mt-10 mb-4">
         Frequently Asked Questions
       </h2>
 
       <div className="space-y-4">
         {dynamicFaq.map((faq, i) => (
-          <div key={i} className="border p-4 rounded-lg">
-            <h3 className="font-semibold">{faq.question}</h3>
+          <div
+            key={i}
+            className="border p-4 rounded-lg"
+          >
+            <h3 className="font-semibold">
+              {faq.question}
+            </h3>
+
             <p>{faq.answer}</p>
           </div>
         ))}
       </div>
-
     </div>
   )
 }
