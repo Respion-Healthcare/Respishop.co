@@ -5,18 +5,34 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: "*",
-        allow: "/",
-        disallow: [
-          "/*/feed/",
-          "/tag/",
-          "/cart/",
-          "/checkout/",
-          "/my-account/",
-          "/search/",
+
+        allow: [
+          "/",
+          "/wp-admin/admin-ajax.php",
         ],
+
+      disallow: [
+  "/wp-admin/",
+
+  "/*/feed/",
+  "/tag/",
+  "/cart/",
+  "/checkout/",
+  "/my-account/",
+  "/search/",
+
+  "/?add-to-cart=",
+  "/*?add-to-cart=",
+  "/*?add-to-wishlist=",
+  "/*?orderby=",
+  "/*?min_price=",
+  "/*?max_price=",
+  "/*?wc-ajax=",
+  "/*?page_id=",
+   ],
       },
     ],
+
     sitemap: "https://respishop.in/sitemap.xml",
-    host: "https://respishop.in",
   };
 }
