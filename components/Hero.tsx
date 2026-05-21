@@ -162,7 +162,7 @@ export default function Hero() {
         { id: 1, img: "/images/hero12.png", cls: "top-0 left-16 w-[500px] h-[280px]", tilt: tilt1 },
         { id: 2, img: "/images/hero13.png", cls: "top-[260px] left-0 w-[320px] h-[260px]", tilt: tilt2 },
         { id: 3, img: "/images/hero11.png", cls: "top-[200px] left-[240px] w-[420px] h-[520px]", tilt: tilt3 },
-        { id: 4, img: "/images/hero14.png", cls: "bottom-0 right-10 w-[360px] h-[240px]", tilt: tilt4 },
+        { id: 4, img: "/images/Blogs/best cpap.png", cls: "bottom-0 right-10 w-[360px] h-[240px]", tilt: tilt4 },
 
         // ✅ BIG BACKGROUND RECTANGLE
         {

@@ -40,7 +40,7 @@ const blog = [
     category: "Local SEO",
     date: "March 2026",
     readTime: "5 min read",
-    image: "/images/Blog2.webp",
+    image: "/images/blog2.webp",
     excerpt:
       "Check CPAP machine price in Bhubaneswar and best places to buy online.",
   },
