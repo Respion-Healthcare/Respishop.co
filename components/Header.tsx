@@ -175,7 +175,7 @@ export default function Header() {
 
           <Link href="/about">About Us</Link>
           <Link href="/contact">Contact</Link>
-          <Link href="/blogs">Blogs</Link>
+          <Link href="/blog">Blogs</Link>
 
         </nav>
 
@@ -261,7 +261,7 @@ export default function Header() {
 
         <Link href="/about" onClick={closeMobileMenu} className="py-2 border-b">About</Link>
         <Link href="/contact" onClick={closeMobileMenu} className="py-2 border-b">Contact</Link>
-        <Link href="/blogs" onClick={closeMobileMenu} className="py-2">Blogs</Link>
+        <Link href="/blog" onClick={closeMobileMenu} className="py-2">Blogs</Link>
 
       </div>
 

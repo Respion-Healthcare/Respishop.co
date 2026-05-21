@@ -62,8 +62,8 @@ export default function ContactPage() {
         </h1>
 
         <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-          You can call us in working time or visit our office.
-          All mails will get the response within 24 hours.
+          You can call us in working hour or visit our office.
+          Reply to all mails within 24 hours.
           <br />
           Love to hear from you!
         </p>

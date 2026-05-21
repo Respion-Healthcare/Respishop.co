@@ -117,7 +117,7 @@ Yes, it significantly reduces or eliminates snoring.</p>
 },
 "best-cpap-machine-in-india": {
   title: "Best CPAP Machine in India (2026) – Price, Features & Buying Guide",
-  image: "/images/SleepTherapy.jpg",
+  image: "/images/Blogs/best cpap.png",
   content: `
 
 <h1>Best CPAP Machine in India (2026) – Complete Buying Guide</h1>
@@ -553,10 +553,35 @@ Yes, if you want modern features and better tracking.</p>
   const blog = blogContent[safeSlug]
 
   if (!blog) return notFound()
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: blog.title,
+  image: [`https://respishop.in${blog.image}`],
+  author: {
+    "@type": "Organization",
+    name: "Respishop",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Respishop",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://respishop.in/logo.png",
+    },
+  },
+}
 
   return (
+    
     <div className="bg-gray-50 min-h-screen">
-
+  
+  <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(blogSchema),
+  }}
+/>
       {/* HERO */}
       <div className="relative w-full h-[320px] md:h-[420px] overflow-hidden">
         <Image

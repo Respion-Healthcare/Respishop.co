@@ -10,27 +10,27 @@ import { useRef } from "react"
 
 const reviews = [
   {
-    name: "Aarav Mehta",
+    name: "Rajesh Patel",
     review:
-      "Absolutely love the quality! The fabric feels premium and delivery was super fast. Will definitely shop again.",
+      "The oxygen concentrator arrived quickly and was very easy to set up at home. My father feels much more comfortable now.",
     rating: 5,
   },
   {
-    name: "Priya Sharma",
+    name: "Ananya Das",
     review:
-      "Great experience from browsing to checkout. The customer support was very helpful and responsive.",
+      "Excellent support from the team during our CPAP purchase. They explained everything clearly and helped us choose the right machine.",
+    rating: 5,
+  },
+  {
+    name: "Vikram Nair",
+    review:
+      "Very reliable medical equipment and genuine products. Delivery was on time and packaging was secure.",
     rating: 4,
   },
   {
-    name: "Rohan Kapoor",
+    name: "Meera Sharma",
     review:
-      "Stylish products and amazing fit. Exactly what I was looking for. Highly recommended!",
-    rating: 5,
-  },
-  {
-    name: "Sneha Verma",
-    review:
-      "The packaging was beautiful and the product exceeded expectations. 10/10 experience!",
+      "We ordered a patient care bed for my elderly mother and the overall experience was smooth from delivery to installation.",
     rating: 5,
   },
 ]
@@ -55,7 +55,7 @@ export default function ReviewsSection() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Product",
+            "@type": "MedicalBusiness",
             name: "Customer Reviews",
             review: reviews.map((r) => ({
               "@type": "Review",
@@ -84,15 +84,15 @@ export default function ReviewsSection() {
           {/* Heading */}
           <header className="text-center mb-16">
             <p className="uppercase tracking-[0.25em] text-blue-500 text-sm font-semibold mb-4">
-              Testimonials
+              Patient Testimonials
             </p>
 
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-              What Our Customers Say
+              Trusted by Families Across India
             </h2>
 
             <p className="text-gray-500 mt-5 text-lg max-w-2xl mx-auto leading-relaxed">
-              Real customer reviews about our products, quality, and service experience.
+              Genuine reviews from customers who rely on our healthcare and medical support products.
             </p>
           </header>
 
@@ -197,7 +197,7 @@ export default function ReviewsSection() {
                         {item.name}
                       </h4>
                       <p className="text-sm text-blue-500 font-medium mt-1">
-                        Verified Buyer
+                        Verified Customer
                       </p>
                     </div>
 

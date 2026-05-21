@@ -113,7 +113,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/blogs" className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300">
+                <Link href="/blog" className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300">
                   Our Blogs
                 </Link>
               </li>

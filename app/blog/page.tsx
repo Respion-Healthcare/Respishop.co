@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Read expert guides on CPAP machines, sleep apnea, oxygen therapy, and respiratory care in India. Compare prices, features, and buying tips.",
   alternates: {
-    canonical: "https://www.respishop.in/blogs",
+    canonical: "https://www.respishop.in/blog",
   },
   robots: {
     index: true,
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 }
 
 // ✅ ALL BLOGS (SYNC WITH SLUG FILE)
-const blogs = [
+const blog = [
   {
     id: 1,
     slug: "best-cpap-machine-in-india",
@@ -28,7 +28,7 @@ const blogs = [
     category: "CPAP Guide",
     date: "March 2026",
     readTime: "7 min read",
-    image: "/images/SleepTherapy.jpg",
+    image: "/images/Blogs/best cpap.png",
     excerpt:
       "Compare top CPAP machines in India with features, pricing, and buying tips.",
   },
@@ -40,7 +40,7 @@ const blogs = [
     category: "Local SEO",
     date: "March 2026",
     readTime: "5 min read",
-    image: "/images/blog2.webp",
+    image: "/images/Blog2.webp",
     excerpt:
       "Check CPAP machine price in Bhubaneswar and best places to buy online.",
   },
@@ -51,7 +51,7 @@ const blogs = [
     category: "Oxygen Therapy",
     date: "March 2026",
     readTime: "6 min read",
-    image: "/images/sleepstudy.jpg",
+    image: "/images/Blogs/b3.png",
     excerpt:
       "Latest oxygen concentrator price in India with features and buying tips.",
   },
@@ -62,7 +62,7 @@ const blogs = [
     category: "Beginner Guide",
     date: "April 2026",
     readTime: "6 min read",
-    image: "/images/SleepTherapy.jpg",
+    image: "/images/Blogs/b8.jpg",
     excerpt:
       "Learn how CPAP machines work and why they are essential for sleep apnea treatment.",
   },
@@ -73,7 +73,7 @@ const blogs = [
     category: "Price Guide",
     date: "April 2026",
     readTime: "7 min read",
-    image: "/images/SleepTherapy.jpg",
+    image: "/images/Blogs/b2.png",
     excerpt:
       "Explore CPAP machine prices in India with detailed buying insights.",
   },
@@ -84,7 +84,7 @@ const blogs = [
     category: "Problem Solving",
     date: "April 2026",
     readTime: "6 min read",
-    image: "/images/SleepTherapy.jpg",
+    image: "/images/Blogs/b6.png",
     excerpt:
       "Facing CPAP issues? Learn side effects and simple solutions for better comfort.",
   },
@@ -95,7 +95,7 @@ const blogs = [
     category: "Comparison",
     date: "April 2026",
     readTime: "7 min read",
-    image: "/images/SleepTherapy.jpg",
+    image: "/images/Blogs/b5.png",
     excerpt:
       "Compare AirSense 10 vs 11 features, price, and performance to choose the best CPAP machine.",
   },
@@ -119,7 +119,7 @@ export default function BlogPage() {
       <section className="w-full px-4 sm:px-6 lg:max-w-7xl lg:mx-auto pb-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-          {blogs.map((blog) => (
+          {blog.map((blog) => (
             <article
               key={blog.id}
               className="group bg-white rounded-3xl shadow-lg overflow-hidden 
@@ -154,7 +154,7 @@ export default function BlogPage() {
                 </p>
 
                 <Link
-                  href={`/blogs/${blog.slug}`}
+                  href={`/blog/${blog.slug}`}
                   className="text-blue-600 font-medium hover:underline"
                 >
                   Read More →

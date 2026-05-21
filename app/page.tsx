@@ -6,7 +6,9 @@ import Hero from "@/components/Hero"
 import ProductBannerGrid from "@/components/ProductBannerGrid"
 import ReviewsSection from "@/components/Review"
 import ShopCategories from "@/components/ShopCategories"
-import LocationSEOSection from "@/components/LocationSEOSection"
+import TrustBadges from "@/components/TrustBadges"
+import FloatingContactButtons from "@/components/FloatingContactButtons"
+// import LocationSEOSection from "@/components/LocationSEOSection"
 
 export const metadata: Metadata = {
   title: "Buy CPAP, BiPAP & Oxygen Concentrators in India | Respishop",
@@ -32,20 +34,26 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="bg-gradient-to-b from-blue-50 via-white to-blue-100 min-h-screen">
-      
-      {/* ✅ H1 for SEO (VERY IMPORTANT) */}
+
+      {/* SEO H1 */}
       <h1 className="sr-only">
         Buy CPAP, BiPAP Machines & Oxygen Concentrators in India
       </h1>
 
       <Hero />
-      <ProductBannerGrid />
-      <ShopCategories />
-      <BestSellingSection />
-      <DealOfTheDay />
-      {/* <LocationSEOSection /> */}
-      <ReviewsSection />
 
+      <ProductBannerGrid />
+
+      <ShopCategories />
+
+      <BestSellingSection />
+  <TrustBadges />
+      <DealOfTheDay />
+
+      {/* <LocationSEOSection /> */}
+
+      <ReviewsSection />
+<FloatingContactButtons />
     </main>
   )
 }

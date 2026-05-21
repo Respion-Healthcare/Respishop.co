@@ -303,7 +303,7 @@ href={`/products/${item.category}/${item.slug}`}
 
 <p className="mt-4">
   Read our guide on{" "}
-  <Link href="/blogs/what-is-cpap-machine" className="text-blue-600 underline">
+  <Link href="/blog/what-is-cpap-machine" className="text-blue-600 underline">
     what is a CPAP machine
   </Link>{" "}
   to understand how this product works.

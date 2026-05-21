@@ -528,7 +528,7 @@ const breadcrumbSchema = {
           <li>
             <Link
               className="text-blue-600 underline"
-              href="/blogs/best-cpap-machine-in-india"
+              href="/blog/best-cpap-machine-in-india"
             >
               Best CPAP Machine in
               India
