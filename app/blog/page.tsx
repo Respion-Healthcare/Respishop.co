@@ -18,7 +18,6 @@ export const metadata: Metadata = {
   },
 }
 
-// ✅ ALL BLOGS (SYNC WITH SLUG FILE)
 const blog = [
   {
     id: 1,

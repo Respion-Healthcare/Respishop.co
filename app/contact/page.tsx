@@ -4,7 +4,6 @@ import { Mail, Phone, MapPin } from "lucide-react"
 import { useState } from "react"
 
 export default function ContactPage() {
-
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -53,112 +52,153 @@ export default function ContactPage() {
   }
 
   return (
-    <main className="pt-[120px] min-h-screen bg-gray-100">
+    <main className="pt-[120px] min-h-screen bg-gradient-to-b from-blue-50 via-white to-gray-100">
 
-      {/* TOP SECTION */}
-      <section className="max-w-6xl mx-auto px-6 py-16 text-center">
-        <h1 className="text-4xl md:text-5xl font-semibold text-gray-800 mb-6">
-          We're always eager to hear from you!
-        </h1>
+      {/* SEO CONTENT + FORM SECTION */}
+      <section className="max-w-7xl mx-auto px-6 py-16">
 
-        <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-          You can call us in working hour or visit our office.
-          Reply to all mails within 24 hours.
-          <br />
-          Love to hear from you!
-        </p>
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-        {/* CONTACT INFO ROW */}
-        <div className="grid md:grid-cols-3 gap-12 mt-16 text-left">
+          {/* LEFT CONTENT */}
+          <div>
 
-          <a
-            href="https://maps.google.com/?q=702,13th Cross Rd,J.P Nagar,Bengaluru,560078"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-start gap-4 group hover:bg-white p-4 rounded-xl transition"
-          >
-            <MapPin className="text-blue-500 w-7 h-7 mt-1 group-hover:scale-110 transition" />
-            <div>
-              <h3 className="font-semibold text-lg text-gray-800 mb-2">
-                Address
-              </h3>
-              <p className="text-gray-600 leading-relaxed group-hover:text-gray-800">
-                702, 13th Cross Rd, 1st Phase, J.P Nagar, <br />
-                Bengaluru, Karnataka, 560078
+            <span className="inline-block bg-blue-100 text-blue-700 px-5 py-2 rounded-full text-sm font-medium mb-6">
+              Contact Respishop
+            </span>
+
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+              Let’s Connect With You
+            </h1>
+
+            <p className="text-gray-600 leading-relaxed text-lg mb-10 max-w-xl">
+              Have questions about CPAP machines, BiPAP machines, oxygen
+              concentrators, sleep apnea therapy, or respiratory care products?
+              Our expert team is ready to help you choose the right medical
+              equipment and provide complete support for your respiratory health
+              needs.
+            </p>
+
+            {/* CONTACT INFO */}
+            <div className="space-y-8">
+
+              {/* ADDRESS */}
+              <div className="flex items-start gap-5">
+                <div className="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center shrink-0">
+                  <MapPin className="text-blue-600 w-7 h-7" />
+                </div>
+
+                <div>
+                  <h2 className="text-xl font-semibold text-gray-900 mb-2">
+                    Address
+                  </h2>
+
+                  <p className="text-gray-600 leading-relaxed">
+                    702, 13th Cross Rd, 1st Phase,
+                    <br />
+                    J.P Nagar, Bengaluru,
+                    <br />
+                    Karnataka 560078
+                  </p>
+                </div>
+              </div>
+
+              {/* PHONE */}
+              <div className="flex items-start gap-5">
+                <div className="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center shrink-0">
+                  <Phone className="text-blue-600 w-7 h-7" />
+                </div>
+
+                <div>
+                  <h2 className="text-xl font-semibold text-gray-900 mb-2">
+                    Call Us
+                  </h2>
+
+                  <p className="text-gray-600 mb-1">
+                    Speak directly with our support team
+                  </p>
+
+                  <a
+                    href="tel:+919148733700"
+                    className="text-blue-600 font-semibold text-lg hover:underline"
+                  >
+                    +91 9148733700
+                  </a>
+                </div>
+              </div>
+
+              {/* EMAIL */}
+              <div className="flex items-start gap-5">
+                <div className="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center shrink-0">
+                  <Mail className="text-blue-600 w-7 h-7" />
+                </div>
+
+                <div>
+                  <h2 className="text-xl font-semibold text-gray-900 mb-2">
+                    Email Us
+                  </h2>
+
+                  <p className="text-gray-600 mb-1">
+                    We usually reply within 24 hours
+                  </p>
+
+                  <a
+                    href="mailto:respishop.in@gmail.com"
+                    className="text-blue-600 font-semibold hover:underline break-all"
+                  >
+                    respishop.in@gmail.com
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+            {/* SEO TEXT */}
+            <div className="mt-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                Trusted Respiratory Care & Sleep Therapy Solutions
+              </h2>
+
+              <p className="text-gray-600 leading-relaxed">
+                Respishop provides premium CPAP machines, BiPAP devices,
+                oxygen concentrators, masks, humidifiers, and sleep therapy
+                accessories across India. Our respiratory care specialists
+                assist patients with sleep apnea treatment, home respiratory
+                support, and advanced breathing care solutions.
               </p>
             </div>
-          </a>
 
-          <a
-            href="tel:+919148733700"
-            className="flex items-start gap-4 group hover:bg-white p-4 rounded-xl transition"
-          >
-            <Phone className="text-blue-500 w-7 h-7 mt-1 group-hover:scale-110 transition" />
-            <div>
-              <h3 className="font-semibold text-lg text-gray-800 mb-2">
-                Contact
-              </h3>
-              <p className="text-gray-600 group-hover:text-gray-800">
-                Mobile:{" "}
-                <span className="font-medium text-gray-800 underline underline-offset-4">
-                  +91 9148733700
-                </span>
-              </p>
-            </div>
-          </a>
+          </div>
 
-          <a
-            href="mailto:respishop.in@gmail.com"
-            className="flex items-start gap-4 group hover:bg-white p-4 rounded-xl transition"
-          >
-            <Mail className="text-blue-500 w-7 h-7 mt-1 group-hover:scale-110 transition" />
-            <div>
-              <h3 className="font-semibold text-lg text-gray-800 mb-2">
-                Email Us
-              </h3>
-              <p className="text-gray-600 group-hover:text-gray-800">
-                Email:{" "}
-                <span className="font-medium text-gray-800 underline underline-offset-4">
-                  respishop.in@gmail.com
-                </span>
-              </p>
-            </div>
-          </a>
+          {/* RIGHT FORM */}
+          <div className="relative">
 
-        </div>
-      </section>
+            {/* GLOW */}
+            <div className="absolute inset-0 bg-blue-300/20 blur-3xl rounded-full" />
 
-      {/* FORM SECTION */}
-      <section className="relative max-w-5xl mx-auto px-6 pb-28">
+            {/* FORM CARD */}
+            <div className="relative bg-white border border-gray-200 shadow-2xl rounded-[32px] p-8 md:p-10">
 
-        <div className="absolute -top-24 left-1/2 -translate-x-1/2 
-                        w-[750px] h-[350px] 
-                        bg-blue-300/40 rounded-full blur-[120px] opacity-70" />
+              <div className="mb-8">
+                <h2 className="text-3xl font-bold text-gray-900 mb-3">
+                  Send Us a Message
+                </h2>
 
-        <div className="relative">
+                <p className="text-gray-500 text-sm">
+                  Fill out the form below and our team will contact you shortly.
+                </p>
+              </div>
 
-          <h2 className="text-3xl md:text-4xl font-semibold text-center text-gray-800 mb-14">
-            Ask us anything here
-          </h2>
+              <form onSubmit={handleSubmit} className="space-y-5">
 
-          <div className="relative rounded-3xl p-[2px] 
-                          bg-gradient-to-r from-blue-400 via-blue-300 to-blue-500 
-                          shadow-2xl shadow-blue-300/40">
-
-            <div className="bg-white/90 backdrop-blur-2xl 
-                            rounded-3xl p-10 md:p-14">
-
-              <form onSubmit={handleSubmit} className="space-y-8">
-
-                {/* ROW 1 */}
-                <div className="grid md:grid-cols-2 gap-8">
+                {/* NAME */}
+                <div className="grid md:grid-cols-2 gap-4">
                   <input
                     type="text"
                     name="firstName"
                     value={form.firstName}
                     onChange={handleChange}
                     placeholder="First Name"
-                    className="w-full p-4 rounded-full border border-gray-300"
+                    className="w-full h-12 px-5 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
                   />
 
                   <input
@@ -167,19 +207,19 @@ export default function ContactPage() {
                     value={form.lastName}
                     onChange={handleChange}
                     placeholder="Last Name"
-                    className="w-full p-4 rounded-full border border-gray-300"
+                    className="w-full h-12 px-5 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
                   />
                 </div>
 
-                {/* ROW 2 */}
-                <div className="grid md:grid-cols-2 gap-8">
+                {/* EMAIL + PHONE */}
+                <div className="grid md:grid-cols-2 gap-4">
                   <input
                     type="email"
                     name="email"
                     value={form.email}
                     onChange={handleChange}
-                    placeholder="Your Email"
-                    className="w-full p-4 rounded-full border border-gray-300"
+                    placeholder="Email Address"
+                    className="w-full h-12 px-5 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
                   />
 
                   <input
@@ -187,8 +227,8 @@ export default function ContactPage() {
                     name="phone"
                     value={form.phone}
                     onChange={handleChange}
-                    placeholder="Your Phone"
-                    className="w-full p-4 rounded-full border border-gray-300"
+                    placeholder="Phone Number"
+                    className="w-full h-12 px-5 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
                   />
                 </div>
 
@@ -197,21 +237,20 @@ export default function ContactPage() {
                   name="message"
                   value={form.message}
                   onChange={handleChange}
-                  placeholder="Message"
-                  rows={6}
-                  className="w-full p-6 rounded-2xl border border-gray-300 resize-none"
+                  placeholder="Write your message..."
+                  rows={5}
+                  className="w-full p-5 rounded-2xl border border-gray-300 resize-none focus:outline-none focus:ring-2 focus:ring-blue-400"
                 />
 
                 {/* BUTTON */}
-                <div className="text-center pt-4">
-                  <button
-                    type="submit"
-                    className="bg-gradient-to-r from-blue-500 to-blue-600 
-                               text-white px-12 py-4 rounded-full"
-                  >
-                    Send Message
-                  </button>
-                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-blue-600 to-blue-500 
+                             hover:scale-[1.02] transition-all duration-300
+                             text-white font-semibold py-4 rounded-2xl shadow-lg"
+                >
+                  Send Message
+                </button>
 
               </form>
 
@@ -220,7 +259,6 @@ export default function ContactPage() {
 
         </div>
       </section>
-
     </main>
   )
 }

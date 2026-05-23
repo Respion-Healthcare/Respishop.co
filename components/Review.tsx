@@ -5,8 +5,11 @@ import {
   ChevronLeft,
   ChevronRight,
   Quote,
+  ShieldCheck,
 } from "lucide-react"
+
 import { useRef } from "react"
+import { motion } from "framer-motion"
 
 const reviews = [
   {
@@ -33,6 +36,22 @@ const reviews = [
       "We ordered a patient care bed for my elderly mother and the overall experience was smooth from delivery to installation.",
     rating: 5,
   },
+
+  // ✅ NEW REVIEW 1
+  {
+    name: "Sanjay Verma",
+    review:
+      "Respishop provided an original ResMed CPAP machine at a very competitive price. The delivery was fast and customer support was extremely helpful.",
+    rating: 5,
+  },
+
+  // ✅ NEW REVIEW 2
+  {
+    name: "Priya Kulkarni",
+    review:
+      "The BiPAP machine quality is excellent and setup assistance was professional. Highly recommended for respiratory and sleep apnea care products.",
+    rating: 5,
+  },
 ]
 
 export default function ReviewsSection() {
@@ -49,18 +68,36 @@ export default function ReviewsSection() {
 
   return (
     <>
-      {/* SEO: Structured Data (Google Rich Results) */}
+      {/* ✅ SEO STRUCTURED DATA */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalBusiness",
-            name: "Customer Reviews",
+
+            name: "Respishop Healthcare",
+
+            description:
+              "Respishop Healthcare provides CPAP machines, BiPAP machines, oxygen concentrators, respiratory care products, sleep apnea devices, and medical equipment across India.",
+
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "4.9",
+              reviewCount: reviews.length.toString(),
+              bestRating: "5",
+            },
+
             review: reviews.map((r) => ({
               "@type": "Review",
-              author: r.name,
+
+              author: {
+                "@type": "Person",
+                name: r.name,
+              },
+
               reviewBody: r.review,
+
               reviewRating: {
                 "@type": "Rating",
                 ratingValue: r.rating,
@@ -72,141 +109,180 @@ export default function ReviewsSection() {
       />
 
       <section
-        aria-label="Customer Reviews Section"
-        className="relative w-full overflow-hidden bg-gradient-to-b from-[#f4f9ff] to-white py-24 px-6 lg:px-20"
+        aria-label="Customer Reviews and Testimonials"
+        className="relative overflow-hidden py-24 lg:py-28 bg-gradient-to-b from-white via-[#f5f9ff] to-[#edf6ff]"
       >
-        {/* Background Glow */}
-        <div className="absolute top-0 left-0 w-72 h-72 bg-blue-200/40 blur-3xl rounded-full" />
-        <div className="absolute bottom-0 right-0 w-72 h-72 bg-cyan-200/40 blur-3xl rounded-full" />
 
-        <div className="relative z-10">
+        {/* BACKGROUND BLOBS */}
+        <div className="absolute top-0 left-0 w-[320px] h-[320px] bg-blue-200/30 blur-[120px] rounded-full" />
 
-          {/* Heading */}
-          <header className="text-center mb-16">
-            <p className="uppercase tracking-[0.25em] text-blue-500 text-sm font-semibold mb-4">
-              Patient Testimonials
-            </p>
+        <div className="absolute bottom-0 right-0 w-[320px] h-[320px] bg-cyan-200/30 blur-[120px] rounded-full" />
 
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
-              Trusted by Families Across India
-            </h2>
+        <div className="relative z-10 px-6 lg:px-20">
 
-            <p className="text-gray-500 mt-5 text-lg max-w-2xl mx-auto leading-relaxed">
-              Genuine reviews from customers who rely on our healthcare and medical support products.
-            </p>
-          </header>
+          {/* HEADER */}
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 mb-16">
 
-          {/* Arrows */}
-          <div className="flex justify-end gap-4 mb-8">
-            <button
-              onClick={() => scroll("left")}
-              aria-label="Scroll left reviews"
-              className="group bg-white/80 backdrop-blur-xl border border-blue-100 h-12 w-12 rounded-full shadow-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all duration-300"
-            >
-              <ChevronLeft className="w-5 h-5 group-hover:scale-110 transition" />
-            </button>
+            {/* LEFT */}
+            <div className="max-w-3xl">
 
-            <button
-              onClick={() => scroll("right")}
-              aria-label="Scroll right reviews"
-              className="group bg-white/80 backdrop-blur-xl border border-blue-100 h-12 w-12 rounded-full shadow-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all duration-300"
-            >
-              <ChevronRight className="w-5 h-5 group-hover:scale-110 transition" />
-            </button>
+              <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase mb-6">
+
+                <ShieldCheck size={14} />
+
+                Verified Customer Reviews
+
+              </div>
+
+              {/* ✅ SEO OPTIMIZED HEADING */}
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-gray-900 leading-tight">
+                Trusted CPAP, BiPAP & Oxygen Concentrator Reviews
+              </h2>
+
+              {/* ✅ SEO OPTIMIZED PARAGRAPH */}
+              <p className="mt-6 text-gray-600 text-lg leading-relaxed max-w-2xl">
+                Read genuine customer reviews for CPAP machines, BiPAP
+                machines, oxygen concentrators, respiratory care products,
+                sleep apnea devices, and medical equipment from Respishop
+                Healthcare.
+              </p>
+
+            </div>
+
+            {/* RIGHT */}
+            <div className="flex items-center gap-4">
+
+              <button
+                onClick={() => scroll("left")}
+                aria-label="Scroll Left Reviews"
+                className="group h-14 w-14 rounded-full bg-white/80 backdrop-blur-xl border border-white shadow-xl hover:bg-blue-600 hover:text-white transition-all duration-300 flex items-center justify-center"
+              >
+                <ChevronLeft className="w-5 h-5 group-hover:scale-110 transition" />
+              </button>
+
+              <button
+                onClick={() => scroll("right")}
+                aria-label="Scroll Right Reviews"
+                className="group h-14 w-14 rounded-full bg-white/80 backdrop-blur-xl border border-white shadow-xl hover:bg-blue-600 hover:text-white transition-all duration-300 flex items-center justify-center"
+              >
+                <ChevronRight className="w-5 h-5 group-hover:scale-110 transition" />
+              </button>
+
+            </div>
+
           </div>
 
-          {/* Reviews */}
+          {/* REVIEW SLIDER */}
           <div
             ref={scrollRef}
             className="flex gap-8 overflow-x-auto scroll-smooth no-scrollbar pb-4"
           >
+
             {reviews.map((item, index) => (
-              <article
+              <motion.article
                 key={index}
+                whileHover={{
+                  y: -8,
+                }}
+                transition={{
+                  duration: 0.3,
+                }}
                 className="
-                  min-w-[360px]
+                  min-w-[340px]
                   md:min-w-[420px]
-                  relative
+                  rounded-[2rem]
+                  bg-white/75
+                  backdrop-blur-2xl
+                  border
+                  border-white/60
+                  shadow-[0_20px_70px_rgba(37,99,235,0.08)]
                   overflow-hidden
-                  rounded-[32px]
-                  p-[1px]
-                  bg-gradient-to-br
-                  from-blue-400/40
-                  via-cyan-300/30
-                  to-blue-500/40
-                  shadow-[0_10px_40px_rgba(59,130,246,0.18)]
-                  hover:scale-[1.03]
-                  transition-all
-                  duration-500
+                  relative
                   group
                 "
               >
-                <div
-                  className="
-                    h-full
-                    w-full
-                    rounded-[32px]
-                    bg-gradient-to-br
-                    from-[#eaf4ff]
-                    via-[#dff1ff]
-                    to-[#f5fbff]
-                    backdrop-blur-2xl
-                    p-10
-                    relative
-                    overflow-hidden
-                  "
-                >
-                  {/* Glow */}
-                  <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-300/30 blur-3xl rounded-full" />
 
-                  {/* Top */}
-                  <div className="relative z-10 flex items-center justify-between mb-8">
+                {/* TOP BLUE LINE */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-500" />
 
-                    {/* Stars */}
-                    <div className="flex gap-1">
+                {/* GLOW */}
+                <div className="absolute -top-20 -right-20 w-52 h-52 bg-blue-200/20 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition duration-500" />
+
+                <div className="relative z-10 p-8 lg:p-10">
+
+                  {/* TOP */}
+                  <div className="flex items-start justify-between mb-8">
+
+                    {/* STARS */}
+                    <div className="flex items-center gap-1">
+
                       {[...Array(item.rating)].map((_, i) => (
                         <Star
                           key={i}
                           className="w-5 h-5 fill-yellow-400 text-yellow-400"
                         />
                       ))}
+
                     </div>
 
-                    {/* Quote */}
-                    <div className="h-12 w-12 rounded-2xl bg-white/70 backdrop-blur-xl flex items-center justify-center shadow-md">
-                      <Quote className="w-5 h-5 text-blue-600" />
+                    {/* QUOTE ICON */}
+                    <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 text-white flex items-center justify-center shadow-lg">
+
+                      <Quote className="w-5 h-5" />
+
                     </div>
+
                   </div>
 
-                  {/* Review */}
-                  <p className="relative z-10 text-gray-700 text-lg leading-relaxed mb-10">
+                  {/* REVIEW */}
+                  <p className="text-gray-700 text-lg leading-relaxed min-h-[150px]">
+
                     “{item.review}”
+
                   </p>
 
-                  {/* Bottom */}
-                  <div className="relative z-10 flex items-center gap-4">
+                  {/* DIVIDER */}
+                  <div className="my-8 h-[1px] w-full bg-gradient-to-r from-transparent via-blue-200 to-transparent" />
 
-                    {/* Avatar */}
-                    <div className="h-14 w-14 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 text-white flex items-center justify-center font-bold text-lg shadow-lg">
-                      {item.name.charAt(0)}
+                  {/* USER */}
+                  <div className="flex items-center gap-4">
+
+                    {/* AVATAR */}
+                    <div className="relative">
+
+                      <div className="h-16 w-16 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 text-white flex items-center justify-center font-bold text-xl shadow-xl">
+                        {item.name.charAt(0)}
+                      </div>
+
+                      {/* VERIFIED DOT */}
+                      <div className="absolute bottom-0 right-0 h-5 w-5 rounded-full bg-green-500 border-[3px] border-white" />
+
                     </div>
 
-                    {/* Info */}
+                    {/* INFO */}
                     <div>
-                      <h4 className="font-semibold text-lg text-gray-900">
+
+                      <h3 className="text-lg font-semibold text-gray-900">
                         {item.name}
-                      </h4>
-                      <p className="text-sm text-blue-500 font-medium mt-1">
+                      </h3>
+
+                      <p className="text-sm text-blue-600 font-medium mt-1">
                         Verified Customer
                       </p>
+
                     </div>
 
                   </div>
+
                 </div>
-              </article>
+
+              </motion.article>
             ))}
+
           </div>
+
         </div>
+
       </section>
     </>
   )

@@ -38,7 +38,7 @@ export default function ProductBannerGrid() {
   ]
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-20 py-16 lg:py-24 bg-gray-50">
+    <section className="w-full px-4 sm:px-6 lg:px-20 py-16 lg:py-24 bg-[#f5fbff] overflow-hidden">
 
       {/* HEADER */}
       <motion.div
@@ -48,11 +48,15 @@ export default function ProductBannerGrid() {
         transition={{ duration: 0.6 }}
         className="max-w-3xl mb-10 lg:mb-16"
       >
-        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-serif text-[#2563EB] leading-tight">
+        <span className="inline-block bg-blue-100 text-blue-700 text-xs sm:text-sm font-semibold px-4 py-1 rounded-full mb-4">
+          Featured Collection
+        </span>
+
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
           Featured Medical Equipment
         </h2>
 
-        <p className="mt-3 sm:mt-4 text-gray-600 text-sm sm:text-base lg:text-lg">
+        <p className="mt-4 text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed">
           Explore our most trusted CPAP, BiPAP, and respiratory care products
           designed for reliability, comfort, and advanced performance.
         </p>
@@ -64,23 +68,24 @@ export default function ProductBannerGrid() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, margin: "-100px" }}
-        className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-10"
+        className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8"
       >
         {bannerProducts.map((slug, index) => {
           const product = allProducts.find((p) => p.slug === slug)
+
           if (!product) return null
 
           return (
             <motion.div
-              key={index}
+              key={product.slug}
               variants={item}
-              whileHover={{ y: -6 }}
-              transition={{ type: "spring", stiffness: 120 }}
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring", stiffness: 180 }}
               className="will-change-transform"
             >
               <Link
                 href={`/products/${product.category}/${product.slug}`}
-                className="block"
+                className="block h-full"
               >
                 <ProductBannerCard product={product} />
               </Link>

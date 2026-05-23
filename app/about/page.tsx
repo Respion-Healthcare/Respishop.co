@@ -473,26 +473,42 @@ export default function AboutPage() {
 
                   <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 p-5">
 
+                     {/* CALL */}
+                  <a
+                    href="tel:+919148733700"
+                    className="block rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 p-5 hover:shadow-lg hover:-translate-y-1 transition duration-300"
+                  >
+
                     <p className="text-blue-600 font-semibold mb-2 text-sm">
                       Call Us
                     </p>
 
-                    <p className="text-xl font-black text-gray-900">
+                    <p className="text-xl font-black text-gray-900 hover:text-blue-600 transition">
                       +91 9148733700
                     </p>
 
+                  </a>
+
+                 
                   </div>
 
                   <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 p-5">
+
+                     {/* EMAIL */}
+                  <a
+                    href="mailto:respishop.in@gmail.com"
+                    className="block rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 p-5 hover:shadow-lg hover:-translate-y-1 transition duration-300"
+                  >
 
                     <p className="text-blue-600 font-semibold mb-2 text-sm">
                       Email
                     </p>
 
-                    <p className="text-base font-semibold text-gray-800 break-all">
+                    <p className="text-base font-semibold text-gray-800 break-all hover:text-blue-600 transition">
                       respishop.in@gmail.com
                     </p>
 
+                  </a>
                   </div>
 
                   <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 p-5">
