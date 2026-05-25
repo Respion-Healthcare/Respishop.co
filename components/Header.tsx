@@ -229,7 +229,7 @@ export default function Header() {
 
                         <li>
                           <Link
-                            href="/products/cpap-machine"
+                            href="/products/bipap-machine"
                             className="hover:text-blue-600 transition"
                           >
                             BiPAP Machines
@@ -273,10 +273,10 @@ export default function Header() {
                       <ul className="space-y-3 text-[15px] text-gray-600">
                         <li>
                           <Link
-                            href="/products/hose-pipes-tubes"
+                            href="/products/tubes-and-connectors"
                             className="hover:text-blue-600 transition"
                           >
-                            Hose Pipes & Tubes
+                          Tubes & Connectors 
                           </Link>
                         </li>
 

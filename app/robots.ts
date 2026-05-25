@@ -11,25 +11,25 @@ export default function robots(): MetadataRoute.Robots {
           "/wp-admin/admin-ajax.php",
         ],
 
-      disallow: [
-  "/wp-admin/",
+        disallow: [
+          "/wp-admin/",
 
-  "/*/feed/",
-  "/tag/",
-  "/cart/",
-  "/checkout/",
-  "/my-account/",
-  "/search/",
+          "/cart/",
+          "/checkout/",
+          "/my-account/",
+          "/search/",
+          "/wishlist/",
 
-  "/?add-to-cart=",
-  "/*?add-to-cart=",
-  "/*?add-to-wishlist=",
-  "/*?orderby=",
-  "/*?min_price=",
-  "/*?max_price=",
-  "/*?wc-ajax=",
-  "/*?page_id=",
-   ],
+          "/*/feed/",
+
+          "/*?add-to-cart=",
+          "/*?add-to-wishlist=",
+          "/*?orderby=",
+          "/*?min_price=",
+          "/*?max_price=",
+          "/*?wc-ajax=",
+          "/*?page_id=",
+        ],
       },
     ],
 
