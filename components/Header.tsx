@@ -401,27 +401,27 @@ export default function Header() {
                     {[
                       {
                         name: "Resmed AirFit N20",
-                        href: "/products/resmed-airfit-n20-nasal-mask",
+                        href: "/products/nasal-mask/resmed-airfit-n20-nasal-mask",
                       },
                       {
                         name: "AirSense 10 AutoSet",
-                        href: "/products/resmed-airsense-10-autoset-tripack",
+                        href: "/products/cpap-machine/resmed-airsense-10-autoset-tripack",
                       },
                       {
                         name: "Lumis 100 VPAP ST",
-                        href: "/products/resmed-lumis-100-vpap-st",
+                        href: "/products/bipap-machine/lumis-100-vpap-st",
                       },
                       {
                         name: "AirMini AutoSet",
-                        href: "/products/airmini-autoset-cpap",
+                        href: "/products/cpap-machine/airmini-autoset-cpap-device",
                       },
                       {
                         name: "AirFit F20 Full Face",
-                        href: "/products/resmed-airfit-f20-full-face-mask",
+                        href: "/products/full-face-mask/resmed-airfit-f20-full-face-mask",
                       },
                       {
                         name: "AirSense 11 AutoSet",
-                        href: "/products/airsense-11-autoset-single-pack",
+                        href: "/products/cpap-machine/airsense-11-autoset-single-pack",
                       },
                     ].map((item, index) => (
                       <Link
