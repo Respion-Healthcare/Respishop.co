@@ -29,13 +29,13 @@ const item: Variants = {
 
 export default function ProductBannerGrid() {
   const bannerProducts = [
-    "resmed-airfit-f20-full-face-mask",
-    "resmed-lumis-100-vpap-st",
-    "resmed-lumis-150-vpap-st",
-    "airmini-autoset-cpap-device",
-    "airsense-11-autoset-4g-tripack",
-    "airsense-11-autoset-single-pack",
-  ]
+  "resmed-airfit-f20-full-face-mask",
+  "lumis-100-vpap-st",
+  "resmed-lumis™-150",
+  "airmini-autoset-cpap-device",
+  "resmed-airsense-10-autoset-tripack",
+  "airsense-11-autoset-single-pack",
+]
 
   return (
     <section className="w-full px-4 sm:px-6 lg:px-20 py-16 lg:py-24 bg-[#f5fbff] overflow-hidden">
