@@ -19,83 +19,83 @@ const nextConfig: NextConfig = {
 
       // OLD PRODUCT URLS
       {
-        source: "/product/s9-airsense-filters-pack-of-6",
+        source: "/product/s9-airsense-filters-pack-of-6/:path*",
         destination: "/products/filters-cleaners/airsense-filters-cleaners",
         permanent: true,
       },
 
       {
-        source: "/product/resmed-airfit-n20-cushion",
+        source: "/product/resmed-airfit-n20-cushion/:path*",
         destination: "/products/mask-cushion",
         permanent: true,
       },
 
       {
-        source: "/product/resmed-airmini-f30-setup-pack-no-mask",
+        source: "/product/resmed-airmini-f30-setup-pack-no-mask/:path*",
         destination: "/products/mask-headgear",
         permanent: true,
       },
 
       {
-        source: "/product/humidair-cleanable-tub",
+        source: "/product/humidair-cleanable-tub/:path*",
         destination: "/products/humidifier-bottle",
         permanent: true,
       },
 
       // OLD CATEGORY URLS
       {
-        source: "/product-category/rental/cpap-bi-level-rental",
+        source: "/product-category/rental/cpap-bi-level-rental/:path*",
         destination: "/products/rental",
         permanent: true,
       },
 
       {
-        source: "/product-category/sleep-apnea-machines/bipap-machines",
+        source: "/product-category/sleep-apnea-machines/bipap-machines/:path*",
         destination: "/products/bipap-machine",
         permanent: true,
       },
 
       {
-        source: "/product-category/accessories/humidifiers-bottles",
+        source: "/product-category/accessories/humidifiers-bottles/:path*",
         destination: "/products/humidifier-bottle",
         permanent: true,
       },
 
       {
-        source: "/product-category/accessories/mask-frame-vents",
+        source: "/product-category/accessories/mask-frame-vents/:path*",
         destination: "/products/tubes-and-connectors",
         permanent: true,
       },
 
       // OLD AUTHOR/TAG PAGES
       {
-        source: "/author/respishop_tech_admin",
+        source: "/author/respishop_tech_admin/:path*",
         destination: "/blog",
         permanent: true,
       },
 
       {
-        source: "/tag/airfit-f20-review-and-features",
+        source: "/tag/airfit-f20-review-and-features/:path*",
         destination: "/blog",
         permanent: true,
       },
 
       // OLD BLOG URL
       {
-        source: "/resmed-airstart-10-apap-features-guide",
+        source: "/resmed-airstart-10-apap-features-guide/:path*",
         destination: "/blog",
         permanent: true,
       },
 
       // OLD CITY URLS
       {
-        source: "/cpap-machine/bhubaneswar",
+        source: "/cpap-machine/bhubaneswar/:path*",
         destination: "/",
         permanent: true,
       },
 
       {
-        source: "/cpap-machine/patna",
+        source: "/cpap-machine/patna/:path*",
         destination: "/",
         permanent: true,
       },
