@@ -16,6 +16,35 @@ export type Product = {
     label: string
     value: string
   }[]
+  stock?: string
+  delivery?: string
+  warranty?: string
+  returnPolicy?: string
+
+  badges?: string[]
+
+  features?: {
+    title: string
+    value: string
+  }[]
+
+  longDescription?: string[]
+
+  videos?: {
+    title: string
+    url: string
+  }[]
+
+  serviceCenters?: {
+    city: string
+    address: string
+  }[]
+
+  faqs?: {
+    question: string
+    answer: string
+  }[]
+
 }
 
 export const products: Product[] = [

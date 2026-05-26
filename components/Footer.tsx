@@ -19,40 +19,45 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="space-y-3">
-            <h2 className="text-3xl font-serif font-semibold text-blue-700 tracking-wide">
+
+            <Link
+              href="/"
+              className="inline-block text-3xl font-serif font-semibold text-blue-700 tracking-wide"
+            >
               Respishop
-            </h2>
+            </Link>
 
             <p className="text-gray-600 text-sm leading-relaxed max-w-sm">
-              Trusted respiratory healthcare products designed for comfort,
-              precision, and modern medical living.
+              Buy CPAP machines, BiPAP machines, oxygen concentrators,
+              CPAP masks and sleep apnea equipment online in India with
+              fast delivery and trusted respiratory care support.
             </p>
 
             <div className="flex gap-5 pt-2">
 
-              {/* Facebook */}
               <a
                 href="https://facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Respishop Facebook"
               >
                 <Facebook className="w-5 h-5 text-gray-500 hover:text-blue-600 hover:scale-110 transition duration-300 cursor-pointer" />
               </a>
 
-              {/* Youtube */}
               <a
                 href="https://youtube.com/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Respishop YouTube"
               >
                 <Youtube className="w-5 h-5 text-gray-500 hover:text-blue-600 hover:scale-110 transition duration-300 cursor-pointer" />
               </a>
 
-              {/* Instagram */}
               <a
                 href="https://instagram.com/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Respishop Instagram"
               >
                 <Instagram className="w-5 h-5 text-gray-500 hover:text-blue-600 hover:scale-110 transition duration-300 cursor-pointer" />
               </a>
@@ -62,71 +67,127 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
+
             <h3 className="text-lg font-semibold text-blue-800 mb-3 tracking-wide">
               Quick Links
             </h3>
 
             <ul className="space-y-2 text-sm">
+
               <li>
-                <Link href="/about" className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300">
+                <Link
+                  href="/about"
+                  className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300"
+                >
                   About Us
                 </Link>
               </li>
+
               <li>
-                <Link href="/products" className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300">
-                  BIPAP Machines
+                <Link
+                  href="/category/cpap-machine"
+                  className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300"
+                >
+                  CPAP Machines
                 </Link>
               </li>
+
               <li>
-                <Link href="/products" className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300">
+                <Link
+                  href="/category/bipap-machine"
+                  className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300"
+                >
+                  BiPAP Machines
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/category/full-face-mask"
+                  className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300"
+                >
                   CPAP Masks
                 </Link>
               </li>
+
               <li>
-                <Link href="/contact" className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300">
+                <Link
+                  href="/contact"
+                  className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300"
+                >
                   Contact Us
                 </Link>
               </li>
+
             </ul>
           </div>
 
           {/* Our Company */}
           <div>
+
             <h3 className="text-lg font-semibold text-blue-800 mb-3 tracking-wide">
               Our Company
             </h3>
 
             <ul className="space-y-2 text-sm">
+
               <li>
-                <Link href="/terms" className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300">
+                <Link
+                  href="/terms"
+                  className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300"
+                >
                   Terms & Conditions
                 </Link>
               </li>
+
               <li>
-                <Link href="/privacy" className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300">
+                <Link
+                  href="/privacy"
+                  className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300"
+                >
                   Privacy Policy
                 </Link>
               </li>
+
               <li>
-                <Link href="/shipping" className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300">
+                <Link
+                  href="/shipping"
+                  className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300"
+                >
                   Shipping Policy
                 </Link>
               </li>
+
               <li>
-                <Link href="/blog" className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300">
+                <Link
+                  href="/return-policy"
+                  className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300"
+                >
+                  Return Policy
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/blog"
+                  className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300"
+                >
                   Our Blogs
                 </Link>
               </li>
+
             </ul>
           </div>
 
           {/* Contact */}
           <div>
+
             <h3 className="text-lg font-semibold text-blue-800 mb-3 tracking-wide">
               Contact Us
             </h3>
 
             <ul className="space-y-2 text-sm text-gray-600 leading-relaxed">
+
               <li>
                 702, 13th Cross Rd, 1st Phase, J.P Nagar,
                 Bengaluru, Karnataka, 560078
@@ -149,6 +210,7 @@ export default function Footer() {
                   +91 9148733700
                 </a>
               </li>
+
             </ul>
           </div>
 
@@ -157,7 +219,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-blue-100 py-3 text-center text-sm text-gray-500 bg-[#f3f8ff]">
-        © 2026 Respishop. Crafted with precision.
+        © 2026 Respishop. All Rights Reserved.
       </div>
     </footer>
   )

@@ -101,14 +101,19 @@ export default function Header() {
 
         {/* LOGO */}
         <Link
-          href="/"
-          className="text-4xl font-serif font-semibold text-blue-700 tracking-tight"
-        >
-          Respishop
-        </Link>
+  href="/"
+  aria-label="Respishop Home"
+  className="text-4xl font-serif font-semibold text-blue-700 tracking-tight"
+>
+  <span className="sr-only">
+    Respishop - CPAP & BiPAP Machines India
+  </span>
 
+  Respishop
+</Link>
         {/* DESKTOP NAV */}
         <nav
+  aria-label="Main Navigation"
           ref={dropdownRef}
           className="hidden lg:flex items-center gap-8 text-gray-700 font-medium relative"
         >
@@ -472,7 +477,7 @@ export default function Header() {
             onKeyDown={(e) =>
               e.key === "Enter" && handleSearch()
             }
-            placeholder="Search CPAP, BiPAP, Masks..."
+            placeholder="Search CPAP machines, BiPAP machines, masks..."
             className="flex-1 bg-transparent outline-none text-sm text-gray-700"
           />
 

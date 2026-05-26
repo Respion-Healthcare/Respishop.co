@@ -103,7 +103,7 @@ return (
       </div>
 
       {/* RIGHT - Customer Reviews */}
-      <div>
+      {/* <div>
         <div className="border rounded-xl p-6 shadow-md">
 
           <h2 className="text-lg font-semibold mb-4">
@@ -164,7 +164,7 @@ return (
           </div>
 
         </div>
-      </div>
+      </div> */}
 
     </div>
 

@@ -22,7 +22,7 @@ const categories = [
   },
   {
     name: "Oxygen Concentrator",
-    image: "/images/deal3.jpg",
+    image: "/images/Oc/deal3.jpg",
     link: "/category/oxygen-concentrator",
   },
   {

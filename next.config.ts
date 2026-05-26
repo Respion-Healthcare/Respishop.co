@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
 
-      // FORCE HTTPS
+      // FORCE HTTPS + REMOVE WWW
       {
         source: "/:path*",
 
@@ -18,6 +18,16 @@ const nextConfig: NextConfig = {
 
         destination:
           "https://respishop.in/:path*",
+
+        permanent: true,
+      },
+
+      // OLD PRODUCT URL → NEW PRODUCT URL
+      {
+        source: "/product/s9-airsense-filters-pack-of-6",
+
+        destination:
+          "/products/filters-cleaners/airsense-filters-cleaners",
 
         permanent: true,
       },
