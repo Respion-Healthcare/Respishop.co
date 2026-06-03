@@ -78,10 +78,10 @@ export default function Hero() {
   const glow = useGlow()
 
   return (
-    <section className="relative bg-gradient-to-br from-blue-50 via-white to-blue-100 w-full overflow-visible">
+    <section className="relative bg-linear-to-br from-blue-50 via-white to-blue-100 w-full overflow-visible">
 
       {/* BACKGROUND BLOBS */}
-      <div className="absolute top-10 right-10 w-[250px] sm:w-[500px] h-[250px] sm:h-[500px] bg-blue-300 blur-[120px] opacity-30 rounded-full" />
+      <div className="absolute top-10 right-10 w-62.5 sm:w-125 h-62.5 sm:h-125 bg-blue-300 blur-[120px] opacity-30 rounded-full" />
       <div className="absolute bottom-10 left-10 w-[200px] sm:w-[400px] h-[200px] sm:h-[400px] bg-blue-200 blur-[100px] opacity-30 rounded-full" />
 
       <div className="max-w-[1400px] xl:max-w-[1600px] mx-auto px-6 sm:px-12 lg:px-16 xl:px-20 py-16 lg:py-24 grid lg:grid-cols-[1.1fr_1.4fr] gap-16 items-center">
@@ -107,7 +107,7 @@ export default function Hero() {
             className="mt-10 w-full flex justify-center lg:justify-start"
           >
             <Image
-              src="/images/hero1.jpg"
+              src="/images/home1.png"
               alt="Medical Equipment"
               width={420}
               height={380}

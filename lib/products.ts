@@ -51,7 +51,7 @@ export const products: Product[] = [
 
 //masks
 //nasal
-{ id: 1, slug: "resmed-airfit-n20-nasal-mask", name: "AirFit™ N20", price: 5600, offer: { type: "percentage", value: 25 }, category: "nasal-mask", description: "Comfortable nasal mask for CPAP users.", images: ["/images/banner1.webp", "/images/Mask/Resmed AirFit™ N20 Nasal Mask/1.webp", "/images/Mask/Resmed AirFit™ N20 Nasal Mask/2.webp", "/images/Mask/Resmed AirFit™ N20 Nasal Mask/3.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Mask" }] },
+{ id: 1, slug: "resmed-airfit-n20-nasal-mask", name: "AirFit™ N20", price: 3149, offer: { type: "percentage", value: 25 }, category: "nasal-mask", description: "Comfortable nasal mask for CPAP users.", images: ["/images/banner1.webp", "/images/Mask/Resmed AirFit™ N20 Nasal Mask/1.webp", "/images/Mask/Resmed AirFit™ N20 Nasal Mask/2.webp", "/images/Mask/Resmed AirFit™ N20 Nasal Mask/3.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Mask" }] },
 { id: 29, slug: "airfit-n20-classic", name: "AirFit™ N20 Classic", price: 4200, offer: { type: "percentage", value: 25 }, category: "nasal-mask", description: "Classic nasal mask with forehead support for stable and comfortable therapy.", images: ["/images/Mask/Resmed AirFit™ N20 Classic Mask/1.webp", "/images/Mask/Resmed AirFit™ N20 Classic Mask/2.webp", "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Nasal Mask" }] },
 { id: 30, slug: "airfit-n30i", name: "AirFit™ N30i", price: 7200, offer: { type: "flat", value: 1200 }, category: "nasal-mask", description: "Top-of-head tube nasal mask designed for flexible sleeping positions.", images: ["/images/Mask/Resmed AirFit™ N30i Nasal Mask.webp", "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Nasal Mask" }] },
 { id: 31, slug: "best-fit-2-nasal-mask", name: "BEST FIT 2 NASAL MASK", price: 4500, offer: { type: "percentage", value: 10 }, category: "nasal-mask", description: "Lightweight and comfortable nasal mask for daily CPAP therapy.", images: ["/images/Mask/Resmed Best Fit 2 Nasal Mask.webp","/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "BMC" }, { label: "Category", value: "Nasal Mask" }] },
@@ -70,12 +70,10 @@ export const products: Product[] = [
 { id: 38, slug: "airfit-p10", name: "AirFit™ P10", price: 5400, offer: { type: "percentage", value: 15 }, category: "nasal-pillow-mask", description: "Ultra-lightweight nasal pillow mask for quiet and comfortable CPAP therapy.", images: ["/images/Mask/Resmed AirFit™ P10 Nasal Pillow Mask.webp","/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Nasal Pillow Mask" }] },
 { id: 39, slug: "airfit-p10-for-airmini", name: "AirFit™ P10 for AirMini™", price: 6200, offer: { type: "flat", value: 800 }, category: "nasal-pillow-mask", description: "Compact nasal pillow mask specially designed for AirMini travel CPAP.", images: ["/images/Mask/Resmed AirFit™ P10 for AirMini™.webp", "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Nasal Pillow Mask" }] },
 
-
 //-------------------------------------------------------------------------------------------------------------
 
-
 //cpap
-{ id: 2, slug: "resmed-airsense-10-autoset-tripack", name: "AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube", price: 84300, offer: { type: "flat", value: 2000 }, category: "cpap-machine", description: "Advanced CPAP machine with humidifier.", 
+{ id: 2, slug: "resmed-airsense-10-autoset-tripack", name: "AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube", price: 81490, offer: { type: "flat", value: 2000 }, category: "cpap-machine", description: "Advanced CPAP machine with humidifier.", 
         images: ["/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/1.webp",
           "/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/2.1.webp",
           "/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/3.1.webp",
@@ -87,7 +85,7 @@ export const products: Product[] = [
  images: ["/images/Devices/AirSense™ 10 Elite -Tripack 3G.webp"],
   specifications: [{ label: "Brand", value: "ResMed" }, { label: "Type", value: "CPAP" }] },
 
- { id: 5, slug: "airSense™10-autoset™-for-her", name: "AirSense™ 10 AutoSet™ for Her CPAP Machine 4G", price: 105000, category: "cpap-machine", description: "Bi-level ventilation support device.", 
+ { id: 5, slug: "airSense™10-autoset™-for-her", name: "AirSense™ 10 AutoSet™ for Her CPAP Machine 4G", price: 53000, category: "cpap-machine", description: "Bi-level ventilation support device.", 
   images: ["/images/Devices/AirSense™ 10 AutoSet™ for Her CPAP Machine 4G/1.webp",
      "/images/Devices/AirSense™ 10 AutoSet™ for Her CPAP Machine 4G/2.webp",
       "/images/Devices/AirSense™ 10 AutoSet™ for Her CPAP Machine 4G/3.webp", 
@@ -116,13 +114,13 @@ export const products: Product[] = [
      "/images/Devices/AirSense™ 11 AutoSet™ (Single Pack)/5.webp"],
    specifications: [{ label: "Brand", value: "ResMed" }, { label: "Model", value: "AirSense 11" }] },
 
-{ id: 9, slug: "airmini-autoset-cpap-device", name: "AirMini™ AutoSet CPAP Device", price: 54000, offer: { type: "percentage", value: 19.76 }, category: "cpap-machine", description: "Portable CPAP device.",
+{ id: 9, slug: "airmini-autoset-cpap-device", name: "AirMini™ AutoSet CPAP Device", price: 45500, category: "cpap-machine", description: "Portable CPAP device.",
  images: ["/images/Product4.webp", "/images/Devices/AirMini™ AutoSet CPAP Device/2.webp",
    "/images/Devices/AirMini™ AutoSet CPAP Device/5.webp", 
    "/images/Devices/AirMini™ AutoSet CPAP Device/8.webp"], 
    specifications: [{ label: "Brand", value: "ResMed" }, { label: "Type", value: "Auto CPAP" }, { label: "Category", value: "CPAP Machine" }] },
 
-{ id: 40, slug: "airstart™ 10-with-humidification-and-tube", name: "AirStart™ 10 APAP with humidification and tube", price: 29300, offer: { type: "percentage", value: 18.23 }, category: "cpap-machine", description: "Next-generation CPAP device.",
+{ id: 40, slug: "airstart™ 10-with-humidification-and-tube", name: "AirStart™ 10 APAP with humidification and tube", price: 24390, category: "cpap-machine", description: "Next-generation CPAP device.",
  images: ["/images/Devices/AirStart™ 10 APAP with humidification and tube/1.webp",
    "/images/Devices/AirStart™ 10 APAP with humidification and tube/2.webp",
     "/images/Devices/AirStart™ 10 APAP with humidification and tube/3.webp",
@@ -133,7 +131,7 @@ export const products: Product[] = [
 
 //Bipap
 { 
-  id: 41, slug: "lumis-100-vpap-st", name: "Lumis™ 100 VPAP ST Non- Invasive Ventilator", price: 68500, offer: { type: "percentage", value: 12 }, category: "bipap-machine",
+  id: 41, slug: "lumis-100-vpap-st", name: "Lumis™ 100 VPAP ST Non- Invasive Ventilator", price: 45900, category: "bipap-machine",
   description: "Advanced bilevel device designed for non-invasive ventilation support.",
   images: [
     "/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/1.webp",
@@ -146,7 +144,7 @@ export const products: Product[] = [
 
 { 
   id: 42, slug: "resmed-lumis™-150",
-  name: "Resmed Lumis™ 150 VPAP ST", price: 74200, offer: { type: "percentage", value: 15 }, category: "bipap-machine", description: "Auto-adjusting bilevel therapy device for personalized sleep apnea treatment.",
+  name: "Resmed Lumis™ 150 VPAP ST", price: 63490, category: "bipap-machine", description: "Auto-adjusting bilevel therapy device for personalized sleep apnea treatment.",
   images: [
     "/images/Devices/Resmed Lumis™ 150 VPAP ST/1.webp",
     "/images/Devices/Resmed Lumis™ 150 VPAP ST/2.webp",
@@ -161,9 +159,8 @@ export const products: Product[] = [
 { 
   id: 43,
   slug: "lumis™-150-invasive-ventilator",
-  name: "Lumis™ 150 VPAP ST-A Non- Invasive Ventilator",
-  price: 89500,
-  offer: { type: "percentage", value: 10 },
+  name: "Resmed AirCurve 10 VAuto BIPAP – Best Auto BIPAP",
+  price: 66800,
   category: "bipap-machine",
   description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support.",
   images: [
