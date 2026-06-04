@@ -8,12 +8,12 @@ const categories = [
   {
     name: "CPAP",
     image: "/images/aboutus.webp",
-    link: "/category/cpap",
+    link: "/products/cpap-machine",
   },
   {
     name: "BIPAP",
     image: "/images/sleep apnea.webp",
-    link: "/category/bipap",
+    link: "/products/bipap-machine",
   },
   {
     name: "Mask",
@@ -23,7 +23,7 @@ const categories = [
   {
     name: "Oxygen Concentrator",
     image: "/images/Oc/deal3.jpg",
-    link: "/category/oxygen-concentrator",
+    link: "/products/oxygen-concentrator",
   },
   {
     name: "Accessories",

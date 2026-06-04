@@ -51,7 +51,12 @@ export const products: Product[] = [
 
 //masks
 //nasal
-{ id: 1, slug: "resmed-airfit-n20-nasal-mask", name: "AirFit™ N20", price: 3149, offer: { type: "percentage", value: 25 }, category: "nasal-mask", description: "Comfortable nasal mask for CPAP users.", images: ["/images/banner1.webp", "/images/Mask/Resmed AirFit™ N20 Nasal Mask/1.webp", "/images/Mask/Resmed AirFit™ N20 Nasal Mask/2.webp", "/images/Mask/Resmed AirFit™ N20 Nasal Mask/3.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Mask" }] },
+{ id: 1, slug: "resmed-airfit-n20-nasal-mask", name: "AirFit™ N20", price: 3149, 
+  offer: { type: "percentage", value: 25 }, category: "nasal-mask", 
+  description: "Comfortable nasal mask for CPAP users.",
+   images: ["/images/banner1.webp", "/images/Mask/Resmed AirFit™ N20 Nasal Mask/1.webp",
+     "/images/Mask/Resmed AirFit™ N20 Nasal Mask/2.webp", "/images/Mask/Resmed AirFit™ N20 Nasal Mask/3.webp"],
+      specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Mask" }] }, 
 { id: 29, slug: "airfit-n20-classic", name: "AirFit™ N20 Classic", price: 4200, offer: { type: "percentage", value: 25 }, category: "nasal-mask", description: "Classic nasal mask with forehead support for stable and comfortable therapy.", images: ["/images/Mask/Resmed AirFit™ N20 Classic Mask/1.webp", "/images/Mask/Resmed AirFit™ N20 Classic Mask/2.webp", "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Nasal Mask" }] },
 { id: 30, slug: "airfit-n30i", name: "AirFit™ N30i", price: 7200, offer: { type: "flat", value: 1200 }, category: "nasal-mask", description: "Top-of-head tube nasal mask designed for flexible sleeping positions.", images: ["/images/Mask/Resmed AirFit™ N30i Nasal Mask.webp", "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Nasal Mask" }] },
 { id: 31, slug: "best-fit-2-nasal-mask", name: "BEST FIT 2 NASAL MASK", price: 4500, offer: { type: "percentage", value: 10 }, category: "nasal-mask", description: "Lightweight and comfortable nasal mask for daily CPAP therapy.", images: ["/images/Mask/Resmed Best Fit 2 Nasal Mask.webp","/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "BMC" }, { label: "Category", value: "Nasal Mask" }] },
@@ -127,6 +132,13 @@ export const products: Product[] = [
      "/images/Devices/AirStart™ 10 APAP with humidification and tube/4.webp"],
       specifications: [{ label: "Brand", value: "ResMed" }, { label: "Connectivity", value: "4G Enabled" }] },
 
+{ id: 66, slug: "oxymed-sleepeasy", name: "OxyMed SleepEasy Auto CPAP", price: 26990, category: "cpap-machine", description: "Next-generation CPAP device.",
+ images: ["/images/Devices/OxyMed SleepEasy Auto CPAP/1.webp",
+   "/images/Devices/OxyMed SleepEasy Auto CPAP/2.webp",
+    "/images/Devices/OxyMed SleepEasy Auto CPAP/3.webp",
+     "/images/Devices/OxyMed SleepEasy Auto CPAP/4.webp"],
+      specifications: [{ label: "Brand", value: "ResMed" }, { label: "Connectivity", value: "4G Enabled" }] },
+
 // -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 //Bipap
@@ -177,10 +189,14 @@ export const products: Product[] = [
 
 //oc
 { id: 10, slug: "oxymed-portable-oxygen-concentrator", name: "Oxymed Portable Oxygen Concentrator", price: 132690, category: "oxygen-concentrator", description: "Portable oxygen concentrator.", images: ["/images/Oc/deal1.jpg"], specifications: [{ label: "Brand", value: "Oxymed" }, { label: "Category", value: "Oxygen Concentrator" }] },
+{ id: 65, slug: "evox", name: "Evox 5 LPM", price: 35000, category: "oxygen-concentrator", description: "Standard oxygen mask.",
+   images: ["/images/Oc/evox1.jpg", "/images/Oc/evox2.jpg", "/images/Oc/evox3.jpg"], specifications: [{ label: "Category", value: "Oxygen Accessory" }] },
 { id: 11, slug: "oxymed-oxygen-concentrator-5lpm", name: "OxyMed Oxygen Concentrator Machine 5LPM", price: 34900, category: "oxygen-concentrator", description: "5LPM oxygen concentrator.", images: ["/images/Oc/deal2.jpg"], specifications: [{ label: "Brand", value: "Oxymed" }, { label: "Capacity", value: "5LPM" }] },
-{ id: 12, slug: "oxymed-10ltr-oxygen-concentrator", name: "OxyMed 10 Ltr Oxygen Concentrator", price: 51550, category: "oxygen-concentrator", description: "High capacity concentrator.", images: ["/images/Oc/deal3.jpg"], specifications: [{ label: "Brand", value: "Oxymed" }, { label: "Capacity", value: "10LPM" }] },
 { id: 13, slug: "philips-everflo-oxygen-concentrator", name: "Philips EverFlo Home Oxygen (5 LPM)", price: 59000, category: "oxygen-concentrator", description: "Home oxygen concentrator.", images: ["/images/Oc/deal4.webp"], specifications: [{ label: "Brand", value: "Philips" }, { label: "Capacity", value: "5LPM" }] },
-{ id: 16, slug: "oxygen-machines", name: "Oxymed Inteli 5LPM Auto Flow Oxygen Concentrator", price: 500, category: "oxygen-concentrator", description: "Standard oxygen mask.",
+{ id: 12, slug: "oxymed-10ltr-oxygen-concentrator", name: "OxyMed 10 Ltr Oxygen Concentrator", price: 51550, category: "oxygen-concentrator", description: "High capacity concentrator.", images: ["/images/Oc/deal3.jpg"], specifications: [{ label: "Brand", value: "Oxymed" }, { label: "Capacity", value: "10LPM" }] },
+{ id: 64, slug: "nidek", name: "Nidek Nuvo Lite 5 LPM", price: 57599, category: "oxygen-concentrator", description: "Standard oxygen mask.",
+   images: ["/images/Oc/nidek1.jpg", "/images/Oc/nidek2.jpg", "/images/Oc/nidek3.jpg","/images/Oc/nidek4.jpg"], specifications: [{ label: "Category", value: "Oxygen Accessory" }] },
+{ id: 16, slug: "oxygen-machines", name: "Oxymed Inteli 5LPM Auto Flow Oxygen Concentrator", price: 55500, category: "oxygen-concentrator", description: "Standard oxygen mask.",
    images: ["/images/Oc/1.jpg", "/images/Oc/2.jpg", "/images/Oc/3.jpg","/images/Oc/5.jpg"], specifications: [{ label: "Category", value: "Oxygen Accessory" }] },
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -224,16 +240,16 @@ export const products: Product[] = [
 { id: 54, slug: "p30i-n30i-headgear", name: "Resmed AirFit™ P30i N30i Headgear", price: 1100, category: "mask-headgear", description: "Mask frame.", images: ["/images/Accesories/Headgear/Resmed AirFit™ P30i N30i Headgear.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
 { id: 59, slug: "vent-airfit-headgear", name: "QuietAir vent for AirFit™ Mask", price: 1100, category: "mask-headgear", description: "Mask frame.", images: ["/images/Accesories/Mask frame and vents/QuietAir vent for AirFit™ Mask.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
 { id: 60, slug: "sys-headgear", name: "Resmed AirFit™ F20 Frame SYS", price: 1100, category: "mask-headgear", description: "Mask frame.", images: ["/images/Accesories/Mask frame and vents/Resmed AirFit™ F20 Frame SYS.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
-{ id: 61, slug: "n20-sys-headgear", name: "Resmed AirFit™ N20 Frame SYS", price: 1100, category: "mask-headgear", description: "Mask frame.", images: ["/images/Accesories/Mask frame and vents/Resmed AirFit™ N20 Frame SYS.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
+{ id: 63, slug: "n20-sys-headgear", name: "Resmed AirFit™ N20 Frame SYS", price: 1100, category: "mask-headgear", description: "Mask frame.", images: ["/images/Accesories/Mask frame and vents/Resmed AirFit™ N20 Frame SYS.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
 
 //mask and cushion
 { id: 22, slug: "airfit-cushion", name: "Resmed AirFit™ F20 Cushion", price: 900, category: "mask-cushion", description: "Comfort cushion.", images: ["/images/Accesories/Cushion/Resmed AirFit™ F20 Cushion.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
 { id: 27, slug: "f30-cushion", name: "Resmed AirFit™ F30 Cushion", price: 1800, category: "mask-cushion", description: "Hose Pipes & Tubes", images: ["/images/Accesories/Cushion/Resmed AirFit™ F30 Cushion.webp", "/images/Accesories/Cushion/Resmed AirFit™ F30 Cushion2.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
 { id: 23, slug: "f30i-cushion", name: "Resmed AirFit™ F30i Cushion", price: 400, category: "mask-cushion", description: "Replacement clips.", images: ["/images/Accesories/Cushion/Resmed AirFit™ F30i Cushion.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
 { id: 14, slug: "n20-cushion", name: "Resmed AirFit™ N20 Cushion", price: 2900, category: "mask-cushion", description: "Setup pack for AirMini.", images: ["/images/Accesories/Cushion/Resmed AirFit™ N20 Cushion.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "CPAP Accessory" }] },
-{ id: 17, slug: "n30i-cushion", name: "Resmed AirFit™ N30i Cushion", price: 0, category: "mask-cushion", description: "Rental service.", images: ["/images/Accesories/Cushion/Resmed AirFit™ N30i Cushion.webp"], specifications: [{ label: "Type", value: "Rental" }] },
+{ id: 17, slug: "n30i-cushion", name: "Resmed AirFit™ N30i Cushion", price: 3500, category: "mask-cushion", description: "Rental service.", images: ["/images/Accesories/Cushion/Resmed AirFit™ N30i Cushion.webp"], specifications: [{ label: "Type", value: "Rental" }] },
 { id: 19, slug: "p30i-cushion", name: "Resmed AirFit™ P30i Cushion", price: 300, category: "mask-cushion", description: "Air filters.", images: ["/images/Accesories/Cushion/Resmed AirFit™ P30i Cushion.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
-{ id: 25, slug: "airtouch-f20", name: "Resmed AirTouch F20 Cushion (Pack of 2)", price: 2000, category: "mask-cushion", description: "Accessories for AirSense 11.", images: ["/images/Accesories/Cushion/Resmed AirTouch F20 Cushion (Pack of 2).webp"], specifications: [{ label: "Category", value: "Accessory" }] },
+{ id: 25, slug: "airtouch-f20I", name: "Resmed AirTouch F20 Cushion (Pack of 2)", price: 2000, category: "mask-cushion", description: "Accessories for AirSense 11.", images: ["/images/Accesories/Cushion/Resmed AirTouch F20 Cushion (Pack of 2).webp"], specifications: [{ label: "Category", value: "Accessory" }] },
 
 //Mask pad clip
 { id: 26, slug: "n20-accessories", name: "Resmed N20 Mask Magnet Clips (2PK)", price: 1800, category: "mask-clips", description: "Accessories for Resmed N20 Mask ", images: ["/images/Accesories/Mask Pad Clips/1.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
@@ -262,3 +278,4 @@ export const products: Product[] = [
 
 
 ]
+// LAST 65

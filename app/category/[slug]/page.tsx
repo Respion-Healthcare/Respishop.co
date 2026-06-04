@@ -8,33 +8,60 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
 
   const formattedName = slug.replace(/-/g, " ")
 
-  if (slug === "cpap-machine") {
-    return {
-      title:
-        "CPAP Machine for Sleep Apnea | Buy Online in India - Respishop",
+if (slug === "mask") {
+  return {
+    title: "CPAP Masks & BiPAP Masks Online in India | Respishop",
+    description:
+      "Buy CPAP masks, BiPAP masks, full face masks, nasal masks and nasal pillow masks online in India from leading brands like ResMed, Philips and BMC.",
+    keywords: [
+      "CPAP mask",
+      "BiPAP mask",
+      "full face mask",
+      "nasal mask",
+      "ResMed mask",
+      "CPAP mask India",
+    ],
+    alternates: {
+      canonical: `https://www.respishop.in/category/${slug}`,
+    },
+    openGraph: {
+      title: "CPAP Masks & BiPAP Masks Online in India | Respishop",
       description:
-        "Shop CPAP machines online in India for sleep apnea treatment. Buy ResMed CPAP devices, Auto CPAP machines, sleep therapy equipment and accessories at best price.",
-      keywords: [
-        "CPAP machine",
-        "sleep apnea machine",
-        "ResMed CPAP",
-        "Auto CPAP",
-        "CPAP machine India",
-        "sleep therapy device",
-      ],
-      alternates: {
-        canonical: `https://www.respishop.in/category/${slug}`,
-      },
-      openGraph: {
-        title: "CPAP Machine for Sleep Apnea | Respishop",
-        description:
-          "Buy CPAP machines online in India with fast delivery and genuine products.",
-        url: `https://www.respishop.in/category/${slug}`,
-        siteName: "Respishop",
-        type: "website",
-      },
-    }
+        "Buy CPAP masks, BiPAP masks, full face masks, nasal masks and nasal pillow masks online in India from leading brands.",
+      url: `https://www.respishop.in/category/${slug}`,
+      siteName: "Respishop",
+      type: "website",
+    },
   }
+}
+
+if (slug === "accessory") {
+  return {
+    title: "CPAP & BiPAP Accessories Online in India | Respishop",
+    description:
+      "Shop CPAP and BiPAP accessories including tubing, filters, humidifier chambers, mask cushions, headgear and replacement parts.",
+    keywords: [
+      "CPAP accessories",
+      "BiPAP accessories",
+      "CPAP tubing",
+      "CPAP filter",
+      "humidifier chamber",
+      "sleep therapy accessories",
+    ],
+    alternates: {
+      canonical: `https://www.respishop.in/category/${slug}`,
+    },
+    openGraph: {
+      title: "CPAP & BiPAP Accessories Online in India | Respishop",
+      description:
+        "Shop CPAP and BiPAP accessories including tubing, filters, humidifier chambers, mask cushions and replacement parts.",
+      url: `https://www.respishop.in/category/${slug}`,
+      siteName: "Respishop",
+      type: "website",
+    },
+  }
+}
+
 
   return {
     title: `${formattedName} Price in India | Buy Online - Respishop`,
@@ -66,24 +93,110 @@ export default async function CategoryPage({
 }) {
   const { slug } = await params
 
-  const filteredProducts = products.filter(
-    (product) => product.category === slug
-  )
+const filteredProducts =
+  slug === "mask"
+    ? products.filter((product) =>
+        [
+          "nasal-mask",
+          "full-face-mask",
+          "nasal-pillow-mask",
+        ].includes(product.category)
+      )
+    : slug === "accessory"
+    ? products.filter((product) =>
+        [
+          "tubes-and-connectors",
+          "filters-cleaners",
+          "humidifier-bottle",
+          "mask-headgear",
+          "mask-cushion",
+          "mask-clips",
+        ].includes(product.category)
+      )
+    : products.filter(
+        (product) => product.category === slug
+      )
 
+console.log("Products Found:", filteredProducts.length)
   const categoryTitle = slug
-    ? slug.replace(/-/g, " ")
-    : "Category"
+  ? slug
+      .replace(/-/g, " ")
+      .replace(/\b\w/g, (c) => c.toUpperCase())
+  : "Category"
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6 md:p-10">
-
+    <div className="
+min-h-screen
+bg-gradient-to-br
+from-slate-50
+via-blue-50
+to-cyan-50
+p-6
+md:p-10
+">
       {/* PAGE TITLE */}
       <div className="max-w-7xl mx-auto">
 
-        <h1 className="text-3xl md:text-4xl font-bold mb-3 capitalize text-gray-900">
-          {categoryTitle}
-        </h1>
+      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 via-sky-500 to-cyan-400 p-10 md:p-16 mb-12">
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.25),transparent_40%)]" />
 
+  <div className="relative z-10 max-w-3xl">
+    <span className="inline-flex rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white backdrop-blur">
+      Respishop Collection
+    </span>
+
+    <h1 className="mt-5 text-4xl md:text-6xl font-bold text-white">
+      {categoryTitle}
+    </h1>
+
+   <p className="mt-5 text-lg text-blue-50">
+  {filteredProducts.length}+ genuine products available with fast delivery
+  across India.
+</p>
+  </div>
+
+  <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
+  <div className="absolute -bottom-24 left-0 h-72 w-72 rounded-full bg-cyan-300/20 blur-3xl" />
+</div>
+<div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+
+  <div className="rounded-2xl bg-white p-5 shadow-sm border border-blue-100">
+    <p className="text-3xl font-bold text-blue-600">
+      {filteredProducts.length}+
+    </p>
+    <p className="text-gray-600 text-sm">
+      Products
+    </p>
+  </div>
+
+  <div className="rounded-2xl bg-white p-5 shadow-sm border border-blue-100">
+    <p className="text-3xl font-bold text-blue-600">
+      100%
+    </p>
+    <p className="text-gray-600 text-sm">
+      Genuine Products
+    </p>
+  </div>
+
+  <div className="rounded-2xl bg-white p-5 shadow-sm border border-blue-100">
+    <p className="text-3xl font-bold text-blue-600">
+      PAN India
+    </p>
+    <p className="text-gray-600 text-sm">
+      Delivery
+    </p>
+  </div>
+
+  <div className="rounded-2xl bg-white p-5 shadow-sm border border-blue-100">
+    <p className="text-3xl font-bold text-blue-600">
+      Expert
+    </p>
+    <p className="text-gray-600 text-sm">
+      Support
+    </p>
+  </div>
+
+</div>
         <p className="text-gray-600 mb-10 max-w-3xl">
           Explore premium quality {categoryTitle} products at Respishop.
           Genuine products, affordable prices, fast shipping and trusted
@@ -93,22 +206,40 @@ export default async function CategoryPage({
         {filteredProducts.length === 0 ? (
           <p>No products found.</p>
         ) : (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
 
             {filteredProducts.map((product) => (
 
               <Link
                 key={product.id}
                 href={`/products/${product.category}/${product.slug}`}
-                className="bg-white p-4 rounded-2xl border hover:shadow-lg transition duration-300"
-              >
+               className="
+                          group
+                          relative
+                          overflow-hidden
+                          rounded-3xl
+                          border border-blue-100
+                          bg-white
+                          p-4
+                          shadow-sm
+                          transition-all
+                          duration-500
+                          hover:-translate-y-2
+                          hover:border-blue-300
+                          hover:shadow-[0_20px_50px_rgba(59,130,246,0.25)]">
 
-                <div className="relative w-full h-44 bg-gray-50 rounded-xl overflow-hidden">
+                <div className="relative h-56 overflow-hidden rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50">
                   <Image
                     src={product.images[0]}
                     alt={product.name}
                     fill
-                    className="object-contain p-3"
+                  className="
+object-contain
+p-4
+transition-transform
+duration-500
+group-hover:scale-110
+"
                   />
                 </div>
 
@@ -116,10 +247,20 @@ export default async function CategoryPage({
                   {product.name}
                 </h2>
 
-                <p className="text-blue-600 font-semibold mt-2">
-                  ₹{product.price.toLocaleString()}
+                <p className="mt-3 text-xl font-bold text-blue-600 transition-colors duration-300 group-hover:text-cyan-600">
+                  ₹{product.price > 0
+  ? `₹${product.price.toLocaleString()}`
+  : "Contact for Price"}
                 </p>
+<div className="mt-4 flex items-center justify-between">
+  <span className="text-sm text-slate-500">
+    View Details
+  </span>
 
+  <span className="rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold text-white transition-all duration-300 group-hover:bg-cyan-600">
+    Explore
+  </span>
+</div>
               </Link>
 
             ))}
@@ -128,196 +269,289 @@ export default async function CategoryPage({
         )}
 
         {/* SEO CONTENT */}
-        <div className="mt-20 max-w-5xl text-gray-700 leading-relaxed">
+        <div className="
+mt-20
+rounded-3xl
+border
+border-blue-100
+bg-gradient-to-br
+from-white
+to-blue-50
+p-8
+md:p-12
+shadow-sm
+">
 
-          {/* CPAP CONTENT */}
-          {slug === "cpap-machine" && (
-            <>
+ {/* MASK CATEGORY CONTENT */}
+{slug === "mask" && (
+  <div className="space-y-10">
 
-              <h2 className="text-3xl font-bold mb-6 text-gray-900">
-                CPAP Machines for Sleep Apnea Treatment in India
-              </h2>
+    <div className="text-center max-w-4xl mx-auto">
+      <span className="inline-flex rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700">
+        CPAP & BiPAP Masks
+      </span>
 
-              <p className="mb-5">
-                CPAP machines are one of the most effective treatments for
-                obstructive sleep apnea and breathing disorders during sleep.
-                These devices deliver continuous air pressure to keep your
-                airways open, helping you breathe properly throughout the
-                night and improving sleep quality significantly.
-              </p>
+      <h2 className="mt-4 text-4xl font-bold text-gray-900">
+        CPAP & BiPAP Masks Online in India
+      </h2>
 
-              <p className="mb-5">
-                At Respishop, we provide advanced CPAP therapy devices from
-                trusted brands like ResMed. Our collection includes Auto CPAP
-                machines, travel CPAP devices, humidifier-supported systems,
-                and premium accessories designed for maximum comfort and
-                long-term therapy support.
-              </p>
+      <p className="mt-5 text-lg text-gray-600">
+        Discover premium CPAP and BiPAP masks from leading brands including
+        ResMed, Philips and BMC. Choose from full face masks, nasal masks
+        and nasal pillow masks designed for effective and comfortable sleep
+        therapy.
+      </p>
+    </div>
 
-              <p className="mb-5">
-                Whether you are looking for your first CPAP device or planning
-                to upgrade your existing machine, you can find reliable,
-                clinically trusted and easy-to-use options suitable for home
-                therapy and long-term respiratory care.
-              </p>
+    <div className="grid md:grid-cols-3 gap-6">
 
-              <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
-                Benefits of CPAP Machines
-              </h3>
+      <div className="rounded-3xl bg-white p-6 shadow-sm border border-blue-100">
+        <div className="mb-4 text-4xl">😴</div>
+        <h3 className="text-xl font-semibold mb-3">
+          Better Sleep Comfort
+        </h3>
+        <p className="text-gray-600">
+          Lightweight and ergonomic designs help you sleep comfortably
+          throughout the night.
+        </p>
+      </div>
 
-              <ul className="list-disc pl-6 space-y-2 mb-8">
-                <li>Helps manage sleep apnea effectively</li>
-                <li>Improves breathing during sleep</li>
-                <li>Reduces snoring and interrupted sleep</li>
-                <li>Enhances sleep quality and daily energy</li>
-                <li>Supports long-term respiratory health</li>
-                <li>Comfortable and easy-to-use therapy devices</li>
-              </ul>
+      <div className="rounded-3xl bg-white p-6 shadow-sm border border-blue-100">
+        <div className="mb-4 text-4xl">💨</div>
+        <h3 className="text-xl font-semibold mb-3">
+          Improved Therapy
+        </h3>
+        <p className="text-gray-600">
+          Advanced cushion technology provides a secure seal and effective
+          airflow delivery.
+        </p>
+      </div>
 
-              <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
-                Why Buy from Respishop?
-              </h3>
+      <div className="rounded-3xl bg-white p-6 shadow-sm border border-blue-100">
+        <div className="mb-4 text-4xl">✔️</div>
+        <h3 className="text-xl font-semibold mb-3">
+          Trusted Quality
+        </h3>
+        <p className="text-gray-600">
+          Genuine masks from globally trusted respiratory care brands.
+        </p>
+      </div>
 
-              <ul className="list-disc pl-6 space-y-2 mb-8">
-                <li>100% genuine respiratory care products</li>
-                <li>Trusted sleep therapy solutions</li>
-                <li>Fast delivery across India</li>
-                <li>Affordable pricing and support</li>
-                <li>Premium brands including ResMed</li>
-              </ul>
+    </div>
 
-              <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
-                Frequently Asked Questions
-              </h3>
+    <div className="rounded-3xl bg-gradient-to-r from-blue-600 to-cyan-500 p-8 text-white">
 
-              <div className="space-y-5">
+      <h3 className="text-2xl font-bold mb-6">
+        Popular Mask Types
+      </h3>
 
-                <div>
-                  <h4 className="font-semibold text-lg">
-                    What is a CPAP machine?
-                  </h4>
+      <div className="grid md:grid-cols-3 gap-4">
 
-                  <p className="mt-1 text-gray-700">
-                    A CPAP machine is a medical device used to treat sleep
-                    apnea by providing continuous airflow that keeps the airway
-                    open during sleep.
-                  </p>
-                </div>
+        <div className="rounded-2xl bg-white/10 p-5 backdrop-blur">
+          <h4 className="font-semibold mb-2">
+            Full Face Masks
+          </h4>
+          <p className="text-sm text-blue-50">
+            Covers nose and mouth for reliable therapy delivery.
+          </p>
+        </div>
 
-                <div>
-                  <h4 className="font-semibold text-lg">
-                    Is CPAP safe for long-term use?
-                  </h4>
+        <div className="rounded-2xl bg-white/10 p-5 backdrop-blur">
+          <h4 className="font-semibold mb-2">
+            Nasal Masks
+          </h4>
+          <p className="text-sm text-blue-50">
+            Compact and comfortable option for everyday use.
+          </p>
+        </div>
 
-                  <p className="mt-1 text-gray-700">
-                    Yes, CPAP therapy is medically recommended and considered
-                    safe for daily and long-term use when prescribed by a
-                    healthcare professional.
-                  </p>
-                </div>
+        <div className="rounded-2xl bg-white/10 p-5 backdrop-blur">
+          <h4 className="font-semibold mb-2">
+            Nasal Pillow Masks
+          </h4>
+          <p className="text-sm text-blue-50">
+            Minimal-contact design for maximum freedom.
+          </p>
+        </div>
 
-                <div>
-                  <h4 className="font-semibold text-lg">
-                    Which CPAP machine is best for beginners?
-                  </h4>
+      </div>
 
-                  <p className="mt-1 text-gray-700">
-                    Auto-adjusting CPAP machines like the ResMed AirSense
-                    series are commonly recommended for beginners because of
-                    their comfort and intelligent pressure adjustment features.
-                  </p>
-                </div>
+    </div>
 
-              </div>
+    <div className="rounded-3xl border border-blue-100 bg-white p-8">
 
-            </>
-          )}
+      <h3 className="text-2xl font-bold text-gray-900 mb-4">
+        Complete Your Sleep Therapy Setup
+      </h3>
 
-          {/* GENERIC CATEGORY CONTENT */}
-          {slug !== "cpap-machine" && (
-            <>
+      <p className="text-gray-600 mb-5">
+        Pair your mask with compatible tubing, filters, humidifier chambers
+        and replacement accessories for the best therapy experience.
+      </p>
 
-              <h2 className="text-3xl font-bold mb-6 capitalize text-gray-900">
-                Buy {categoryTitle} Online in India
-              </h2>
+      <Link
+        href="/category/accessory"
+        className="inline-flex rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
+      >
+        Explore Accessories →
+      </Link>
 
-              <p className="mb-5">
-                Explore premium quality {categoryTitle} products available at
-                Respishop. We offer carefully selected respiratory care and
-                sleep therapy products designed for comfort, durability and
-                reliable performance.
-              </p>
+    </div>
 
-              <p className="mb-5">
-                Whether you are searching for accessories, masks, oxygen
-                therapy products or advanced respiratory equipment, our
-                collection includes trusted solutions from leading healthcare
-                brands.
-              </p>
+  </div>
+)}
 
-              <p className="mb-5">
-                Respishop focuses on delivering genuine healthcare products
-                with affordable pricing, quick delivery and dedicated customer
-                support across India.
-              </p>
+{slug === "accessory" && (
+  <div className="space-y-10">
 
-              <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
-                Why Choose Respishop?
-              </h3>
+    <div className="text-center max-w-4xl mx-auto">
+      <span className="inline-flex rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700">
+        CPAP & BiPAP Accessories
+      </span>
 
-              <ul className="list-disc pl-6 space-y-2 mb-8">
-                <li>Trusted respiratory healthcare products</li>
-                <li>Fast delivery across India</li>
-                <li>Affordable pricing</li>
-                <li>Premium quality products</li>
-                <li>Easy online ordering experience</li>
-              </ul>
+      <h2 className="mt-4 text-4xl font-bold text-gray-900">
+        Genuine CPAP & BiPAP Accessories Online in India
+      </h2>
 
-              <h3 className="text-2xl font-semibold mt-10 mb-4 text-gray-900">
-                Customer Reviews
-              </h3>
+      <p className="mt-5 text-lg text-gray-600">
+        Maintain peak sleep therapy performance with genuine CPAP and BiPAP
+        accessories including tubing, filters, humidifier chambers,
+        cushions, headgear and replacement components from trusted brands.
+      </p>
+    </div>
 
-              <p className="mb-5">
-                Customers across India trust Respishop for genuine respiratory
-                care products and reliable sleep therapy equipment. Our focus
-                on product quality, customer support and quick delivery makes
-                us a trusted destination for healthcare needs.
-              </p>
+    <div className="grid md:grid-cols-3 gap-6">
 
-            </>
-          )}
+      <div className="rounded-3xl bg-white p-6 shadow-sm border border-blue-100">
+        <div className="mb-4 text-4xl">🫧</div>
+        <h3 className="font-semibold text-xl mb-3">
+          Better Hygiene
+        </h3>
+        <p className="text-gray-600">
+          Replace filters, cushions and tubing regularly to maintain
+          cleanliness and improve therapy effectiveness.
+        </p>
+      </div>
 
+      <div className="rounded-3xl bg-white p-6 shadow-sm border border-blue-100">
+        <div className="mb-4 text-4xl">😴</div>
+        <h3 className="font-semibold text-xl mb-3">
+          Enhanced Comfort
+        </h3>
+        <p className="text-gray-600">
+          Fresh cushions and headgear provide a better seal and a more
+          comfortable sleep therapy experience.
+        </p>
+      </div>
+
+      <div className="rounded-3xl bg-white p-6 shadow-sm border border-blue-100">
+        <div className="mb-4 text-4xl">⚙️</div>
+        <h3 className="font-semibold text-xl mb-3">
+          Longer Equipment Life
+        </h3>
+        <p className="text-gray-600">
+          Proper maintenance and timely replacement parts help extend the
+          lifespan of your CPAP or BiPAP machine.
+        </p>
+      </div>
+
+    </div>
+
+    <div className="rounded-3xl bg-gradient-to-r from-blue-600 to-cyan-500 p-8 text-white">
+
+      <h3 className="text-2xl font-bold mb-6">
+        Popular CPAP Accessories
+      </h3>
+
+      <div className="grid md:grid-cols-2 gap-4">
+
+        <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
+          ✓ CPAP Tubing & Air Hoses
+        </div>
+
+        <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
+          ✓ Replacement Filters
+        </div>
+
+        <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
+          ✓ Humidifier Water Chambers
+        </div>
+
+        <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
+          ✓ Mask Cushions & Headgear
+        </div>
+
+      </div>
+
+    </div>
+
+    <div className="rounded-3xl border border-blue-100 bg-white p-8">
+
+      <h3 className="text-2xl font-bold text-gray-900 mb-4">
+        Find Compatible Masks & Accessories
+      </h3>
+
+      <p className="text-gray-600 mb-5">
+        Looking for replacement cushions, clips, headgear or mask parts?
+        Browse our mask collection and find compatible accessories for your
+        sleep therapy setup.
+      </p>
+
+      <Link
+        href="/category/mask"
+        className="inline-flex rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
+      >
+        Explore CPAP & BiPAP Masks →
+      </Link>
+
+    </div>
+
+  </div>
+)}
           {/* INTERNAL LINKS */}
-          <div className="mt-10 border-t pt-8">
+         <div className="mt-10 border-t pt-8">
 
-            <p className="mb-4">
-              Check related products in our{" "}
-              <Link
-                href="/category/cpap-machine"
-                className="text-blue-600 underline"
-              >
-                CPAP machines collection
-              </Link>.
-            </p>
+  {slug === "mask" && (
+    <>
+      <p className="mb-4">
+        Explore our{" "}
+        <Link
+          href="/category/cpap-machine"
+          className="text-blue-600 underline"
+        >
+          CPAP Machines Collection
+        </Link>{" "}
+        for complete sleep therapy solutions.
+      </p>
 
-            <p>
-              Popular products include{" "}
-              <Link
-                href="/products/cpap-machine/resmed-airsense-10-autoset-tripack"
-                className="text-blue-600 underline"
-              >
-                ResMed AirSense 10
-              </Link>{" "}
-              and{" "}
-              <Link
-                href="/products/cpap-machine/airsense-11-autoset-single-pack"
-                className="text-blue-600 underline"
-              >
-                AirSense 11 AutoSet
-              </Link>.
-            </p>
+      <p>
+        Shop full face masks, nasal masks and nasal pillow masks from
+        trusted brands including ResMed, Philips and BMC.
+      </p>
+    </>
+  )}
 
-          </div>
+  {slug === "accessory" && (
+    <>
+      <p className="mb-4">
+        Browse our{" "}
+        <Link
+          href="/category/mask"
+          className="text-blue-600 underline"
+        >
+          CPAP & BiPAP Masks Collection
+        </Link>{" "}
+        to find compatible replacement parts and accessories.
+      </p>
+
+      <p>
+        Genuine CPAP tubing, filters, humidifier chambers, mask cushions
+        and headgear available with fast delivery across India.
+      </p>
+    </>
+  )}
+
+</div>
 
         </div>
 

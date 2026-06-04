@@ -8,7 +8,7 @@ import ReviewsSection from "@/components/Review"
 import ShopCategories from "@/components/ShopCategories"
 import TrustBadges from "@/components/TrustBadges"
 import FloatingContactButtons from "@/components/FloatingContactButtons"
-// import LocationSEOSection from "@/components/LocationSEOSection"
+import AuthorizedPartners from "@/components/AuthorizedPartners"
 
 export const metadata: Metadata = {
   title: "Buy CPAP, BiPAP & Oxygen Concentrators in India | Respishop",
@@ -50,7 +50,7 @@ export default function Home() {
   <TrustBadges />
       <DealOfTheDay />
 
-      {/* <LocationSEOSection /> */}
+      <AuthorizedPartners />
 
       <ReviewsSection />
 <FloatingContactButtons />

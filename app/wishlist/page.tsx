@@ -67,13 +67,19 @@ export default function WishlistPage() {
                   Remove
                 </button>
 
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  width={200}
-                  height={200}
-                  className="mx-auto object-contain h-[160px]"
-                />
+               {product.image ? (
+                  <Image
+                    src={product.image}
+                    alt={product.name || "Product"}
+                    width={200}
+                    height={200}
+                    className="mx-auto object-contain h-[160px]"
+                  />
+                ) : (
+                  <div className="mx-auto h-[160px] flex items-center justify-center bg-gray-100 rounded">
+                    No Image Available
+                  </div>
+                )}
 
                 <h3 className="mt-4 text-sm font-medium text-gray-800">
                   {product.name}
