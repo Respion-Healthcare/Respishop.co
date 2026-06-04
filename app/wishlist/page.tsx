@@ -5,36 +5,41 @@ import Image from "next/image"
 import Link from "next/link"
 
 export default function WishlistPage() {
-
   const [wishlist, setWishlist] = useState<any[]>([])
 
   useEffect(() => {
     const storedWishlist = localStorage.getItem("wishlist")
 
     if (storedWishlist) {
-      setWishlist(JSON.parse(storedWishlist))
+      try {
+        setWishlist(JSON.parse(storedWishlist))
+      } catch {
+        setWishlist([])
+      }
     }
   }, [])
 
-  const removeFromWishlist = (id:number) => {
-
-    const updatedWishlist = wishlist.filter(item => item.id !== id)
+  const removeFromWishlist = (slug: string) => {
+    const updatedWishlist = wishlist.filter(
+      (item) => item.slug !== slug
+    )
 
     setWishlist(updatedWishlist)
 
-    localStorage.setItem("wishlist", JSON.stringify(updatedWishlist))
+    localStorage.setItem(
+      "wishlist",
+      JSON.stringify(updatedWishlist)
+    )
   }
 
   return (
     <div className="min-h-screen bg-gray-50 pt-28 px-6">
       <div className="max-w-6xl mx-auto">
-
         <h1 className="text-3xl font-semibold text-gray-800 mb-8">
           My Wishlist
         </h1>
 
         {wishlist.length === 0 ? (
-
           <div className="bg-white rounded-xl shadow-sm p-10 text-center">
             <p className="text-gray-500 text-lg">
               Your wishlist is empty.
@@ -47,41 +52,37 @@ export default function WishlistPage() {
               Browse Products
             </Link>
           </div>
-
         ) : (
-
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-
             {wishlist.map((product) => (
-
               <div
-                key={product.id}
+                key={product.slug}
                 className="bg-white p-6 rounded-xl shadow-sm relative"
               >
-
-                {/* Remove Button */}
                 <button
-                  onClick={() => removeFromWishlist(product.id)}
+                  onClick={() =>
+                    removeFromWishlist(product.slug)
+                  }
                   className="absolute top-3 right-3 text-red-500 text-sm hover:underline"
                 >
                   Remove
                 </button>
 
-               {product.image ? (
-                  <Image
-                    src={product.image}
-                    alt={product.name || "Product"}
-                    width={200}
-                    height={200}
-                    className="mx-auto object-contain h-[160px]"
-                  />
-                ) : (
+               {product.images?.[0] ? (
+                          <Image
+                            src={product.images[0]}
+                            alt={product.name || "Product"}
+                            width={200}
+                            height={200}
+                            className="mx-auto object-contain h-[160px]"
+                          />
+                        ) : (
                   <div className="mx-auto h-[160px] flex items-center justify-center bg-gray-100 rounded">
                     No Image Available
                   </div>
                 )}
 
-                <h3 className="mt-4 text-sm font-medium text-gray-800">
+                <h3 className="mt-4 text-sm font-medium text-gray-800 line-clamp-2">
                   {product.name}
                 </h3>
 
@@ -89,31 +90,24 @@ export default function WishlistPage() {
                   {product.price}
                 </p>
 
-<Link
-  key={product.slug}
-  href={`/products/${product.category}/${product.slug}`}
-  className="flex items-center gap-3 border rounded-lg p-3 hover:shadow-md transition"
->
-  <div className="w-16 h-16 bg-gray-100 rounded-lg" />
+                <Link
+                  href={`/products/${product.category}/${product.slug}`}
+                  className="mt-4 flex items-center gap-3 border rounded-lg p-3 hover:shadow-md transition"
+                >
+                  <div>
+                    <p className="text-sm font-medium">
+                      View Product
+                    </p>
 
-  <div>
-    <p className="text-sm font-medium line-clamp-2">
-      {product.name}
-    </p>
-    <p className="text-xs text-blue-600 mt-1">
-      View Product →
-    </p>
-  </div>
-</Link>
-
+                    <p className="text-xs text-blue-600 mt-1">
+                      Open →
+                    </p>
+                  </div>
+                </Link>
               </div>
-
             ))}
-
           </div>
-
         )}
-
       </div>
     </div>
   )

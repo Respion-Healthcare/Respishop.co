@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import {
   Heart,
   ShieldCheck,
@@ -11,9 +11,8 @@ import {
 import AddToCartButton from "./AddToCartButton"
 
 export default function ProductOptions({ product }: any) {
-
+console.log(JSON.stringify(product, null, 2))
   const [qty, setQty] = useState(1)
-  const [wish, setWish] = useState(false)
   const [pincode, setPincode] = useState("")
   const [accepted, setAccepted] = useState(false)
 
@@ -39,6 +38,48 @@ export default function ProductOptions({ product }: any) {
   const [selectedPackage, setSelectedPackage] = useState(
     packageOptions[0]
   )
+const [wish, setWish] = useState(false)
+
+const handleWishlist = () => {
+  const wishlist = JSON.parse(
+    localStorage.getItem("wishlist") || "[]"
+  )
+
+  const exists = wishlist.find(
+    (item: any) => item.slug === product.slug
+  )
+
+  if (exists) {
+    const updated = wishlist.filter(
+      (item: any) => item.slug !== product.slug
+    )
+
+    localStorage.setItem(
+      "wishlist",
+      JSON.stringify(updated)
+    )
+
+    setWish(false)
+  } else {
+    localStorage.setItem(
+      "wishlist",
+      JSON.stringify([...wishlist, product])
+    )
+
+    setWish(true)
+  }
+}
+useEffect(() => {
+  const wishlist = JSON.parse(
+    localStorage.getItem("wishlist") || "[]"
+  )
+
+  const exists = wishlist.find(
+    (item: any) => item.slug === product.slug
+  )
+
+  setWish(!!exists)
+}, [product.slug])
 
   return (
 
@@ -82,21 +123,19 @@ export default function ProductOptions({ product }: any) {
 
       )}
 
-      {/* Wishlist */}
-      <button
-        onClick={() => setWish(!wish)}
-        className="flex items-center gap-2 mt-5 text-sm text-gray-600 hover:text-red-500 transition"
-      >
+              {/* Wishlist */}
+              <button
+          onClick={handleWishlist}
+          className="flex items-center gap-2 mt-5 text-sm text-gray-600 hover:text-red-500 transition"
+        >
+          <Heart
+            className={`w-5 h-5 ${
+              wish ? "fill-red-500 text-red-500" : ""
+            }`}
+          />
 
-        <Heart
-          className={`w-5 h-5 ${
-            wish ? "fill-red-500 text-red-500" : ""
-          }`}
-        />
-
-        {wish ? "Wishlisted" : "Add to Wishlist"}
-
-      </button>
+          {wish ? "Wishlisted" : "Add to Wishlist"}
+        </button>
 
       {/* Quantity */}
       <div className="mt-7">

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="bg-gradient-to-b from-blue-50 via-white to-blue-100 min-h-screen">
+    <main className="bg-linear-to-b from-blue-50 via-white to-blue-100 min-h-screen">
 
       {/* SEO H1 */}
       <h1 className="sr-only">

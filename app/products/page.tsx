@@ -101,7 +101,7 @@ function ProductSection({
               className="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition"
             >
               {/* IMAGE */}
-              <div className="relative h-[250px] flex items-center justify-center bg-white p-5">
+              <div className="relative h-62.5 flex items-center justify-center bg-white p-5">
                 <Image
                   src={product.images?.[0] || "/placeholder.webp"}
                   alt={product.name}

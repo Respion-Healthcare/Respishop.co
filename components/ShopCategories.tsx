@@ -12,7 +12,7 @@ const categories = [
   },
   {
     name: "BIPAP",
-    image: "/images/sleep apnea.webp",
+    image: "/images/bipap.jpg",
     link: "/products/bipap-machine",
   },
   {
