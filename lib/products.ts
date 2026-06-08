@@ -60,6 +60,11 @@ export const products: Product[] = [
 { id: 29, slug: "airfit-n20-classic", name: "AirFit™ N20 Classic", price: 4200, offer: { type: "percentage", value: 25 }, category: "nasal-mask", description: "Classic nasal mask with forehead support for stable and comfortable therapy.", images: ["/images/Mask/Resmed AirFit™ N20 Classic Mask/1.webp", "/images/Mask/Resmed AirFit™ N20 Classic Mask/2.webp", "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Nasal Mask" }] },
 { id: 30, slug: "airfit-n30i", name: "AirFit™ N30i", price: 7200, offer: { type: "flat", value: 1200 }, category: "nasal-mask", description: "Top-of-head tube nasal mask designed for flexible sleeping positions.", images: ["/images/Mask/Resmed AirFit™ N30i Nasal Mask.webp", "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Nasal Mask" }] },
 { id: 31, slug: "best-fit-2-nasal-mask", name: "BEST FIT 2 NASAL MASK", price: 4500, offer: { type: "percentage", value: 10 }, category: "nasal-mask", description: "Lightweight and comfortable nasal mask for daily CPAP therapy.", images: ["/images/Mask/Resmed Best Fit 2 Nasal Mask.webp","/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "BMC" }, { label: "Category", value: "Nasal Mask" }] },
+{ id: 77, slug: "philips-nasal-mask", name: "Philips Comfrotgel Nasal Mask", price: 3400, offer: { type: "percentage", value: 10 }, category: "nasal-mask", description: "Lightweight and comfortable nasal mask for daily CPAP therapy.", images: ["/images/Mask/Philips mask/Philips Comfrotgel Nasal Mask1.webp"], specifications: [{ label: "Brand", value: "BMC" }, { label: "Category", value: "Nasal Mask" }] },
+{ id: 78, slug: "philips-dream-nasal-mask", name: "Philips Dream Wisp Nasal Mask", price: 5000, offer: { type: "percentage", value: 10 }, category: "nasal-mask", description: "Lightweight and comfortable nasal mask for daily CPAP therapy.", images: ["/images/Mask/Philips mask/Philips Dream Wisp Nasal Mask1.webp","/images/Mask/Philips mask/Philips Dream Wisp Nasal Mask2.webp","/images/Mask/Philips mask/Philips Dream Wisp Nasal Mask4.webp","/images/Mask/Philips mask/Philips Dream Wisp Nasal Mask3.webp"], specifications: [{ label: "Brand", value: "BMC" }, { label: "Category", value: "Nasal Mask" }] },
+{ id: 79, slug: "philips-dreamware-nasal-mask", name: "Philips Dreamware Nasal Mask", price: 4100, offer: { type: "percentage", value: 10 }, category: "nasal-mask", description: "Lightweight and comfortable nasal mask for daily CPAP therapy.", images: ["/images/Mask/Philips mask/Philips Dreamware Nasal Mask1.webp", "/images/Mask/Philips mask/Philips Dreamware Nasal Mask2.webp"], specifications: [{ label: "Brand", value: "BMC" }, { label: "Category", value: "Nasal Mask" }] },
+{ id: 80, slug: "philips-pico-nasal-mask", name: "Philips Pico Nasal Mask", price: 2200, offer: { type: "percentage", value: 10 }, category: "nasal-mask", description: "Lightweight and comfortable nasal mask for daily CPAP therapy.", images: ["/images/Mask/Philips mask/Philips Pico Nasal Mask1.webp", "/images/Mask/Philips mask/Philips Pico Nasal Mask2.jpg", "/images/Mask/Philips mask/Philips Pico Nasal Mask3.bmp"], specifications: [{ label: "Brand", value: "BMC" }, { label: "Category", value: "Nasal Mask" }] },
+
 
 //Full Face Mask
 { id: 4, slug: "resmed-airfit-f20-full-face-mask", name: "Resmed AirFit F20 Full Face Mask", price: 7300, offer: { type: "percentage", value: 25 }, category: "full-face-mask", description: "Full face CPAP mask with superior comfort.", images: ["/images/Product1.jpg", "/images/Mask/Resmed AirTouch™ F20 Full Face Mask.webp", "/images/Mask/Resmed AirFit™ F20 Full Face Mask.webp", "/images/All.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Full Face Mask" }] },
@@ -69,6 +74,11 @@ export const products: Product[] = [
 { id: 35, slug: "bestfit-2-full-face-mask", name: "BestFit 2 Full Face Mask", price: 4800, offer: { type: "percentage", value: 10 }, category: "full-face-mask", description: "Comfortable and reliable full face CPAP mask for daily therapy.", images: ["/images/Mask/Resmed Best Fit 2 Full Face Mask.jpg","/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "BMC" }, { label: "Category", value: "Full Face Mask" }] },
 { id: 36, slug: "acucare-f1-0", name: "AcuCare™ F1-0", price: 3900, category: "full-face-mask", description: "Lightweight full face CPAP mask with secure fit and comfort.", images: ["/images/Mask/AcuCare™ F1-0.webp","/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Full Face Mask" }] },
 { id: 37, slug: "acucare-f1-4", name: "AcuCare™ F1-4", price: 4100, category: "full-face-mask", description: "Soft cushion full face mask designed for stable CPAP therapy.", images: ["/images/Mask/AcuCare™ F1-4.webp", "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Full Face Mask" }] },
+{ id: 74, slug: "philips-amara", name: "Philips Amara Full Face Mask", price: 4000, category: "full-face-mask", description: "Soft cushion full face mask designed for stable CPAP therapy.", images: ["/images/Mask/Philips mask/philips amara1.webp", "/images/Mask/Philips mask/philips amara2.webp", "/images/Mask/Philips mask/philips amara4.webp", "/images/Mask/Philips mask/philips amara3.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Full Face Mask" }] },
+{ id: 75, slug: "philips-amara-gel", name: "PHILIPS Unisex Respironics Amara Gel Full Face Mask- Medium,Transparent", price: 5567, category: "full-face-mask", description: "Soft cushion full face mask designed for stable CPAP therapy.", images: [ "/images/Mask/Philips mask/philips amara gel2.jpg","/images/Mask/Philips mask/philips amara gel1.jpg", "/images/Mask/Philips mask/philips amara gel3.jpg", "/images/Mask/Philips mask/philips amara gel4.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Full Face Mask" }] },
+{ id: 76, slug: "philips-dreamware", name: "Philips Dreamware Full Face mask", price: 4250, category: "full-face-mask", description: "Soft cushion full face mask designed for stable CPAP therapy.", images: [ "/images/Mask/Philips mask/Philips Respironics Dreamwear Full Face Mask1.jpg","/images/Mask/Philips mask/Philips Respironics Dreamwear Full Face Mask2.jpg", "/images/Mask/Philips mask/Philips Respironics Dreamwear Full Face Mask3.jpg", "/images/Mask/Philips mask/Philips Respironics Dreamwear Full Face Mask4.jpg"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Full Face Mask" }] },
+
+
 
 //nasal pillow mask
 { id: 15, slug: "nasal-pillow-mask", name: "AirFit™ P30i Nasal Pillow Mask", price: 3500, category: "nasal-pillow-mask", description: "Lightweight nasal pillow mask.", images: ["/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/1.webp", "/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/2.webp", "/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/3.webp", "/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/4.webp","/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/5.webp",], specifications: [{ label: "Category", value: "Mask" }] },
@@ -89,6 +99,14 @@ export const products: Product[] = [
 { id: 3, slug: "AirSense™ 10 Elite -Tripack 3G", name: "AirSense™ 10 Elite -Tripack 3G", price: 59000, offer: { type: "flat", value: 5000 }, category: "cpap-machine", description: "Reliable auto CPAP therapy device.",
  images: ["/images/Devices/AirSense™ 10 Elite -Tripack 3G.webp"],
   specifications: [{ label: "Brand", value: "ResMed" }, { label: "Type", value: "CPAP" }] },
+
+
+{ id: 68, slug: "philips-dreamstation", name: "Philips Respironics DreamStation Auto CPAP", price: 52499, category: "cpap-machine",
+   description: "Philips Respironics DreamStation Auto CPAP sleep therapy devices are designed to be as comfortable and easy to experience as sleep is intended to be. Connecting patients and care teams, DreamStation devices empower users to embrace their care with confidence and enable care teams to practice efficient and effective patient management.",
+ images: ["/images/Devices/Philips Respironics DreamStation Auto CPAP/DREAM-STATION.webp",
+   "/images/Devices/Philips Respironics DreamStation Auto CPAP/DREAM-STATION1.webp"],
+      specifications: [{ label: "Brand", value: "ResMed" }, { label: "Connectivity", value: "4G Enabled" }] },
+
 
  { id: 5, slug: "airSense™10-autoset™-for-her", name: "AirSense™ 10 AutoSet™ for Her CPAP Machine 4G", price: 53000, category: "cpap-machine", description: "Bi-level ventilation support device.", 
   images: ["/images/Devices/AirSense™ 10 AutoSet™ for Her CPAP Machine 4G/1.webp",
@@ -139,6 +157,7 @@ export const products: Product[] = [
      "/images/Devices/OxyMed SleepEasy Auto CPAP/4.webp"],
       specifications: [{ label: "Brand", value: "ResMed" }, { label: "Connectivity", value: "4G Enabled" }] },
 
+
 // -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 //Bipap
@@ -155,6 +174,20 @@ export const products: Product[] = [
     { label: "Brand", value: "ResMed" }, { label: "Connectivity", value: "4G Enabled" }]},
 
 { 
+  id: 67, slug: "oxymed-airsmart",
+  name: "Oxymed AirSmart BPAP ST", price: 44000, category: "bipap-machine", description: "Auto-adjusting bilevel therapy device for personalized sleep apnea treatment.",
+  images: [
+    "/images/Devices/Oxymed AirSmart BPAP ST/1.jpg",
+     "/images/Devices/Oxymed AirSmart BPAP ST/4.jpg",
+    "/images/Devices/Oxymed AirSmart BPAP ST/3.jpg",
+    "/images/Devices/Oxymed AirSmart BPAP ST/2.jpg"
+  ],
+  specifications: [
+    { label: "Brand", value: "ResMed" }, { label: "Connectivity", value: "Wireless Enabled" }
+  ]
+},
+
+{ 
   id: 42, slug: "resmed-lumis™-150",
   name: "Resmed Lumis™ 150 VPAP ST", price: 63490, category: "bipap-machine", description: "Auto-adjusting bilevel therapy device for personalized sleep apnea treatment.",
   images: [
@@ -165,6 +198,58 @@ export const products: Product[] = [
   ],
   specifications: [
     { label: "Brand", value: "ResMed" }, { label: "Connectivity", value: "Wireless Enabled" }
+  ]
+},
+
+{ 
+  id: 69,
+  slug: "philips-auto-bipap",
+  name: "Philips Dreamstation Auto BiPAP",
+  price: 69500,
+  category: "bipap-machine",
+  description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support.",
+  images: [
+    "/images/Devices/Bipap Machiene/Philips Dreamstation Auto BiPAP1.webp",
+     "/images/Devices/Bipap Machiene/Philips Dreamstation Auto BiPAP2.webp",
+  ],
+  specifications: [
+    { label: "Brand", value: "ResMed" },
+    { label: "Connectivity", value: "Cloud Connected" }
+  ]
+},
+
+{ 
+  id: 70,
+  slug: "philips-avaps",
+  name: "Philips DreamStation AVAPS 30 AAM-AE",
+  price: 83999,
+  category: "bipap-machine",
+  description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support.",
+  images: [
+    "/images/Devices/Bipap Machiene/Philips DreamStation AVAPS 30 AAM-AE1.webp",
+     "/images/Devices/Bipap Machiene/Philips DreamStation AVAPS 30 AAM-AE2.webp",
+  ],
+  specifications: [
+    { label: "Brand", value: "ResMed" },
+    { label: "Connectivity", value: "Cloud Connected" }
+  ]
+},
+
+{ 
+  id: 71,
+  slug: "philips-dreamStation-bipap",
+  name: "Philips DreamStation BiPAP AVAPS 25",
+  price: 68000,
+  category: "bipap-machine",
+  description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support.",
+  images: [
+    "/images/Devices/Bipap Machiene/Philips DreamStation BiPAP AVAPS 1.webp",
+     "/images/Devices/Bipap Machiene/Philips DreamStation BiPAP AVAPS 2.webp",
+     "/images/Devices/Bipap Machiene/Philips DreamStation BiPAP AVAPS 3.webp",
+  ],
+  specifications: [
+    { label: "Brand", value: "ResMed" },
+    { label: "Connectivity", value: "Cloud Connected" }
   ]
 },
 
@@ -184,6 +269,138 @@ export const products: Product[] = [
   ]
 },
 
+{ 
+  id: 72,
+  slug: "philips-bipap-pro",
+  name: "Philips DreamStation BiPAP Pro",
+  price: 65000,
+  category: "bipap-machine",
+  description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support.",
+  images: [
+    "/images/Devices/Bipap Machiene/Philips DreamStation BiPAP Pro1.webp",
+     "/images/Devices/Bipap Machiene/Philips DreamStation BiPAP Pro2.webp",
+     "/images/Devices/Bipap Machiene/Philips DreamStation BiPAP Pro3.webp",
+  ],
+  specifications: [
+    { label: "Brand", value: "ResMed" },
+    { label: "Connectivity", value: "Cloud Connected" }
+  ]
+},
+
+{ 
+  id: 73,
+  slug: "philips-bipap-st-25",
+  name: "Philips Respironics DreamStation BiPAP S/T 25",
+  price: 64000,
+  category: "bipap-machine",
+  description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support.",
+  images: [
+    "/images/Devices/Bipap Machiene/Philips Respironics DreamStation BiPAP1.webp",
+     "/images/Devices/Bipap Machiene/Philips Respironics DreamStation BiPAP2.webp",
+  ],
+  specifications: [
+    { label: "Brand", value: "ResMed" },
+    { label: "Connectivity", value: "Cloud Connected" }
+  ]
+},
+
+{ 
+  id: 83,
+  slug: "bmc-bipap",
+  name: "BMC G2S B30VT BIPAP",
+  price: 23000,
+  category: "bipap-machine",
+  description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support.",
+  images: ["/images/Devices/Bipap Machiene/BMC G2S B30VT BIPAP2.jpg",
+    "/images/Devices/Bipap Machiene/BMC G2S B30VT BIPAP1.jpg",
+     "/images/Devices/Bipap Machiene/BMC G2S B30VT BIPAP3.webp",
+     "/images/Devices/Bipap Machiene/BMC G2S B30VT BIPAP4.webp",
+  ],
+  specifications: [
+    { label: "Brand", value: "ResMed" },
+    { label: "Connectivity", value: "Cloud Connected" }
+  ]
+},
+{ 
+  id: 84,
+  slug: "loewenstein-bipap",
+  name: "Loewenstein Prisma 25ST BIPAP",
+  price: 73500,
+  category: "bipap-machine",
+  description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support.",
+  images: ["/images/Devices/Bipap Machiene/Loewenstein Prisma 25ST BIPAP3.webp",
+    "/images/Devices/Bipap Machiene/Loewenstein Prisma 25ST BIPAP4.webp",
+     "/images/Devices/Bipap Machiene/Loewenstein Prisma 25ST BIPAP1.webp",
+     "/images/Devices/Bipap Machiene/Loewenstein Prisma 25ST BIPAP2.webp",
+  ],
+  specifications: [
+    { label: "Brand", value: "ResMed" },
+    { label: "Connectivity", value: "Cloud Connected" }
+  ]
+},
+{ 
+  id: 85,
+  slug: "loewenstein-bipap-st",
+  name: "Loewenstein Prisma 30ST BIPAP",
+  price: 83300,
+  category: "bipap-machine",
+  description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support.",
+  images: ["/images/Devices/Bipap Machiene/Loewenstein Prisma 30ST BIPAP3.webp", "/images/Devices/Bipap Machiene/Loewenstein Prisma 30ST BIPAP1.webp",
+    "/images/Devices/Bipap Machiene/Loewenstein Prisma 30ST BIPAP2.webp"
+  ],
+  specifications: [
+    { label: "Brand", value: "ResMed" },
+    { label: "Connectivity", value: "Cloud Connected" }
+  ]
+},
+
+{ 
+  id: 86,
+  slug: "bmc-b30-bipap-st",
+  name: "BMC G3 B30vt BIPAP Device with Humidifier and Mask",
+  price: 40000,
+  category: "bipap-machine",
+  description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support.",
+  images: ["/images/Devices/Bipap Machiene/BMC G3 B30vt BIPAP Device with Humidifier and Mask1.jpg",
+     "/images/Devices/Bipap Machiene/BMC G3 B30vt BIPAP Device with Humidifier and Mask2.jpg",
+    "/images/Devices/Bipap Machiene/BMC G3 B30vt BIPAP Device with Humidifier and Mask3.jpg"
+  ],
+  specifications: [
+    { label: "Brand", value: "ResMed" },
+    { label: "Connectivity", value: "Cloud Connected" }
+  ]
+},
+{ 
+  id: 87,
+  slug: "loewenstein-bipap-prisma",
+  name: "Lowenstein PrismaLab Bipap",
+  price: 188000,
+  category: "bipap-machine",
+  description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support.",
+  images: ["/images/Devices/Bipap Machiene/Lowenstein PrismaLab Bipap1.webp","/images/Devices/Bipap Machiene/Lowenstein PrismaLab Bipap2.webp",
+    "/images/Devices/Bipap Machiene/Lowenstein PrismaLab Bipap3.webp","/images/Devices/Bipap Machiene/Lowenstein PrismaLab Bipap4.webp",
+  ],
+  specifications: [
+    { label: "Brand", value: "ResMed" },
+    { label: "Connectivity", value: "Cloud Connected" }
+  ]
+},
+
+{ 
+  id: 88,
+  slug: "bmc-bipap-g3",
+  name: "BMC G3 B25vt BIPAP Device with Humidifier and Mask",
+  price: 40000,
+  category: "bipap-machine",
+  description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support.",
+  images: ["/images/Devices/Bipap Machiene/BMC G3 B25vt BIPAP Device with Humidifier and Mask1.webp","/images/Devices/Bipap Machiene/BMC G3 B25vt BIPAP Device with Humidifier and Mask2.webp",
+    "/images/Devices/Bipap Machiene/BMC G3 B25vt BIPAP Device with Humidifier and Mask3.webp"
+  ],
+  specifications: [
+    { label: "Brand", value: "ResMed" },
+    { label: "Connectivity", value: "Cloud Connected" }
+  ]
+},
 //----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -198,6 +415,10 @@ export const products: Product[] = [
    images: ["/images/Oc/nidek1.jpg", "/images/Oc/nidek2.jpg", "/images/Oc/nidek3.jpg","/images/Oc/nidek4.jpg"], specifications: [{ label: "Category", value: "Oxygen Accessory" }] },
 { id: 16, slug: "oxygen-machines", name: "Oxymed Inteli 5LPM Auto Flow Oxygen Concentrator", price: 55500, category: "oxygen-concentrator", description: "Standard oxygen mask.",
    images: ["/images/Oc/1.jpg", "/images/Oc/2.jpg", "/images/Oc/3.jpg","/images/Oc/5.jpg"], specifications: [{ label: "Category", value: "Oxygen Accessory" }] },
+{ id: 81, slug: "philipsgo-oxygen-machines", name: "Philips Simply Go Oxygen Concentrator", price: 190000, category: "oxygen-concentrator", description: "Standard oxygen mask.",
+   images: ["/images/Oc/Philips Simply Go Oxygen Concentrator1.webp", "/images/Oc/Philips Simply Go Oxygen Concentrator2.webp"], specifications: [{ label: "Category", value: "Oxygen Accessory" }] },
+{ id: 82, slug: "simply-go-oxygen-machines", name: "Simply Go Mini Oxygen Concentrator", price: 228000, category: "oxygen-concentrator", description: "Standard oxygen mask.",
+   images: ["/images/Oc/Simply Go Mini Oxygen Concentrator1.webp", "/images/Oc/Simply Go Mini Oxygen Concentrator2.webp"], specifications: [{ label: "Category", value: "Oxygen Accessory" }] },
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

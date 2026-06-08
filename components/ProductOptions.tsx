@@ -11,7 +11,7 @@ import {
 import AddToCartButton from "./AddToCartButton"
 
 export default function ProductOptions({ product }: any) {
-console.log(JSON.stringify(product, null, 2))
+console.log(JSON.stringify(product, null, 2))  
   const [qty, setQty] = useState(1)
   const [pincode, setPincode] = useState("")
   const [accepted, setAccepted] = useState(false)
