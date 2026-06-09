@@ -34,7 +34,12 @@ console.log(JSON.stringify(product, null, 2))
       price: "₹99,999",
     },
   ]
+const isMask =
+  product.category === "nasal-mask" ||
+  product.category === "full-face-mask" ||
+  product.category === "nasal-pillow-mask"
 
+const [selectedSize, setSelectedSize] = useState("Medium")
   const [selectedPackage, setSelectedPackage] = useState(
     packageOptions[0]
   )
@@ -88,7 +93,7 @@ useEffect(() => {
       {/* Package Offer */}
       {isMachine && (
 
-        <div className="bg-gradient-to-br from-red-50 to-white border border-red-100 rounded-3xl p-5 shadow-sm">
+        <div className="bg-linear-to-br from-red-50 to-white border border-red-100 rounded-3xl p-5 shadow-sm">
 
           <div className="inline-flex items-center bg-red-100 text-red-600 text-xs font-semibold px-3 py-1 rounded-full">
             Limited Period Offer
@@ -137,6 +142,24 @@ useEffect(() => {
           {wish ? "Wishlisted" : "Add to Wishlist"}
         </button>
 
+{isMask && (
+  <div className="mt-6">
+    <h3 className="font-medium text-gray-900 mb-3">
+      Select Size
+    </h3>
+
+    <select
+      value={selectedSize}
+      onChange={(e) => setSelectedSize(e.target.value)}
+      className="w-full border border-gray-200 rounded-2xl px-4 py-3"
+    >
+      <option value="Small">Small</option>
+      <option value="Medium">Medium</option>
+      <option value="Large">Large</option>
+    </select>
+  </div>
+)}
+
       {/* Quantity */}
       <div className="mt-7">
 
@@ -169,7 +192,7 @@ useEffect(() => {
       </div>
 
       {/* Pincode */}
-      <div className="mt-7">
+      {/* <div className="mt-7">
 
         <h3 className="font-medium text-gray-900 mb-3">
           Check Availability
@@ -193,7 +216,7 @@ useEffect(() => {
 
         </div>
 
-      </div>
+      </div> */}
 
       {/* Consent */}
       {isMachine && (
@@ -225,6 +248,7 @@ useEffect(() => {
           product={product}
           quantity={qty}
           packageName={selectedPackage.name}
+          selectedSize={selectedSize}
           disabled={isMachine ? !accepted : false}
         />
 

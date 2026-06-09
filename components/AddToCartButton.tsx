@@ -11,6 +11,7 @@ interface Props {
   product: any
   quantity: number
   packageName?: string
+  selectedSize?: string
   disabled?: boolean
 }
 
@@ -18,6 +19,7 @@ export default function AddToCartButton({
   product,
   quantity,
   packageName,
+  selectedSize,
   disabled,
 }: Props) {
 
@@ -33,15 +35,15 @@ export default function AddToCartButton({
 
     setLoading(true)
 
-    addToCart({
-      id: product.id,
-      name: product.name,
-      price: getFinalPrice(product),
-      image: product.images[0],
-      quantity: quantity,
-      packageName: packageName || null,
-    })
-
+      addToCart({
+        id: product.id,
+        name: product.name,
+        price: getFinalPrice(product),
+        image: product.images[0],
+        quantity: quantity,
+        packageName: packageName || undefined,
+        size: selectedSize || undefined,
+      })
     setShowPopup(true)
 
     setTimeout(() => {
