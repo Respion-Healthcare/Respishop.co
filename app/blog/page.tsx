@@ -98,6 +98,51 @@ const blog = [
     excerpt:
       "Compare AirSense 10 vs 11 features, price, and performance to choose the best CPAP machine.",
   },
+  {
+  id: 8,
+  slug: "bipap-machine-price-in-kolkata",
+  title: "BiPAP Machine Price in Kolkata – Complete Buying Guide",
+  category: "BiPAP",
+  date: "June 2026",
+  readTime: "6 min read",
+  image: "/images/bipap.jpg",
+  excerpt:
+    "Discover BiPAP machine prices in Kolkata, popular models, features, and tips to choose the right device for sleep apnea and respiratory care.",
+},
+
+// {
+//   id: 10,
+//   slug: "cpap-machine-price-in-bhubaneswar",
+//   title: "CPAP Machine Price in Bhubaneswar – 2026 Guide",
+//   category: "CPAP",
+//   date: "June 2026",
+//   readTime: "5 min read",
+//   image: "/images/Blogs/b7.png",
+//   excerpt:
+//     "Compare CPAP machine prices in Bhubaneswar, explore popular models, and learn how to choose the best CPAP device for sleep apnea treatment.",
+// },
+// {
+//   id: 11,
+//   slug: "oxygen-concentrator-price-in-india",
+//   title: "Oxygen Concentrator Price in India – Latest 2026 Guide",
+//   category: "Oxygen Concentrator",
+//   date: "June 2026",
+//   readTime: "7 min read",
+//   image: "/images/Blogs/b8.png",
+//   excerpt:
+//     "Learn about oxygen concentrator prices in India, key features, top brands, and factors to consider before purchasing.",
+// },
+// {
+//   id: 12,
+//   slug: "best-cpap-machine-in-india",
+//   title: "Best CPAP Machine in India – Top Models Compared",
+//   category: "CPAP",
+//   date: "June 2026",
+//   readTime: "8 min read",
+//   image: "/images/Blogs/b9.png",
+//   excerpt:
+//     "Explore the best CPAP machines available in India, compare features, pricing, and find the ideal sleep therapy device for your needs.",
+// },
 ]
 
 export default function BlogPage() {
