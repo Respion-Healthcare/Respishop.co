@@ -222,7 +222,7 @@ export default function BlogPage() {
 
         <p>
           Browse our{" "}
-          <Link href="/category/cpap-machine" className="text-blue-600 underline">
+          <Link href="/products/cpap-machine" className="text-blue-600 underline">
             CPAP machines collection
           </Link>{" "}
           for the latest products and offers in India.

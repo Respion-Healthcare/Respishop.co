@@ -2,10 +2,13 @@ import { products } from "@/lib/products"
 import Image from "next/image"
 import Link from "next/link"
 import type { Metadata } from "next"
+import { notFound } from "next/navigation"
 
 export async function generateMetadata({ params }: any): Promise<Metadata> {
   const { slug } = await params
-
+if (!["mask", "accessory"].includes(slug)) {
+  notFound()
+}
   const formattedName = slug.replace(/-/g, " ")
 
 if (slug === "mask") {
@@ -234,12 +237,12 @@ md:p-10
                     alt={product.name}
                     fill
                   className="
-object-contain
-p-4
-transition-transform
-duration-500
-group-hover:scale-110
-"
+                  object-contain
+                  p-4
+                  transition-transform
+                  duration-500
+                  group-hover:scale-110
+                  "
                   />
                 </div>
 
@@ -249,18 +252,18 @@ group-hover:scale-110
 
                 <p className="mt-3 text-xl font-bold text-blue-600 transition-colors duration-300 group-hover:text-cyan-600">
                   ₹{product.price > 0
-  ? `₹${product.price.toLocaleString()}`
-  : "Contact for Price"}
-                </p>
-<div className="mt-4 flex items-center justify-between">
-  <span className="text-sm text-slate-500">
-    View Details
-  </span>
+                  ? `₹${product.price.toLocaleString()}`
+                  : "Contact for Price"}
+                                </p>
+                <div className="mt-4 flex items-center justify-between">
+                  <span className="text-sm text-slate-500">
+                    View Details
+                  </span>
 
-  <span className="rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold text-white transition-all duration-300 group-hover:bg-cyan-600">
-    Explore
-  </span>
-</div>
+                  <span className="rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold text-white transition-all duration-300 group-hover:bg-cyan-600">
+                    Explore
+                  </span>
+                </div>
               </Link>
 
             ))}
@@ -270,17 +273,17 @@ group-hover:scale-110
 
         {/* SEO CONTENT */}
         <div className="
-mt-20
-rounded-3xl
-border
-border-blue-100
-bg-gradient-to-br
-from-white
-to-blue-50
-p-8
-md:p-12
-shadow-sm
-">
+              mt-20
+              rounded-3xl
+              border
+              border-blue-100
+              bg-gradient-to-br
+              from-white
+              to-blue-50
+              p-8
+              md:p-12
+              shadow-sm
+              ">
 
  {/* MASK CATEGORY CONTENT */}
 {slug === "mask" && (
@@ -516,7 +519,7 @@ shadow-sm
       <p className="mb-4">
         Explore our{" "}
         <Link
-          href="/category/cpap-machine"
+          href="/products/cpap-machine"
           className="text-blue-600 underline"
         >
           CPAP Machines Collection

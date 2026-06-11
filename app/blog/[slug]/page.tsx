@@ -78,7 +78,7 @@ const blogContent: Record<string, any> = {
 
 <p>
 👉 Explore our collection of 
-<a href="/category/cpap-machine" style="color:blue; text-decoration:underline;">
+<a href="/products/cpap-machine" style="color:blue; text-decoration:underline;">
 CPAP machines in India
 </a> 
 for the best options available.
@@ -148,7 +148,7 @@ Yes, it significantly reduces or eliminates snoring.</p>
 
 <p>
 👉 Browse our latest 
-<a href="/category/cpap-machine" style="color:blue; text-decoration:underline;">
+<a href="/products/cpap-machine" style="color:blue; text-decoration:underline;">
 CPAP machines collection
 </a> 
 for best deals and offers.
@@ -201,7 +201,7 @@ Yes, it is essential for managing sleep apnea effectively.</p>
 
 <p>
 👉 Check latest deals on 
-<a href="/category/cpap-machine" style="color:blue; text-decoration:underline;">
+<a href="/products/cpap-machine" style="color:blue; text-decoration:underline;">
 CPAP machines in Bhubaneswar
 </a>
 </p>
@@ -269,7 +269,7 @@ Yes, online stores provide delivery across Bhubaneswar.</p>
 
 <p>
 👉 Explore 
-<a href="/category/cpap-machine" style="color:blue; text-decoration:underline;">
+<a href="/products/cpap-machine" style="color:blue; text-decoration:underline;">
 CPAP machines
 </a> 
 for sleep therapy solutions.
@@ -328,7 +328,7 @@ Yes, most models are designed for home use.</p>
 
 <p>
 👉 Explore the latest 
-<a href="/category/cpap-machine" style="color:blue; text-decoration:underline;">
+<a href="/products/cpap-machine" style="color:blue; text-decoration:underline;">
 CPAP machines in India
 </a>
 </p>
@@ -414,7 +414,7 @@ Yes, you can buy online with home delivery across India.</p>
 
 <p>
 👉 Explore more options in our 
-<a href="/category/cpap-machine" style="color:blue; text-decoration:underline;">
+<a href="/products/cpap-machine" style="color:blue; text-decoration:underline;">
 CPAP machines collection
 </a>
 </p>
@@ -531,7 +531,7 @@ ResMed AirSense 11
 
 <p>
 👉 Explore all options here:
-<a href="/category/cpap-machine" style="color:blue; text-decoration:underline;">
+<a href="/products/cpap-machine" style="color:blue; text-decoration:underline;">
 CPAP Machines Collection
 </a>
 </p>
@@ -614,7 +614,7 @@ Yes, if you want modern features and better tracking.</p>
 
 <p>
 👉 Explore available models:
-<a href="/category/bipap-machine" style="color:blue;">
+<a href="/products/bipap-machine" style="color:blue;">
 BiPAP Machines Collection
 </a>
 </p>
@@ -716,7 +716,7 @@ const blogSchema = {
               Explore top-rated CPAP machines with best prices and offers.
             </p>
             <Link
-              href="/category/cpap-machine"
+              href="/products/cpap-machine"
               className="bg-white text-blue-600 px-5 py-2 rounded-full text-sm font-medium hover:scale-105 transition"
             >
               View CPAP Machines →

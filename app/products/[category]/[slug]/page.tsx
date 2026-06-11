@@ -232,7 +232,7 @@ href={`/products/${item.category}/${item.slug}`}
  
  <p className="mt-4">
   Explore more options in our{" "}
-  <Link href="/category/cpap-machine" className="text-blue-600 underline">
+  <Link href="/products/cpap-machine" className="text-blue-600 underline">
     CPAP Machines category
   </Link>.
 </p>
