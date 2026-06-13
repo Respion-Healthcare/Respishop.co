@@ -90,44 +90,6 @@ useEffect(() => {
 
     <div className="mt-6">
 
-      {/* Package Offer */}
-      {isMachine && (
-
-        <div className="bg-linear-to-br from-red-50 to-white border border-red-100 rounded-3xl p-5 shadow-sm">
-
-          <div className="inline-flex items-center bg-red-100 text-red-600 text-xs font-semibold px-3 py-1 rounded-full">
-            Limited Period Offer
-          </div>
-
-          <h3 className="mt-4 font-semibold text-gray-900">
-            Select Package
-          </h3>
-
-          <select
-            className="w-full mt-3 border border-gray-200 rounded-2xl px-4 py-3 outline-none focus:border-black bg-white"
-            value={selectedPackage.name}
-            onChange={(e) => {
-              const found = packageOptions.find(
-                (item) => item.name === e.target.value
-              )
-
-              if (found) setSelectedPackage(found)
-            }}
-          >
-            {packageOptions.map((item) => (
-              <option
-                key={item.name}
-                value={item.name}
-              >
-                {item.name} | {item.price}
-              </option>
-            ))}
-          </select>
-
-        </div>
-
-      )}
-
               {/* Wishlist */}
               <button
           onClick={handleWishlist}

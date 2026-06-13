@@ -56,7 +56,7 @@ export default function Dashboard() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 pt-24 px-4 md:px-6">
+    <div className="min-h-screen bg-linear-to-br from-slate-50 to-blue-50 pt-24 px-4 md:px-6">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6">
 
         {/* Sidebar */}

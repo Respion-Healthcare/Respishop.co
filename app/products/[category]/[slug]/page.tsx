@@ -59,9 +59,17 @@ return (
       {/* CENTER - Info */}
       <div>
 
-        <h1 className="text-2xl font-semibold">
-          {product.name}
-        </h1>
+       <div className="space-y-2">
+
+      <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+        {product.name}
+      </h1>
+
+      <p className="text-gray-600 max-w-2xl">
+        Premium respiratory care equipment designed for comfort,
+        reliability and effective therapy support.
+      </p>
+    </div>
 
         {/* Rating */}
         <div className="flex items-center gap-1 mt-2">
@@ -93,12 +101,41 @@ return (
 
         </div>
 
+        {/* Trust badge */}
+        <div className="grid grid-cols-2 gap-3 mt-6">
+
+          <div className="border rounded-lg p-3 text-center">
+            <p className="font-semibold">100% Genuine</p>
+            <p className="text-xs text-gray-500">
+              Manufacturer Warranty
+            </p>
+          </div>
+
+          <div className="border rounded-lg p-3 text-center">
+            <p className="font-semibold">Fast Delivery</p>
+            <p className="text-xs text-gray-500">
+              Across India
+            </p>
+          </div>
+
+          <div className="border rounded-lg p-3 text-center">
+            <p className="font-semibold">Expert Support</p>
+            <p className="text-xs text-gray-500">
+              Therapy Assistance
+            </p>
+          </div>
+
+          <div className="border rounded-lg p-3 text-center">
+            <p className="font-semibold">Secure Checkout</p>
+            <p className="text-xs text-gray-500">
+              Safe Payments
+            </p>
+          </div>
+
+        </div>
+
         {/* PRODUCT OPTIONS */}
         <ProductOptions product={product} />
-
-      <p className="mt-6 text-gray-600 leading-relaxed">
-  {product.description}
-</p>
 
       </div>
 
@@ -175,77 +212,35 @@ href={`/products/${item.category}/${item.slug}`}
     </div>
 
     {/* ✅ SEO CONTENT (ADDED) */}
-   <div className="mt-20 max-w-4xl text-gray-700">
+  <div className="prose prose-lg max-w-none">
 
-  <h2 className="text-2xl font-semibold mb-4">
-    {product.name} Price in India & Full Details
+  <h2>
+    About {product.name}
   </h2>
 
-  <p className="mb-4">
-    Buy {product.name} online in India at the best price from Respishop. This product is designed for effective respiratory care and is widely used for CPAP therapy and breathing support. It ensures comfort, durability, and reliable performance for long-term use.
+  <p>
+    {product.description}
   </p>
 
-  <p className="mb-4">
-    If you are looking for a trusted solution for sleep apnea or oxygen therapy, this product offers advanced features and user-friendly functionality. It helps improve sleep quality, reduce breathing issues, and supports overall health.
+  <p>
+    {product.name} is designed to provide reliable respiratory
+    therapy support with a focus on comfort, performance,
+    and long-term durability.
   </p>
 
-  <p className="mb-4">
-  The ResMed AirSense 10 AutoSet Tripack is one of the most trusted automatic CPAP machines for sleep apnea therapy in India. Its intelligent AutoSet technology adjusts airflow pressure automatically for comfortable and effective treatment.
-  </p> 
+  <h2>
+    Why Choose {product.name}?
+  </h2>
 
-  <h3 className="text-lg font-semibold mt-6 mb-2">
-    Key Benefits of {product.name}
-  </h3>
-  <ul className="list-disc pl-5 mb-4">
-    <li>Improves breathing during sleep</li>
-    <li>Reduces snoring and sleep disturbances</li>
-    <li>Easy to use and maintain</li>
-    <li>Suitable for home and clinical use</li>
+  <ul>
+    <li>Trusted respiratory care solution</li>
+    <li>Comfortable for daily therapy use</li>
+    <li>Suitable for home and clinical environments</li>
+    <li>Built using high-quality medical-grade materials</li>
+    <li>Backed by Respishop customer support</li>
   </ul>
 
-  <h3 className="text-lg font-semibold mt-6 mb-2">
-    Who Should Use {product.name}?
-  </h3>
-  <p className="mb-4">
-    This product is ideal for individuals suffering from sleep apnea, respiratory issues, or requiring consistent airflow support during sleep or therapy.
-  </p>
-
-  <h3 className="text-lg font-semibold mt-6 mb-2">
-    How to Use
-  </h3>
-  <p className="mb-4">
-    Follow the instructions provided with the product. Ensure proper fitting and settings for optimal performance and comfort.
-  </p>
-
-  <h3 className="text-lg font-semibold mt-6 mb-2">
-    FAQs
-  </h3>
-
-  <p><strong>Is this product safe for daily use?</strong><br/>
-  Yes, it is designed for safe and long-term use.</p>
-
-  <p><strong>Does it help with sleep apnea?</strong><br/>
-  Yes, it helps maintain proper airflow and reduces apnea symptoms.</p>
-
-  <p><strong>Can beginners use it easily?</strong><br/>
-  Yes, it is user-friendly and easy to operate.</p>
- 
- <p className="mt-4">
-  Explore more options in our{" "}
-  <Link href="/products/cpap-machine" className="text-blue-600 underline">
-    CPAP Machines category
-  </Link>.
-</p>
-
-<p className="mt-4">
-  Read our guide on{" "}
-  <Link href="/blog/what-is-cpap-machine" className="text-blue-600 underline">
-    what is a CPAP machine
-  </Link>{" "}
-  to understand how this product works.
-</p>
-
-   </div>
+  </div>
 
     {/* ✅ SCHEMA (ADDED) */}
     <script
@@ -306,7 +301,6 @@ href={`/products/${item.category}/${item.slug}`}
     }),
   }}
 />
-
   </div>
 )
 } 
