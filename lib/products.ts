@@ -68,7 +68,7 @@ export const products: Product[] = [
 images: ["/images/Mask/Resmed AirFit™ N30i Nasal Mask.webp", "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Nasal Mask" }] },
 
 {
-  id: 31,
+  id: 31,          
   slug: "best-fit-2-nasal-mask",name: "BEST FIT 2 NASAL MASK",price: 4500,offer: { type: "percentage", value: 10 },category: "nasal-mask",description: "The BMC Best Fit 2 Nasal Mask is designed to provide a comfortable, reliable, and effective CPAP therapy experience for patients with obstructive sleep apnea (OSA). Built with an ergonomic design and soft silicone cushion, this nasal mask delivers a secure seal while minimizing pressure points and air leakage during sleep. Its lightweight frame and adjustable headgear ensure a personalized fit for a wide range of facial structures, making it suitable for both new and experienced CPAP users. The streamlined design offers an open field of vision, allowing users to read, watch television, or relax comfortably before bedtime. Engineered for long-term durability and easy daily maintenance, the Best Fit 2 Nasal Mask supports consistent airflow delivery and enhanced therapy compliance. Compatible with most CPAP, APAP, and BiPAP machines, this mask is an excellent choice for users seeking dependable performance, comfort, and value. Whether for home use or regular sleep apnea management, the BMC Best Fit 2 Nasal Mask helps promote restful sleep and effective respiratory therapy night after night.",
   images: ["/images/Mask/Resmed Best Fit 2 Nasal Mask.webp","/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"],specifications: [{ label: "Brand", value: "BMC" },{ label: "Category", value: "Nasal Mask" }
   ]
@@ -79,7 +79,7 @@ images: ["/images/Mask/Resmed AirFit™ N30i Nasal Mask.webp", "/images/Mask/Res
 
 { id: 78, slug: "philips-dream-nasal-mask", name: "Philips Dream Wisp Nasal Mask", price: 5000, offer: { type: "percentage", value: 10 }, category: "nasal-mask",
 description: "The Philips DreamWisp Nasal Mask combines the comfort of a traditional nasal mask with the freedom of a top-of-head tubing connection. Designed for active sleepers, the innovative hose placement keeps tubing out of the way, allowing users to sleep comfortably in multiple positions. Its low-profile cushion provides a secure seal while maintaining an open field of vision for reading, watching television, or using mobile devices before sleep. The lightweight frame and soft headgear help reduce facial pressure and improve overall comfort during therapy. Perfect for CPAP users seeking flexibility and freedom of movement, the DreamWisp Nasal Mask offers effective sleep apnea treatment, improved comfort, and enhanced therapy compliance.",
- images: ["/images/Mask/Philips mask/Philips Dream Wisp Nasal Mask1.webp","/images/Mask/Philips mask/Philips Dream Wisp Nasal Mask2.jpg","/images/Mask/Philips mask/Philips Dream Wisp Nasal Mask4.webp","/images/Mask/Philips mask/Philips Dream Wisp Nasal Mask3.webp"], specifications: [{ label: "Brand", value: "BMC" }, { label: "Category", value: "Nasal Mask" }] },
+ images: ["/images/Mask/Philips mask/Philips Dream Wisp Nasal Mask1.webp","/images/Mask/Philips mask/Philips Dream Wisp Nasal Mask2.jpg","/images/Mask/Philips mask/Philips Dream Wisp Nasal Mask4.jpg","/images/Mask/Philips mask/Philips Dream Wisp Nasal Mask3.webp"], specifications: [{ label: "Brand", value: "BMC" }, { label: "Category", value: "Nasal Mask" }] },
 
 { id: 79, slug: "philips-dreamware-nasal-mask", name: "Philips Dreamware Nasal Mask", price: 4100, offer: { type: "percentage", value: 10 }, category: "nasal-mask", 
  description: "The Philips DreamWear Nasal Mask features an innovative under-the-nose cushion and hollow frame design that delivers airflow through the sides of the mask, creating a lightweight and comfortable CPAP therapy experience. Designed to reduce facial contact and eliminate pressure on the nasal bridge, the DreamWear helps users sleep naturally while maintaining effective therapy. Its top-of-head tubing connection allows unrestricted movement throughout the night, making it ideal for side sleepers and active sleepers. The soft silicone frame adapts comfortably to facial contours while providing a secure fit and reliable seal. Compatible with most CPAP and Auto CPAP machines, the DreamWear Nasal Mask is a popular choice for users seeking comfort, freedom, and modern sleep apnea therapy solutions.", images: ["/images/Mask/Philips mask/Philips Dreamware Nasal Mask1.webp", "/images/Mask/Philips mask/Philips Dreamware Nasal Mask2.webp"], specifications: [{ label: "Brand", value: "BMC" }, { label: "Category", value: "Nasal Mask" }] },
@@ -102,7 +102,6 @@ description: "The Philips DreamWisp Nasal Mask combines the comfort of a traditi
 { id: 76, slug: "philips-dreamware", name: "Philips Dreamware Full Face mask", price: 4250, category: "full-face-mask", description: "Soft cushion full face mask designed for stable CPAP therapy.", images: [ "/images/Mask/Philips mask/Philips Respironics Dreamwear Full Face Mask1.jpg","/images/Mask/Philips mask/Philips Respironics Dreamwear Full Face Mask2.jpg", "/images/Mask/Philips mask/Philips Respironics Dreamwear Full Face Mask3.jpg", "/images/Mask/Philips mask/Philips Respironics Dreamwear Full Face Mask4.jpg"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Full Face Mask" }] },
 
 
-
 //nasal pillow mask
 { id: 15, slug: "nasal-pillow-mask", name: "AirFit™ P30i Nasal Pillow Mask", price: 3500, category: "nasal-pillow-mask", description: "Lightweight nasal pillow mask.", images: ["/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/1.webp", "/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/2.webp", "/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/3.webp", "/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/4.webp","/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/5.webp",], specifications: [{ label: "Category", value: "Mask" }] },
 { id: 38, slug: "airfit-p10", name: "AirFit™ P10", price: 3900, offer: { type: "percentage", value: 15 }, category: "nasal-pillow-mask", description: "Ultra-lightweight nasal pillow mask for quiet and comfortable CPAP therapy.", images: ["/images/Mask/Resmed AirFit™ P10 Nasal Pillow Mask.webp","/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Nasal Pillow Mask" }] },
@@ -119,7 +118,7 @@ description: "The Philips DreamWisp Nasal Mask combines the comfort of a traditi
         ], 
         specifications: [{ label: "Brand", value: "ResMed" }, { label: "Type", value: "Auto CPAP" }] },
 
-{ id: 3, slug: "AirSense™ 10 Elite -Tripack 3G", name: "AirSense™ 10 Elite -Tripack 3G", price: 59000, offer: { type: "flat", value: 5000 }, category: "cpap-machine", description: "Reliable auto CPAP therapy device.",
+{ id: 3, slug: "airsense-10", name: "AirSense™ 10 Elite -Tripack 3G", price: 59000, offer: { type: "flat", value: 5000 }, category: "cpap-machine", description: "Reliable auto CPAP therapy device.",
  images: ["/images/Devices/AirSense™ 10 Elite -Tripack 3G.webp"],
   specifications: [{ label: "Brand", value: "ResMed" }, { label: "Type", value: "CPAP" }] },
 
@@ -131,14 +130,14 @@ description: "The Philips DreamWisp Nasal Mask combines the comfort of a traditi
       specifications: [{ label: "Brand", value: "ResMed" }, { label: "Connectivity", value: "4G Enabled" }] },
 
 
- { id: 5, slug: "airSense™10-autoset™-for-her", name: "AirSense™ 10 AutoSet™ for Her CPAP Machine 4G", price: 59000, category: "cpap-machine", description: "Bi-level ventilation support device.", 
+ { id: 5, slug: "airsense-10-for-her", name: "AirSense™ 10 AutoSet™ for Her CPAP Machine 4G", price: 59000, category: "cpap-machine", description: "Bi-level ventilation support device.", 
   images: ["/images/Devices/AirSense™ 10 AutoSet™ for Her CPAP Machine 4G/1.webp",
      "/images/Devices/AirSense™ 10 AutoSet™ for Her CPAP Machine 4G/2.webp",
       "/images/Devices/AirSense™ 10 AutoSet™ for Her CPAP Machine 4G/3.webp", 
-      "/images/Devices/AirSense™ 10 AutoSet™ for Her CPAP Machine 4G/4.webp"], 
+      "/images/Devices/AirSense™ 10 AutoSet™ for Her CPAP Machine 4G/4.jpg"], 
       specifications: [{ label: "Brand", value: "ResMed" }, { label: "Type", value: "VPAP" }] },
 
-{ id: 6, slug: "airsense™-10-autoset™-tripack-4G", name: "AirSense™ 10 Autoset™ Tripack 4G CPAP Device with HumidAir and ClimateLineAir", price: 49000, category: "cpap-machine", description: "Advanced VPAP ST device.",
+{ id: 6, slug: "airsense-10-autoset-tripack-4G", name: "AirSense™ 10 Autoset™ Tripack 4G CPAP Device with HumidAir and ClimateLineAir", price: 49000, category: "cpap-machine", description: "Advanced VPAP ST device.",
    images: ["/images/Devices/AirSense™ 10 Autoset™ Tripack 4G CPAP Device with HumidAir and ClimateLineAir/1.webp",
    "/images/Devices/AirSense™ 10 Autoset™ Tripack 4G CPAP Device with HumidAir and ClimateLineAir/2.webp",
     "/images/Devices/AirSense™ 10 Autoset™ Tripack 4G CPAP Device with HumidAir and ClimateLineAir/3.webp", 
@@ -146,7 +145,7 @@ description: "The Philips DreamWisp Nasal Mask combines the comfort of a traditi
     specifications: [{ label: "Brand", value: "ResMed" }, { label: "Type", value: "VPAP ST" }] },
 
 
-{ id: 7, slug: "aircurve™-11", name: "AirCurve™ 10 VAuto 4G Tripack With Humidifier and ClimateLineAir™ Tube", price: 67000, category: "cpap-machine", description: "Next-generation CPAP device.",
+{ id: 7,slug: "aircurve-10-vauto-4g-tripack", name: "AirCurve™ 10 VAuto 4G Tripack With Humidifier and ClimateLineAir™ Tube", price: 67000, category: "cpap-machine", description: "Next-generation CPAP device.",
  images: ["/images/Devices/AirCurve™ 10 VAuto 4G Tripack With Humidifier and ClimateLineAir™ Tube/1.webp",
    "/images/Devices/AirCurve™ 10 VAuto 4G Tripack With Humidifier and ClimateLineAir™ Tube/2.webp",
     "/images/Devices/AirCurve™ 10 VAuto 4G Tripack With Humidifier and ClimateLineAir™ Tube/3.webp",
@@ -166,7 +165,7 @@ description: "The Philips DreamWisp Nasal Mask combines the comfort of a traditi
    "/images/Devices/AirMini™ AutoSet CPAP Device/8.webp"], 
    specifications: [{ label: "Brand", value: "ResMed" }, { label: "Type", value: "Auto CPAP" }, { label: "Category", value: "CPAP Machine" }] },
 
-{ id: 40, slug: "airstart™ 10-with-humidification-and-tube", name: "AirStart™ 10 APAP with humidification and tube", price: 24990, category: "cpap-machine", description: "Next-generation CPAP device.",
+{ id: 40, slug: "airstart-10-with-humidification-and-tube", name: "AirStart™ 10 APAP with humidification and tube", price: 24990, category: "cpap-machine", description: "Next-generation CPAP device.",
  images: ["/images/Devices/AirStart™ 10 APAP with humidification and tube/1.webp",
    "/images/Devices/AirStart™ 10 APAP with humidification and tube/2.webp",
     "/images/Devices/AirStart™ 10 APAP with humidification and tube/3.webp",
@@ -211,7 +210,7 @@ description: "The Philips DreamWisp Nasal Mask combines the comfort of a traditi
 },
 
 { 
-  id: 42, slug: "resmed-lumis™-150",
+  id: 42, slug: "resmed-lumis-150",
   name: "Resmed Lumis™ 150 VPAP ST", price: 68000, category: "bipap-machine", description: "Auto-adjusting bilevel therapy device for personalized sleep apnea treatment.",
   images: [
     "/images/Devices/Resmed Lumis™ 150 VPAP ST/1.webp",
@@ -278,7 +277,7 @@ description: "The Philips DreamWisp Nasal Mask combines the comfort of a traditi
 
 { 
   id: 43,
-  slug: "lumis™-150-invasive-ventilator",
+  slug: "lumis-150-invasive-ventilator",
   name: "Resmed AirCurve 10 VAuto BIPAP – Best Auto BIPAP",
   price: 66800,
   category: "bipap-machine",
@@ -428,7 +427,7 @@ description: "The Philips DreamWisp Nasal Mask combines the comfort of a traditi
 
 
 //oc
-{ id: 10, slug: "oxymed-portable-oxygen-concentrator", name: "Oxymed Portable Oxygen Concentrator", price: 14500, category: "oxygen-concentrator", description: "Portable oxygen concentrator.", images: ["/images/Oc/deal1.jpg"], specifications: [{ label: "Brand", value: "Oxymed" }, { label: "Category", value: "Oxygen Concentrator" }] },
+{ id: 10, slug: "oxymed-portable-oxygen-concentrator", name: "Oxymed Portable Oxygen Concentrator", price: 145000, category: "oxygen-concentrator", description: "Portable oxygen concentrator.", images: ["/images/Oc/deal1.jpg"], specifications: [{ label: "Brand", value: "Oxymed" }, { label: "Category", value: "Oxygen Concentrator" }] },
 { id: 65, slug: "evox", name: "Evox 5 LPM", price: 35000, category: "oxygen-concentrator", description: "Standard oxygen mask.",
    images: ["/images/Oc/evox1.jpg", "/images/Oc/evox2.jpg", "/images/Oc/evox3.jpg"], specifications: [{ label: "Category", value: "Oxygen Accessory" }] },
 { id: 11, slug: "oxymed-oxygen-concentrator-5lpm", name: "OxyMed Oxygen Concentrator Machine 5LPM", price: 41500, category: "oxygen-concentrator", description: "5LPM oxygen concentrator.", images: ["/images/Oc/deal2.jpg"], specifications: [{ label: "Brand", value: "Oxymed" }, { label: "Capacity", value: "5LPM" }] },
