@@ -84,13 +84,13 @@ export default function ProductBannerCard({ product }: Props) {
       <div className="flex flex-col h-full">
 
         {/* IMAGE */}
-        <div className="relative w-full h-[240px] flex justify-center items-center bg-white overflow-hidden">
+        <div className="relative w-full h-[160px] sm:h-[240px] flex justify-center items-center bg-white overflow-hidden">
           <Image
             src={product.images[0]}
             alt={product.name}
             width={320}
             height={260}
-            className="object-contain p-6 transition duration-500 group-hover:scale-105"
+            className="object-contain p-3 sm:p-6 transition duration-500 group-hover:scale-105"
           />
         </div>
 
@@ -132,7 +132,7 @@ export default function ProductBannerCard({ product }: Props) {
           </div>
 
           {/* PRODUCT NAME */}
-          <h3 className="text-lg font-semibold text-gray-900 leading-snug line-clamp-2 min-h-[56px]">
+          <h3 className="text-sm sm:text-lg font-semibold text-gray-900 leading-snug line-clamp-2 min-h-[42px] sm:min-h-[56px]">
             {product.name}
           </h3>
 
@@ -145,7 +145,7 @@ export default function ProductBannerCard({ product }: Props) {
           <div className="mt-4 flex items-center gap-2 flex-wrap">
 
             {/* FINAL PRICE */}
-            <span className="text-2xl font-bold text-gray-900">
+            <span className="text-lg sm:text-2xl font-bold text-gray-900">
               ₹{getFinalPrice(product).toLocaleString("en-IN")}
             </span>
 
@@ -167,12 +167,13 @@ export default function ProductBannerCard({ product }: Props) {
 
           {/* BUTTON */}
           <button
-            className="mt-5 w-full bg-blue-600 hover:bg-blue-700
-                       text-white font-semibold py-3 rounded-xl
-                       transition-all duration-300 shadow-md"
-          >
-            View Product
-          </button>
+  className="mt-3 w-full bg-blue-600 hover:bg-blue-700
+             text-white font-medium text-sm sm:text-base
+             py-2 sm:py-3 rounded-lg sm:rounded-xl
+             transition-all duration-300 shadow-md"
+>
+  View Product
+</button>
         </div>
       </div>
     </div>

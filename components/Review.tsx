@@ -110,7 +110,7 @@ export default function ReviewsSection() {
 
       <section
         aria-label="Customer Reviews and Testimonials"
-        className="relative overflow-hidden py-24 lg:py-28 bg-gradient-to-b from-white via-[#f5f9ff] to-[#edf6ff]"
+        className="relative overflow-hidden py-14 md:py-20 lg:py-28 bg-gradient-to-b from-white via-[#f5f9ff] to-[#edf6ff]"
       >
 
         {/* BACKGROUND BLOBS */}
@@ -118,7 +118,7 @@ export default function ReviewsSection() {
 
         <div className="absolute bottom-0 right-0 w-[320px] h-[320px] bg-cyan-200/30 blur-[120px] rounded-full" />
 
-        <div className="relative z-10 px-6 lg:px-20">
+        <div className="relative z-10 px-4 sm:px-6 lg:px-20">
 
           {/* HEADER */}
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 mb-16">
@@ -135,12 +135,12 @@ export default function ReviewsSection() {
               </div>
 
               {/* ✅ SEO OPTIMIZED HEADING */}
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-gray-900 leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-gray-900 leading-tight">
                 Trusted CPAP, BiPAP & Oxygen Concentrator Reviews
               </h2>
 
               {/* ✅ SEO OPTIMIZED PARAGRAPH */}
-              <p className="mt-6 text-gray-600 text-lg leading-relaxed max-w-2xl">
+              <p className="mt-4 text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl">
                 Read genuine customer reviews for CPAP machines, BiPAP
                 machines, oxygen concentrators, respiratory care products,
                 sleep apnea devices, and medical equipment from Respishop

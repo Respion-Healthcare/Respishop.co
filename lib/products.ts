@@ -57,169 +57,935 @@ export const products: Product[] = [
      "/images/Mask/Resmed AirFit™ N20 Nasal Mask/2.webp", "/images/Mask/Resmed AirFit™ N20 Nasal Mask/3.webp"],
      specifications: [{ label: "Brand", value: "ResMed" }, { label: "Mask Type", value: "Nasal Mask" },{ label: "Material", value: "Silicone Cushion" }, { label: "Compatibility", value: "All CPAP & BiPAP Machines" }, { label: "Sizes Available", value: "Small, Medium, Large" }, { label: "Country of Origin", value: "Australia" }, { label: "Warranty", value: "90 Days" }, { label: "Ideal For", value: "Sleep Apnea Therapy" }, { label: "Weight", value: "250 g" },{ label: "Package Includes", value: "Mask Frame, Cushion, Headgear" }, { label: "Category", value: "Mask" }] }, 
 
-{ id: 29, slug: "airfit-n20-classic", name: "AirFit™ N20 Classic", price: 4200, offer: { type: "percentage", value: 25 }, category: "nasal-mask",
- description: "The AirFit™ N20 Classic Nasal Mask is designed to provide reliable CPAP therapy with exceptional comfort and stability. Featuring a traditional forehead support design, this mask offers enhanced balance and reduced movement during sleep, making it an excellent choice for users who prefer a more secure fit. The soft silicone cushion creates an effective seal to minimize air leaks while maintaining comfort throughout the night. Its adjustable headgear ensures a personalized fit for different facial structures, helping improve therapy compliance and sleep quality. Compatible with most CPAP, APAP, and BiPAP machines, the AirFit N20 Classic is ideal for sleep apnea patients seeking dependable performance, easy maintenance, and long-lasting durability. Whether you are new to CPAP therapy or replacing an existing mask, the AirFit N20 Classic delivers consistent airflow, comfort, and effective sleep apnea treatment. Buy the AirFit N20 Classic Nasal Mask online at the best price in India with genuine quality assurance and fast delivery.", 
- images: ["/images/Mask/Resmed AirFit™ N20 Classic Mask/1.webp", "/images/Mask/Resmed AirFit™ N20 Classic Mask/2.webp", "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Nasal Mask" }] },
+{
+  id: 29,
+  slug: "airfit-n20-classic",
+  name: "AirFit™ N20 Classic",
+  price: 4200,
+  offer: { type: "percentage", value: 25 },
+  category: "nasal-mask",
 
+  description:
+    "The AirFit™ N20 Classic Nasal Mask from ResMed combines the trusted performance of the original N20 series with a classic forehead-support design for enhanced stability and comfort during CPAP therapy. Engineered to provide a secure seal across a wide range of facial profiles, the mask features a soft silicone cushion that helps reduce air leaks while maintaining comfort throughout the night. The forehead support minimizes mask movement, making it particularly suitable for active sleepers who prefer additional stability. Its lightweight frame, adjustable headgear, and easy-to-use magnetic clips allow for quick fitting and removal, while the open-field design helps users maintain a natural bedtime routine. Compatible with most CPAP, APAP, and BiPAP machines, the AirFit N20 Classic is an excellent choice for sleep apnea patients seeking reliable therapy, long-lasting comfort, and dependable performance night after night.",
+
+  images: [
+    "/images/Mask/Resmed AirFit™ N20 Classic Mask/1.webp",
+    "/images/Mask/Resmed AirFit™ N20 Classic Mask/2.webp",
+    "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"
+  ],
+
+  specifications: [
+    { label: "Brand", value: "ResMed" },
+    { label: "Category", value: "Nasal Mask" },
+    { label: "Mask Type", value: "Nasal CPAP Mask" },
+    { label: "Cushion Material", value: "Soft Silicone Cushion" },
+    { label: "Forehead Support", value: "Yes" },
+    { label: "Frame Design", value: "Lightweight & Durable" },
+    { label: "Headgear", value: "Adjustable Soft Headgear" },
+    { label: "Magnetic Clips", value: "Yes" },
+    { label: "Air Leak Control", value: "Advanced Cushion Seal Technology" },
+    { label: "Compatibility", value: "CPAP, APAP & BiPAP Machines" },
+    { label: "Ease of Cleaning", value: "Quick Disassembly Design" },
+    { label: "Fit Range", value: "Suitable for Most Facial Profiles" },
+    { label: "Comfort Features", value: "Soft Cushion with Stable Forehead Support" },
+    { label: "Recommended For", value: "Sleep Apnea Therapy" },
+    { label: "Latex Free", value: "Yes" }
+  ]
+},
 {
   id: 30,
-  slug: "airfit-n30i", name: "AirFit™ N30i", price: 7200, offer: { type: "flat", value: 1200 }, category: "nasal-mask",
-  description: "The AirFit™ N30i Nasal Cradle Mask is engineered for CPAP users who want maximum freedom of movement and an unobtrusive sleep therapy experience. Featuring an innovative top-of-the-head tube connection, the N30i keeps the air tubing out of sight and out of the way, allowing users to comfortably sleep on their side, back, or stomach without feeling restricted. Its lightweight nasal cradle cushion sits gently beneath the nose, reducing facial contact and helping prevent pressure marks, irritation, and discomfort. The SpringFit™ frame adapts naturally to different facial shapes, providing a secure and personalized fit throughout the night. Designed for active sleepers, the AirFit N30i delivers effective airflow while maintaining comfort and flexibility. Compatible with most CPAP and Auto CPAP machines, this minimal-contact mask is an excellent choice for users seeking a modern, lightweight, and travel-friendly sleep apnea solution. Experience enhanced comfort, quieter therapy, and greater sleeping freedom with the AirFit N30i Nasal Cradle CPAP Mask.",
-images: ["/images/Mask/Resmed AirFit™ N30i Nasal Mask.webp", "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Nasal Mask" }] },
+  slug: "airfit-n30i",
+  name: "AirFit™ N30i",
+  price: 7200,
+  offer: { type: "flat", value: 1200 },
+  category: "nasal-mask",
 
+  description:
+    "The ResMed AirFit™ N30i is an innovative nasal cradle CPAP mask designed to provide exceptional comfort, freedom, and flexibility throughout sleep therapy. Featuring a unique top-of-the-head tube connection, the N30i keeps tubing out of the user's way, allowing unrestricted movement in virtually any sleeping position. Its soft nasal cradle cushion rests comfortably beneath the nose, minimizing facial contact while delivering effective therapy with a secure seal. The SpringFit™ frame automatically adapts to different facial profiles, helping create a personalized fit without excessive adjustments. Designed for active sleepers and users who prefer a minimal-contact mask, the AirFit N30i combines comfort, stability, and modern design to enhance CPAP therapy compliance. Lightweight, quiet, and easy to maintain, it is compatible with most CPAP, APAP, and BiPAP machines, making it an excellent choice for long-term sleep apnea treatment.",
+
+  images: [
+    "/images/Mask/Resmed AirFit™ N30i Nasal Mask.webp",
+    "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"
+  ],
+
+  specifications: [
+    { label: "Brand", value: "ResMed" },
+    { label: "Category", value: "Nasal Cradle Mask" },
+    { label: "Mask Type", value: "Minimal Contact Nasal Mask" },
+    { label: "Cushion Type", value: "Under-the-Nose Nasal Cradle Cushion" },
+    { label: "Frame Technology", value: "SpringFit™ Frame" },
+    { label: "Tube Connection", value: "Top-of-the-Head Design" },
+    { label: "Headgear", value: "Adjustable Soft Headgear" },
+    { label: "Airflow Path", value: "Integrated Frame Airflow" },
+    { label: "Compatibility", value: "CPAP, APAP & BiPAP Machines" },
+    { label: "Sleeping Positions", value: "Side, Back & Stomach Sleepers" },
+    { label: "Air Leak Control", value: "Secure Nasal Cradle Seal" },
+    { label: "Facial Contact", value: "Minimal Contact Design" },
+    { label: "Ease of Cleaning", value: "Quick Disassembly Components" },
+    { label: "Recommended For", value: "Sleep Apnea Therapy & Active Sleepers" },
+    { label: "Latex Free", value: "Yes" }
+  ]
+},
 {
   id: 31,          
   slug: "best-fit-2-nasal-mask",name: "BEST FIT 2 NASAL MASK",price: 4500,offer: { type: "percentage", value: 10 },category: "nasal-mask",description: "The BMC Best Fit 2 Nasal Mask is designed to provide a comfortable, reliable, and effective CPAP therapy experience for patients with obstructive sleep apnea (OSA). Built with an ergonomic design and soft silicone cushion, this nasal mask delivers a secure seal while minimizing pressure points and air leakage during sleep. Its lightweight frame and adjustable headgear ensure a personalized fit for a wide range of facial structures, making it suitable for both new and experienced CPAP users. The streamlined design offers an open field of vision, allowing users to read, watch television, or relax comfortably before bedtime. Engineered for long-term durability and easy daily maintenance, the Best Fit 2 Nasal Mask supports consistent airflow delivery and enhanced therapy compliance. Compatible with most CPAP, APAP, and BiPAP machines, this mask is an excellent choice for users seeking dependable performance, comfort, and value. Whether for home use or regular sleep apnea management, the BMC Best Fit 2 Nasal Mask helps promote restful sleep and effective respiratory therapy night after night.",
-  images: ["/images/Mask/Resmed Best Fit 2 Nasal Mask.webp","/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"],specifications: [{ label: "Brand", value: "BMC" },{ label: "Category", value: "Nasal Mask" }
-  ]
+  images: ["/images/Mask/Resmed Best Fit 2 Nasal Mask.webp","/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"],specifications: [
+  { label: "Brand", value: "BMC" },
+  { label: "Category", value: "Nasal Mask" },
+  { label: "Mask Type", value: "CPAP Nasal Mask" },
+  { label: "Cushion Material", value: "Soft Silicone Cushion" },
+  { label: "Frame Design", value: "Lightweight Ergonomic Frame" },
+  { label: "Headgear", value: "Adjustable Soft Headgear" },
+  { label: "Forehead Support", value: "Integrated Stability Support" },
+  { label: "Seal Technology", value: "Comfort Seal Design" },
+  { label: "Air Leak Control", value: "Enhanced Leak Prevention System" },
+  { label: "Field of Vision", value: "Open View Design" },
+  { label: "Compatibility", value: "CPAP, APAP & BiPAP Machines" },
+  { label: "Sleeping Position", value: "Back & Side Sleepers" },
+  { label: "Comfort Features", value: "Reduced Facial Pressure Points" },
+  { label: "Ease of Cleaning", value: "Quick Disassembly Components" },
+  { label: "Assembly", value: "Easy Fit Design" },
+  { label: "Recommended For", value: "Obstructive Sleep Apnea (OSA)" },
+  { label: "Use Environment", value: "Home & Clinical Use" },
+  { label: "Latex Free", value: "Yes" },
+  { label: "Durability", value: "Long-Term Daily Use" },
+  { label: "Warranty", value: "Manufacturer Warranty Available" }
+]
 },
  { id: 77, slug: "philips-nasal-mask", name: "Philips Comfrotgel Nasal Mask", price: 3400, offer: { type: "percentage", value: 10 }, category: "nasal-mask",
     description: "The Philips ComfortGel Nasal Mask is designed to provide exceptional comfort and stability for CPAP therapy users. Featuring Philips' advanced gel cushion technology, this mask adapts to the contours of the face to create a secure seal while reducing pressure points and skin irritation. The soft forehead support and premium headgear help maintain mask stability throughout the night, minimizing leaks and improving therapy effectiveness. Its durable construction and user-friendly design make cleaning and maintenance simple for daily use. Ideal for individuals with obstructive sleep apnea, the ComfortGel Nasal Mask delivers reliable airflow, enhanced comfort, and consistent sleep therapy performance. Compatible with most CPAP, APAP, and BiPAP machines, it is a trusted choice for users seeking a comfortable and dependable nasal CPAP mask."
-, images: ["/images/Mask/Philips mask/Philips Comfrotgel Nasal Mask1.webp"], specifications: [{ label: "Brand", value: "BMC" }, { label: "Category", value: "Nasal Mask" }] },
+, images: ["/images/Mask/Philips mask/Philips Comfrotgel Nasal Mask1.webp"],specifications: [
+  { label: "Brand", value: "Philips Respironics" },
+  { label: "Category", value: "Nasal Mask" },
+  { label: "Mask Type", value: "CPAP Nasal Mask" },
+  { label: "Cushion Technology", value: "ComfortGel™ Cushion" },
+  { label: "Forehead Support", value: "Premium Adjustable Support" },
+  { label: "Headgear", value: "Soft Adjustable Headgear" },
+  { label: "Frame Design", value: "Durable Lightweight Frame" },
+  { label: "Air Leak Control", value: "Advanced Gel Seal Technology" },
+  { label: "Compatibility", value: "CPAP, APAP & BiPAP Machines" },
+  { label: "Comfort Features", value: "Reduced Pressure Points" },
+  { label: "Ease of Cleaning", value: "Simple Disassembly Design" },
+  { label: "Recommended For", value: "Sleep Apnea Therapy" },
+  { label: "Latex Free", value: "Yes" }
+]}
+,
 
 { id: 78, slug: "philips-dream-nasal-mask", name: "Philips Dream Wisp Nasal Mask", price: 5000, offer: { type: "percentage", value: 10 }, category: "nasal-mask",
 description: "The Philips DreamWisp Nasal Mask combines the comfort of a traditional nasal mask with the freedom of a top-of-head tubing connection. Designed for active sleepers, the innovative hose placement keeps tubing out of the way, allowing users to sleep comfortably in multiple positions. Its low-profile cushion provides a secure seal while maintaining an open field of vision for reading, watching television, or using mobile devices before sleep. The lightweight frame and soft headgear help reduce facial pressure and improve overall comfort during therapy. Perfect for CPAP users seeking flexibility and freedom of movement, the DreamWisp Nasal Mask offers effective sleep apnea treatment, improved comfort, and enhanced therapy compliance.",
- images: ["/images/Mask/Philips mask/Philips Dream Wisp Nasal Mask1.webp","/images/Mask/Philips mask/Philips Dream Wisp Nasal Mask2.jpg","/images/Mask/Philips mask/Philips Dream Wisp Nasal Mask4.jpg","/images/Mask/Philips mask/Philips Dream Wisp Nasal Mask3.webp"], specifications: [{ label: "Brand", value: "BMC" }, { label: "Category", value: "Nasal Mask" }] },
+ images: ["/images/Mask/Philips mask/Philips Dream Wisp Nasal Mask1.webp","/images/Mask/Philips mask/Philips Dream Wisp Nasal Mask2.jpg","/images/Mask/Philips mask/Philips Dream Wisp Nasal Mask4.jpg","/images/Mask/Philips mask/Philips Dream Wisp Nasal Mask3.webp"], specifications: [
+  { label: "Brand", value: "Philips Respironics" },
+  { label: "Category", value: "Nasal Mask" },
+  { label: "Mask Type", value: "Nasal CPAP Mask" },
+  { label: "Tube Connection", value: "Top-of-the-Head Design" },
+  { label: "Cushion Type", value: "Minimal Contact Nasal Cushion" },
+  { label: "Frame Design", value: "Open View Frame" },
+  { label: "Headgear", value: "Soft Adjustable Headgear" },
+  { label: "Air Leak Control", value: "Secure Cushion Seal" },
+  { label: "Compatibility", value: "CPAP, APAP & BiPAP Machines" },
+  { label: "Sleeping Positions", value: "Side, Back & Stomach Sleepers" },
+  { label: "Comfort Features", value: "Reduced Facial Contact" },
+  { label: "Ease of Cleaning", value: "Quick Release Components" },
+  { label: "Recommended For", value: "Active Sleepers & Sleep Apnea Therapy" },
+  { label: "Latex Free", value: "Yes" }
+] },
 
 { id: 79, slug: "philips-dreamware-nasal-mask", name: "Philips Dreamware Nasal Mask", price: 4100, offer: { type: "percentage", value: 10 }, category: "nasal-mask", 
- description: "The Philips DreamWear Nasal Mask features an innovative under-the-nose cushion and hollow frame design that delivers airflow through the sides of the mask, creating a lightweight and comfortable CPAP therapy experience. Designed to reduce facial contact and eliminate pressure on the nasal bridge, the DreamWear helps users sleep naturally while maintaining effective therapy. Its top-of-head tubing connection allows unrestricted movement throughout the night, making it ideal for side sleepers and active sleepers. The soft silicone frame adapts comfortably to facial contours while providing a secure fit and reliable seal. Compatible with most CPAP and Auto CPAP machines, the DreamWear Nasal Mask is a popular choice for users seeking comfort, freedom, and modern sleep apnea therapy solutions.", images: ["/images/Mask/Philips mask/Philips Dreamware Nasal Mask1.webp", "/images/Mask/Philips mask/Philips Dreamware Nasal Mask2.webp"], specifications: [{ label: "Brand", value: "BMC" }, { label: "Category", value: "Nasal Mask" }] },
-
+ description: "The Philips DreamWear Nasal Mask features an innovative under-the-nose cushion and hollow frame design that delivers airflow through the sides of the mask, creating a lightweight and comfortable CPAP therapy experience. Designed to reduce facial contact and eliminate pressure on the nasal bridge, the DreamWear helps users sleep naturally while maintaining effective therapy. Its top-of-head tubing connection allows unrestricted movement throughout the night, making it ideal for side sleepers and active sleepers. The soft silicone frame adapts comfortably to facial contours while providing a secure fit and reliable seal. Compatible with most CPAP and Auto CPAP machines, the DreamWear Nasal Mask is a popular choice for users seeking comfort, freedom, and modern sleep apnea therapy solutions.", images: ["/images/Mask/Philips mask/Philips Dreamware Nasal Mask1.webp", "/images/Mask/Philips mask/Philips Dreamware Nasal Mask2.webp"], specifications: [
+  { label: "Brand", value: "Philips Respironics" },
+  { label: "Category", value: "Nasal Mask" },
+  { label: "Mask Type", value: "Under-the-Nose Nasal Mask" },
+  { label: "Cushion Type", value: "Under-the-Nose Silicone Cushion" },
+  { label: "Frame Design", value: "Soft Hollow Frame Airflow System" },
+  { label: "Tube Connection", value: "Top-of-the-Head Design" },
+  { label: "Headgear", value: "Soft Adjustable Headgear" },
+  { label: "Airflow Path", value: "Integrated Frame Airflow" },
+  { label: "Compatibility", value: "CPAP, APAP & BiPAP Machines" },
+  { label: "Sleeping Positions", value: "Side, Back & Stomach Sleepers" },
+  { label: "Comfort Features", value: "Minimal Facial Contact Design" },
+  { label: "Nasal Bridge Contact", value: "No Direct Contact" },
+  { label: "Air Leak Control", value: "Secure Cushion Seal" },
+  { label: "Field of Vision", value: "Open View Design" },
+  { label: "Ease of Cleaning", value: "Quick Release Components" },
+  { label: "Recommended For", value: "Active Sleepers & Sleep Apnea Therapy" },
+  { label: "Latex Free", value: "Yes" },
+  { label: "Weight", value: "Lightweight Design" },
+  { label: "Use Environment", value: "Home & Clinical Use" }
+]},
 { id: 80, slug: "philips-pico-nasal-mask", name: "Philips Pico Nasal Mask", price: 2200, offer: { type: "percentage", value: 10 }, category: "nasal-mask",
   description: "The Philips Pico Nasal Mask is a compact and lightweight CPAP mask designed to deliver effective sleep apnea therapy with minimal facial contact. Its simple, user-friendly design combines a soft dual-wall cushion with a slim forehead-free frame, providing a secure seal without unnecessary bulk. The lightweight headgear and minimal-contact structure help reduce pressure marks and enhance comfort during extended therapy sessions. Easy to fit, clean, and maintain, the Pico Nasal Mask is an excellent option for first-time CPAP users and experienced patients alike. Compatible with most CPAP, APAP, and BiPAP machines, it offers dependable performance, comfortable airflow delivery, and excellent value for daily sleep therapy.",
-  images: ["/images/Mask/Philips mask/Philips Pico Nasal Mask1.webp", "/images/Mask/Philips mask/Philips Pico Nasal Mask2.jpg", "/images/Mask/Philips mask/Philips Pico Nasal Mask3.bmp"], specifications: [{ label: "Brand", value: "BMC" }, { label: "Category", value: "Nasal Mask" }] },
-
+  images: ["/images/Mask/Philips mask/Philips Pico Nasal Mask1.webp", "/images/Mask/Philips mask/Philips Pico Nasal Mask2.jpg", "/images/Mask/Philips mask/Philips Pico Nasal Mask3.bmp"], specifications: [
+  { label: "Brand", value: "Philips Respironics" },
+  { label: "Category", value: "Nasal Mask" },
+  { label: "Mask Type", value: "Compact Nasal CPAP Mask" },
+  { label: "Cushion Type", value: "Dual-Wall Silicone Cushion" },
+  { label: "Frame Design", value: "Forehead-Free Lightweight Frame" },
+  { label: "Headgear", value: "Adjustable Soft Headgear" },
+  { label: "Comfort Features", value: "Minimal Contact Design" },
+  { label: "Air Leak Control", value: "Enhanced Cushion Seal" },
+  { label: "Compatibility", value: "CPAP, APAP & BiPAP Machines" },
+  { label: "Field of Vision", value: "Open View Design" },
+  { label: "Ease of Use", value: "Simple Fit & Adjustment" },
+  { label: "Ease of Cleaning", value: "Easy Maintenance Components" },
+  { label: "Recommended For", value: "Sleep Apnea Therapy" },
+  { label: "User Type", value: "Adult" },
+  { label: "Sleeping Position", value: "Back & Side Sleepers" },
+  { label: "Weight", value: "Ultra-Lightweight Design" },
+  { label: "Latex Free", value: "Yes" },
+  { label: "Use Environment", value: "Home & Clinical Use" },
+  { label: "Durability", value: "Long-Term Daily Use" }
+]},
 
 //Full Face Mask
-{ id: 4, slug: "resmed-airfit-f20-full-face-mask", name: "Resmed AirFit F20 Full Face Mask", price: 7300, offer: { type: "percentage", value: 25 }, category: "full-face-mask", description: "Full face CPAP mask with superior comfort.", images: ["/images/Product1.jpg", "/images/Mask/Resmed AirTouch™ F20 Full Face Mask.webp", "/images/Mask/Resmed AirFit™ F20 Full Face Mask.webp", "/images/All.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Full Face Mask" }] },
+{
+  id: 4,
+  slug: "resmed-airfit-f20-full-face-mask",
+  name: "ResMed AirFit F20 Full Face Mask",
+  price: 7300,
+  offer: { type: "percentage", value: 25 },
+  category: "full-face-mask",
+  description:
+    "The ResMed AirFit F20 Full Face Mask is one of the most popular CPAP masks designed to provide a secure and comfortable fit for a wide range of users. Featuring the innovative InfinitySeal™ cushion, it adapts to different facial structures and sleeping positions while maintaining an effective seal throughout the night. The soft headgear, magnetic clips, and flexible frame make fitting and removal quick and convenient. Ideal for users who breathe through their mouth during sleep or require higher therapy pressures, the AirFit F20 delivers reliable CPAP therapy with exceptional comfort and performance.",
+  images: [
+    "/images/Product1.jpg",
+    "/images/Mask/Resmed AirTouch™ F20 Full Face Mask.webp",
+    "/images/Mask/Resmed AirFit™ F20 Full Face Mask.webp",
+    "/images/All.webp"
+  ],
+  specifications: [
+    { label: "Brand", value: "ResMed" },
+    { label: "Category", value: "Full Face CPAP Mask" },
+    { label: "Model", value: "AirFit F20" },
+    { label: "Cushion Type", value: "InfinitySeal™ Silicone Cushion" },
+    { label: "Mask Type", value: "Full Face Mask" },
+    { label: "Compatibility", value: "Compatible with most CPAP and BiPAP machines" },
+    { label: "Headgear", value: "Soft adjustable plush headgear" },
+    { label: "Frame Material", value: "Flexible and lightweight frame" },
+    { label: "Magnetic Clips", value: "Yes" },
+    { label: "Quick Release Elbow", value: "Yes" },
+    { label: "Latex Free", value: "Yes" },
+    { label: "Therapy Pressure Range", value: "Suitable for low to high pressure therapy" },
+    { label: "Ideal For", value: "Mouth breathers and high-pressure CPAP users" },
+    { label: "Available Sizes", value: "Small, Medium, Large" },
+    { label: "Color", value: "Blue and Gray" },
+    { label: "Country of Origin", value: "Australia" },
+    { label: "Warranty", value: "As per manufacturer policy" }
+  ]
+},
 // { id: 32, slug: "airfit-f30", name: "AirFit™ F30", price: 7800, offer: { type: "percentage", value: 15 }, category: "full-face-mask", description: "Minimal-contact full face mask designed for comfort and freedom.", images: ["/images/Mask/AirFit-F30/1.webp", "/images/Mask/AirFit-F30/2.webp", "/images/Mask/AirFit-F30/3.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Full Face Mask" }] },
-{ id: 33, slug: "airfit-f30i", name: "AirFit™ F30i", price: 8500, offer: { type: "flat", value: 1000 }, category: "full-face-mask", description: "Top-of-head tube full face mask for flexible sleep movement.", images: ["/images/Mask/Resmed AirFit F30i Full Face Mask/1.webp", "/images/Mask/Resmed AirFit F30i Full Face Mask/2.webp","/images/Mask/Resmed AirFit F30i Full Face Mask/3.webp","/images/Mask/Resmed AirFit F30i Full Face Mask/4.webp","/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Full Face Mask" }] },
-{ id: 34, slug: "airtouch-f20", name: "AirTouch™ F20", price: 3900, category: "full-face-mask", description: "UltraSoft memory foam cushion full face CPAP mask.", images: ["/images/Mask/Resmed AirTouch™ F20 Full Face Mask.webp", "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Full Face Mask" }] },
-{ id: 35, slug: "bestfit-2-full-face-mask", name: "BestFit 2 Full Face Mask", price: 4800, offer: { type: "percentage", value: 10 }, category: "full-face-mask", description: "Comfortable and reliable full face CPAP mask for daily therapy.", images: ["/images/Mask/Resmed Best Fit 2 Full Face Mask.jpg","/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "BMC" }, { label: "Category", value: "Full Face Mask" }] },
-{ id: 36, slug: "acucare-f1-0", name: "AcuCare™ F1-0", price: 3900, category: "full-face-mask", description: "Lightweight full face CPAP mask with secure fit and comfort.", images: ["/images/Mask/AcuCare™ F1-0.webp","/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Full Face Mask" }] },
-{ id: 37, slug: "acucare-f1-4", name: "AcuCare™ F1-4", price: 4100, category: "full-face-mask", description: "Soft cushion full face mask designed for stable CPAP therapy.", images: ["/images/Mask/AcuCare™ F1-4.webp", "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Full Face Mask" }] },
-{ id: 74, slug: "philips-amara", name: "Philips Amara Full Face Mask", price: 4000, category: "full-face-mask", description: "Soft cushion full face mask designed for stable CPAP therapy.", images: ["/images/Mask/Philips mask/philips amara1.webp", "/images/Mask/Philips mask/philips amara2.webp", "/images/Mask/Philips mask/philips amara4.webp", "/images/Mask/Philips mask/philips amara3.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Full Face Mask" }] },
-{ id: 75, slug: "philips-amara-gel", name: "PHILIPS Unisex Respironics Amara Gel Full Face Mask- Medium,Transparent", price: 5567, category: "full-face-mask", description: "Soft cushion full face mask designed for stable CPAP therapy.", images: [ "/images/Mask/Philips mask/philips amara gel2.jpg","/images/Mask/Philips mask/philips amara gel1.jpg", "/images/Mask/Philips mask/philips amara gel3.jpg", "/images/Mask/Philips mask/philips amara gel4.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Full Face Mask" }] },
-{ id: 76, slug: "philips-dreamware", name: "Philips Dreamware Full Face mask", price: 4250, category: "full-face-mask", description: "Soft cushion full face mask designed for stable CPAP therapy.", images: [ "/images/Mask/Philips mask/Philips Respironics Dreamwear Full Face Mask1.jpg","/images/Mask/Philips mask/Philips Respironics Dreamwear Full Face Mask2.jpg", "/images/Mask/Philips mask/Philips Respironics Dreamwear Full Face Mask3.jpg", "/images/Mask/Philips mask/Philips Respironics Dreamwear Full Face Mask4.jpg"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Full Face Mask" }] },
 
+{
+  id: 33,
+  slug: "airfit-f30i",
+  name: "AirFit™ F30i",
+  price: 8500,
+  offer: { type: "flat", value: 1000 },
+  category: "full-face-mask",
+  description:
+    "The ResMed AirFit™ F30i Full Face Mask is an innovative CPAP mask designed with a top-of-head tube connection that keeps air tubing out of the way, allowing users to sleep comfortably in any position. Its minimalist full-face design sits under the nose rather than over it, reducing facial marks and discomfort while maintaining an effective seal. The SpringFit™ frame adapts to different face shapes, and the ultra-compact cushion provides a clear field of vision for reading, watching TV, or wearing glasses before sleep. Ideal for active sleepers, the AirFit F30i combines freedom of movement, comfort, and reliable CPAP therapy performance.",
+  images: [
+    "/images/Mask/Resmed AirFit F30i Full Face Mask/1.webp",
+    "/images/Mask/Resmed AirFit F30i Full Face Mask/2.webp",
+    "/images/Mask/Resmed AirFit F30i Full Face Mask/3.webp",
+    "/images/Mask/Resmed AirFit F30i Full Face Mask/4.webp",
+    "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"
+  ],
+  specifications: [
+    { label: "Brand", value: "ResMed" },
+    { label: "Category", value: "Full Face CPAP Mask" },
+    { label: "Model", value: "AirFit™ F30i" },
+    { label: "Mask Type", value: "Minimal Contact Full Face Mask" },
+    { label: "Cushion Type", value: "Under-the-Nose Silicone Cushion" },
+    { label: "Tube Connection", value: "Top-of-Head Connection" },
+    { label: "Frame Technology", value: "SpringFit™ Frame" },
+    { label: "Headgear", value: "Soft Adjustable Headgear" },
+    { label: "Quick Release Elbow", value: "Yes" },
+    { label: "Magnetic Clips", value: "Yes" },
+    { label: "Field of Vision", value: "Open Design for Reading and Watching TV" },
+    { label: "Sleeping Position", value: "Suitable for Side, Back, and Stomach Sleepers" },
+    { label: "Compatibility", value: "Compatible with Most CPAP and BiPAP Machines" },
+    { label: "Latex Free", value: "Yes" },
+    { label: "Available Sizes", value: "Small, Medium, Wide" },
+    { label: "Color", value: "Gray and Blue" },
+    { label: "Ideal For", value: "Active Sleepers and Users Seeking Greater Freedom of Movement" },
+    { label: "Country of Origin", value: "Australia" },
+    { label: "Warranty", value: "As per Manufacturer Policy" }
+  ]
+},
+{
+  id: 34,
+  slug: "airtouch-f20",
+  name: "AirTouch™ F20",
+  price: 3900,
+  category: "full-face-mask",
+  description:
+    "The ResMed AirTouch™ F20 Full Face Mask is the world's first CPAP mask featuring UltraSoft™ memory foam cushion technology, designed to provide exceptional comfort and a personalized fit. The memory foam cushion gently adapts to facial contours, reducing pressure points and skin irritation while maintaining an effective seal throughout the night. Its lightweight frame, magnetic clips, and quick-release elbow make daily use simple and convenient. The AirTouch F20 is an excellent choice for CPAP users who experience discomfort with traditional silicone cushions and are looking for a softer, more comfortable therapy experience.",
+  images: [
+    "/images/Mask/Resmed AirTouch™ F20 Full Face Mask.webp",
+    "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"
+  ],
+  specifications: [
+    { label: "Brand", value: "ResMed" },
+    { label: "Category", value: "Full Face CPAP Mask" },
+    { label: "Model", value: "AirTouch™ F20" },
+    { label: "Mask Type", value: "Full Face Mask" },
+    { label: "Cushion Type", value: "UltraSoft™ Memory Foam Cushion" },
+    { label: "Frame Material", value: "Flexible Lightweight Frame" },
+    { label: "Headgear", value: "Soft Plush Adjustable Headgear" },
+    { label: "Magnetic Clips", value: "Yes" },
+    { label: "Quick Release Elbow", value: "Yes" },
+    { label: "Seal Technology", value: "Adaptive Memory Foam Seal" },
+    { label: "Comfort Level", value: "High Comfort with Reduced Facial Pressure" },
+    { label: "Compatibility", value: "Compatible with Most CPAP and BiPAP Machines" },
+    { label: "Latex Free", value: "Yes" },
+    { label: "Available Sizes", value: "Small, Medium, Large" },
+    { label: "Ideal For", value: "Users Sensitive to Silicone Cushions" },
+    { label: "Sleeping Position", value: "Suitable for Back and Side Sleepers" },
+    { label: "Color", value: "Blue and Gray" },
+    { label: "Country of Origin", value: "Australia" },
+    { label: "Warranty", value: "As per Manufacturer Policy" }
+  ]
+},
+{
+  id: 35,
+  slug: "bestfit-2-full-face-mask",
+  name: "BestFit 2 Full Face Mask",
+  price: 4800,
+  offer: { type: "percentage", value: 10 },
+  category: "full-face-mask",
+  description:
+    "The BMC BestFit 2 Full Face Mask is designed to deliver effective CPAP and BiPAP therapy with exceptional comfort and stability. Featuring a soft silicone cushion and ergonomic frame design, the mask provides a secure seal while minimizing facial pressure and air leaks. Its lightweight construction, adjustable headgear, and quick-release clips make daily use simple and comfortable. The BestFit 2 Full Face Mask is ideal for users who breathe through their mouth during sleep and require reliable therapy performance throughout the night.",
+  images: [
+    "/images/Mask/Resmed Best Fit 2 Full Face Mask.jpg",
+    "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"
+  ],
+  specifications: [
+    { label: "Brand", value: "BMC" },
+    { label: "Category", value: "Full Face CPAP Mask" },
+    { label: "Model", value: "BestFit 2" },
+    { label: "Mask Type", value: "Full Face Mask" },
+    { label: "Cushion Material", value: "Soft Medical-Grade Silicone" },
+    { label: "Frame Material", value: "Lightweight Durable Frame" },
+    { label: "Headgear", value: "Adjustable Soft Headgear" },
+    { label: "Forehead Support", value: "Integrated Stability Support" },
+    { label: "Quick Release Clips", value: "Yes" },
+    { label: "Ventilation System", value: "Quiet Air Diffusion Design" },
+    { label: "Compatibility", value: "Compatible with Most CPAP and BiPAP Machines" },
+    { label: "Latex Free", value: "Yes" },
+    { label: "Available Sizes", value: "Small, Medium, Large" },
+    { label: "Ideal For", value: "Mouth Breathers and High-Pressure Therapy Users" },
+    { label: "Sleeping Position", value: "Suitable for Back and Side Sleepers" },
+    { label: "Color", value: "Blue and Gray" },
+    { label: "Country of Origin", value: "China" },
+    { label: "Warranty", value: "As per Manufacturer Policy" }
+  ]
+},
+{
+  id: 36,
+  slug: "acucare-f1-0",
+  name: "AcuCare™ F1-0",
+  price: 3900,
+  category: "full-face-mask",
+  description:
+    "The ResMed AcuCare™ F1-0 Full Face Mask is designed to provide comfortable and effective CPAP therapy for users who require full-face coverage. Featuring a soft silicone cushion and lightweight frame, the mask delivers a secure seal while minimizing pressure on the face. Its ergonomic design ensures a comfortable fit throughout the night, while the adjustable headgear helps accommodate a wide range of facial structures. The AcuCare F1-0 is an ideal choice for patients seeking reliable therapy performance, ease of use, and long-lasting comfort at an affordable price.",
+  images: [
+    "/images/Mask/AcuCare™ F1-0.webp",
+    "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"
+  ],
+  specifications: [
+    { label: "Brand", value: "ResMed" },
+    { label: "Category", value: "Full Face CPAP Mask" },
+    { label: "Model", value: "AcuCare™ F1-0" },
+    { label: "Mask Type", value: "Full Face Mask" },
+    { label: "Cushion Material", value: "Soft Medical-Grade Silicone" },
+    { label: "Frame Material", value: "Lightweight Durable Frame" },
+    { label: "Headgear", value: "Adjustable Soft Headgear" },
+    { label: "Seal Design", value: "Comfort-Fit Leak Resistant Cushion" },
+    { label: "Forehead Support", value: "Integrated Stability Support" },
+    { label: "Quick Release Clips", value: "Yes" },
+    { label: "Ventilation System", value: "Quiet Air Diffusion Technology" },
+    { label: "Compatibility", value: "Compatible with Most CPAP and BiPAP Machines" },
+    { label: "Latex Free", value: "Yes" },
+    { label: "Available Sizes", value: "Small, Medium, Large" },
+    { label: "Ideal For", value: "Mouth Breathers and Full Face Therapy Users" },
+    { label: "Sleeping Position", value: "Suitable for Back and Side Sleepers" },
+    { label: "Color", value: "Transparent and Blue" },
+    { label: "Country of Origin", value: "Australia" },
+    { label: "Warranty", value: "As per Manufacturer Policy" }
+  ]
+},{
+  id: 37,
+  slug: "acucare-f1-4",
+  name: "AcuCare™ F1-4",
+  price: 4100,
+  category: "full-face-mask",
+  description:
+    "The ResMed AcuCare™ F1-4 Full Face Mask is designed to provide dependable CPAP and BiPAP therapy with a balance of comfort, stability, and performance. Featuring a soft dual-wall silicone cushion, the mask creates a secure seal while reducing pressure points and minimizing air leaks. Its lightweight frame and adjustable headgear ensure a comfortable fit for a wide range of facial profiles. The AcuCare F1-4 is ideal for users who breathe through their mouth during sleep and require consistent therapy throughout the night. Easy to fit, clean, and maintain, it offers a practical solution for long-term sleep therapy users.",
+  images: [
+    "/images/Mask/AcuCare™ F1-4.webp",
+    "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"
+  ],
+  specifications: [
+    { label: "Brand", value: "ResMed" },
+    { label: "Category", value: "Full Face CPAP Mask" },
+    { label: "Model", value: "AcuCare™ F1-4" },
+    { label: "Mask Type", value: "Full Face Mask" },
+    { label: "Cushion Material", value: "Dual-Wall Medical-Grade Silicone Cushion" },
+    { label: "Frame Material", value: "Lightweight Durable Frame" },
+    { label: "Headgear", value: "Soft Adjustable Headgear" },
+    { label: "Seal Technology", value: "Leak-Resistant Comfort Seal" },
+    { label: "Forehead Support", value: "Enhanced Stability Forehead Support" },
+    { label: "Quick Release Clips", value: "Yes" },
+    { label: "Ventilation System", value: "Quiet Air Diffusion Vent" },
+    { label: "Compatibility", value: "Compatible with Most CPAP and BiPAP Machines" },
+    { label: "Latex Free", value: "Yes" },
+    { label: "Available Sizes", value: "Small, Medium, Large" },
+    { label: "Ideal For", value: "Mouth Breathers and Full Face Therapy Users" },
+    { label: "Sleeping Position", value: "Suitable for Back and Side Sleepers" },
+    { label: "Color", value: "Transparent and Blue" },
+    { label: "Country of Origin", value: "Australia" },
+    { label: "Warranty", value: "As per Manufacturer Policy" }
+  ]
+},
+{
+  id: 74,
+  slug: "philips-amara",
+  name: "Philips Amara Full Face Mask",
+  price: 4000,
+  category: "full-face-mask",
+  description:
+    "The Philips Amara Full Face Mask is designed to provide effective CPAP and BiPAP therapy with a lightweight and comfortable design. Featuring a soft silicone cushion and minimal-contact frame, the mask offers a secure seal while reducing facial pressure and skin irritation. Its simple assembly and adjustable headgear make fitting quick and convenient for everyday use. Suitable for mouth breathers and users requiring full-face coverage, the Philips Amara delivers reliable therapy performance with enhanced comfort throughout the night.",
+  images: [
+    "/images/Mask/Philips mask/philips amara1.webp",
+    "/images/Mask/Philips mask/philips amara2.webp",
+    "/images/Mask/Philips mask/philips amara4.webp",
+    "/images/Mask/Philips mask/philips amara3.webp"
+  ],
+  specifications: [
+    { label: "Brand", value: "Philips Respironics" },
+    { label: "Category", value: "Full Face CPAP Mask" },
+    { label: "Model", value: "Amara" },
+    { label: "Mask Type", value: "Full Face Mask" },
+    { label: "Cushion Material", value: "Soft Silicone Cushion" },
+    { label: "Frame Design", value: "Lightweight Minimal Contact Frame" },
+    { label: "Headgear", value: "Adjustable Soft Headgear" },
+    { label: "Quick Release Clips", value: "Yes" },
+    { label: "Compatibility", value: "Compatible with Most CPAP and BiPAP Machines" },
+    { label: "Latex Free", value: "Yes" },
+    { label: "Available Sizes", value: "Petite, Small, Medium, Large" },
+    { label: "Ideal For", value: "Mouth Breathers and Full Face Therapy Users" },
+    { label: "Color", value: "Blue and Gray" },
+    { label: "Warranty", value: "As per Manufacturer Policy" }
+  ]
+},
+{
+  id: 75,
+  slug: "philips-amara-gel",
+  name: "PHILIPS Unisex Respironics Amara Gel Full Face Mask - Medium, Transparent",
+  price: 5567,
+  category: "full-face-mask",
+  description:
+    "The Philips Respironics Amara Gel Full Face Mask combines the comfort of a premium gel cushion with a lightweight frame to deliver effective CPAP therapy. The gel cushion adapts to facial contours, helping reduce pressure points while maintaining a reliable seal throughout the night. Designed for easy assembly and cleaning, the Amara Gel offers excellent comfort for users who prefer a softer cushion compared to traditional silicone masks. Its durable construction and secure fit make it a dependable choice for long-term sleep therapy.",
+  images: [
+    "/images/Mask/Philips mask/philips amara gel2.jpg",
+    "/images/Mask/Philips mask/philips amara gel1.jpg",
+    "/images/Mask/Philips mask/philips amara gel3.jpg",
+    "/images/Mask/Philips mask/philips amara gel4.webp"
+  ],
+  specifications: [
+    { label: "Brand", value: "Philips Respironics" },
+    { label: "Category", value: "Full Face CPAP Mask" },
+    { label: "Model", value: "Amara Gel" },
+    { label: "Mask Type", value: "Full Face Mask" },
+    { label: "Cushion Material", value: "Premium Gel Cushion" },
+    { label: "Frame Material", value: "Lightweight Durable Frame" },
+    { label: "Headgear", value: "Adjustable Soft Headgear" },
+    { label: "Quick Release Clips", value: "Yes" },
+    { label: "Forehead Support", value: "Yes" },
+    { label: "Compatibility", value: "Compatible with Most CPAP and BiPAP Machines" },
+    { label: "Latex Free", value: "Yes" },
+    { label: "Size", value: "Medium" },
+    { label: "Color", value: "Transparent and Blue" },
+    { label: "Ideal For", value: "Users Seeking Gel Cushion Comfort" },
+    { label: "Warranty", value: "As per Manufacturer Policy" }
+  ]
+},
+{
+  id: 76,
+  slug: "philips-dreamware",
+  name: "Philips DreamWear Full Face Mask",
+  price: 4250,
+  category: "full-face-mask",
+  description:
+    "The Philips DreamWear Full Face Mask features an innovative top-of-head tube connection that allows users to sleep comfortably in any position. Its under-the-nose full face cushion helps prevent red marks on the bridge of the nose while providing an open field of vision for reading, watching TV, or wearing glasses before sleep. The hollow frame design delivers airflow through the frame itself, offering greater freedom of movement and a more natural sleeping experience. Designed for comfort and flexibility, the DreamWear Full Face Mask is ideal for active sleepers seeking effective CPAP therapy.",
+  images: [
+    "/images/Mask/Philips mask/Philips Respironics Dreamwear Full Face Mask1.jpg",
+    "/images/Mask/Philips mask/Philips Respironics Dreamwear Full Face Mask2.jpg",
+    "/images/Mask/Philips mask/Philips Respironics Dreamwear Full Face Mask3.jpg",
+    "/images/Mask/Philips mask/Philips Respironics Dreamwear Full Face Mask4.jpg"
+  ],
+  specifications: [
+    { label: "Brand", value: "Philips Respironics" },
+    { label: "Category", value: "Full Face CPAP Mask" },
+    { label: "Model", value: "DreamWear Full Face" },
+    { label: "Mask Type", value: "Minimal Contact Full Face Mask" },
+    { label: "Cushion Type", value: "Under-the-Nose Silicone Cushion" },
+    { label: "Tube Connection", value: "Top-of-Head Connection" },
+    { label: "Frame Design", value: "Hollow Airflow Frame" },
+    { label: "Headgear", value: "Soft Adjustable Headgear" },
+    { label: "Quick Release Elbow", value: "Yes" },
+    { label: "Field of Vision", value: "Open Design for Reading and Watching TV" },
+    { label: "Compatibility", value: "Compatible with Most CPAP and BiPAP Machines" },
+    { label: "Latex Free", value: "Yes" },
+    { label: "Available Sizes", value: "Small, Medium, Large" },
+    { label: "Ideal For", value: "Active Sleepers and Side Sleepers" },
+    { label: "Sleeping Position", value: "Back, Side, and Stomach Sleepers" },
+    { label: "Color", value: "Blue and White" },
+    { label: "Warranty", value: "As per Manufacturer Policy" }
+  ]
+},
 
 //nasal pillow mask
-{ id: 15, slug: "nasal-pillow-mask", name: "AirFit™ P30i Nasal Pillow Mask", price: 3500, category: "nasal-pillow-mask", description: "Lightweight nasal pillow mask.", images: ["/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/1.webp", "/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/2.webp", "/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/3.webp", "/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/4.webp","/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/5.webp",], specifications: [{ label: "Category", value: "Mask" }] },
-{ id: 38, slug: "airfit-p10", name: "AirFit™ P10", price: 3900, offer: { type: "percentage", value: 15 }, category: "nasal-pillow-mask", description: "Ultra-lightweight nasal pillow mask for quiet and comfortable CPAP therapy.", images: ["/images/Mask/Resmed AirFit™ P10 Nasal Pillow Mask.webp","/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Nasal Pillow Mask" }] },
-{ id: 39, slug: "airfit-p10-for-airmini", name: "AirFit™ P10 for AirMini™", price: 6200, offer: { type: "flat", value: 800 }, category: "nasal-pillow-mask", description: "Compact nasal pillow mask specially designed for AirMini travel CPAP.", images: ["/images/Mask/Resmed AirFit™ P10 for AirMini™.webp", "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Nasal Pillow Mask" }] },
+{ id: 15, slug: "nasal-pillow-mask", name: "AirFit™ P30i Nasal Pillow Mask", price: 3500, category: "nasal-pillow-mask",description:
+"The ResMed AirFit™ P30i Nasal Pillow Mask is designed for CPAP users who want maximum freedom of movement and minimal facial contact during sleep therapy. Featuring a top-of-the-head tube connection and dual-wall nasal pillows, the P30i keeps tubing out of the way while providing a secure and comfortable seal. The SpringFit™ frame adapts naturally to different facial shapes, helping maintain stability throughout the night. Ideal for active sleepers, the mask allows users to comfortably sleep in multiple positions without compromising therapy effectiveness. Lightweight, quiet, and easy to maintain, the AirFit P30i delivers reliable CPAP therapy while enhancing overall comfort and convenience.",
+ images: ["/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/1.webp", "/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/2.webp", "/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/3.webp", "/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/4.webp","/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/5.webp",], specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Nasal Pillow Mask" },
+  { label: "Mask Type", value: "Minimal Contact Nasal Pillow Mask" },
+  { label: "Cushion Type", value: "Dual-Wall Nasal Pillows" },
+  { label: "Frame Technology", value: "SpringFit™ Frame" },
+  { label: "Tube Connection", value: "Top-of-the-Head Design" },
+  { label: "Headgear", value: "Adjustable Soft Headgear" },
+  { label: "Airflow Path", value: "Integrated Frame Airflow" },
+  { label: "Compatibility", value: "CPAP, APAP & BiPAP Machines" },
+  { label: "Sleeping Positions", value: "Side, Back & Stomach Sleepers" },
+  { label: "Comfort Features", value: "Minimal Facial Contact" },
+  { label: "Air Leak Control", value: "Secure Nasal Pillow Seal" },
+  { label: "Ease of Cleaning", value: "Quick Disassembly Design" },
+  { label: "Recommended For", value: "Active Sleepers & Sleep Apnea Therapy" },
+  { label: "Latex Free", value: "Yes" }
+] },
+{ id: 38, slug: "airfit-p10", name: "AirFit™ P10", price: 3900, offer: { type: "percentage", value: 15 }, category: "nasal-pillow-mask", description:
+"The ResMed AirFit™ P10 Nasal Pillow Mask is one of the lightest and quietest CPAP masks available, designed to provide a comfortable and unobtrusive sleep therapy experience. Featuring ResMed's QuietAir™ woven-mesh vent technology, the P10 significantly reduces noise while gently dispersing exhaled air. Its dual-wall nasal pillows provide a secure seal with minimal facial contact, helping users enjoy effective therapy without discomfort. The lightweight elastic headgear offers simplicity and ease of use, making it an excellent choice for both new and experienced CPAP users seeking comfort, reliability, and freedom during sleep.", images: ["/images/Mask/Resmed AirFit™ P10 Nasal Pillow Mask.webp","/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Nasal Pillow Mask" },
+  { label: "Mask Type", value: "Ultra-Lightweight Nasal Pillow Mask" },
+  { label: "Cushion Type", value: "Dual-Wall Nasal Pillows" },
+  { label: "Vent Technology", value: "QuietAir™ Woven-Mesh Vent" },
+  { label: "Headgear", value: "QuickFit™ Elastic Headgear" },
+  { label: "Weight", value: "Ultra-Lightweight Design" },
+  { label: "Noise Reduction", value: "Ultra-Quiet Performance" },
+  { label: "Compatibility", value: "CPAP, APAP & BiPAP Machines" },
+  { label: "Air Leak Control", value: "Stable Nasal Pillow Seal" },
+  { label: "Facial Contact", value: "Minimal Contact Design" },
+  { label: "Ease of Cleaning", value: "Simple Component Assembly" },
+  { label: "Recommended For", value: "Sleep Apnea Therapy" },
+  { label: "Travel Friendly", value: "Yes" },
+  { label: "Latex Free", value: "Yes" }
+] },
+{ id: 39, slug: "airfit-p10-for-airmini", name: "AirFit™ P10 for AirMini™", price: 6200, offer: { type: "flat", value: 800 }, category: "nasal-pillow-mask",description:
+"The ResMed AirFit™ P10 for AirMini™ is a compact nasal pillow mask specifically engineered to work seamlessly with the ResMed AirMini™ Travel CPAP Device. Combining the proven comfort of the AirFit P10 design with HumidX™ waterless humidification technology, it delivers effective therapy without the need for a traditional humidifier. The lightweight mask features dual-wall nasal pillows and QuietAir™ vent technology to provide a secure seal and quiet operation. Designed for travelers and users seeking a portable therapy solution, the AirFit P10 for AirMini offers exceptional comfort, convenience, and performance in a compact package.", images: ["/images/Mask/Resmed AirFit™ P10 for AirMini™.webp", "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"],specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Nasal Pillow Mask" },
+  { label: "Mask Type", value: "Travel Nasal Pillow Mask" },
+  { label: "Compatibility", value: "Exclusive for AirMini™ CPAP Device" },
+  { label: "Cushion Type", value: "Dual-Wall Nasal Pillows" },
+  { label: "Humidification", value: "HumidX™ Waterless Humidification Compatible" },
+  { label: "Vent Technology", value: "QuietAir™ Vent Technology" },
+  { label: "Headgear", value: "QuickFit™ Elastic Headgear" },
+  { label: "Weight", value: "Ultra-Lightweight Design" },
+  { label: "Travel Friendly", value: "Yes" },
+  { label: "Noise Reduction", value: "Ultra-Quiet Performance" },
+  { label: "Air Leak Control", value: "Secure Nasal Pillow Seal" },
+  { label: "Ease of Cleaning", value: "Easy Maintenance Design" },
+  { label: "Recommended For", value: "Travel CPAP Therapy" },
+  { label: "Latex Free", value: "Yes" }
+]},
 
 //-------------------------------------------------------------------------------------------------------------
 
 //cpap
-{ id: 2, slug: "resmed-airsense-10-autoset-tripack", name: "AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube", price: 71000, offer: { type: "flat", value: 2000 }, category: "cpap-machine", description: "Advanced CPAP machine with humidifier.", 
+{ id: 2, slug: "resmed-airsense-10-autoset-tripack", name: "AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube", price: 71000, offer: { type: "flat", value: 2000 }, category: "cpap-machine",description:
+    "The AirSense™ 11 AutoSet™ 4G Tripack is ResMed's latest intelligent Auto CPAP solution designed to provide personalized and comfortable sleep apnea therapy. Featuring advanced AutoSet technology, the device automatically adjusts pressure levels throughout the night based on the user's breathing patterns, helping maintain effective airway support while maximizing comfort. The integrated HumidAir™ humidifier and ClimateLineAir™ heated tube work together to reduce dryness and condensation, ensuring a more comfortable therapy experience. Equipped with built-in 4G connectivity, advanced event detection, and easy-to-use touchscreen controls, the AirSense 11 AutoSet offers comprehensive therapy management for patients with Obstructive Sleep Apnea (OSA) seeking reliable long-term treatment.", 
         images: ["/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/1.webp",
           "/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/2.1.webp",
           "/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/3.1.webp",
           "/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/4.webp"
         ], 
-        specifications: [{ label: "Brand", value: "ResMed" }, { label: "Type", value: "Auto CPAP" }] },
+        specifications: [ { label: "Brand", value: "ResMed" }, { label: "Model", value: "AirSense™ 11 AutoSet™" }, { label: "Device Type", value: "Auto CPAP Machine" }, { label: "Therapy Mode", value: "AutoSet (APAP)" }, { label: "Pressure Range", value: "4–20 cmH₂O" }, { label: "Humidifier", value: "Integrated HumidAir™ Heated Humidifier" }, { label: "Tube Type", value: "ClimateLineAir™ Heated Tube Included" }, { label: "Display", value: "Color Touchscreen Display" }, { label: "Connectivity", value: "Built-in 4G Connectivity" },  { label: "Therapy Tracking", value: "myAir™ & AirView™ Compatible" }, { label: "Ramp Feature", value: "AutoRamp™ Technology" }, { label: "Pressure Relief", value: "EPR™ (Expiratory Pressure Relief)" }, { label: "Event Detection", value: "Advanced Sleep Event Monitoring" }, { label: "Noise Level", value: "Ultra-Quiet Operation" }, { label: "Power Supply", value: "100–240V AC" }, { label: "Recommended Use", value: "Obstructive Sleep Apnea Therapy" },  { label: "Weight", value: "Approx. 1.3 kg" }, { label: "Warranty", value: "2 Years Manufacturer Warranty" }] },
 
-{ id: 3, slug: "airsense-10", name: "AirSense™ 10 Elite -Tripack 3G", price: 59000, offer: { type: "flat", value: 5000 }, category: "cpap-machine", description: "Reliable auto CPAP therapy device.",
- images: ["/images/Devices/AirSense™ 10 Elite -Tripack 3G.webp"],
-  specifications: [{ label: "Brand", value: "ResMed" }, { label: "Type", value: "CPAP" }] },
+{
+  id: 3,
+  slug: "airsense-10",
+  name: "AirSense™ 10 Elite - Tripack 3G",
+  price: 59000,
+  offer: { type: "flat", value: 5000 },
+  category: "cpap-machine",
 
+  description:
+    "The ResMed AirSense™ 10 Elite Tripack 3G is a premium fixed-pressure CPAP machine engineered to provide effective and comfortable therapy for patients diagnosed with Obstructive Sleep Apnea (OSA). Utilizing ResMed's advanced sleep therapy technology, the device delivers a consistent prescribed pressure throughout the night to help maintain open airways and reduce apnea events. The integrated HumidAir™ humidifier minimizes dryness and irritation, while AutoRamp™ technology gradually increases pressure only after detecting that the user has fallen asleep, improving comfort and compliance. Equipped with EPR™ (Expiratory Pressure Relief), built-in 3G connectivity, and detailed therapy tracking, the AirSense 10 Elite offers a personalized and reliable sleep therapy experience. Its intuitive color display, whisper-quiet operation, and compact design make it one of the most trusted CPAP solutions for long-term sleep apnea management at home.",
 
-{ id: 68, slug: "philips-dreamstation", name: "Philips Respironics DreamStation Auto CPAP", price: 52499, category: "cpap-machine",
-   description: "Philips Respironics DreamStation Auto CPAP sleep therapy devices are designed to be as comfortable and easy to experience as sleep is intended to be. Connecting patients and care teams, DreamStation devices empower users to embrace their care with confidence and enable care teams to practice efficient and effective patient management.",
- images: ["/images/Devices/Philips Respironics DreamStation Auto CPAP/DREAM-STATION.webp",
-   "/images/Devices/Philips Respironics DreamStation Auto CPAP/DREAM-STATION1.webp"],
-      specifications: [{ label: "Brand", value: "ResMed" }, { label: "Connectivity", value: "4G Enabled" }] },
+  images: [
+    "/images/Devices/AirSense™ 10 Elite -Tripack 3G.webp"
+  ],
 
+  specifications: [
+    { label: "Brand", value: "ResMed" },
+    { label: "Model", value: "AirSense™ 10 Elite" },
+    { label: "Series", value: "Tripack 3G" },
+    { label: "Device Type", value: "Fixed Pressure CPAP Machine" },
+    { label: "Therapy Mode", value: "CPAP" },
+    { label: "Pressure Range", value: "4–20 cmH₂O" },
+    { label: "Humidifier", value: "Integrated HumidAir™ Humidifier" },
+    { label: "Connectivity", value: "Built-in 3G Wireless Connectivity" },
+    { label: "Display", value: "Color LCD Screen" },
+    { label: "Ramp Feature", value: "AutoRamp™ Technology" },
+    { label: "Pressure Relief", value: "EPR™ (Expiratory Pressure Relief)" },
+    { label: "SmartStart", value: "Automatic Therapy Start & Stop" },
+    { label: "Climate Control", value: "Automatic Humidification Management" },
+    { label: "Therapy Monitoring", value: "Advanced Compliance & Usage Reports" },
+    { label: "Event Detection", value: "Apnea, Hypopnea & Flow Limitation Tracking" },
+    { label: "Data Storage", value: "SD Card & Cloud-Based Monitoring" },
+    { label: "Noise Level", value: "Approx. 26.6 dBA" },
+    { label: "Power Supply", value: "100–240V AC, 50/60Hz" },
+    { label: "Dimensions", value: "116 × 255 × 150 mm" },
+    { label: "Weight", value: "Approx. 1.25 kg" },
+    { label: "Recommended Use", value: "Obstructive Sleep Apnea (OSA)" },
+    { label: "Warranty", value: "2 Years Manufacturer Warranty" }
+  ]
+},
 
- { id: 5, slug: "airsense-10-for-her", name: "AirSense™ 10 AutoSet™ for Her CPAP Machine 4G", price: 59000, category: "cpap-machine", description: "Bi-level ventilation support device.", 
-  images: ["/images/Devices/AirSense™ 10 AutoSet™ for Her CPAP Machine 4G/1.webp",
-     "/images/Devices/AirSense™ 10 AutoSet™ for Her CPAP Machine 4G/2.webp",
-      "/images/Devices/AirSense™ 10 AutoSet™ for Her CPAP Machine 4G/3.webp", 
-      "/images/Devices/AirSense™ 10 AutoSet™ for Her CPAP Machine 4G/4.jpg"], 
-      specifications: [{ label: "Brand", value: "ResMed" }, { label: "Type", value: "VPAP" }] },
+{
+  id: 68,
+  slug: "philips-dreamstation",
+  name: "Philips Respironics DreamStation Auto CPAP",
+  price: 52499,
+  category: "cpap-machine",
 
-{ id: 6, slug: "airsense-10-autoset-tripack-4G", name: "AirSense™ 10 Autoset™ Tripack 4G CPAP Device with HumidAir and ClimateLineAir", price: 49000, category: "cpap-machine", description: "Advanced VPAP ST device.",
-   images: ["/images/Devices/AirSense™ 10 Autoset™ Tripack 4G CPAP Device with HumidAir and ClimateLineAir/1.webp",
-   "/images/Devices/AirSense™ 10 Autoset™ Tripack 4G CPAP Device with HumidAir and ClimateLineAir/2.webp",
-    "/images/Devices/AirSense™ 10 Autoset™ Tripack 4G CPAP Device with HumidAir and ClimateLineAir/3.webp", 
-    "/images/Devices/AirSense™ 10 Autoset™ Tripack 4G CPAP Device with HumidAir and ClimateLineAir/4.webp"], 
-    specifications: [{ label: "Brand", value: "ResMed" }, { label: "Type", value: "VPAP ST" }] },
+  description:
+    "The Philips Respironics DreamStation Auto CPAP is an advanced automatic sleep therapy device designed to provide personalized treatment for patients with Obstructive Sleep Apnea (OSA). Featuring intelligent Auto CPAP technology, the device continuously monitors breathing patterns and automatically adjusts pressure levels throughout the night to deliver optimal therapy and enhanced comfort. Its sleek, user-friendly design includes a full-color display, integrated Bluetooth connectivity, advanced data tracking, and optional heated humidification to improve therapy adherence. DreamStation's innovative comfort features, including Flex pressure relief technology, help make breathing more natural and comfortable. Designed for both patients and healthcare providers, the DreamStation Auto CPAP supports effective sleep apnea management while offering detailed therapy insights and long-term reliability.",
+  images: [
+    "/images/Devices/Philips Respironics DreamStation Auto CPAP/DREAM-STATION.webp",
+    "/images/Devices/Philips Respironics DreamStation Auto CPAP/DREAMSTATION1.webp"
+  ],
 
+  specifications: [
+    { label: "Brand", value: "Philips Respironics" },
+    { label: "Model", value: "DreamStation Auto CPAP" },
+    { label: "Device Type", value: "Auto CPAP Machine" },
+    { label: "Therapy Mode", value: "Auto CPAP (APAP)" },
+    { label: "Pressure Range", value: "4–20 cmH₂O" },
+    { label: "Pressure Relief", value: "A-Flex & C-Flex Technology" },
+    { label: "Humidifier", value: "Optional Integrated Heated Humidifier" },
+    { label: "Connectivity", value: "Bluetooth & Wireless Connectivity" },
+    { label: "Display", value: "Color LCD Display" },
+    { label: "Data Tracking", value: "Advanced Therapy Monitoring" },
+    { label: "Smart Features", value: "Automatic Pressure Adjustment" },
+    { label: "Ramp Feature", value: "Ramp Plus Technology" },
+    { label: "Event Detection", value: "Apnea, Hypopnea & Flow Limitation Tracking" },
+    { label: "Data Storage", value: "SD Card Support" },
+    { label: "Noise Level", value: "Approx. 25.8 dBA" },
+    { label: "Power Supply", value: "100–240V AC, 50/60Hz" },
+    { label: "Weight", value: "Approx. 1.33 kg" },
+    { label: "Recommended Use", value: "Obstructive Sleep Apnea (OSA)" },
+    { label: "Warranty", value: "2 Years Manufacturer Warranty" }
+  ]
+},
 
-{ id: 7,slug: "aircurve-10-vauto-4g-tripack", name: "AirCurve™ 10 VAuto 4G Tripack With Humidifier and ClimateLineAir™ Tube", price: 67000, category: "cpap-machine", description: "Next-generation CPAP device.",
- images: ["/images/Devices/AirCurve™ 10 VAuto 4G Tripack With Humidifier and ClimateLineAir™ Tube/1.webp",
-   "/images/Devices/AirCurve™ 10 VAuto 4G Tripack With Humidifier and ClimateLineAir™ Tube/2.webp",
+ {
+  id: 5,
+  slug: "airsense-10-for-her",
+  name: "AirSense™ 10 AutoSet™ for Her CPAP Machine 4G",
+  price: 59000,
+  category: "cpap-machine",
+
+  description:
+    "The ResMed AirSense™ 10 AutoSet™ for Her is a premium auto-adjusting CPAP device specifically designed with an algorithm tailored to female sleep apnea patients. Built on ResMed's proven AutoSet technology, it automatically adapts pressure levels throughout the night in response to breathing events while providing enhanced sensitivity to flow limitation patterns commonly seen in women. The device features an integrated HumidAir™ heated humidifier, AutoRamp™ technology, EPR™ pressure relief, and built-in 4G connectivity for seamless therapy monitoring. Its quiet operation, intuitive interface, and advanced sleep tracking capabilities make it an excellent choice for women seeking personalized and effective sleep apnea treatment.",
+
+  images: [
+    "/images/Devices/AirSense™ 10 AutoSet™ for Her CPAP Machine 4G/1.webp",
+    "/images/Devices/AirSense™ 10 AutoSet™ for Her CPAP Machine 4G/2.webp",
+    "/images/Devices/AirSense™ 10 AutoSet™ for Her CPAP Machine 4G/3.webp",
+    "/images/Devices/AirSense™ 10 AutoSet™ for Her CPAP Machine 4G/4.jpg"
+  ],
+
+  specifications: [
+    { label: "Brand", value: "ResMed" },
+    { label: "Model", value: "AirSense™ 10 AutoSet™ for Her" },
+    { label: "Device Type", value: "Auto CPAP Machine" },
+    { label: "Therapy Mode", value: "AutoSet™ & AutoSet™ for Her" },
+    { label: "Pressure Range", value: "4–20 cmH₂O" },
+    { label: "Humidifier", value: "Integrated HumidAir™ Heated Humidifier" },
+    { label: "Connectivity", value: "Built-in 4G Connectivity" },
+    { label: "Display", value: "Color LCD Screen" },
+    { label: "Ramp Feature", value: "AutoRamp™ Technology" },
+    { label: "Pressure Relief", value: "EPR™ (Expiratory Pressure Relief)" },
+    { label: "Special Algorithm", value: "Women's Sleep Therapy Algorithm" },
+    { label: "Climate Control", value: "Compatible with ClimateLineAir™ Tubing" },
+    { label: "Data Tracking", value: "Advanced Therapy & Compliance Monitoring" },
+    { label: "Noise Level", value: "Approx. 26.6 dBA" },
+    { label: "Weight", value: "Approx. 1.25 kg" },
+    { label: "Recommended Use", value: "Obstructive Sleep Apnea (OSA)" },
+    { label: "Warranty", value: "2 Years Manufacturer Warranty" }
+  ]
+},
+
+{
+  id: 6,
+  slug: "airsense-10-autoset-tripack-4G",
+  name: "AirSense™ 10 AutoSet™ Tripack 4G CPAP Device with HumidAir and ClimateLineAir",
+  price: 49000,
+  category: "cpap-machine",
+
+  description:
+    "The ResMed AirSense™ 10 AutoSet™ Tripack 4G is an intelligent auto-adjusting CPAP device designed to provide personalized sleep apnea therapy with maximum comfort. Using advanced AutoSet™ technology, the machine continuously monitors breathing patterns and automatically adjusts pressure levels to maintain optimal airway support throughout the night. The integrated HumidAir™ heated humidifier and ClimateLineAir™ heated tubing work together to provide consistent humidity and temperature control, helping reduce dryness and rainout. Built-in 4G connectivity enables remote therapy monitoring, while AutoRamp™ and EPR™ technologies enhance comfort and improve therapy compliance.",
+
+  images: [
+    "/images/Devices/AirSense™ 10 AutoSet™ Tripack 4G CPAP Device with HumidAir and ClimateLineAir/1.webp",
+    "/images/Devices/AirSense™ 10 AutoSet™ Tripack 4G CPAP Device with HumidAir and ClimateLineAir/2.webp",
+    "/images/Devices/AirSense™ 10 AutoSet™ Tripack 4G CPAP Device with HumidAir and ClimateLineAir/3.webp",
+    "/images/Devices/AirSense™ 10 AutoSet™ Tripack 4G CPAP Device with HumidAir and ClimateLineAir/4.webp"
+  ],
+
+  specifications: [
+    { label: "Brand", value: "ResMed" },
+    { label: "Model", value: "AirSense™ 10 AutoSet™ Tripack 4G" },
+    { label: "Device Type", value: "Auto CPAP Machine" },
+    { label: "Therapy Mode", value: "AutoSet™ & CPAP" },
+    { label: "Pressure Range", value: "4–20 cmH₂O" },
+    { label: "Humidifier", value: "Integrated HumidAir™ Heated Humidifier" },
+    { label: "Tubing", value: "ClimateLineAir™ Heated Tube Included" },
+    { label: "Connectivity", value: "Built-in 4G Connectivity" },
+    { label: "Display", value: "Color LCD Screen" },
+    { label: "Ramp Feature", value: "AutoRamp™ Technology" },
+    { label: "Pressure Relief", value: "EPR™ (Expiratory Pressure Relief)" },
+    { label: "Climate Control", value: "Automatic Temperature & Humidity Control" },
+    { label: "Data Tracking", value: "Advanced Therapy Monitoring" },
+    { label: "Event Detection", value: "Apnea, Hypopnea & Flow Limitation Tracking" },
+    { label: "Noise Level", value: "Approx. 26.6 dBA" },
+    { label: "Weight", value: "Approx. 1.25 kg" },
+    { label: "Recommended Use", value: "Obstructive Sleep Apnea (OSA)" },
+    { label: "Warranty", value: "2 Years Manufacturer Warranty" }
+  ]
+},
+
+{
+  id: 7,
+  slug: "aircurve-10-vauto-4g-tripack",
+  name: "AirCurve™ 10 VAuto 4G Tripack With Humidifier and ClimateLineAir™ Tube",
+  price: 67000,
+  category: "cpap-machine",
+
+  description:
+    "The ResMed AirCurve™ 10 VAuto 4G Tripack is an advanced Auto BiPAP (Auto Bilevel) device designed for patients who require higher pressure support than traditional CPAP therapy. Featuring ResMed's intelligent VAuto algorithm, the device automatically adjusts inspiratory and expiratory pressures to maintain optimal airway patency while maximizing comfort. The integrated HumidAir™ heated humidifier and ClimateLineAir™ heated tubing work together to deliver consistent humidity and temperature control, reducing dryness and improving therapy compliance. With built-in 4G connectivity, Easy-Breathe technology, and advanced event detection, the AirCurve 10 VAuto provides personalized, effective, and comfortable sleep apnea therapy for patients with complex respiratory needs.",
+
+  images: [
+    "/images/Devices/AirCurve™ 10 VAuto 4G Tripack With Humidifier and ClimateLineAir™ Tube/1.webp",
+    "/images/Devices/AirCurve™ 10 VAuto 4G Tripack With Humidifier and ClimateLineAir™ Tube/2.webp",
     "/images/Devices/AirCurve™ 10 VAuto 4G Tripack With Humidifier and ClimateLineAir™ Tube/3.webp",
-     "/images/Devices/AirCurve™ 10 VAuto 4G Tripack With Humidifier and ClimateLineAir™ Tube/4.webp"],
-      specifications: [{ label: "Brand", value: "ResMed" }, { label: "Connectivity", value: "4G Enabled" }] },
+    "/images/Devices/AirCurve™ 10 VAuto 4G Tripack With Humidifier and ClimateLineAir™ Tube/4.webp"
+  ],
 
-{ id: 8, slug: "airsense-11-autoset-single-pack", name: "AirSense™ 11 AutoSet™ (Single Pack)", price: 79700, category: "cpap-machine", description: "Latest AirSense 11 CPAP.", 
-  images: ["/images/Devices/AirSense™ 11 AutoSet™ (Single Pack)/1.webp", 
-    "/images/Product6.jpg", 
+  specifications: [
+    { label: "Brand", value: "ResMed" },
+    { label: "Model", value: "AirCurve™ 10 VAuto" },
+    { label: "Device Type", value: "Auto BiPAP / Auto Bilevel Device" },
+    { label: "Therapy Modes", value: "VAuto, S Mode, CPAP" },
+    { label: "Pressure Range", value: "4–25 cmH₂O" },
+    { label: "Pressure Support", value: "0–10 cmH₂O" },
+    { label: "Humidifier", value: "Integrated HumidAir™ Heated Humidifier" },
+    { label: "Tubing", value: "ClimateLineAir™ Heated Tube Included" },
+    { label: "Connectivity", value: "Built-in 4G Connectivity" },
+    { label: "Display", value: "Color LCD Screen" },
+    { label: "Comfort Technology", value: "Easy-Breathe Waveform" },
+    { label: "Ramp Feature", value: "AutoRamp™ Technology" },
+    { label: "Pressure Relief", value: "Easy Exhalation Support" },
+    { label: "Data Tracking", value: "Advanced Therapy Monitoring" },
+    { label: "Noise Level", value: "Approx. 26.6 dBA" },
+    { label: "Weight", value: "Approx. 1.25 kg" },
+    { label: "Recommended Use", value: "OSA, High Pressure Therapy & PAP Intolerance" },
+    { label: "Warranty", value: "2 Years Manufacturer Warranty" }
+  ]
+},
+{
+  id: 8,
+  slug: "airsense-11-autoset-single-pack",
+  name: "AirSense™ 11 AutoSet™ (Single Pack)",
+  price: 79700,
+  category: "cpap-machine",
+
+  description:
+    "The ResMed AirSense™ 11 AutoSet™ is the latest generation auto-adjusting CPAP device designed to deliver intelligent, personalized sleep apnea therapy. Powered by ResMed's advanced AutoSet™ algorithm, the device automatically adapts pressure levels based on breathing patterns throughout the night. Featuring an intuitive touchscreen interface, integrated digital health support, enhanced event detection, and advanced therapy tracking, AirSense 11 helps users achieve better therapy compliance and improved sleep quality. Its sleek modern design, built-in heated humidification compatibility, and smart connectivity features make it one of the most advanced CPAP devices available for home sleep apnea treatment.",
+
+  images: [
+    "/images/Devices/AirSense™ 11 AutoSet™ (Single Pack)/1.webp",
+    "/images/Product6.jpg",
     "/images/Devices/AirSense™ 11 AutoSet™ (Single Pack)/3.webp",
-     "/images/Devices/AirSense™ 11 AutoSet™ (Single Pack)/5.webp"],
-   specifications: [{ label: "Brand", value: "ResMed" }, { label: "Model", value: "AirSense 11" }] },
+    "/images/Devices/AirSense™ 11 AutoSet™ (Single Pack)/5.webp"
+  ],
 
-{ id: 9, slug: "airmini-autoset-cpap-device", name: "AirMini™ AutoSet CPAP Device", price: 45500, category: "cpap-machine", description: "Portable CPAP device.",
- images: ["/images/Product4.webp", "/images/Devices/AirMini™ AutoSet CPAP Device/2.webp",
-   "/images/Devices/AirMini™ AutoSet CPAP Device/5.webp", 
-   "/images/Devices/AirMini™ AutoSet CPAP Device/8.webp"], 
-   specifications: [{ label: "Brand", value: "ResMed" }, { label: "Type", value: "Auto CPAP" }, { label: "Category", value: "CPAP Machine" }] },
+  specifications: [
+    { label: "Brand", value: "ResMed" },
+    { label: "Model", value: "AirSense™ 11 AutoSet™" },
+    { label: "Device Type", value: "Auto CPAP Machine" },
+    { label: "Therapy Modes", value: "AutoSet™ & CPAP" },
+    { label: "Pressure Range", value: "4–20 cmH₂O" },
+    { label: "Display", value: "Full-Color Touchscreen Display" },
+    { label: "Humidifier", value: "Integrated Heated Humidification" },
+    { label: "Connectivity", value: "Built-in Wireless Connectivity" },
+    { label: "Smart Features", value: "Personal Therapy Assistant & Care Check-In" },
+    { label: "Ramp Feature", value: "AutoRamp™ Technology" },
+    { label: "Pressure Relief", value: "EPR™ Technology" },
+    { label: "Climate Control", value: "Climate Control Compatibility" },
+    { label: "Data Tracking", value: "Advanced Therapy Reports & Monitoring" },
+    { label: "Event Detection", value: "Apnea, Hypopnea & Flow Limitation Tracking" },
+    { label: "Noise Level", value: "Approx. 27 dBA" },
+    { label: "Weight", value: "Approx. 1.13 kg" },
+    { label: "Recommended Use", value: "Obstructive Sleep Apnea (OSA)" },
+    { label: "Warranty", value: "2 Years Manufacturer Warranty" }
+  ]
+},
 
-{ id: 40, slug: "airstart-10-with-humidification-and-tube", name: "AirStart™ 10 APAP with humidification and tube", price: 24990, category: "cpap-machine", description: "Next-generation CPAP device.",
- images: ["/images/Devices/AirStart™ 10 APAP with humidification and tube/1.webp",
-   "/images/Devices/AirStart™ 10 APAP with humidification and tube/2.webp",
+{
+  id: 9,
+  slug: "airmini-autoset-cpap-device",
+  name: "AirMini™ AutoSet CPAP Device",
+  price: 45500,
+  category: "cpap-machine",
+
+  description:
+    "The ResMed AirMini™ AutoSet is one of the world's smallest and most advanced portable CPAP devices, designed for sleep apnea patients who need effective therapy while traveling. Despite its compact size, AirMini delivers the same trusted AutoSet™ therapy algorithm found in ResMed's premium home devices. Featuring Bluetooth connectivity, smartphone app integration, AutoRamp™ technology, and waterless humidification with HumidX™, the AirMini provides convenient and comfortable therapy wherever life takes you. Lightweight and travel-friendly, it is ideal for frequent travelers, business professionals, and users seeking a compact sleep therapy solution without compromising performance.",
+
+  images: [
+    "/images/Product4.webp",
+    "/images/Devices/AirMini™ AutoSet CPAP Device/2.webp",
+    "/images/Devices/AirMini™ AutoSet CPAP Device/5.webp",
+    "/images/Devices/AirMini™ AutoSet CPAP Device/8.webp"
+  ],
+
+  specifications: [
+    { label: "Brand", value: "ResMed" },
+    { label: "Model", value: "AirMini™ AutoSet" },
+    { label: "Device Type", value: "Portable Auto CPAP Machine" },
+    { label: "Therapy Modes", value: "AutoSet™ & CPAP" },
+    { label: "Pressure Range", value: "4–20 cmH₂O" },
+    { label: "Humidification", value: "HumidX™ Waterless Humidification" },
+    { label: "Connectivity", value: "Bluetooth Enabled" },
+    { label: "Mobile App", value: "AirMini™ App Compatible" },
+    { label: "Ramp Feature", value: "AutoRamp™ Technology" },
+    { label: "Pressure Relief", value: "EPR™ Technology" },
+    { label: "Noise Level", value: "Quiet Operation" },
+    { label: "Power Supply", value: "Universal AC Power" },
+    { label: "Weight", value: "Approx. 300 g" },
+    { label: "Travel Friendly", value: "Yes" },
+    { label: "FAA Approved", value: "Yes" },
+    { label: "Recommended Use", value: "Obstructive Sleep Apnea (OSA)" },
+    { label: "Warranty", value: "2 Years Manufacturer Warranty" }
+  ]
+},
+{
+  id: 40,
+  slug: "airstart-10-with-humidification-and-tube",
+  name: "AirStart™ 10 APAP with Humidification and Tube",
+  price: 24990,
+  category: "cpap-machine",
+
+  description:
+    "The ResMed AirStart™ 10 APAP is an affordable and reliable automatic CPAP device designed to provide effective sleep apnea therapy with minimal complexity. Featuring automatic pressure adjustment, integrated humidification, and user-friendly controls, the device helps maintain airway patency while enhancing patient comfort throughout the night. Its compact design, quiet operation, and straightforward interface make it an excellent choice for first-time CPAP users and those seeking dependable therapy at an economical price.",
+
+  images: [
+    "/images/Devices/AirStart™ 10 APAP with humidification and tube/1.webp",
+    "/images/Devices/AirStart™ 10 APAP with humidification and tube/2.webp",
     "/images/Devices/AirStart™ 10 APAP with humidification and tube/3.webp",
-     "/images/Devices/AirStart™ 10 APAP with humidification and tube/4.webp"],
-      specifications: [{ label: "Brand", value: "ResMed" }, { label: "Connectivity", value: "4G Enabled" }] },
+    "/images/Devices/AirStart™ 10 APAP with humidification and tube/4.webp"
+  ],
 
-{ id: 66, slug: "oxymed-sleepeasy", name: "OxyMed SleepEasy Auto CPAP", price: 29000, category: "cpap-machine", description: "Next-generation CPAP device.",
- images: ["/images/Devices/OxyMed SleepEasy Auto CPAP/1.webp",
-   "/images/Devices/OxyMed SleepEasy Auto CPAP/2.webp",
+  specifications: [
+    { label: "Brand", value: "ResMed" },
+    { label: "Model", value: "AirStart™ 10 APAP" },
+    { label: "Device Type", value: "Auto CPAP Machine" },
+    { label: "Therapy Mode", value: "APAP" },
+    { label: "Pressure Range", value: "4–20 cmH₂O" },
+    { label: "Humidifier", value: "Integrated Heated Humidifier" },
+    { label: "Tubing", value: "Standard Air Tube Included" },
+    { label: "Display", value: "LCD Display" },
+    { label: "Ramp Feature", value: "Ramp Function" },
+    { label: "Pressure Relief", value: "Comfort Exhalation Relief" },
+    { label: "Data Recording", value: "Therapy Compliance Tracking" },
+    { label: "Noise Level", value: "Quiet Operation" },
+    { label: "Weight", value: "Approx. 1.2 kg" },
+    { label: "Recommended Use", value: "Obstructive Sleep Apnea (OSA)" },
+    { label: "Warranty", value: "2 Years Manufacturer Warranty" }
+  ]
+},
+{
+  id: 66,
+  slug: "oxymed-sleepeasy",
+  name: "OxyMed SleepEasy Auto CPAP",
+  price: 29000,
+  category: "cpap-machine",
+
+  description:
+    "The OxyMed SleepEasy Auto CPAP is a smart and affordable sleep therapy device designed to provide effective treatment for Obstructive Sleep Apnea (OSA). Equipped with automatic pressure adjustment technology, the machine continuously adapts to the user's breathing patterns, ensuring optimal therapy throughout the night. Its integrated humidification system, intuitive interface, and quiet operation enhance comfort and compliance, while advanced therapy monitoring helps users track treatment progress. Compact, reliable, and easy to use, the SleepEasy Auto CPAP is ideal for home sleep therapy.",
+
+  images: [
+    "/images/Devices/OxyMed SleepEasy Auto CPAP/1.webp",
+    "/images/Devices/OxyMed SleepEasy Auto CPAP/2.webp",
     "/images/Devices/OxyMed SleepEasy Auto CPAP/3.webp",
-     "/images/Devices/OxyMed SleepEasy Auto CPAP/4.webp"],
-      specifications: [{ label: "Brand", value: "ResMed" }, { label: "Connectivity", value: "4G Enabled" }] },
+    "/images/Devices/OxyMed SleepEasy Auto CPAP/4.webp"
+  ],
 
+  specifications: [
+    { label: "Brand", value: "OxyMed" },
+    { label: "Model", value: "SleepEasy Auto CPAP" },
+    { label: "Device Type", value: "Auto CPAP Machine" },
+    { label: "Therapy Mode", value: "APAP" },
+    { label: "Pressure Range", value: "4–20 cmH₂O" },
+    { label: "Humidifier", value: "Integrated Heated Humidifier" },
+    { label: "Display", value: "Color LCD Screen" },
+    { label: "Ramp Feature", value: "Auto Ramp Function" },
+    { label: "Pressure Relief", value: "Expiratory Pressure Relief" },
+    { label: "Data Recording", value: "Therapy Usage & Compliance Reports" },
+    { label: "Connectivity", value: "SD Card Support" },
+    { label: "Noise Level", value: "< 30 dBA" },
+    { label: "Weight", value: "Approx. 1.4 kg" },
+    { label: "Recommended Use", value: "Obstructive Sleep Apnea (OSA)" },
+    { label: "Warranty", value: "2 Years Manufacturer Warranty" }
+  ]
+},
 
 // -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 //Bipap
 { 
   id: 41, slug: "lumis-100-vpap-st", name: "Lumis™ 100 VPAP ST Non- Invasive Ventilator", price: 49000, category: "bipap-machine",
-  description: "Advanced bilevel device designed for non-invasive ventilation support.",
-  images: [
-    "/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/1.webp",
-    "/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/2.webp",
-    "/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/3.webp",
-    "/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/4.webp"
+  description: "The Lumis™ 100 VPAP ST is a sophisticated non-invasive ventilator developed to provide reliable respiratory support for patients with chronic respiratory insufficiency and sleep-disordered breathing. Equipped with intelligent Spontaneous/Timed (ST) ventilation, the device automatically assists breathing while maintaining a backup respiratory rate when necessary. Its advanced synchronization technology helps deliver comfortable therapy by adapting to the patient's natural breathing pattern. Designed for both home and clinical environments, the Lumis 100 VPAP ST offers quiet performance, detailed therapy monitoring, and enhanced comfort features that promote long-term treatment adherence. It is commonly used for managing Obstructive Sleep Apnea (OSA), Central Sleep Apnea (CSA), COPD, neuromuscular disorders, and other respiratory conditions requiring ventilatory assistance.",
+ images: [ "/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/1.webp", "/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/2.webp", "/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/3.webp",  "/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/4.webp"
   ],
-  specifications: [
-    { label: "Brand", value: "ResMed" }, { label: "Connectivity", value: "4G Enabled" }]},
-
+   specifications: [
+    { label: "Brand", value: "ResMed" }, { label: "Model", value: "Lumis 100 VPAP ST" },{ label: "Device Type", value: "Non-Invasive Ventilator (BiLevel)" },  { label: "Ventilation Mode", value: "Spontaneous / Timed (ST)" },   { label: "Pressure Support", value: "Customizable IPAP & EPAP" }, { label: "Pressure Range", value: "Up to 25 cmH₂O" }, { label: "Backup Breath Rate", value: "Adjustable" }, { label: "Trigger & Cycle Sensitivity", value: "Automatic Adjustment" },  { label: "Humidification", value: "Compatible with HumidAir™ Humidifier" }, { label: "Ramp Feature", value: "AutoRamp Technology" },  { label: "Display", value: "Color LCD Interface" },  { label: "Therapy Tracking", value: "Detailed Compliance & Usage Reports" }, { label: "Connectivity", value: "4G Enabled" }, { label: "Data Storage", value: "SD Card & Wireless Monitoring" }, { label: "Noise Output", value: "Ultra-Quiet Operation" },{ label: "Recommended Use", value: "Home & Clinical Respiratory Care" },{ label: "Weight", value: "Approx. 1.3 kg" },{ label: "Warranty", value: "2 Years Manufacturer Warranty" }
+  ]
+},
 { 
   id: 67, slug: "oxymed-airsmart",
-  name: "Oxymed AirSmart BPAP ST", price: 45000, category: "bipap-machine", description: "Auto-adjusting bilevel therapy device for personalized sleep apnea treatment.",
-  images: [
-    "/images/Devices/Oxymed AirSmart BPAP ST/1.jpg",
-     "/images/Devices/Oxymed AirSmart BPAP ST/4.jpg",
-    "/images/Devices/Oxymed AirSmart BPAP ST/3.jpg",
-    "/images/Devices/Oxymed AirSmart BPAP ST/2.jpg"
+  name: "Oxymed AirSmart BPAP ST", price: 45000, category: "bipap-machine",
+  description: "The Oxymed AirSmart BPAP ST is an advanced BiPAP device designed for patients requiring non-invasive ventilation support and effective sleep apnea therapy. Featuring Spontaneous/Timed (ST) mode, the device automatically switches between inspiratory and expiratory pressure levels while providing backup respiratory support when needed. Its intelligent pressure delivery system enhances patient comfort, improves therapy compliance, and ensures reliable breathing assistance throughout the night. The AirSmart BPAP ST includes a user-friendly color display, advanced event detection, leak compensation technology, and quiet operation, making it suitable for both home and clinical use. With multiple therapy modes and comprehensive monitoring capabilities, it provides personalized respiratory support for patients with Obstructive Sleep Apnea (OSA), Central Sleep Apnea (CSA), COPD, and other respiratory conditions.",
+ images: [ "/images/Devices/Oxymed AirSmart BPAP ST/1.jpg", "/images/Devices/Oxymed AirSmart BPAP ST/4.jpg", "/images/Devices/Oxymed AirSmart BPAP ST/3.jpg", "/images/Devices/Oxymed AirSmart BPAP ST/2.jpg"
   ],
-  specifications: [
-    { label: "Brand", value: "ResMed" }, { label: "Connectivity", value: "Wireless Enabled" }
+   specifications: [
+    { label: "Brand", value: "Oxymed" },{ label: "Model", value: "AirSmart BPAP ST" }, { label: "Device Type", value: "BiPAP ST (Spontaneous/Timed)" },{ label: "Therapy Modes", value: "CPAP, S, ST, T" },
+    { label: "Pressure Range", value: "4 – 30 cmH₂O" },{ label: "Backup Rate", value: "Adjustable" },{ label: "Ramp Function", value: "Yes" }, { label: "Humidifier Compatibility", value: "Integrated Heated Humidifier" },{ label: "Display", value: "Color LCD Screen" },{ label: "Leak Compensation", value: "Advanced Automatic Compensation" },{ label: "Data Recording", value: "Therapy Data Storage" },{ label: "Noise Level", value: "< 30 dB" },{ label: "Power Supply", value: "100–240V AC, 50/60Hz" },{ label: "Connectivity", value: "SD Card Data Transfer" },{ label: "Usage", value: "Home & Clinical Use" },{ label: "Weight", value: "Approx. 1.8 kg" },{ label: "Warranty", value: "2 Years Manufacturer Warranty" }
   ]
 },
 
 { 
   id: 42, slug: "resmed-lumis-150",
-  name: "Resmed Lumis™ 150 VPAP ST", price: 68000, category: "bipap-machine", description: "Auto-adjusting bilevel therapy device for personalized sleep apnea treatment.",
-  images: [
-    "/images/Devices/Resmed Lumis™ 150 VPAP ST/1.webp",
-    "/images/Devices/Resmed Lumis™ 150 VPAP ST/2.webp",
-    "/images/Devices/Resmed Lumis™ 150 VPAP ST/3.webp",
-    "/images/Devices/Resmed Lumis™ 150 VPAP ST/4.webp"
+  name: "Resmed Lumis™ 150 VPAP ST", price: 68000, category: "bipap-machine",   description:
+    "The ResMed Lumis™ 150 VPAP ST is a premium non-invasive ventilation device engineered to deliver advanced respiratory support for patients with complex breathing disorders. Featuring Spontaneous/Timed (ST) mode, the device intelligently synchronizes with the patient's natural breathing pattern while providing a backup respiratory rate when required. Its innovative pressure support technology helps maintain effective ventilation, improve comfort, and enhance therapy compliance. The Lumis 150 VPAP ST incorporates advanced monitoring capabilities, integrated humidification compatibility, and wireless connectivity for seamless therapy management. Suitable for both home and professional healthcare settings, it is widely used for Obstructive Sleep Apnea (OSA), Central Sleep Apnea (CSA), COPD, neuromuscular disorders, and chronic respiratory insufficiency.",
+  images: [ "/images/Devices/Resmed Lumis™ 150 VPAP ST/1.webp","/images/Devices/Resmed Lumis™ 150 VPAP ST/2.webp","/images/Devices/Resmed Lumis™ 150 VPAP ST/3.webp","/images/Devices/Resmed Lumis™ 150 VPAP ST/4.webp"
   ],
   specifications: [
-    { label: "Brand", value: "ResMed" }, { label: "Connectivity", value: "Wireless Enabled" }
+ { label: "Brand", value: "ResMed" }, { label: "Model", value: "Lumis™ 150 VPAP ST" }, { label: "Device Type", value: "Advanced Non-Invasive Ventilator" },  { label: "Therapy Mode", value: "Spontaneous / Timed (ST)" },  { label: "Pressure Range", value: "4–25 cmH₂O" }, { label: "Pressure Support", value: "Customizable IPAP & EPAP Settings" }, { label: "Backup Respiratory Rate", value: "Adjustable" },{ label: "iVAPS Support", value: "Available" },  { label: "Trigger & Cycle Sensitivity", value: "Automatic Adjustment" }, { label: "Humidification", value: "Compatible with HumidAir™ Heated Humidifier" }, { label: "Ramp Technology", value: "AutoRamp™" }, { label: "Display", value: "High-Resolution Color LCD Screen" }, { label: "Data Monitoring", value: "Advanced Therapy & Compliance Reporting" }, { label: "Connectivity", value: "Wireless Enabled" }, { label: "Data Transfer", value: "SD Card & Cloud-Based Monitoring" }, { label: "Noise Level", value: "Ultra-Quiet Operation (<30 dB)" }, { label: "Power Supply", value: "100–240V AC, 50/60Hz" }, { label: "Recommended Use", value: "Home & Clinical Respiratory Care" }, { label: "Weight", value: "Approx. 1.3 kg" }, { label: "Warranty", value: "2 Years Manufacturer Warranty" }
   ]
 },
 
@@ -229,14 +995,12 @@ description: "The Philips DreamWisp Nasal Mask combines the comfort of a traditi
   name: "Philips Dreamstation Auto BiPAP",
   price: 69500,
   category: "bipap-machine",
-  description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support.",
+   description: "The Philips DreamStation Auto BiPAP is an advanced bilevel therapy system designed to provide personalized respiratory support for patients suffering from sleep-disordered breathing and chronic respiratory conditions. Featuring intelligent Auto BiPAP technology, the device automatically adjusts inspiratory and expiratory pressure levels according to the patient's breathing needs throughout the night. Its sophisticated event detection algorithms help maintain effective therapy while maximizing comfort. The DreamStation platform offers a user-friendly interface, quiet performance, integrated humidification compatibility, and comprehensive therapy monitoring. Ideal for patients requiring higher pressure support than traditional CPAP therapy, it helps improve sleep quality and long-term treatment adherence.",
   images: [
-    "/images/Devices/Bipap Machiene/Philips Dreamstation Auto BiPAP1.webp",
-     "/images/Devices/Bipap Machiene/Philips Dreamstation Auto BiPAP2.webp",
+    "/images/Devices/Bipap Machiene/Philips Dreamstation Auto BiPAP1.webp","/images/Devices/Bipap Machiene/Philips Dreamstation Auto BiPAP2.webp",
   ],
-  specifications: [
-    { label: "Brand", value: "ResMed" },
-    { label: "Connectivity", value: "Cloud Connected" }
+   specifications: [
+    { label: "Brand", value: "Philips Respironics" }, { label: "Model", value: "DreamStation Auto BiPAP" }, { label: "Device Type", value: "Automatic BiLevel Therapy Device" }, { label: "Therapy Modes", value: "CPAP, BiPAP Auto" }, { label: "Pressure Range", value: "4–25 cmH₂O" },  { label: "Pressure Relief", value: "Bi-Flex Comfort Technology" },  { label: "Ramp Feature", value: "SmartRamp Technology" },  { label: "Humidifier", value: "Integrated Heated Humidifier Compatible" },  { label: "Display", value: "Color LCD Display" }, { label: "Data Monitoring", value: "Advanced Therapy Reporting" }, { label: "Connectivity", value: "Cloud Connected" }, { label: "Data Transfer", value: "Bluetooth & SD Card" }, { label: "Noise Level", value: "Quiet Operation" }, { label: "Power Supply", value: "100–240V AC" }, { label: "Recommended Use", value: "Sleep Apnea & Respiratory Therapy" }, { label: "Weight", value: "Approx. 1.4 kg" }, { label: "Warranty", value: "2 Years Manufacturer Warranty" }
   ]
 },
 
@@ -246,14 +1010,13 @@ description: "The Philips DreamWisp Nasal Mask combines the comfort of a traditi
   name: "Philips DreamStation AVAPS 30 AAM-AE",
   price: 83999,
   category: "bipap-machine",
-  description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support.",
-  images: [
-    "/images/Devices/Bipap Machiene/Philips DreamStation AVAPS 30 AAM-AE1.webp",
-     "/images/Devices/Bipap Machiene/Philips DreamStation AVAPS 30 AAM-AE2.webp",
+ description:
+    "The Philips DreamStation AVAPS 30 AAM-AE is a high-performance non-invasive ventilator engineered for patients requiring advanced respiratory assistance. Equipped with Average Volume Assured Pressure Support (AVAPS) technology, the device automatically adapts pressure support to maintain a targeted tidal volume, ensuring consistent ventilation despite changes in breathing patterns. Its intelligent ventilation algorithms provide enhanced comfort, precise therapy delivery, and improved patient synchronization. Designed for both home and clinical settings, the DreamStation AVAPS supports patients with COPD, neuromuscular disorders, obesity hypoventilation syndrome, and complex sleep apnea conditions requiring long-term ventilatory support.",
+ images: [
+    "/images/Devices/Bipap Machiene/Philips DreamStation AVAPS 30 AAM-AE1.webp", "/images/Devices/Bipap Machiene/Philips DreamStation AVAPS 30 AAM-AE2.webp",
   ],
-  specifications: [
-    { label: "Brand", value: "ResMed" },
-    { label: "Connectivity", value: "Cloud Connected" }
+   specifications: [
+    { label: "Brand", value: "Philips Respironics" },  { label: "Model", value: "DreamStation AVAPS 30 AAM-AE" },{ label: "Device Type", value: "Advanced Non-Invasive Ventilator" }, { label: "Ventilation Technology", value: "AVAPS (Average Volume Assured Pressure Support)" }, { label: "Therapy Modes", value: "CPAP, S, ST, PC, AVAPS" }, { label: "Pressure Range", value: "4–30 cmH₂O" }, { label: "Target Tidal Volume", value: "Adjustable" }, { label: "Backup Breath Rate", value: "Programmable" }, { label: "Patient Synchronization", value: "Advanced Auto-Trak Technology" }, { label: "Humidifier", value: "Integrated Heated Humidifier Compatible" }, { label: "Display", value: "Color LCD Interface" }, { label: "Data Recording", value: "Detailed Therapy & Ventilation Reports" }, { label: "Connectivity", value: "Cloud Connected" }, { label: "Data Transfer", value: "Bluetooth, SD Card & Wireless Monitoring" }, { label: "Noise Level", value: "Low Noise Operation" }, { label: "Recommended Use", value: "COPD, Neuromuscular Disorders & Complex Sleep Apnea" }, { label: "Weight", value: "Approx. 1.4 kg" },{ label: "Warranty", value: "2 Years Manufacturer Warranty" }
   ]
 },
 
@@ -263,15 +1026,11 @@ description: "The Philips DreamWisp Nasal Mask combines the comfort of a traditi
   name: "Philips DreamStation BiPAP AVAPS 25",
   price: 68000,
   category: "bipap-machine",
-  description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support.",
-  images: [
-    "/images/Devices/Bipap Machiene/Philips DreamStation BiPAP AVAPS 1.webp",
-     "/images/Devices/Bipap Machiene/Philips DreamStation BiPAP AVAPS 2.webp",
-     "/images/Devices/Bipap Machiene/Philips DreamStation BiPAP AVAPS 3.webp",
+  description: "The Philips DreamStation BiPAP AVAPS 25 is a sophisticated non-invasive ventilation device designed to deliver consistent and personalized respiratory support for patients with chronic respiratory insufficiency and complex sleep-disordered breathing. Utilizing Average Volume Assured Pressure Support (AVAPS) technology, the device automatically adjusts pressure levels to maintain a targeted tidal volume while enhancing patient comfort. Its advanced Auto-Trak algorithm continuously adapts to the patient's breathing pattern, ensuring optimal synchronization and effective ventilation. The DreamStation BiPAP AVAPS 25 is suitable for home and clinical use, providing reliable therapy for patients with COPD, neuromuscular disorders, obesity hypoventilation syndrome, and sleep apnea requiring advanced ventilatory assistance.",
+ images: [ "/images/Devices/Bipap Machiene/Philips DreamStation BiPAP AVAPS 1.webp", "/images/Devices/Bipap Machiene/Philips DreamStation BiPAP AVAPS 2.webp","/images/Devices/Bipap Machiene/Philips DreamStation BiPAP AVAPS 3.webp",
   ],
-  specifications: [
-    { label: "Brand", value: "ResMed" },
-    { label: "Connectivity", value: "Cloud Connected" }
+   specifications: [
+    { label: "Brand", value: "Philips Respironics" }, { label: "Model", value: "DreamStation BiPAP AVAPS 25" }, { label: "Device Type", value: "Non-Invasive Ventilator" }, { label: "Ventilation Technology", value: "AVAPS (Average Volume Assured Pressure Support)" }, { label: "Therapy Modes", value: "CPAP, S, ST, T, AVAPS" }, { label: "Maximum Pressure", value: "25 cmH₂O" }, { label: "Target Tidal Volume", value: "Adjustable Volume Support" }, { label: "Backup Respiratory Rate", value: "Programmable" }, { label: "Patient Synchronization", value: "Auto-Trak Adaptive Technology" },  { label: "Pressure Relief", value: "Bi-Flex Comfort Technology" },  { label: "Ramp Feature", value: "SmartRamp Technology" },  { label: "Humidification", value: "Compatible with Heated Humidifier" },  { label: "Display", value: "Color LCD Screen" },  { label: "Therapy Monitoring", value: "Detailed Compliance & Usage Reports" }, { label: "Connectivity", value: "Cloud Connected" }, { label: "Data Transfer", value: "Bluetooth, SD Card & Wireless Monitoring" }, { label: "Noise Level", value: "Low Noise Operation" }, { label: "Recommended Use", value: "COPD, Neuromuscular Disorders & Advanced Sleep Apnea Therapy" },  { label: "Weight", value: "Approx. 1.4 kg" }, { label: "Warranty", value: "2 Years Manufacturer Warranty" }
   ]
 },
 
@@ -281,13 +1040,12 @@ description: "The Philips DreamWisp Nasal Mask combines the comfort of a traditi
   name: "Resmed AirCurve 10 VAuto BIPAP – Best Auto BIPAP",
   price: 66800,
   category: "bipap-machine",
-  description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support.",
-  images: [
+ description: "The ResMed AirCurve 10 VAuto BiPAP is an advanced automatic bilevel therapy device engineered for patients who require higher-pressure sleep apnea treatment with enhanced comfort. Powered by ResMed's VAuto algorithm, the device continuously adjusts inspiratory and expiratory pressures based on the patient's breathing needs, ensuring effective therapy while minimizing discomfort. Its Easy-Breathe waveform technology delivers smooth and natural airflow, helping users adapt to treatment more easily. The AirCurve 10 VAuto features integrated humidification, intelligent event detection, wireless connectivity, and detailed therapy tracking, making it an ideal choice for individuals with Obstructive Sleep Apnea (OSA), pressure intolerance, and complex sleep-disordered breathing conditions. Designed for long-term therapy success, it combines comfort, performance, and intelligent automation in a compact device.",
+images: [
     "/images/Devices/Lumis™ 150 VPAP ST-A Non- Invasive Ventilator.webp",
   ],
-  specifications: [
-    { label: "Brand", value: "ResMed" },
-    { label: "Connectivity", value: "Cloud Connected" }
+ specifications: [
+    { label: "Brand", value: "ResMed" }, { label: "Model", value: "AirCurve 10 VAuto" }, { label: "Device Type", value: "Automatic BiLevel (Auto BiPAP)" }, { label: "Therapy Modes", value: "CPAP, S, VAuto" }, { label: "Pressure Range", value: "4–25 cmH₂O" }, { label: "Auto-Adjusting Pressure", value: "VAuto Algorithm" }, { label: "Pressure Relief", value: "Easy-Breathe Technology" }, { label: "Ramp Feature", value: "AutoRamp™ with Sleep Onset Detection" },  { label: "Humidification", value: "Integrated HumidAir™ Heated Humidifier" },   { label: "Climate Control", value: "Automatic Climate Control Available" }, { label: "Display", value: "Color LCD Screen" },  { label: "Data Monitoring", value: "Advanced Therapy & Compliance Reports" }, { label: "Connectivity", value: "Cloud Connected" }, { label: "Wireless Technology", value: "Built-in Cellular Connectivity" }, { label: "Data Transfer", value: "SD Card & AirView™ Support" }, { label: "Noise Level", value: "Ultra-Quiet Operation" }, { label: "Recommended Use", value: "Obstructive Sleep Apnea & High-Pressure PAP Therapy" },  { label: "Weight", value: "Approx. 1.2 kg" }, { label: "Power Supply", value: "100–240V AC, 50/60Hz" }, { label: "Warranty", value: "2 Years Manufacturer Warranty" }
   ]
 },
 
@@ -297,15 +1055,12 @@ description: "The Philips DreamWisp Nasal Mask combines the comfort of a traditi
   name: "Philips DreamStation BiPAP Pro",
   price: 65000,
   category: "bipap-machine",
-  description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support.",
-  images: [
-    "/images/Devices/Bipap Machiene/Philips DreamStation BiPAP Pro1.webp",
-     "/images/Devices/Bipap Machiene/Philips DreamStation BiPAP Pro2.webp",
-     "/images/Devices/Bipap Machiene/Philips DreamStation BiPAP Pro3.webp",
+  description: "The Philips DreamStation BiPAP Pro is a premium bilevel positive airway pressure device designed to provide effective and comfortable therapy for patients with obstructive sleep apnea and other breathing disorders. Featuring advanced Bi-Flex comfort technology, the device delivers different pressure levels during inhalation and exhalation, making therapy more natural and easier to tolerate. Its intelligent event detection system continuously monitors breathing patterns to optimize treatment performance while enhancing patient comfort. The DreamStation BiPAP Pro combines a modern user-friendly interface, quiet operation, integrated humidification compatibility, and comprehensive therapy tracking, making it an ideal solution for long-term sleep therapy at home.",
+ images: ["/images/Devices/Bipap Machiene/Philips DreamStation BiPAP Pro1.webp", "/images/Devices/Bipap Machiene/Philips DreamStation BiPAP Pro2.webp", "/images/Devices/Bipap Machiene/Philips DreamStation BiPAP Pro3.webp",
   ],
-  specifications: [
-    { label: "Brand", value: "ResMed" },
-    { label: "Connectivity", value: "Cloud Connected" }
+ specifications: [
+    { label: "Brand", value: "Philips Respironics" },
+{ label: "Model", value: "DreamStation BiPAP Pro" }, { label: "Device Type", value: "BiLevel Positive Airway Pressure Device" },  { label: "Therapy Modes", value: "CPAP, BiPAP" }, { label: "Pressure Range", value: "4–25 cmH₂O" },  { label: "Comfort Technology", value: "Bi-Flex Pressure Relief" }, { label: "Ramp Feature", value: "SmartRamp Technology" }, { label: "Humidification", value: "Compatible with Heated Humidifier" }, { label: "Display", value: "Color LCD Screen" }, { label: "Event Detection", value: "Advanced Sleep Event Monitoring" }, { label: "Therapy Monitoring", value: "Detailed Compliance Reports" }, { label: "Connectivity", value: "Cloud Connected" }, { label: "Data Transfer", value: "Bluetooth & SD Card Support" }, { label: "Noise Level", value: "Quiet Night-Time Operation" }, { label: "Mask Compatibility", value: "Works with Most CPAP & BiPAP Masks" }, { label: "Power Supply", value: "100–240V AC, 50/60Hz" }, { label: "Recommended Use", value: "Obstructive Sleep Apnea Therapy" },  { label: "Weight", value: "Approx. 1.4 kg" }, { label: "Warranty", value: "2 Years Manufacturer Warranty" }
   ]
 },
 
@@ -315,14 +1070,10 @@ description: "The Philips DreamWisp Nasal Mask combines the comfort of a traditi
   name: "Philips Respironics DreamStation BiPAP S/T 25",
   price: 64000,
   category: "bipap-machine",
-  description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support.",
-  images: [
-    "/images/Devices/Bipap Machiene/Philips Respironics DreamStation BiPAP1.webp",
-     "/images/Devices/Bipap Machiene/Philips Respironics DreamStation BiPAP2.webp",
+  description:  "The Philips Respironics DreamStation BiPAP S/T 25 is an advanced non-invasive ventilation device designed for patients who require enhanced respiratory support beyond conventional CPAP therapy. Equipped with Spontaneous/Timed (S/T) mode, the device synchronizes with the patient's natural breathing while providing an automatic backup breath rate when necessary. Its innovative Auto-Trak technology continuously adapts to changing breathing patterns, ensuring accurate triggering and comfortable therapy delivery. The DreamStation BiPAP S/T 25 is suitable for patients with COPD, neuromuscular disorders, obesity hypoventilation syndrome, and complex sleep apnea. With a modern user interface, quiet operation, wireless connectivity, and comprehensive therapy monitoring, it offers reliable respiratory care for both home and clinical environments.",
+ images: ["/images/Devices/Bipap Machiene/Philips Respironics DreamStation BiPAP1.webp",  "/images/Devices/Bipap Machiene/Philips Respironics DreamStation BiPAP2.webp",
   ],
-  specifications: [
-    { label: "Brand", value: "ResMed" },
-    { label: "Connectivity", value: "Cloud Connected" }
+  specifications: [  { label: "Brand", value: "Philips Respironics" }, { label: "Model", value: "DreamStation BiPAP S/T 25" }, { label: "Device Type", value: "Non-Invasive Ventilator" }, { label: "Ventilation Mode", value: "Spontaneous / Timed (S/T)" },{ label: "Maximum Pressure", value: "25 cmH₂O" }, { label: "Backup Breath Rate", value: "Programmable" }, { label: "Trigger Technology", value: "Auto-Trak Adaptive Technology" },  { label: "Pressure Support", value: "Adjustable IPAP & EPAP" },  { label: "Therapy Modes", value: "CPAP, S, ST" },  { label: "Comfort Feature", value: "Bi-Flex Pressure Relief" },  { label: "Ramp Feature", value: "SmartRamp Technology" },  { label: "Humidification", value: "Compatible with Heated Humidifier" },  { label: "Display", value: "Color LCD Screen" }, { label: "Therapy Monitoring", value: "Advanced Compliance & Usage Reporting" }, { label: "Connectivity", value: "Cloud Connected" }, { label: "Data Transfer", value: "Bluetooth, SD Card & Wireless Monitoring" },  { label: "Noise Level", value: "Low Noise Operation" }, { label: "Recommended Use", value: "COPD, Neuromuscular Disorders & Sleep Apnea Therapy" }, { label: "Weight", value: "Approx. 1.4 kg" }, { label: "Warranty", value: "2 Years Manufacturer Warranty" }
   ]
 },
 
@@ -332,15 +1083,11 @@ description: "The Philips DreamWisp Nasal Mask combines the comfort of a traditi
   name: "BMC G2S B30VT BIPAP",
   price: 23000,
   category: "bipap-machine",
-  description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support.",
-  images: ["/images/Devices/Bipap Machiene/BMC G2S B30VT BIPAP2.jpg",
-    "/images/Devices/Bipap Machiene/BMC G2S B30VT BIPAP1.jpg",
-     "/images/Devices/Bipap Machiene/BMC G2S B30VT BIPAP3.webp",
-     "/images/Devices/Bipap Machiene/BMC G2S B30VT BIPAP4.webp",
+  description: "The BMC G2S B30VT BiPAP is a compact and efficient bilevel positive airway pressure device designed to provide comfortable respiratory therapy for patients with sleep apnea and chronic breathing disorders. Featuring intelligent pressure adjustment technology, the device delivers separate inspiratory and expiratory pressures to improve breathing comfort and therapy effectiveness. Its user-friendly interface, quiet operation, and integrated humidification support help enhance patient compliance during long-term treatment. The G2S B30VT is suitable for home use and offers reliable performance, advanced event monitoring, and personalized therapy settings to meet individual respiratory needs.",
+ images: ["/images/Devices/Bipap Machiene/BMC G2S B30VT BIPAP2.jpg", "/images/Devices/Bipap Machiene/BMC G2S B30VT BIPAP1.jpg", "/images/Devices/Bipap Machiene/BMC G2S B30VT BIPAP3.webp", "/images/Devices/Bipap Machiene/BMC G2S B30VT BIPAP4.webp",
   ],
   specifications: [
-    { label: "Brand", value: "ResMed" },
-    { label: "Connectivity", value: "Cloud Connected" }
+    { label: "Brand", value: "BMC" }, { label: "Model", value: "G2S B30VT" }, { label: "Device Type", value: "BiLevel Positive Airway Pressure Device" }, { label: "Therapy Modes", value: "CPAP, S, ST, T" }, { label: "Pressure Range", value: "4–30 cmH₂O" },{ label: "Pressure Support", value: "Adjustable IPAP & EPAP" }, { label: "Backup Respiratory Rate", value: "Programmable" }, { label: "Ramp Feature", value: "Automatic Ramp Function" }, { label: "Humidification", value: "Integrated Heated Humidifier Compatible" },  { label: "Display", value: "Color LCD Screen" },  { label: "Therapy Monitoring", value: "Usage & Compliance Tracking" },  { label: "Connectivity", value: "SD Card Data Storage" }, { label: "Leak Compensation", value: "Automatic" },  { label: "Noise Level", value: "Low Noise Operation" }, { label: "Recommended Use", value: "Sleep Apnea & Respiratory Therapy" }, { label: "Weight", value: "Approx. 1.5 kg" }, { label: "Warranty", value: "2 Years Manufacturer Warranty" }
   ]
 },
 { 
@@ -349,15 +1096,11 @@ description: "The Philips DreamWisp Nasal Mask combines the comfort of a traditi
   name: "Loewenstein Prisma 25ST BIPAP",
   price: 73500,
   category: "bipap-machine",
-  description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support.",
-  images: ["/images/Devices/Bipap Machiene/Loewenstein Prisma 25ST BIPAP3.webp",
-    "/images/Devices/Bipap Machiene/Loewenstein Prisma 25ST BIPAP4.webp",
-     "/images/Devices/Bipap Machiene/Loewenstein Prisma 25ST BIPAP1.webp",
-     "/images/Devices/Bipap Machiene/Loewenstein Prisma 25ST BIPAP2.webp",
+   description: "The Loewenstein Prisma 25ST BiPAP is a premium non-invasive ventilation device engineered to provide advanced respiratory support for patients with complex breathing disorders. Featuring Spontaneous/Timed (ST) ventilation, the device synchronizes with the patient's natural breathing pattern while offering a programmable backup respiratory rate when required. Its intelligent pressure management system, advanced comfort features, and precise therapy delivery help ensure effective treatment and improved patient adherence. Designed for both home and clinical use, the Prisma 25ST is suitable for managing sleep apnea, COPD, neuromuscular disorders, and chronic respiratory insufficiency.",
+ images: ["/images/Devices/Bipap Machiene/Loewenstein Prisma 25ST BIPAP3.webp","/images/Devices/Bipap Machiene/Loewenstein Prisma 25ST BIPAP4.webp", "/images/Devices/Bipap Machiene/Loewenstein Prisma 25ST BIPAP1.webp", "/images/Devices/Bipap Machiene/Loewenstein Prisma 25ST BIPAP2.webp",
   ],
-  specifications: [
-    { label: "Brand", value: "ResMed" },
-    { label: "Connectivity", value: "Cloud Connected" }
+ specifications: [
+   { label: "Brand", value: "Loewenstein Medical" }, { label: "Model", value: "Prisma 25ST" }, { label: "Device Type", value: "Non-Invasive Ventilator" }, { label: "Ventilation Mode", value: "Spontaneous / Timed (ST)" }, { label: "Maximum Pressure", value: "25 cmH₂O" },  { label: "Pressure Support", value: "Adjustable IPAP & EPAP" }, { label: "Backup Respiratory Rate", value: "Programmable" }, { label: "Therapy Modes", value: "CPAP, S, ST" }, { label: "Ramp Function", value: "Automatic Ramp Feature" }, { label: "Humidification", value: "Compatible with prismaAQUA Humidifier" }, { label: "Display", value: "High-Resolution Color Display" }, { label: "Therapy Monitoring", value: "Detailed Compliance Reporting" }, { label: "Connectivity", value: "SD Card & Data Management Support" }, { label: "Event Detection", value: "Advanced Respiratory Event Analysis" }, { label: "Noise Level", value: "Ultra-Quiet Operation" }, { label: "Recommended Use", value: "COPD, Sleep Apnea & Respiratory Support" }, { label: "Weight", value: "Approx. 1.4 kg" }, { label: "Warranty", value: "2 Years Manufacturer Warranty" }
   ]
 },
 { 
@@ -366,13 +1109,11 @@ description: "The Philips DreamWisp Nasal Mask combines the comfort of a traditi
   name: "Loewenstein Prisma 30ST BIPAP",
   price: 83300,
   category: "bipap-machine",
-  description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support.",
-  images: ["/images/Devices/Bipap Machiene/Loewenstein Prisma 30ST BIPAP3.webp", "/images/Devices/Bipap Machiene/Loewenstein Prisma 30ST BIPAP1.webp",
-    "/images/Devices/Bipap Machiene/Loewenstein Prisma 30ST BIPAP2.webp"
+   description: "The Loewenstein Prisma 30ST BiPAP is a high-performance non-invasive ventilation device developed for patients requiring advanced respiratory support and bilevel therapy. Equipped with Spontaneous/Timed (ST) ventilation, the device intelligently synchronizes with the user's breathing while providing a backup respiratory rate when necessary. Its precise pressure control system helps ensure effective ventilation, improved comfort, and enhanced therapy adherence. Designed for both homecare and clinical environments, the Prisma 30ST is suitable for managing sleep apnea, COPD, neuromuscular disorders, obesity hypoventilation syndrome, and chronic respiratory insufficiency. The device combines advanced therapy algorithms, detailed monitoring capabilities, and quiet operation to deliver reliable respiratory care.",
+images: ["/images/Devices/Bipap Machiene/Loewenstein Prisma 30ST BIPAP3.webp", "/images/Devices/Bipap Machiene/Loewenstein Prisma 30ST BIPAP1.webp", "/images/Devices/Bipap Machiene/Loewenstein Prisma 30ST BIPAP2.webp"
   ],
-  specifications: [
-    { label: "Brand", value: "ResMed" },
-    { label: "Connectivity", value: "Cloud Connected" }
+    specifications: [
+    { label: "Brand", value: "Loewenstein Medical" },{ label: "Model", value: "Prisma 30ST" }, { label: "Device Type", value: "Non-Invasive Ventilator" }, { label: "Ventilation Mode", value: "Spontaneous / Timed (ST)" },  { label: "Maximum Pressure", value: "30 cmH₂O" }, { label: "Pressure Support", value: "Adjustable IPAP & EPAP Settings" }, { label: "Backup Respiratory Rate", value: "Programmable" },{ label: "Therapy Modes", value: "CPAP, S, ST" }, { label: "Trigger & Cycle Sensitivity", value: "Automatic Adjustment" }, { label: "Ramp Function", value: "Auto Ramp Technology" },{ label: "Humidification", value: "Compatible with prismaAQUA Heated Humidifier" }, { label: "Display", value: "High-Resolution Color Display" }, { label: "Therapy Monitoring", value: "Advanced Compliance & Usage Reports" }, { label: "Connectivity", value: "SD Card & Data Management Support" }, { label: "Leak Compensation", value: "Automatic Leak Management" }, { label: "Event Detection", value: "Advanced Respiratory Event Analysis" }, { label: "Noise Level", value: "Ultra-Quiet Operation" }, { label: "Recommended Use", value: "COPD, Sleep Apnea & Chronic Respiratory Support" }, { label: "Weight", value: "Approx. 1.4 kg" }, { label: "Warranty", value: "2 Years Manufacturer Warranty" }
   ]
 },
 
@@ -382,14 +1123,11 @@ description: "The Philips DreamWisp Nasal Mask combines the comfort of a traditi
   name: "BMC G3 B30vt BIPAP Device with Humidifier and Mask",
   price: 40000,
   category: "bipap-machine",
-  description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support.",
-  images: ["/images/Devices/Bipap Machiene/BMC G3 B30vt BIPAP Device with Humidifier and Mask1.jpg",
-     "/images/Devices/Bipap Machiene/BMC G3 B30vt BIPAP Device with Humidifier and Mask2.jpg",
-    "/images/Devices/Bipap Machiene/BMC G3 B30vt BIPAP Device with Humidifier and Mask3.jpg"
+  description: "The BMC G3 B30VT BiPAP Device with Humidifier and Mask is an advanced bilevel ventilation solution designed to provide effective respiratory therapy for patients with sleep apnea and chronic breathing disorders. Equipped with intelligent pressure support technology and Spontaneous/Timed (ST) ventilation capabilities, the device delivers personalized therapy while maintaining patient comfort. The integrated heated humidifier helps reduce dryness and irritation, ensuring a more comfortable treatment experience throughout the night. Featuring a modern user interface, real-time therapy monitoring, and quiet operation, the G3 B30VT is suitable for both home and clinical use. Its comprehensive therapy modes and reliable performance make it an ideal choice for long-term respiratory care.",
+ images: ["/images/Devices/Bipap Machiene/BMC G3 B30vt BIPAP Device with Humidifier and Mask1.jpg", "/images/Devices/Bipap Machiene/BMC G3 B30vt BIPAP Device with Humidifier and Mask2.jpg", "/images/Devices/Bipap Machiene/BMC G3 B30vt BIPAP Device with Humidifier and Mask3.jpg"
   ],
-  specifications: [
-    { label: "Brand", value: "ResMed" },
-    { label: "Connectivity", value: "Cloud Connected" }
+   specifications: [
+    { label: "Brand", value: "BMC" }, { label: "Model", value: "G3 B30VT" },{ label: "Device Type", value: "BiLevel Positive Airway Pressure Device" }, { label: "Ventilation Mode", value: "Spontaneous / Timed (ST)" }, { label: "Therapy Modes", value: "CPAP, S, ST, T" }, { label: "Maximum Pressure", value: "30 cmH₂O" }, { label: "Pressure Support", value: "Adjustable IPAP & EPAP" }, { label: "Backup Respiratory Rate", value: "Programmable" }, { label: "Humidifier", value: "Integrated Heated Humidifier Included" }, { label: "Mask Included", value: "Yes" }, { label: "Display", value: "Color LCD Touch Interface" }, { label: "Ramp Feature", value: "Automatic Ramp Function" }, { label: "Leak Compensation", value: "Automatic Leak Adjustment" }, { label: "Therapy Monitoring", value: "Detailed Usage & Compliance Reports" }, { label: "Data Storage", value: "SD Card Support" }, { label: "Connectivity", value: "Wi-Fi & Mobile App Support" }, { label: "Noise Level", value: "Low Noise Operation" }, { label: "Recommended Use", value: "Sleep Apnea & Respiratory Therapy" }, { label: "Weight", value: "Approx. 1.7 kg" }, { label: "Warranty", value: "2 Years Manufacturer Warranty" }
   ]
 },
 { 
@@ -398,13 +1136,12 @@ description: "The Philips DreamWisp Nasal Mask combines the comfort of a traditi
   name: "Lowenstein PrismaLab Bipap",
   price: 188000,
   category: "bipap-machine",
-  description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support.",
-  images: ["/images/Devices/Bipap Machiene/Lowenstein PrismaLab Bipap1.webp","/images/Devices/Bipap Machiene/Lowenstein PrismaLab Bipap2.webp",
-    "/images/Devices/Bipap Machiene/Lowenstein PrismaLab Bipap3.webp","/images/Devices/Bipap Machiene/Lowenstein PrismaLab Bipap4.webp",
+   description:
+    "The Lowenstein PrismaLab BiPAP is a premium non-invasive ventilation system designed for advanced respiratory diagnostics, therapy optimization, and long-term ventilation support. Engineered with sophisticated monitoring and pressure management technologies, the device delivers highly accurate bilevel ventilation tailored to individual patient requirements. It supports comprehensive sleep therapy evaluation and respiratory care, making it suitable for sleep laboratories, hospitals, and specialized respiratory clinics. The PrismaLab platform offers advanced data analysis, intelligent event detection, customizable ventilation settings, and seamless therapy monitoring, enabling healthcare professionals to achieve precise diagnosis and effective treatment outcomes for patients with sleep-disordered breathing and chronic respiratory insufficiency.",
+  images: ["/images/Devices/Bipap Machiene/Lowenstein PrismaLab Bipap1.webp","/images/Devices/Bipap Machiene/Lowenstein PrismaLab Bipap2.webp","/images/Devices/Bipap Machiene/Lowenstein PrismaLab Bipap3.webp","/images/Devices/Bipap Machiene/Lowenstein PrismaLab Bipap4.webp",
   ],
-  specifications: [
-    { label: "Brand", value: "ResMed" },
-    { label: "Connectivity", value: "Cloud Connected" }
+    specifications: [
+    { label: "Brand", value: "Loewenstein Medical" }, { label: "Model", value: "PrismaLab BiPAP" }, { label: "Device Type", value: "Advanced Non-Invasive Ventilation System" }, { label: "Application", value: "Sleep Lab & Clinical Respiratory Care" }, { label: "Therapy Modes", value: "CPAP, APAP, BiLevel, ST" }, { label: "Pressure Range", value: "4–30 cmH₂O" }, { label: "Pressure Support", value: "Adjustable IPAP & EPAP" }, { label: "Backup Respiratory Rate", value: "Programmable" }, { label: "Patient Monitoring", value: "Advanced Respiratory Event Analysis" }, { label: "Leak Compensation", value: "Automatic Leak Management" }, { label: "Trigger Sensitivity", value: "Automatic Breath Detection" }, { label: "Humidification", value: "Compatible with prismaAQUA Humidifier" }, { label: "Display", value: "High-Resolution Color Touchscreen" }, { label: "Therapy Reporting", value: "Comprehensive Diagnostic & Compliance Reports" }, { label: "Data Storage", value: "SD Card & Therapy Data Management" }, { label: "Connectivity", value: "PC Software & Data Transfer Support" }, { label: "Noise Level", value: "Ultra-Quiet Operation" }, { label: "Recommended Use", value: "Sleep Labs, Hospitals & Advanced Respiratory Therapy" }, { label: "Weight", value: "Approx. 1.5 kg" }, { label: "Warranty", value: "2 Years Manufacturer Warranty" }
   ]
 },
 
@@ -414,34 +1151,249 @@ description: "The Philips DreamWisp Nasal Mask combines the comfort of a traditi
   name: "BMC G3 B25vt BIPAP Device with Humidifier and Mask",
   price: 40000,
   category: "bipap-machine",
-  description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support.",
-  images: ["/images/Devices/Bipap Machiene/BMC G3 B25vt BIPAP Device with Humidifier and Mask1.webp","/images/Devices/Bipap Machiene/BMC G3 B25vt BIPAP Device with Humidifier and Mask2.webp",
+ description: "The BMC G3 B25VT BiPAP Device with Humidifier and Mask is a reliable bilevel ventilation solution developed to support patients with sleep apnea and respiratory insufficiency. Featuring advanced pressure delivery technology, the device provides separate inspiratory and expiratory pressure levels to promote comfortable and effective breathing throughout therapy. Its integrated heated humidifier helps minimize airway dryness and enhances user comfort during extended use. Designed with intelligent monitoring features, a modern color display, and quiet operation, the G3 B25VT offers a seamless therapy experience for both new and experienced users. Suitable for homecare and clinical settings, it delivers dependable respiratory support while improving therapy compliance and sleep quality.",
+ images: ["/images/Devices/Bipap Machiene/BMC G3 B25vt BIPAP Device with Humidifier and Mask1.webp","/images/Devices/Bipap Machiene/BMC G3 B25vt BIPAP Device with Humidifier and Mask2.webp",
     "/images/Devices/Bipap Machiene/BMC G3 B25vt BIPAP Device with Humidifier and Mask3.webp"
   ],
   specifications: [
-    { label: "Brand", value: "ResMed" },
-    { label: "Connectivity", value: "Cloud Connected" }
+    { label: "Brand", value: "BMC" }, { label: "Model", value: "G3 B25VT" }, { label: "Device Type", value: "BiLevel Positive Airway Pressure Device" }, { label: "Therapy Modes", value: "CPAP, S, ST, T" }, { label: "Maximum Pressure", value: "25 cmH₂O" }, { label: "Pressure Support", value: "Adjustable IPAP & EPAP" }, { label: "Backup Respiratory Rate", value: "Programmable" }, { label: "Humidifier", value: "Integrated Heated Humidifier Included" }, { label: "Mask Included", value: "Yes" }, { label: "Display", value: "Color LCD Interface" }, { label: "Ramp Function", value: "Automatic Ramp Technology" }, { label: "Leak Compensation", value: "Automatic Leak Adjustment" }, { label: "Therapy Monitoring", value: "Usage & Compliance Tracking" }, { label: "Data Storage", value: "SD Card Support" }, { label: "Connectivity", value: "Wi-Fi & Mobile App Support" }, { label: "Noise Level", value: "Quiet Operation" }, { label: "Recommended Use", value: "Sleep Apnea & Respiratory Therapy" }, { label: "Power Supply", value: "100–240V AC, 50/60Hz" },{ label: "Weight", value: "Approx. 1.7 kg" }, { label: "Warranty", value: "2 Years Manufacturer Warranty" }
   ]
 },
 //----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 //oc
-{ id: 10, slug: "oxymed-portable-oxygen-concentrator", name: "Oxymed Portable Oxygen Concentrator", price: 145000, category: "oxygen-concentrator", description: "Portable oxygen concentrator.", images: ["/images/Oc/deal1.jpg"], specifications: [{ label: "Brand", value: "Oxymed" }, { label: "Category", value: "Oxygen Concentrator" }] },
-{ id: 65, slug: "evox", name: "Evox 5 LPM", price: 35000, category: "oxygen-concentrator", description: "Standard oxygen mask.",
-   images: ["/images/Oc/evox1.jpg", "/images/Oc/evox2.jpg", "/images/Oc/evox3.jpg"], specifications: [{ label: "Category", value: "Oxygen Accessory" }] },
-{ id: 11, slug: "oxymed-oxygen-concentrator-5lpm", name: "OxyMed Oxygen Concentrator Machine 5LPM", price: 41500, category: "oxygen-concentrator", description: "5LPM oxygen concentrator.", images: ["/images/Oc/deal2.jpg"], specifications: [{ label: "Brand", value: "Oxymed" }, { label: "Capacity", value: "5LPM" }] },
-{ id: 13, slug: "philips-everflo-oxygen-concentrator", name: "Philips EverFlo Home Oxygen (5 LPM)", price: 69000, category: "oxygen-concentrator", description: "Home oxygen concentrator.", images: ["/images/Oc/deal4.webp"], specifications: [{ label: "Brand", value: "Philips" }, { label: "Capacity", value: "5LPM" }] },
-{ id: 12, slug: "oxymed-10ltr-oxygen-concentrator", name: "OxyMed 10 Ltr Oxygen Concentrator", price: 55000, category: "oxygen-concentrator", description: "High capacity concentrator.", images: ["/images/Oc/deal3.jpg"], specifications: [{ label: "Brand", value: "Oxymed" }, { label: "Capacity", value: "10LPM" }] },
-{ id: 64, slug: "nidek", name: "Nidek Nuvo Lite 5 LPM", price: 65000, category: "oxygen-concentrator", description: "Standard oxygen mask.",
-   images: ["/images/Oc/nidek1.jpg", "/images/Oc/nidek2.jpg", "/images/Oc/nidek3.jpg","/images/Oc/nidek4.jpg"], specifications: [{ label: "Category", value: "Oxygen Accessory" }] },
-{ id: 16, slug: "oxygen-machines", name: "Oxymed Inteli 5LPM Auto Flow Oxygen Concentrator", price: 55500, category: "oxygen-concentrator", description: "Standard oxygen mask.",
-   images: ["/images/Oc/1.jpg", "/images/Oc/2.jpg", "/images/Oc/3.jpg","/images/Oc/5.jpg"], specifications: [{ label: "Category", value: "Oxygen Accessory" }] },
-{ id: 81, slug: "philipsgo-oxygen-machines", name: "Philips Simply Go Oxygen Concentrator", price: 190000, category: "oxygen-concentrator", description: "Standard oxygen mask.",
-   images: ["/images/Oc/Philips Simply Go Oxygen Concentrator1.webp", "/images/Oc/Philips Simply Go Oxygen Concentrator2.webp"], specifications: [{ label: "Category", value: "Oxygen Accessory" }] },
-{ id: 82, slug: "simply-go-oxygen-machines", name: "Simply Go Mini Oxygen Concentrator", price: 228000, category: "oxygen-concentrator", description: "Standard oxygen mask.",
-   images: ["/images/Oc/Simply Go Mini Oxygen Concentrator1.webp", "/images/Oc/Simply Go Mini Oxygen Concentrator2.webp"], specifications: [{ label: "Category", value: "Oxygen Accessory" }] },
+{
+  id: 10,
+  slug: "oxymed-portable-oxygen-concentrator",
+  name: "Oxymed Portable Oxygen Concentrator",
+  price: 145000,
+  category: "oxygen-concentrator",
+  description: "The Oxymed Portable Oxygen Concentrator is a lightweight and travel-friendly oxygen therapy device designed for patients requiring supplemental oxygen at home or on the move. Featuring advanced pulse-dose oxygen delivery, a rechargeable battery, and a compact design, it offers reliable oxygen support while maintaining mobility and independence. Ideal for travel, daily activities, and outdoor use, the device combines performance, convenience, and energy efficiency.",
+  images: ["/images/Oc/deal1.jpg"],
+  specifications: [
+    { label: "Brand", value: "Oxymed" },{ label: "Category", value: "Portable Oxygen Concentrator" },{ label: "Oxygen Delivery", value: "Pulse Dose" },{ label: "Flow Settings", value: "1-5 Levels" },{ label: "Oxygen Purity", value: "Up to 93% ± 3%" },{ label: "Noise Level", value: "< 45 dB" },{ label: "Display", value: "LCD Display" },{ label: "Battery Type", value: "Rechargeable Lithium Battery" },{ label: "Battery Backup", value: "Up to 4-6 Hours (Depending on Setting)" },{ label: "Power Supply", value: "AC/DC Power Adapter" },{ label: "Weight", value: "Approx. 2.2 - 2.5 kg" },{ label: "Portable", value: "Yes" },{ label: "Travel Friendly", value: "Airline Compatible*" },{ label: "Alarm System", value: "Low Battery, Low Oxygen Purity, System Fault" },{ label: "Operating Mode", value: "Continuous Use" },{ label: "Warranty", value: "1 Year Manufacturer Warranty" }
+  ]
+},
+  {
+  id: 65,
+  slug: "evox-5-lpm",
+  name: "Evox 5 LPM Oxygen Concentrator",
+  price: 35000,
+  category: "oxygen-concentrator",
 
+  description:
+    "The Evox 5 LPM Oxygen Concentrator is a reliable and energy-efficient oxygen therapy device designed for home and clinical use. It delivers up to 5 liters per minute of high-purity oxygen, ensuring consistent respiratory support for patients with COPD, asthma, and other breathing disorders. Featuring a user-friendly interface, low-noise operation, and advanced filtration technology, the Evox concentrator provides safe and comfortable oxygen therapy around the clock.",
+
+  images: [
+    "/images/Oc/evox1.jpg",
+    "/images/Oc/evox2.jpg",
+    "/images/Oc/evox3.jpg"
+  ],
+
+  specifications: [
+    { label: "Brand", value: "Evox" },
+    { label: "Category", value: "Oxygen Concentrator" },
+    { label: "Flow Rate", value: "0.5 - 5 LPM" },
+    { label: "Oxygen Purity", value: "93% ± 3%" },
+    { label: "Technology", value: "PSA (Pressure Swing Adsorption)" },
+    { label: "Display", value: "Digital LCD Display" },
+    { label: "Noise Level", value: "< 45 dB" },
+    { label: "Power Consumption", value: "Low Power Consumption" },
+    { label: "Operating Mode", value: "Continuous Use" },
+    { label: "Humidifier Bottle", value: "Included" },
+    { label: "Alarm System", value: "Power Failure, Low Oxygen Purity, High Pressure" },
+    { label: "Wheels", value: "Yes" },
+    { label: "Recommended Use", value: "Home & Clinical Care" },
+    { label: "Weight", value: "Approx. 14-16 kg" },
+    { label: "Warranty", value: "1 Year Manufacturer Warranty" }
+  ]
+},
+{
+  id: 11,
+  slug: "oxymed-oxygen-concentrator-5lpm",
+  name: "OxyMed Oxygen Concentrator Machine 5LPM",
+  price: 41500,
+  category: "oxygen-concentrator",
+
+  description:
+    "The OxyMed Oxygen Concentrator Machine 5LPM is a dependable oxygen therapy solution designed for homecare and clinical environments. Using advanced PSA technology, it delivers up to 5 liters per minute of medical-grade oxygen with consistent purity levels. Its compact design, low-noise operation, and user-friendly controls make it ideal for patients requiring long-term oxygen therapy for respiratory conditions such as COPD, asthma, and other breathing disorders.",
+
+  images: ["/images/Oc/deal2.jpg"],
+
+  specifications: [
+    { label: "Brand", value: "OxyMed" },
+    { label: "Category", value: "Oxygen Concentrator" },
+    { label: "Flow Rate", value: "0.5 - 5 LPM" },
+    { label: "Oxygen Purity", value: "93% ± 3%" },
+    { label: "Technology", value: "PSA (Pressure Swing Adsorption)" },
+    { label: "Display", value: "LCD Display" },
+    { label: "Noise Level", value: "< 45 dB" },
+    { label: "Power Consumption", value: "Low Power Consumption" },
+    { label: "Operating Mode", value: "24/7 Continuous Operation" },
+    { label: "Humidifier Bottle", value: "Included" },
+    { label: "Alarm Features", value: "Power Failure, Low Purity, High Pressure" },
+    { label: "Mobility", value: "Caster Wheels Included" },
+    { label: "Weight", value: "Approx. 15 kg" },
+    { label: "Recommended Use", value: "Home & Clinical Care" },
+    { label: "Warranty", value: "1 Year Manufacturer Warranty" }
+  ]
+},
+{
+  id: 13,
+  slug: "philips-everflo-oxygen-concentrator",
+  name: "Philips EverFlo Home Oxygen (5 LPM)",
+  price: 69000,
+  category: "oxygen-concentrator",
+
+  description:
+    "The Philips EverFlo Home Oxygen Concentrator is a premium oxygen therapy device engineered for reliability, durability, and patient comfort. Delivering up to 5 liters per minute of oxygen, EverFlo features a compact and lightweight design, making it easier to position and transport within the home. Its energy-efficient operation and robust build quality have made it one of the most trusted oxygen concentrators for long-term respiratory care.",
+
+  images: ["/images/Oc/deal4.webp"],
+
+  specifications: [
+    { label: "Brand", value: "Philips Respironics" },
+    { label: "Category", value: "Home Oxygen Concentrator" },
+    { label: "Flow Rate", value: "0.5 - 5 LPM" },
+    { label: "Oxygen Purity", value: "93% ± 3%" },
+    { label: "Technology", value: "PSA Oxygen Generation" },
+    { label: "Power Consumption", value: "Approx. 350 Watts" },
+    { label: "Noise Level", value: "< 45 dB" },
+    { label: "Operating Pressure", value: "5.5 PSI" },
+    { label: "Weight", value: "Approx. 14 kg" },
+    { label: "Display", value: "Simple User Interface" },
+    { label: "Operating Mode", value: "Continuous Oxygen Therapy" },
+    { label: "Safety Alarms", value: "Power Failure, Low Oxygen, High Pressure" },
+    { label: "Mobility", value: "Integrated Wheels" },
+    { label: "Recommended Use", value: "Homecare & Long-Term Oxygen Therapy" },
+    { label: "Warranty", value: "3 Years Manufacturer Warranty" }
+  ]
+},{
+  id: 12,
+  slug: "oxymed-10ltr-oxygen-concentrator",
+  name: "OxyMed 10 Ltr Oxygen Concentrator",
+  price: 55000,
+  category: "oxygen-concentrator",
+  description:"The OxyMed 10 Ltr Oxygen Concentrator is a high-capacity oxygen therapy device designed for patients requiring higher oxygen flow rates. Equipped with advanced PSA technology, it delivers up to 10 liters per minute of medical-grade oxygen with consistent purity levels. Ideal for hospitals, clinics, and homecare settings, the concentrator features a user-friendly digital display, low-noise operation, and comprehensive safety alarms for reliable and uninterrupted oxygen therapy.",
+  images: ["/images/Oc/deal3.jpg"],
+  specifications: [
+  { label: "Brand", value: "OxyMed" }, { label: "Category", value: "Oxygen Concentrator" }, { label: "Flow Rate", value: "1 - 10 LPM" }, { label: "Oxygen Purity", value: "93% ± 3%" },  { label: "Technology", value: "PSA (Pressure Swing Adsorption)" }, { label: "Display", value: "Digital LCD Display" }, { label: "Noise Level", value: "< 55 dB" }, { label: "Power Consumption", value: "Efficient Power Usage" }, { label: "Operating Mode", value: "24/7 Continuous Operation" }, { label: "Humidifier Bottle", value: "Included" }, { label: "Safety Alarms", value: "Power Failure, Low Oxygen Purity, High Pressure, System Fault" }, { label: "Mobility", value: "Heavy-Duty Wheels" }, { label: "Recommended Use", value: "Hospital, Clinic & Homecare" }, { label: "Weight", value: "Approx. 24-28 kg" }, { label: "Warranty", value: "1 Year Manufacturer Warranty" }
+  ]
+},
+{
+  id: 64,
+  slug: "nidek",
+  name: "Nidek Nuvo Lite 5 LPM",
+  price: 65000,
+  category: "oxygen-concentrator",
+description:"The Nidek Nuvo Lite 5 LPM Oxygen Concentrator is a lightweight and dependable oxygen therapy device trusted worldwide for home respiratory care. Designed with reliability and patient comfort in mind, it delivers up to 5 liters per minute of concentrated oxygen while maintaining low power consumption and quiet operation. Its compact footprint and durable construction make it an excellent choice for long-term oxygen therapy in home and clinical environments.",
+images: [
+    "/images/Oc/nidek1.jpg","/images/Oc/nidek2.jpg","/images/Oc/nidek3.jpg","/images/Oc/nidek4.jpg"],
+specifications: [
+  { label: "Brand", value: "Nidek Medical" },{ label: "Category", value: "Oxygen Concentrator" }, { label: "Model", value: "Nuvo Lite" }, { label: "Flow Rate", value: "0.125 - 5 LPM" }, { label: "Oxygen Purity", value: "Up to 95%" }, { label: "Technology", value: "PSA Oxygen Concentration" }, { label: "Power Consumption", value: "Approx. 290 Watts" }, { label: "Noise Level", value: "< 40 dB" }, { label: "Operating Pressure", value: "7 PSI" }, { label: "Display", value: "Easy-Access Control Panel" }, { label: "Safety Alarms", value: "Power Failure, Low Oxygen, System Malfunction" }, { label: "Mobility", value: "Integrated Wheels" }, { label: "Weight", value: "Approx. 13.6 kg" }, { label: "Recommended Use", value: "Homecare & Long-Term Oxygen Therapy" },{ label: "Warranty", value: "3 Years Manufacturer Warranty" }
+  ]
+},
+   {
+  id: 16,
+  slug: "oxygen-machines",
+  name: "Oxymed Inteli 5LPM Auto Flow Oxygen Concentrator",
+  price: 55500,
+  category: "oxygen-concentrator",
+
+  description:
+    "The Oxymed Inteli 5LPM Auto Flow Oxygen Concentrator is an advanced oxygen therapy device designed to provide intelligent and efficient oxygen delivery for patients requiring respiratory support. Featuring smart auto-flow technology, it automatically adjusts oxygen output based on user requirements, ensuring optimal therapy and improved comfort. Its compact design, digital display, and low-noise operation make it an ideal choice for homecare, clinics, and long-term oxygen therapy.",
+
+  images: [
+    "/images/Oc/1.jpg",
+    "/images/Oc/2.jpg",
+    "/images/Oc/3.jpg",
+    "/images/Oc/5.jpg"
+  ],
+
+  specifications: [
+    { label: "Brand", value: "Oxymed" },
+    { label: "Category", value: "Oxygen Concentrator" },
+    { label: "Model", value: "Inteli Auto Flow" },
+    { label: "Flow Rate", value: "0.5 - 5 LPM" },
+    { label: "Oxygen Purity", value: "93% ± 3%" },
+    { label: "Technology", value: "Intelligent Auto Flow System" },
+    { label: "Display", value: "Digital LCD Display" },
+    { label: "Noise Level", value: "< 45 dB" },
+    { label: "Power Consumption", value: "Energy Efficient" },
+    { label: "Humidifier Bottle", value: "Included" },
+    { label: "Safety Alarms", value: "Power Failure, Low Purity, High Pressure, System Error" },
+    { label: "Operating Mode", value: "24/7 Continuous Operation" },
+    { label: "Mobility", value: "Caster Wheels Included" },
+    { label: "Recommended Use", value: "Homecare & Clinical Use" },
+    { label: "Warranty", value: "1 Year Manufacturer Warranty" }
+  ]
+},
+{
+  id: 81,
+  slug: "philipsgo-oxygen-machines",
+  name: "Philips Simply Go Oxygen Concentrator",
+  price: 190000,
+  category: "oxygen-concentrator",
+
+  description:
+    "The Philips SimplyGo Portable Oxygen Concentrator is a premium oxygen therapy solution designed for active users who require reliable oxygen support both at home and while traveling. Unlike many portable concentrators, SimplyGo offers both continuous flow and pulse-dose modes, providing exceptional flexibility. Its durable construction, long battery life, and compact design make it one of the most trusted portable oxygen concentrators available today.",
+
+  images: [
+    "/images/Oc/Philips Simply Go Oxygen Concentrator1.webp",
+    "/images/Oc/Philips Simply Go Oxygen Concentrator2.webp"
+  ],
+
+  specifications: [
+    { label: "Brand", value: "Philips Respironics" },
+    { label: "Category", value: "Portable Oxygen Concentrator" },
+    { label: "Model", value: "SimplyGo" },
+    { label: "Oxygen Delivery", value: "Continuous Flow & Pulse Dose" },
+    { label: "Continuous Flow", value: "Up to 2 LPM" },
+    { label: "Pulse Dose Settings", value: "1-6 Levels" },
+    { label: "Oxygen Purity", value: "Up to 96%" },
+    { label: "Battery Type", value: "Rechargeable Lithium-Ion" },
+    { label: "Battery Backup", value: "Up to 3.5 Hours" },
+    { label: "Weight", value: "Approx. 4.5 kg" },
+    { label: "Noise Level", value: "< 43 dB" },
+    { label: "Display", value: "LCD Screen" },
+    { label: "FAA Approved", value: "Yes" },
+    { label: "Recommended Use", value: "Travel & Home Oxygen Therapy" },
+    { label: "Warranty", value: "2 Years Manufacturer Warranty" }
+  ]
+},
+{
+  id: 82,
+  slug: "simply-go-oxygen-machines",
+  name: "Simply Go Mini Oxygen Concentrator",
+  price: 228000,
+  category: "oxygen-concentrator",
+
+  description:
+    "The SimplyGo Mini Portable Oxygen Concentrator is a compact and lightweight oxygen therapy device built for users who want maximum mobility without compromising performance. Designed for travel and active lifestyles, it delivers reliable pulse-dose oxygen therapy with advanced battery technology and an intuitive user interface. Its sleek design and FAA approval make it an ideal companion for daily activities, vacations, and business travel.",
+
+  images: [
+    "/images/Oc/Simply Go Mini Oxygen Concentrator1.webp",
+    "/images/Oc/Simply Go Mini Oxygen Concentrator2.webp"
+  ],
+
+  specifications: [
+    { label: "Brand", value: "Philips Respironics" },
+    { label: "Category", value: "Portable Oxygen Concentrator" },
+    { label: "Model", value: "SimplyGo Mini" },
+    { label: "Oxygen Delivery", value: "Pulse Dose" },
+    { label: "Pulse Settings", value: "1-5 Levels" },
+    { label: "Oxygen Purity", value: "Up to 90% ± 3%" },
+    { label: "Battery Type", value: "Rechargeable Lithium-Ion Battery" },
+    { label: "Battery Backup", value: "Up to 9 Hours (Extended Battery)" },
+    { label: "Weight", value: "Approx. 2.3 kg" },
+    { label: "Noise Level", value: "< 40 dB" },
+    { label: "Display", value: "Easy-to-Read LCD Screen" },
+    { label: "FAA Approved", value: "Yes" },
+    { label: "Carrying Options", value: "Shoulder Bag & Carry Case" },
+    { label: "Recommended Use", value: "Travel, Home & Outdoor Activities" },
+    { label: "Warranty", value: "2 Years Manufacturer Warranty" }
+  ]
+},
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //accessories
@@ -458,18 +1410,12 @@ description: "The Philips DreamWisp Nasal Mask combines the comfort of a traditi
 
 //humidifire and bottles
 { id: 20, slug: "humidifier-pack-of-3", name: "Humid™ X Plus - Pack of 3 (2 Units)", price: 1500, category: "humidifier-bottle", description: "Humidifier bottle.",
-   images: ["/images/Accesories/Humidifier/Humid™ X Plus - Pack of 3 (2 Units)/1.webp",
-    "/images/Accesories/Humidifier/Humid™ X Plus - Pack of 3 (2 Units)/2.webp",
-    "/images/Accesories/Humidifier/Humid™ X Plus - Pack of 3 (2 Units)/3.webp",
-    "/images/Accesories/Humidifier/Humid™ X Plus - Pack of 3 (2 Units)/4.webp",
+   images: ["/images/Accesories/Humidifier/Humid™ X Plus - Pack of 3 (2 Units)/1.webp", "/images/Accesories/Humidifier/Humid™ X Plus - Pack of 3 (2 Units)/2.webp", "/images/Accesories/Humidifier/Humid™ X Plus - Pack of 3 (2 Units)/3.webp", "/images/Accesories/Humidifier/Humid™ X Plus - Pack of 3 (2 Units)/4.webp",
    ], 
    specifications: [{ label: "Category", value: "Accessory" }] },
 
 { id: 49, slug: "humidifier-pack-of-6", name: "Humid™ X - Pack of 6", price: 1500, category: "humidifier-bottle", description: "Humidifier bottle.",
-   images: ["/images/Accesories/Humidifier/Humid™ X - Pack of 6/1.webp",
-"/images/Accesories/Humidifier/Humid™ X - Pack of 6/2.webp",
-"/images/Accesories/Humidifier/Humid™ X - Pack of 6/3.webp",
-"/images/Accesories/Humidifier/Humid™ X - Pack of 6/4.webp"
+   images: ["/images/Accesories/Humidifier/Humid™ X - Pack of 6/1.webp","/images/Accesories/Humidifier/Humid™ X - Pack of 6/2.webp","/images/Accesories/Humidifier/Humid™ X - Pack of 6/3.webp","/images/Accesories/Humidifier/Humid™ X - Pack of 6/4.webp"
 ], specifications: [{ label: "Category", value: "Accessory" }] },
 
 { id: 50, slug: "heated-humidifier", name: "Resmed H4i Heated Humidifier FOR STELLAR", price: 1500, category: "humidifier-bottle", description: "Humidifier bottle.", images: ["/images/Accesories/Humidifier/Resmed H4i Heated Humidifier FOR STELLAR.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
@@ -505,42 +1451,29 @@ description: "The Philips DreamWisp Nasal Mask combines the comfort of a traditi
 
 //Rental
 { id: 61, slug: "rental-airsence", name: "Rental AirSense™ 11 AutoSet™ Tripack 4G with 1 Mask", price: 6900, category: "rental", description: "Mask frame.", 
-  images: ["/images/Devices/AirSense™ 11 AutoSet™ (Single Pack)/1.webp",
-    "/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/2.1.webp",
-          "/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/3.1.webp",
-          "/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/4.webp"
+  images: ["/images/Devices/AirSense™ 11 AutoSet™ (Single Pack)/1.webp", "/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/2.1.webp", "/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/3.1.webp", "/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/4.webp"
   ], specifications: [{ label: "Category", value: "Accessory" }] },
 
 { id: 62, slug: "lumis-100", name: "Lumis™ 100 VPAP ST Non- Invasive Ventilator", price: 4500, category: "rental", description: "Mask frame.", 
   images: [  
-    "/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/1.webp",
-    "/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/2.webp",
-    "/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/3.webp",
-    "/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/4.webp"
+    "/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/1.webp", "/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/2.webp", "/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/3.webp", "/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/4.webp"
   ], specifications: [{ label: "Category", value: "Accessory" }] },
 
 { id: 89, slug: "lumis-150", name: "Resmed AirCurve 10 VAuto BIPAP – Best Auto BIPAP", price: 5900, category: "rental", description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support..", 
-   images: [
-    "/images/Devices/Lumis™ 150 VPAP ST-A Non- Invasive Ventilator.webp",
+   images: ["/images/Devices/Lumis™ 150 VPAP ST-A Non- Invasive Ventilator.webp",
   ], specifications: [
     { label: "Brand", value: "ResMed" },
     { label: "Connectivity", value: "Cloud Connected" }]
   },
 
 { id: 90, slug: "airsense-10", name: "AirSense™ 11 AutoSet™ 4G Tripack", price: 4900, category: "rental", description: "Advanced CPAP machine", 
-  images: ["/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/1.webp",
-          "/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/2.1.webp",
-          "/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/3.1.webp",
-          "/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/4.webp"
+  images: ["/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/1.webp", "/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/2.1.webp", "/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/3.1.webp",  "/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/4.webp"
         ], 
         specifications: [{ label: "Brand", value: "ResMed" }, { label: "Type", value: "Auto CPAP" }] 
       },
 
   { id: 91, slug: "airstart-10", name: "AirStart™ 10 APAP", price: 3900, category: "rental", description: "Advanced CPAP machine", 
-  images: ["/images/Devices/AirStart™ 10 APAP with humidification and tube/1.webp",
-   "/images/Devices/AirStart™ 10 APAP with humidification and tube/2.webp",
-    "/images/Devices/AirStart™ 10 APAP with humidification and tube/3.webp",
-     "/images/Devices/AirStart™ 10 APAP with humidification and tube/4.webp"],
+  images: ["/images/Devices/AirStart™ 10 APAP with humidification and tube/1.webp","/images/Devices/AirStart™ 10 APAP with humidification and tube/2.webp", "/images/Devices/AirStart™ 10 APAP with humidification and tube/3.webp", "/images/Devices/AirStart™ 10 APAP with humidification and tube/4.webp"],
       specifications: [{ label: "Brand", value: "ResMed" }, { label: "Connectivity", value: "4G Enabled" }] },
 
 
