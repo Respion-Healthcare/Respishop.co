@@ -121,7 +121,7 @@ export default function DealOfTheDay() {
             </div>
 
             <h2 className="text-4xl lg:text-5xl font-serif text-gray-900 leading-tight">
-              Daily Deals Of The Day
+              Deals Of The Day
             </h2>
 
             <p className="mt-4 text-gray-600 text-base lg:text-lg max-w-3xl leading-relaxed">
