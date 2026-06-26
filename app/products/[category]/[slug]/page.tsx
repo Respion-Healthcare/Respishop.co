@@ -52,9 +52,47 @@ return (
     <div className="grid md:grid-cols-3 gap-10">
 
       {/* LEFT - Image Slider */}
-      <div>
-        <ImageSlider images={product.images} name={product.name} />
-      </div>
+      <div className="space-y-6">
+
+    <ImageSlider
+        images={product.images}
+        name={product.name}
+    />
+
+    {/* TRUST BADGES */}
+    <div className="grid grid-cols-2 gap-4">
+
+        <div className="border rounded-lg p-4 text-center">
+            <p className="font-semibold">100% Genuine</p>
+            <p className="text-xs text-gray-500">
+                Manufacturer Warranty
+            </p>
+        </div>
+
+        <div className="border rounded-lg p-4 text-center">
+            <p className="font-semibold">Fast Delivery</p>
+            <p className="text-xs text-gray-500">
+                Across India within 24 hours 
+            </p>
+        </div>
+
+        <div className="border rounded-lg p-4 text-center">
+            <p className="font-semibold">24 Hour Therapy Assistance</p>
+            <p className="text-xs text-gray-500">
+                 From Expert Technician 
+            </p>
+        </div>
+
+        <div className="border rounded-lg p-4 text-center">
+            <p className="font-semibold">Secure Checkout</p>
+            <p className="text-xs text-gray-500">
+                Safe Payments
+            </p>
+        </div>
+
+    </div>
+
+</div>
 
       {/* CENTER - Info */}
       <div>
@@ -101,46 +139,13 @@ return (
 
         </div>
 
-        {/* Trust badge */}
-        <div className="grid grid-cols-2 gap-3 mt-6">
-
-          <div className="border rounded-lg p-3 text-center">
-            <p className="font-semibold">100% Genuine</p>
-            <p className="text-xs text-gray-500">
-              Manufacturer Warranty
-            </p>
-          </div>
-
-          <div className="border rounded-lg p-3 text-center">
-            <p className="font-semibold">Fast Delivery</p>
-            <p className="text-xs text-gray-500">
-              Across India
-            </p>
-          </div>
-
-          <div className="border rounded-lg p-3 text-center">
-            <p className="font-semibold">Expert Support</p>
-            <p className="text-xs text-gray-500">
-              Therapy Assistance
-            </p>
-          </div>
-
-          <div className="border rounded-lg p-3 text-center">
-            <p className="font-semibold">Secure Checkout</p>
-            <p className="text-xs text-gray-500">
-              Safe Payments
-            </p>
-          </div>
-
-        </div>
-
+       
         {/* PRODUCT OPTIONS */}
         <ProductOptions product={product} />
 
       </div>
 
     </div>
-
     {/* PRODUCT DETAILS */}
     <div className="mt-20">
 

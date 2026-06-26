@@ -219,7 +219,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-blue-100 py-3 text-center text-sm text-gray-500 bg-[#f3f8ff]">
-        © 2026 Respishop. All Rights Reserved.
+        © 2025 Respishop. All Rights Reserved.
       </div>
     </footer>
   )
