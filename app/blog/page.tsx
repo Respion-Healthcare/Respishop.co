@@ -110,17 +110,17 @@ const blog = [
     "Discover BiPAP machine prices in Kolkata, popular models, features, and tips to choose the right device for sleep apnea and respiratory care.",
 },
 
-// {
-//   id: 10,
-//   slug: "cpap-machine-price-in-bhubaneswar",
-//   title: "CPAP Machine Price in Bhubaneswar – 2026 Guide",
-//   category: "CPAP",
-//   date: "June 2026",
-//   readTime: "5 min read",
-//   image: "/images/Blogs/b7.png",
-//   excerpt:
-//     "Compare CPAP machine prices in Bhubaneswar, explore popular models, and learn how to choose the best CPAP device for sleep apnea treatment.",
-// },
+{
+  id: 9,
+  slug: "cpap-machine-rental-bhubaneswar",
+  title: "CPAP Machine Rental in Bhubaneswar | 3-Hour Delivery by Respishop",
+  category: "CPAP Rental",
+  date: "June 2026",
+  readTime: "5 min read",
+  image: "/images/Blogs/B9.jpg",
+  excerpt:
+    "Rent CPAP, BiPAP, and oxygen concentrators from Respishop with 3-hour delivery in Bhubaneswar, Kolkata, Ranchi, Patna, and Bangalore. Enjoy one-day delivery across the rest of India with genuine devices, expert support, and affordable rental plans.",
+},
 // {
 //   id: 11,
 //   slug: "oxygen-concentrator-price-in-india",

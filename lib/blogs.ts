@@ -781,5 +781,248 @@ ResMed is one of the most trusted brands for BiPAP therapy.</p>
 
 `,
 },
+"cpap-machine-rental-bhubaneswar": {
+ title: "CPAP Machine Rental in Bhubaneswar | 3-Hour Delivery by Respishop",
+ image: "/images/Blogs/B9.jpg",
+content: `
+
+<h2>CPAP Machine Rental in Bhubaneswar (2026) – 3-Hour Delivery by Respishop</h2>
+
+<p>
+Looking for a <strong>CPAP machine on rent in Bhubaneswar</strong>? Respishop provides
+affordable <strong>CPAP machines, BiPAP machines, and Oxygen Concentrator rentals</strong>
+with fast doorstep delivery, expert setup, and dedicated after-sales support.
+Whether you need therapy for a few days, a month, or want to try a CPAP before purchasing,
+our flexible rental plans make respiratory care simple and affordable.
+</p>
+
+<div class="bg-blue-50 border-l-4 border-blue-600 rounded-xl p-5 my-8">
+<h3>🚚 Fast Delivery Available</h3>
+
+<ul>
+<li><strong>3-Hour Delivery:</strong> Bhubaneswar, Kolkata, Ranchi, Patna & Bangalore</li>
+<li><strong>One-Day Delivery:</strong> Available across the rest of India</li>
+</ul>
+</div>
+
+<hr>
+
+<h2>Why Rent a CPAP Machine?</h2>
+
+<p>Renting is a smart choice if you require temporary therapy or wish to test a machine before buying.</p>
+
+<ul>
+<li>✅ Affordable monthly rental plans</li>
+<li>✅ No large upfront investment</li>
+<li>✅ Perfect for trial therapy</li>
+<li>✅ Professionally cleaned & sanitized devices</li>
+<li>✅ Expert installation and setup</li>
+<li>✅ Dedicated customer support</li>
+</ul>
+
+<hr>
+
+<h2>Rental Products Available</h2>
+
+<table>
+<thead>
+<tr>
+<th>Equipment</th>
+<th>Available on Rent</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>CPAP Machines</td>
+<td>✅</td>
+</tr>
+
+<tr>
+<td>Auto CPAP (APAP)</td>
+<td>✅</td>
+</tr>
+
+<tr>
+<td>BiPAP Machines</td>
+<td>✅</td>
+</tr>
+
+<tr>
+<td>Oxygen Concentrators</td>
+<td>✅</td>
+</tr>
+
+<tr>
+<td>CPAP Masks & Accessories</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2>Why Choose Respishop?</h2>
+
+<div class="grid md:grid-cols-2 gap-4">
+
+<div>
+
+<h3>✔ Genuine Equipment</h3>
+
+<p>We supply trusted respiratory care equipment from leading international brands.</p>
+
+</div>
+
+<div>
+
+<h3>✔ Flexible Rentals</h3>
+
+<p>Daily, weekly, and monthly rental plans according to your needs.</p>
+
+</div>
+
+<div>
+
+<h3>✔ Affordable Pricing</h3>
+
+<p>Transparent pricing with no hidden charges.</p>
+
+</div>
+
+<div>
+
+<h3>✔ Expert Support</h3>
+
+<p>Professional setup assistance and continuous customer support.</p>
+
+</div>
+
+<div>
+
+<h3>✔ Fast Delivery</h3>
+
+<p>3-hour delivery in major cities and one-day delivery across India.</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<h2>Who Should Rent a CPAP Machine?</h2>
+
+<p>CPAP rental is recommended for:</p>
+
+<ul>
+<li>Patients recently diagnosed with Sleep Apnea</li>
+<li>Patients undergoing Sleep Study</li>
+<li>Travellers requiring temporary therapy</li>
+<li>Patients recovering after surgery</li>
+<li>Users wanting to try CPAP before purchasing</li>
+</ul>
+
+<hr>
+
+<h2>3-Hour Delivery Cities</h2>
+
+<div class="bg-green-50 rounded-xl p-5">
+
+<ul>
+<li>📍 Bhubaneswar</li>
+<li>📍 Kolkata</li>
+<li>📍 Ranchi</li>
+<li>📍 Patna</li>
+<li>📍 Bangalore</li>
+</ul>
+
+<p>
+Orders received in these cities are delivered within approximately
+<strong>3 hours</strong>, subject to stock availability.
+</p>
+
+</div>
+
+<hr>
+
+<h2>Pan India Delivery</h2>
+
+<p>
+Outside our rapid delivery cities, Respishop offers
+<strong>One-Day Delivery across most states in India</strong>.
+Every rental device is securely packed, sanitized, and dispatched through trusted logistics partners.
+</p>
+
+<hr>
+
+<h2>How to Rent a CPAP Machine</h2>
+
+<ol>
+<li>Select the CPAP, BiPAP, or Oxygen Concentrator.</li>
+<li>Contact the Respishop rental team.</li>
+<li>Complete a quick verification process.</li>
+<li>Receive fast doorstep delivery.</li>
+<li>Begin therapy with expert guidance.</li>
+</ol>
+
+<hr>
+
+<h2>Frequently Asked Questions</h2>
+
+<details>
+  <summary>Do you provide CPAP machine rental in Bhubaneswar?</summary>
+  <p>
+    Yes. Respishop provides CPAP machine rentals with approximately 3-hour delivery
+    within Bhubaneswar, subject to product availability.
+  </p>
+</details>
+
+<details>
+  <summary>Which cities receive 3-hour delivery?</summary>
+  <p>
+    We offer approximately 3-hour delivery in Bhubaneswar, Kolkata, Ranchi,
+    Patna, and Bangalore.
+  </p>
+</details>
+
+<details>
+  <summary>Do you deliver across India?</summary>
+  <p>
+    Yes. We provide one-day delivery across most locations in India using trusted
+    logistics partners.
+  </p>
+</details>
+
+<details>
+  <summary>Can I rent a BiPAP machine or Oxygen Concentrator?</summary>
+  <p>
+    Yes. Respishop offers rental options for CPAP machines, BiPAP machines,
+    and Oxygen Concentrators depending on availability.
+  </p>
+</details>
+
+<details>
+  <summary>How do I book a rental?</summary>
+  <p>
+    Simply contact our team, choose your device, complete a quick verification,
+    and we'll arrange fast doorstep delivery.
+  </p>
+</details>
+
+<div class="bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-2xl p-8 my-10">
+
+<h2>Need a CPAP Machine Today?</h2>
+
+<p>
+Respishop offers affordable CPAP, BiPAP, and Oxygen Concentrator rentals with
+<strong>3-hour delivery</strong> in Bhubaneswar, Kolkata, Ranchi, Patna, and Bangalore,
+along with <strong>one-day delivery across India</strong>.
+</p>
+
+<p><strong>📞 Contact our experts today to book your rental.</strong></p>
+
+</div>
+`
+}
 }
 export default blogContent;

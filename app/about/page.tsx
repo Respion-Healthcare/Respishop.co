@@ -180,7 +180,7 @@ export default function AboutPage() {
         </div>
 
         {/* HERO SECTION */}
-<section className="relative w-full min-h-screen px-10 md:px-16 lg:px-20 xl:px-24 pt-6 pb-10 flex items-start">        <div className="grid lg:grid-cols-2 gap-10 items-center w-full mt-6">
+          <section className="relative w-full min-h-screen px-4 sm:px-6 md:px-10 lg:px-20 xl:px-24 pt-6 pb-12 flex items-center">        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full mt-4">
 
             {/* LEFT */}
             <div>
@@ -189,7 +189,7 @@ export default function AboutPage() {
                 Trusted Respiratory Healthcare
               </div>
 
-              <h1 className="text-4xl md:text-5xl xl:text-6xl font-black leading-tight text-gray-900 mb-5">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-black leading-tight text-gray-900 mb-5">
 
                 Transforming
 
@@ -204,7 +204,7 @@ export default function AboutPage() {
 
               </h1>
 
-              <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8 max-w-2xl">
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-8 max-w-2xl">
                 Respishop delivers premium CPAP, BiPAP, oxygen concentrators,
                 sleep study services, and respiratory care solutions with
                 trusted support and advanced expertise.
@@ -212,11 +212,11 @@ export default function AboutPage() {
 
               {/* STATS */}
 
-<div className="mt-8 rounded-2xl bg-white/70 backdrop-blur-xl border border-white/50 shadow-xl p-6">
+<div className="mt-6 rounded-2xl bg-white/70 backdrop-blur-xl border border-white/50 shadow-xl p-4 sm:p-5 sm:p-6">
 
   <div className="flex items-center gap-3 mb-3">
     <span className="text-3xl">🇮🇳</span>
-    <h3 className="text-2xl font-bold text-gray-900">
+    <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
       Pan India Delivery
     </h3>
   </div>
@@ -248,14 +248,13 @@ export default function AboutPage() {
             {/* RIGHT IMAGE */}
             <div className="relative group float-animation">
 
-              <div className="absolute -inset-5 bg-gradient-to-tr from-blue-200/60 via-cyan-100/50 to-white rounded-[35px] blur-3xl opacity-80"></div>
+              <div className="absolute -inset-5 bg-gradient-to-tr from-blue-200/60 via-cyan-100/50 to-white rounded-3xl lg:rounded-3xl lg:rounded-[35px] p-4 sm:p-5 sm:p-8 p-4 sm:p-5 sm:p-8 blur-3xl opacity-80"></div>
 
-              <div className="absolute top-5 left-5 z-20 bg-white/90 backdrop-blur-xl text-blue-700 px-5 py-2 rounded-full shadow-xl text-xs font-bold border border-white">
+              <div className="absolute top-4 sm:p-5 left-5 z-20 bg-white/90 backdrop-blur-xl text-blue-700 px-5 py-2 rounded-full shadow-xl text-xs font-bold border border-white">
                 Trusted Since 2025
               </div>
 
-              <div className="relative h-[560px] rounded-[35px] overflow-hidden shadow-[0_20px_80px_rgba(59,130,246,0.20)]">
-
+              <div className="relative h-[320px] sm:h-[420px] md:h-[520px] lg:h-[560px] rounded-[28px] sm:rounded-3xl lg:rounded-3xl lg:rounded-[35px] p-4 sm:p-5 sm:p-8 p-4 sm:p-5 sm:p-8 overflow-hidden">
                 <Image
                   src="/images/aboutus.webp"
                   alt="Respishop Sleep Therapy Team"
@@ -275,11 +274,10 @@ export default function AboutPage() {
         </section>
 
         {/* ABOUT + CONTACT */}
-   <section className="relative w-full min-h-[78vh] px-10 md:px-16 lg:px-20 xl:px-24 pt-0 pb-2 -mt-6 flex items-start">         
-     <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 w-full items-stretch">
+  <section className="relative w-full px-4 sm:px-6 md:px-10 lg:px-20 xl:px-24 pt-8 pb-12 flex items-start">     <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 w-full items-stretch">
 
             {/* LEFT */}
-            <div className="bg-white/70 backdrop-blur-2xl border border-white/60 rounded-[35px] p-7 md:p-9 shadow-[0_20px_70px_rgba(0,0,0,0.05)] flex flex-col justify-between">
+            <div className="bg-white/70 backdrop-blur-2xl border border-white/60 rounded-3xl lg:rounded-3xl lg:rounded-3xl lg:rounded-[35px] p-4 sm:p-5 sm:p-8 p-4 sm:p-5 sm:p-8 p-4 sm:p-5 sm:p-7 md:p-9 shadow-[0_20px_70px_rgba(0,0,0,0.05)] flex flex-col justify-between">
 
               <div>
 
@@ -287,7 +285,7 @@ export default function AboutPage() {
                   About Respishop
                 </div>
 
-                <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-5">
+                <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-4xl sm:text-4xl md:text-5xl font-black text-gray-900 mb-5">
                   Building Better
                   <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                     {" "}
@@ -320,7 +318,7 @@ export default function AboutPage() {
               <div className="grid gap-4">
 
                 {/* CARD */}
-                <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-white p-5 border border-blue-100 hover:-translate-y-1 transition duration-500 hover:shadow-xl">
+                <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-white p-4 sm:p-5 border border-blue-100 hover:-translate-y-1 transition duration-500 hover:shadow-xl">
 
                   <div className="flex gap-4 items-start">
 
@@ -346,7 +344,7 @@ export default function AboutPage() {
                 </div>
 
                 {/* CARD */}
-                <div className="rounded-2xl bg-gradient-to-r from-cyan-50 to-white p-5 border border-cyan-100 hover:-translate-y-1 transition duration-500 hover:shadow-xl">
+                <div className="rounded-2xl bg-gradient-to-r from-cyan-50 to-white p-4 sm:p-5 border border-cyan-100 hover:-translate-y-1 transition duration-500 hover:shadow-xl">
 
                   <div className="flex gap-4 items-start">
 
@@ -371,7 +369,7 @@ export default function AboutPage() {
                 </div>
 
                 {/* CARD */}
-                <div className="rounded-2xl bg-gradient-to-r from-sky-50 to-white p-5 border border-sky-100 hover:-translate-y-1 transition duration-500 hover:shadow-xl">
+                <div className="rounded-2xl bg-gradient-to-r from-sky-50 to-white p-4 sm:p-5 border border-sky-100 hover:-translate-y-1 transition duration-500 hover:shadow-xl">
 
                   <div className="flex gap-4 items-start">
 
@@ -404,7 +402,7 @@ export default function AboutPage() {
             <div className="flex flex-col gap-6">
 
               {/* TESTIMONIAL */}
-              <div className="relative overflow-hidden rounded-[35px] bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-500 p-8 shadow-[0_20px_70px_rgba(59,130,246,0.30)] flex-1">
+              <div className="relative overflow-hidden rounded-3xl lg:rounded-3xl lg:rounded-[35px] p-4 sm:p-5 sm:p-8 p-4 sm:p-5 sm:p-8 bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-500 p-8 shadow-[0_20px_70px_rgba(59,130,246,0.30)] flex-1">
 
                 <div className="absolute top-0 right-0 w-56 h-56 bg-white/10 rounded-full blur-3xl"></div>
 
@@ -416,7 +414,7 @@ export default function AboutPage() {
                       Patient Testimonials
                     </div>
 
-                    <h2 className="text-3xl md:text-4xl font-black text-white">
+                    <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-4xl md:text-4xl font-black text-white">
                       What Our Clients Say
                     </h2>
 
@@ -424,7 +422,7 @@ export default function AboutPage() {
 
                   <div className="bg-white/95 backdrop-blur-xl rounded-[28px] p-7 shadow-xl flex-1 flex flex-col justify-center transition-all duration-700">
 
-                    <p className="text-lg italic text-gray-700 leading-relaxed text-center mb-8">
+                    <p className="text-base sm:text-lg italic text-gray-700 leading-relaxed text-center mb-8">
                       “{testimonials[currentTestimonial].text}”
                     </p>
 
@@ -447,7 +445,7 @@ export default function AboutPage() {
               </div>
 
               {/* CONTACT */}
-              <div className="bg-white/75 backdrop-blur-2xl border border-white/60 rounded-[35px] p-8 shadow-[0_20px_70px_rgba(0,0,0,0.05)]">
+              <div className="bg-white/75 backdrop-blur-2xl border border-white/60 rounded-3xl lg:rounded-3xl lg:rounded-[35px] p-4 sm:p-5 sm:p-8 p-4 sm:p-5 sm:p-8 p-8 shadow-[0_20px_70px_rgba(0,0,0,0.05)]">
 
                 <div className="mb-6">
 
@@ -455,7 +453,7 @@ export default function AboutPage() {
                     Contact Information
                   </div>
 
-                  <h2 className="text-3xl md:text-4xl font-black text-gray-900">
+                  <h2 className="text-2xl sm:text-2xl sm:text-3xl md:text-4xl md:text-4xl font-black text-gray-900">
                     Get in Touch
                   </h2>
 
@@ -463,12 +461,12 @@ export default function AboutPage() {
 
                 <div className="space-y-4">
 
-                  <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 p-5">
+                  <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 p-4 sm:p-5">
 
                      {/* CALL */}
                   <a
                     href="tel:+919148733700"
-                    className="block rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 p-5 hover:shadow-lg hover:-translate-y-1 transition duration-300"
+                    className="block rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 p-4 sm:p-5 hover:shadow-lg hover:-translate-y-1 transition duration-300"
                   >
 
                     <p className="text-blue-600 font-semibold mb-2 text-sm">
@@ -484,12 +482,12 @@ export default function AboutPage() {
                  
                   </div>
 
-                  <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 p-5">
+                  <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 p-4 sm:p-5">
 
                      {/* EMAIL */}
                   <a
                     href="mailto:respishop.in@gmail.com"
-                    className="block rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 p-5 hover:shadow-lg hover:-translate-y-1 transition duration-300"
+                    className="block rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 p-4 sm:p-5 hover:shadow-lg hover:-translate-y-1 transition duration-300"
                   >
 
                     <p className="text-blue-600 font-semibold mb-2 text-sm">
@@ -503,13 +501,13 @@ export default function AboutPage() {
                   </a>
                   </div>
 
-                  <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 p-5">
+                  <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 p-4 sm:p-5">
 
                     <p className="text-blue-600 font-semibold mb-2 text-sm">
                       Address
                     </p>
 
-                    <p className="text-sm text-gray-700 leading-relaxed">
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                       702, 13th Cross Rd, 1st Phase,
                       <br />
                       J.P Nagar, Bengaluru,
