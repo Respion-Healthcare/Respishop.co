@@ -65,6 +65,13 @@ function useGlow() {
 export default function Hero() {
   const [activeCard, setActiveCard] = useState<number | null>(null)
 
+  const heroImages = [
+  "/images/home11.png",
+  "/images/home2.png",
+  "/images/home3.png",
+]
+
+const [currentImage, setCurrentImage] = useState(0)
   const typedText = useTypewriter(
     "Cutting-edge solutions for modern medical technology, designed to improve patient care and everyday comfort."
   )
@@ -77,6 +84,14 @@ export default function Hero() {
 
   const glow = useGlow()
 
+  useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentImage((prev) => (prev + 1) % heroImages.length)
+  }, 5000)
+
+  return () => clearInterval(interval)
+}, [])
+
   return (
     <section className="relative bg-linear-to-br from-blue-50 via-white to-blue-100 w-full overflow-visible">
 
@@ -84,43 +99,48 @@ export default function Hero() {
       <div className="absolute top-10 right-10 w-62.5 sm:w-125 h-62.5 sm:h-125 bg-blue-300 blur-[120px] opacity-30 rounded-full" />
       <div className="absolute bottom-10 left-10 w-[200px] sm:w-[400px] h-[200px] sm:h-[400px] bg-blue-200 blur-[100px] opacity-30 rounded-full" />
 
-      <div className="max-w-[1400px] xl:max-w-[1600px] mx-auto px-6 sm:px-12 lg:px-16 xl:px-20 py-16 lg:py-24 grid lg:grid-cols-[1.1fr_1.4fr] gap-16 items-center">
-
+      <div className="max-w-[1400px] xl:max-w-[1600px] mx-auto px-5 sm:px-10 lg:px-16 xl:px-20 py-10 sm:py-14 lg:py-24 grid lg:grid-cols-[1.1fr_1.4fr] gap-10 lg:gap-16 items-center">
         {/* LEFT */}
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center items-center lg:items-start">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-3xl sm:text-5xl lg:text-7xl xl:text-8xl font-serif text-blue-600 leading-tight"
-          >
+            className="text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-serif text-blue-600 leading-[1.15] text-center lg:text-left"  >
             Respishop <br /> Healthcare
           </motion.h1>
 
-          <p className="mt-6 text-gray-600 text-base sm:text-lg lg:text-xl max-w-md leading-relaxed min-h-[80px]">
+          <p className="mt-5 text-gray-600 text-[17px] sm:text-lg lg:text-xl leading-8 max-w-lg text-center lg:text-left min-h-[85px] mx-auto lg:mx-0">
             {typedText}
             <span className="animate-pulse">|</span>
           </p>
 
+                  <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="mt-8 w-full flex justify-center lg:justify-start"
+        >
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="mt-10 w-full flex justify-center lg:justify-start"
+            key={currentImage}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
           >
             <Image
-              src="/images/home1.png"
+              src={heroImages[currentImage]}
               alt="Medical Equipment"
-              width={420}
-              height={380}
-              className="w-full max-w-xs sm:max-w-sm md:max-w-md rounded-2xl shadow-xl hover:scale-105 transition"
+             width={520}
+height={420}
+              className="w-full max-w-[430px] sm:max-w-md md:max-w-lg rounded-3xl shadow-2xl transition duration-500"
             />
           </motion.div>
+        </motion.div>
 
-          <Link
-            href="/products/cpap/resmed-airsense-10-autoset-tripack"
-            className="mt-6 w-fit bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:scale-105 hover:bg-blue-700 transition shadow-lg"
-          >
-            Explore Now
-          </Link>
+              <Link
+        href="/products/cpap/resmed-airsense-10-autoset-tripack"
+        className="mt-8 mx-auto lg:mx-0 w-fit bg-blue-600 text-white px-8 py-4 rounded-full hover:scale-105 hover:bg-blue-700 transition shadow-xl"
+      >
+        Explore Now
+      </Link>
         </div>
 
       {/* RIGHT */}
