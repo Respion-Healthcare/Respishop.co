@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { motion, useMotionValue, useTransform } from "framer-motion"
+import { motion, AnimatePresence, useMotionValue, useTransform,} from "framer-motion"
 
 /* ---------- TILT HOOK ---------- */
 function useTilt() {
@@ -87,7 +87,7 @@ const [currentImage, setCurrentImage] = useState(0)
   useEffect(() => {
   const interval = setInterval(() => {
     setCurrentImage((prev) => (prev + 1) % heroImages.length)
-  }, 5000)
+  }, 3000)
 
   return () => clearInterval(interval)
 }, [])
@@ -114,26 +114,31 @@ const [currentImage, setCurrentImage] = useState(0)
             <span className="animate-pulse">|</span>
           </p>
 
-                  <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="mt-8 w-full flex justify-center lg:justify-start"
-        >
-          <motion.div
-            key={currentImage}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-          >
-            <Image
-              src={heroImages[currentImage]}
-              alt="Medical Equipment"
-             width={520}
-height={420}
-              className="w-full max-w-[430px] sm:max-w-md md:max-w-lg rounded-3xl shadow-2xl transition duration-500"
-            />
-          </motion.div>
-        </motion.div>
+             <motion.div
+  initial={{ opacity: 0, scale: 0.95 }}
+  animate={{ opacity: 1, scale: 1 }}
+  className="mt-8 w-full flex justify-center lg:justify-start"
+>
+  <div className="overflow-hidden rounded-3xl shadow-2xl">
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={currentImage}
+        initial={{ x: 300, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        exit={{ x: -300, opacity: 0 }}
+        transition={{ duration: 0.7 }}
+      >
+        <Image
+          src={heroImages[currentImage]}
+          alt="Medical Equipment"
+          width={600}
+          height={420}
+          className="w-full max-w-[500px] sm:max-w-[560px] h-auto rounded-3xl"
+        />
+      </motion.div>
+    </AnimatePresence>
+  </div>
+</motion.div>
 
               <Link
         href="/products/cpap/resmed-airsense-10-autoset-tripack"
