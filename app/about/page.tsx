@@ -180,7 +180,7 @@ export default function AboutPage() {
         </div>
 
         {/* HERO SECTION */}
-          <section className="relative w-full min-h-screen px-4 sm:px-6 md:px-10 lg:px-20 xl:px-24 pt-6 pb-12 flex items-center">        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full mt-4">
+          <section className="relative w-full min-h-[80vh] sm:min-h-screen px-4 sm:px-6 md:px-10 lg:px-20 xl:px-24 pt-4 sm:pt-6 pb-8 sm:pb-12 flex items-center">        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full mt-4">
 
             {/* LEFT */}
             <div>
@@ -189,7 +189,7 @@ export default function AboutPage() {
                 Trusted Respiratory Healthcare
               </div>
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-black leading-tight text-gray-900 mb-5">
+              <h1 className="text-2xl sm:text-3xl md:text-5xl xl:text-6xl font-black leading-tight text-gray-900 mb-5">
 
                 Transforming
 
@@ -204,7 +204,7 @@ export default function AboutPage() {
 
               </h1>
 
-              <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-8 max-w-2xl">
+              <p className="text-[14px] sm:text-base md:text-lg text-gray-600 leading-relaxed mb-8 max-w-2xl">
                 Respishop delivers premium CPAP, BiPAP, oxygen concentrators,
                 sleep study services, and respiratory care solutions with
                 trusted support and advanced expertise.
@@ -248,13 +248,13 @@ export default function AboutPage() {
             {/* RIGHT IMAGE */}
             <div className="relative group float-animation">
 
-              <div className="absolute -inset-5 bg-gradient-to-tr from-blue-200/60 via-cyan-100/50 to-white rounded-3xl lg:rounded-3xl lg:rounded-[35px] p-4 sm:p-5 sm:p-8 p-4 sm:p-5 sm:p-8 blur-3xl opacity-80"></div>
+              <div className="absolute -inset-5 bg-gradient-to-tr from-blue-200/60 via-cyan-100/50 to-white rounded-3xl lg:rounded-3xl lg:rounded-[35px] p-4 sm:p-6 lg:p-8 p-4 sm:p-6 lg:p-8 blur-3xl opacity-80"></div>
 
               <div className="absolute top-4 sm:p-5 left-5 z-20 bg-white/90 backdrop-blur-xl text-blue-700 px-5 py-2 rounded-full shadow-xl text-xs font-bold border border-white">
                 Trusted Since 2025
               </div>
 
-              <div className="relative h-[320px] sm:h-[420px] md:h-[520px] lg:h-[560px] rounded-[28px] sm:rounded-3xl lg:rounded-3xl lg:rounded-[35px] p-4 sm:p-5 sm:p-8 p-4 sm:p-5 sm:p-8 overflow-hidden">
+              <div className="relative h-[320px] sm:h-[420px] md:h-[520px] lg:h-[560px] rounded-[28px] sm:rounded-3xl lg:rounded-3xl lg:rounded-[35px] p-4 sm:p-6 lg:p-8 p-4 sm:p-6 lg:p-8 overflow-hidden">
                 <Image
                   src="/images/aboutus.webp"
                   alt="Respishop Sleep Therapy Team"
@@ -277,7 +277,7 @@ export default function AboutPage() {
   <section className="relative w-full px-4 sm:px-6 md:px-10 lg:px-20 xl:px-24 pt-8 pb-12 flex items-start">     <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 w-full items-stretch">
 
             {/* LEFT */}
-            <div className="bg-white/70 backdrop-blur-2xl border border-white/60 rounded-3xl lg:rounded-3xl lg:rounded-3xl lg:rounded-[35px] p-4 sm:p-5 sm:p-8 p-4 sm:p-5 sm:p-8 p-4 sm:p-5 sm:p-7 md:p-9 shadow-[0_20px_70px_rgba(0,0,0,0.05)] flex flex-col justify-between">
+            <div className="bg-white/70 backdrop-blur-2xl border border-white/60 rounded-3xl lg:rounded-3xl lg:rounded-3xl lg:rounded-[35px] p-4 sm:p-6 lg:p-8 p-4 sm:p-6 lg:p-8 p-4 sm:p-5 sm:p-7 md:p-9 shadow-[0_20px_70px_rgba(0,0,0,0.05)] flex flex-col justify-between">
 
               <div>
 
@@ -402,7 +402,7 @@ export default function AboutPage() {
             <div className="flex flex-col gap-6">
 
               {/* TESTIMONIAL */}
-              <div className="relative overflow-hidden rounded-3xl lg:rounded-3xl lg:rounded-[35px] p-4 sm:p-5 sm:p-8 p-4 sm:p-5 sm:p-8 bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-500 p-8 shadow-[0_20px_70px_rgba(59,130,246,0.30)] flex-1">
+              <div className="relative overflow-hidden rounded-3xl lg:rounded-3xl lg:rounded-[35px] p-4 sm:p-6 lg:p-8 p-4 sm:p-6 lg:p-8 bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-500 p-8 shadow-[0_20px_70px_rgba(59,130,246,0.30)] flex-1">
 
                 <div className="absolute top-0 right-0 w-56 h-56 bg-white/10 rounded-full blur-3xl"></div>
 
@@ -445,7 +445,7 @@ export default function AboutPage() {
               </div>
 
               {/* CONTACT */}
-              <div className="bg-white/75 backdrop-blur-2xl border border-white/60 rounded-3xl lg:rounded-3xl lg:rounded-[35px] p-4 sm:p-5 sm:p-8 p-4 sm:p-5 sm:p-8 p-8 shadow-[0_20px_70px_rgba(0,0,0,0.05)]">
+              <div className="bg-white/75 backdrop-blur-2xl border border-white/60 rounded-3xl lg:rounded-3xl lg:rounded-[35px] p-4 sm:p-6 lg:p-8 p-4 sm:p-6 lg:p-8 p-8 shadow-[0_20px_70px_rgba(0,0,0,0.05)]">
 
                 <div className="mb-6">
 

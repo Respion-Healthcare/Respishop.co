@@ -97,14 +97,14 @@ export default function DealOfTheDay() {
   }
 
   return (
-    <section className="relative overflow-hidden py-20 lg:py-24 bg-gradient-to-b from-[#f8fbff] via-[#eef6ff] to-[#f4f9ff]">
+    <section className="relative overflow-hidden py-10 sm:py-14 lg:py-24 bg-gradient-to-b from-[#f8fbff] via-[#eef6ff] to-[#f4f9ff]">
 
       {/* BACKGROUND BLUR */}
       <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-200/40 blur-[120px] rounded-full" />
 
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-cyan-200/30 blur-[140px] rounded-full" />
-
-      <div className="relative z-10 px-6 lg:px-20">
+   
+      <div className="relative z-10 px-4 sm:px-6 lg:px-20">
 
         {/* HEADER */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-14">
@@ -113,18 +113,18 @@ export default function DealOfTheDay() {
 
             <div className="flex items-center gap-2 mb-3">
 
-              <span className="bg-orange-100 text-orange-600 px-4 py-1 rounded-full text-xs font-semibold tracking-wide flex items-center gap-1">
+              <span className="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-[10px] sm:text-xs font-semibold tracking-wide flex items-center gap-1">
                 <Flame size={14} />
                 LIMITED TIME DEALS
               </span>
 
             </div>
 
-            <h2 className="text-4xl lg:text-5xl font-serif text-gray-900 leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-5xl font-serif text-gray-900 leading-tight">
               Deals Of The Day
             </h2>
 
-            <p className="mt-4 text-gray-600 text-base lg:text-lg max-w-3xl leading-relaxed">
+            <p className="mt-3 text-gray-600 text-sm sm:text-base lg:text-lg max-w-3xl leading-relaxed">
               Discover premium CPAP, BiPAP, oxygen concentrators,
               masks, and respiratory healthcare equipment with
               exclusive limited-time pricing and fast delivery.
@@ -133,13 +133,13 @@ export default function DealOfTheDay() {
           </div>
 
           {/* TIMER */}
-          <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-4 rounded-2xl shadow-xl w-fit">
+          <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-3 sm:px-6 sm:py-4 rounded-xl sm:rounded-2xl shadow-xl w-fit">
 
             <p className="text-xs uppercase tracking-widest opacity-80 mb-1">
               OFFER ENDS IN
             </p>
 
-            <div className="text-3xl font-bold tracking-wider">
+            <div className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-wider">
               {hours}:{minutes}:{seconds}
             </div>
 
@@ -151,7 +151,7 @@ export default function DealOfTheDay() {
         <div className="grid lg:grid-cols-[1.7fr_0.9fr] gap-8 items-start">
 
           {/* LEFT SLIDER */}
-          <div className="relative rounded-[2.2rem] bg-white/80 backdrop-blur-xl border border-white/60 shadow-[0_20px_80px_rgba(0,0,0,0.08)] p-6 overflow-hidden">
+          <div className="relative rounded-2xl sm:rounded-[2.2rem] bg-white/80 backdrop-blur-xl border border-white/60 shadow-[0_20px_80px_rgba(0,0,0,0.08)] p-4 sm:p-6 overflow-hidden">
 
             {/* TOP BAR */}
             <div className="flex items-center justify-between mb-6">
@@ -174,16 +174,16 @@ export default function DealOfTheDay() {
 
                 <button
                   onClick={() => scroll("left")}
-                  className="w-11 h-11 rounded-full bg-white shadow-md hover:bg-blue-600 hover:text-white transition flex items-center justify-center"
+                  className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white shadow-md hover:bg-blue-600 hover:text-white transition flex items-center justify-center"
                 >
-                  <ChevronLeft size={18} />
+                  <ChevronLeft size={16} />
                 </button>
 
                 <button
                   onClick={() => scroll("right")}
-                  className="w-11 h-11 rounded-full bg-white shadow-md hover:bg-blue-600 hover:text-white transition flex items-center justify-center"
+                  className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white shadow-md hover:bg-blue-600 hover:text-white transition flex items-center justify-center"
                 >
-                  <ChevronRight size={18} />
+                  <ChevronRight size={16} />
                 </button>
 
               </div>
@@ -211,7 +211,7 @@ export default function DealOfTheDay() {
                     key={product.id}
                     whileHover={{ y: -10 }}
                     transition={{ duration: 0.3 }}
-                    className="min-w-[300px]"
+                    className="min-w-[230px] sm:min-w-[280px] lg:min-w-[300px]"
                   >
 
                     <Link
@@ -231,20 +231,20 @@ export default function DealOfTheDay() {
                         )}
 
                         {/* IMAGE */}
-                        <div className="relative h-[240px] rounded-2xl bg-gradient-to-br from-blue-50 to-white flex items-center justify-center overflow-hidden">
+                        <div className="relative h-[170px] sm:h-[210px] lg:h-[240px] rounded-2xl bg-gradient-to-br from-blue-50 to-white flex items-center justify-center overflow-hidden">
 
                           <motion.div
                             whileHover={{ scale: 1.08 }}
                             transition={{ duration: 0.4 }}
                           >
 
-                            <Image
-                              src={product.images[0]}
-                              alt={product.name}
-                              width={220}
-                              height={220}
-                              className="object-contain"
-                            />
+                           <Image
+                          src={product.images[0]}
+                          alt={product.name}
+                          width={170}
+                          height={170}
+                          className="object-contain w-[140px] sm:w-[170px] lg:w-[220px]"
+                        />
 
                           </motion.div>
 
@@ -257,7 +257,7 @@ export default function DealOfTheDay() {
                             {product.category}
                           </p>
 
-                          <h3 className="mt-2 text-lg font-semibold text-gray-900 leading-snug line-clamp-2 min-h-[56px]">
+                          <h3 className="mt-2 text-base sm:text-lg font-semibold text-gray-900 leading-snug line-clamp-2 min-h-[56px]">
                             {product.name}
                           </h3>
 
@@ -283,7 +283,7 @@ export default function DealOfTheDay() {
                           {/* PRICE */}
                           <div className="flex items-center gap-3 mt-4 flex-wrap">
 
-                            <span className="text-2xl font-bold text-blue-700">
+                            <span className="text-xl sm:text-2xl font-bold text-blue-700">
                               ₹
                               {finalPrice.toLocaleString(
                                 "en-IN"
@@ -302,7 +302,7 @@ export default function DealOfTheDay() {
                           </div>
 
                           {/* BUTTON */}
-                          <button className="mt-5 w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-semibold transition-all duration-300 shadow-md">
+                          <button className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-2.5 sm:py-3 rounded-xl text-sm sm:text-base font-semibold transition-all duration-300 shadow-md">
                             View Product
                           </button>
 
@@ -340,8 +340,7 @@ export default function DealOfTheDay() {
 
                   <Link
                     href={`/products/${product.category}/${product.slug}`}
-                    className="group relative flex items-center justify-between gap-5 rounded-[2rem] bg-white/85 backdrop-blur-xl border border-white/60 p-5 shadow-[0_15px_50px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_60px_rgba(37,99,235,0.12)] transition-all duration-500 overflow-hidden"
-                  >
+                    className="group relative flex items-center justify-between gap-5 rounded-[2rem] bg-white/85 backdrop-blur-xl border border-white/60 p-4 sm:p-5 shadow-[0_15px_50px_rgba(0,0,0,0.08)]">
 
                     {/* SIDE GLOW */}
                     <div className="absolute top-0 left-0 h-full w-2 bg-gradient-to-b from-blue-500 to-cyan-400 rounded-full" />
@@ -355,7 +354,7 @@ export default function DealOfTheDay() {
                       </span>
 
                       {/* NAME */}
-                      <h3 className="mt-4 text-xl font-semibold leading-snug text-gray-900 line-clamp-2">
+                      <h3 className="mt-3 text-lg sm:text-xl font-semibold leading-snug text-gray-900 line-clamp-2">
                         {product.name}
                       </h3>
 
@@ -379,7 +378,7 @@ export default function DealOfTheDay() {
                       {/* PRICE */}
                       <div className="mt-4 flex items-center gap-3 flex-wrap">
 
-                        <p className="text-3xl font-bold text-blue-700">
+                        <p className="text-2xl sm:text-3xl font-bold text-blue-700">
                           ₹
                           {getFinalPrice(
                             product
@@ -398,7 +397,7 @@ export default function DealOfTheDay() {
                       </div>
 
                       {/* BUTTON */}
-                      <button className="mt-5 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-full font-semibold transition-all duration-300 shadow-md">
+                      <button className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 text-sm sm:text-base rounded-full font-semibold transition-all duration-300 shadow-md">
                         Shop Now
                       </button>
 
@@ -409,16 +408,16 @@ export default function DealOfTheDay() {
                       whileHover={{
                         scale: 1.06,
                       }}
-                      className="relative min-w-[130px] h-[130px] bg-gradient-to-br from-blue-50 to-white rounded-2xl p-4 shadow-md flex items-center justify-center"
+                      className="relative min-w-[90px] h-[90px] sm:min-w-[130px] sm:h-[130px] bg-gradient-to-br from-blue-50 to-white rounded-2xl p-4 shadow-md flex items-center justify-center"
                     >
 
-                      <Image
-                        src={product.images[0]}
-                        alt={product.name}
-                        width={120}
-                        height={120}
-                        className="object-contain"
-                      />
+                     <Image
+                      src={product.images[0]}
+                      alt={product.name}
+                      width={85}
+                      height={85}
+                      className="object-contain w-[75px] sm:w-[120px]"
+                    />
 
                     </motion.div>
 
