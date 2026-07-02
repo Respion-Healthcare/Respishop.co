@@ -262,6 +262,27 @@ duration-500
         </p>
       </Link>
 
+ <Link href="/sleeptherapy" className="
+group
+relative
+overflow-hidden
+bg-white/80
+backdrop-blur
+p-5
+rounded-3xl
+border
+border-slate-200
+shadow-sm
+hover:shadow-2xl
+hover:-translate-y-2
+transition-all
+duration-500
+">
+        <h3 className="font-semibold text-blue-700">Sleep Therapy</h3>
+        <p className="text-sm text-gray-500 mt-1">
+         Sleep Therapy Diagnosis 
+        </p>
+      </Link>
     </div>
     <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-600 p-8 text-white mb-12">
 

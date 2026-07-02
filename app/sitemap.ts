@@ -58,14 +58,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }))
 
-  // ✅ CATEGORY PAGES
-  const categoryPages = ["mask", "accessory"].map((cat) => ({
-  url: `${baseUrl}/category/${cat}`,
-  lastModified: currentDate,
-  changeFrequency: "weekly" as const,
-  priority: 0.8,
-}))
-
   // ✅ BLOG PAGES
 const blogSlugs = [
   "best-cpap-machine-in-india",
@@ -90,7 +82,6 @@ const blogPages = blogSlugs.map((slug) => ({
     ...staticPages,
     ...seoPages,
     ...productPages,
-    ...categoryPages,
     ...blogPages,
   ]
 }
