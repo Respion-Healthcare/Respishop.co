@@ -6,10 +6,9 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
 
-        allow: [
-          "/",
-          "/wp-admin/admin-ajax.php",
-        ],
+       allow: [
+  "/",
+],
 
         disallow: [
           "/wp-admin/",

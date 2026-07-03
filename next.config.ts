@@ -25,10 +25,35 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
-      // ✅ Old Tag URLs
+      // ✅ Specific Old Tag URL
       {
-        source: "/tag/:slug*",
-        destination: "/blog",
+        source: "/tag/resmed-airstart-10-apap",
+        destination:
+          "/products/cpap-machine/airstart-10-with-humidification-and-tube",
+        permanent: true,
+      },
+
+      // ✅ Old Product URLs
+      {
+        source: "/products/philips-dreamstation",
+        destination: "/products/bipap-machine/philips-auto-bipap",
+        permanent: true,
+      },
+      {
+        source: "/products/philips-bipap-st-25",
+        destination: "/products/bipap-machine/philips-dreamstation-bipap",
+        permanent: true,
+      },
+      {
+        source: "/products/f30i-cushion",
+        destination: "/products/mask-cushion/f30i-cushion",
+        permanent: true,
+      },
+
+      // ✅ Old Blog URL
+      {
+        source: "/blogs/what-is-cpap-machine",
+        destination: "/blog/what-is-cpap-machine",
         permanent: true,
       },
 
