@@ -132,158 +132,165 @@ export default function ProductsPage() {
 </div>
     <div className="max-w-7xl mx-auto px-4 py-12">
      {/* CATEGORY HIGHLIGHTS */}
-   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
-     <Link href="/products/cpap-machine" className="
-group
-relative
-overflow-hidden
-bg-white/80
-backdrop-blur
-p-5
-rounded-3xl
-border
-border-slate-200
-shadow-sm
-hover:shadow-2xl
-hover:-translate-y-2 transition-all duration-500">
-        <h3 className="font-semibold text-blue-700">CPAP</h3>
-        <p className="text-sm text-gray-500 mt-1">
-          Sleep apnea therapy devices
-        </p>
-      </Link>
+  {/* CATEGORY HIGHLIGHTS */}
+<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-4 mb-12">
 
-      <Link href="/products/bipap-machine" className="
-group
-relative
-overflow-hidden
-bg-white/80
-backdrop-blur
-p-5
-rounded-3xl
-border
-border-slate-200
-shadow-sm
-hover:shadow-2xl
-hover:-translate-y-2
-transition-all
-duration-500
-">
-        <h3 className="font-semibold text-blue-700">BiPAP</h3>
-        <p className="text-sm text-gray-500 mt-1">
-          Advanced respiratory support
-        </p>
-      </Link>
-
-      <Link href="/products/oxygen-concentrator" className="
-group
-relative
-overflow-hidden
-bg-white/80
-backdrop-blur
-p-5
-rounded-3xl
-border
-border-slate-200
-shadow-sm
-hover:shadow-2xl
-hover:-translate-y-2
-transition-all
-duration-500
-">
-        <h3 className="font-semibold text-blue-700">Oxygen</h3>
-        <p className="text-sm text-gray-500 mt-1">
-          Portable & home concentrators
-        </p>
-      </Link>
-
-      <Link href="/category/mask" className="
-group
-relative
-overflow-hidden
-bg-white/80
-backdrop-blur
-p-5
-rounded-3xl
-border
-border-slate-200
-shadow-sm
-hover:shadow-2xl
-hover:-translate-y-2
-transition-all
-duration-500
-">
-        <h3 className="font-semibold text-blue-700">Masks</h3>
-        <p className="text-sm text-gray-500 mt-1">
-          Nasal & full face masks
-        </p>
-      </Link>
-
-      <Link href="/category/accessory" className="
-group
-relative
-overflow-hidden
-bg-white/80
-backdrop-blur
-p-5
-rounded-3xl
-border
-border-slate-200
-shadow-sm
-hover:shadow-2xl
-hover:-translate-y-2
-transition-all
-duration-500
-">
-        <h3 className="font-semibold text-blue-700">Accessories</h3>
-        <p className="text-sm text-gray-500 mt-1">
-          Tubes, filters & cushions
-        </p>
-      </Link>
-
-      <Link href="/products/rental" className="
-group
-relative
-overflow-hidden
-bg-white/80
-backdrop-blur
-p-5
-rounded-3xl
-border
-border-slate-200
-shadow-sm
-hover:shadow-2xl
-hover:-translate-y-2
-transition-all
-duration-500
-">
-        <h3 className="font-semibold text-blue-700">Rental</h3>
-        <p className="text-sm text-gray-500 mt-1">
-          CPAP & BiPAP rentals
-        </p>
-      </Link>
-
- <Link href="/sleeptherapy" className="
-group
-relative
-overflow-hidden
-bg-white/80
-backdrop-blur
-p-5
-rounded-3xl
-border
-border-slate-200
-shadow-sm
-hover:shadow-2xl
-hover:-translate-y-2
-transition-all
-duration-500
-">
-        <h3 className="font-semibold text-blue-700">Sleep Therapy</h3>
-        <p className="text-sm text-gray-500 mt-1">
-         Sleep Therapy Diagnosis 
-        </p>
-      </Link>
+  {/* CPAP */}
+  <Link
+    href="/products/cpap-machine"
+    className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+  >
+    <div className="relative h-40 w-full">
+      <Image
+        src="/images/banner2.jpg"
+        alt="CPAP Machine"
+        fill
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
+      />
     </div>
+
+    <div className="p-4">
+      <h3 className="font-semibold text-blue-700">CPAP</h3>
+      <p className="mt-1 text-sm text-gray-500">
+        Sleep apnea therapy devices
+      </p>
+    </div>
+  </Link>
+
+  {/* BiPAP */}
+  <Link
+    href="/products/bipap-machine"
+    className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+  >
+    <div className="relative h-40 w-full">
+      <Image
+        src="/images/Devices/Bipap Machiene/BMC G3 B25vt BIPAP Device with Humidifier and Mask2.webp"
+        alt="BiPAP Machine"
+        fill
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+    </div>
+
+    <div className="p-4">
+      <h3 className="font-semibold text-blue-700">BiPAP</h3>
+      <p className="mt-1 text-sm text-gray-500">
+        Advanced respiratory support
+      </p>
+    </div>
+  </Link>
+
+  {/* Oxygen */}
+  <Link
+    href="/products/oxygen-concentrator"
+    className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+  >
+    <div className="relative h-40 w-full">
+      <Image
+        src="/images/Oc/evox1.jpg"
+        alt="Oxygen Concentrator"
+        fill
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+    </div>
+
+    <div className="p-4">
+      <h3 className="font-semibold text-blue-700">Oxygen</h3>
+      <p className="mt-1 text-sm text-gray-500">
+        Portable & Home Concentrators
+      </p>
+    </div>
+  </Link>
+
+  {/* Masks */}
+  <Link
+    href="/category/mask"
+    className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+  >
+    <div className="relative h-40 w-full">
+      <Image
+        src="/images/banner1.webp"
+        alt="CPAP Masks"
+        fill
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+    </div>
+
+    <div className="p-4">
+      <h3 className="font-semibold text-blue-700">Masks</h3>
+      <p className="mt-1 text-sm text-gray-500">
+        Nasal & Full Face Masks
+      </p>
+    </div>
+  </Link>
+
+  {/* Accessories */}
+  <Link
+    href="/category/accessory"
+    className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+  >
+    <div className="relative h-40 w-full">
+      <Image
+        src="/images/hero12.png"
+        alt="Accessories"
+        fill
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+    </div>
+
+    <div className="p-4">
+      <h3 className="font-semibold text-blue-700">Accessories</h3>
+      <p className="mt-1 text-sm text-gray-500">
+        Tubes, Filters & Cushions
+      </p>
+    </div>
+  </Link>
+
+  {/* Rental */}
+  <Link
+    href="/products/rental"
+    className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+  >
+    <div className="relative h-40 w-full">
+      <Image
+        src="/images/P9.webp"
+        alt="Rental"
+        fill
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+    </div>
+
+    <div className="p-4">
+      <h3 className="font-semibold text-blue-700">Rental</h3>
+      <p className="mt-1 text-sm text-gray-500">
+        CPAP & BiPAP Rentals
+      </p>
+    </div>
+  </Link>
+
+  {/* Sleep Therapy */}
+  <Link
+    href="/sleeptherapy"
+    className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+  >
+    <div className="relative h-40 w-full">
+      <Image
+        src="/images/blog2.webp"
+        alt="Sleep Therapy"
+        fill
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+    </div>
+
+    <div className="p-4">
+      <h3 className="font-semibold text-blue-700">Sleep Therapy</h3>
+      <p className="mt-1 text-sm text-gray-500">
+        Sleep Therapy Diagnosis
+      </p>
+    </div>
+  </Link>
+
+</div>
+    
     <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-600 p-8 text-white mb-12">
 
   <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,white,transparent_40%)]" />
