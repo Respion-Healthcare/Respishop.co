@@ -131,163 +131,68 @@ export default function ProductsPage() {
   </p>
 </div>
     <div className="max-w-7xl mx-auto px-4 py-12">
-     {/* CATEGORY HIGHLIGHTS */}
+
   {/* CATEGORY HIGHLIGHTS */}
-<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-4 mb-12">
+<div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-6 mb-14">
 
-  {/* CPAP */}
-  <Link
-    href="/products/cpap-machine"
-    className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-  >
-    <div className="relative h-40 w-full">
-      <Image
-        src="/images/banner2.jpg"
-        alt="CPAP Machine"
-        fill
-        className="object-cover transition-transform duration-500 group-hover:scale-105"
-      />
-    </div>
+  {[
+    {
+      name: "CPAP",
+      href: "/products/cpap-machine",
+      image: "/images/banner2.jpg",
+    },
+    {
+      name: "BiPAP",
+      href: "/products/bipap-machine",
+      image: "/images/Devices/Bipap Machiene/BMC G3 B25vt BIPAP Device with Humidifier and Mask2.webp",
+    },
+    {
+      name: "Oxygen",
+      href: "/products/oxygen-concentrator",
+      image: "/images/Oc/evox1.jpg",
+    },
+    {
+      name: "Masks",
+      href: "/category/mask",
+      image: "/images/banner1.webp",
+    },
+    {
+      name: "Accessories",
+      href: "/category/accessory",
+      image: "/images/hero12.png",
+    },
+    {
+      name: "Rental",
+      href: "/products/rental",
+      image: "/images/P9.webp",
+    },
+    {
+      name: "Sleep Therapy",
+      href: "/sleeptherapy",
+      image: "/images/blog2.webp",
+    },
+  ].map((item) => (
+    <Link
+      key={item.name}
+      href={item.href}
+      className="group flex flex-col items-center"
+    >
+      {/* Circle Image */}
+      <div className="relative h-28 w-28 sm:h-32 sm:w-32 overflow-hidden rounded-full border-4 border-blue-100 shadow-md transition duration-300 group-hover:scale-105 group-hover:border-blue-500">
+        <Image
+          src={item.image}
+          alt={item.name}
+          fill
+          className="object-cover"
+        />
+      </div>
 
-    <div className="p-4">
-      <h3 className="font-semibold text-blue-700">CPAP</h3>
-      <p className="mt-1 text-sm text-gray-500">
-        Sleep apnea therapy devices
-      </p>
-    </div>
-  </Link>
-
-  {/* BiPAP */}
-  <Link
-    href="/products/bipap-machine"
-    className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-  >
-    <div className="relative h-40 w-full">
-      <Image
-        src="/images/Devices/Bipap Machiene/BMC G3 B25vt BIPAP Device with Humidifier and Mask2.webp"
-        alt="BiPAP Machine"
-        fill
-        className="object-cover transition-transform duration-500 group-hover:scale-105"
-      />
-    </div>
-
-    <div className="p-4">
-      <h3 className="font-semibold text-blue-700">BiPAP</h3>
-      <p className="mt-1 text-sm text-gray-500">
-        Advanced respiratory support
-      </p>
-    </div>
-  </Link>
-
-  {/* Oxygen */}
-  <Link
-    href="/products/oxygen-concentrator"
-    className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-  >
-    <div className="relative h-40 w-full">
-      <Image
-        src="/images/Oc/evox1.jpg"
-        alt="Oxygen Concentrator"
-        fill
-        className="object-cover transition-transform duration-500 group-hover:scale-105"
-      />
-    </div>
-
-    <div className="p-4">
-      <h3 className="font-semibold text-blue-700">Oxygen</h3>
-      <p className="mt-1 text-sm text-gray-500">
-        Portable & Home Concentrators
-      </p>
-    </div>
-  </Link>
-
-  {/* Masks */}
-  <Link
-    href="/category/mask"
-    className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-  >
-    <div className="relative h-40 w-full">
-      <Image
-        src="/images/banner1.webp"
-        alt="CPAP Masks"
-        fill
-        className="object-cover transition-transform duration-500 group-hover:scale-105"
-      />
-    </div>
-
-    <div className="p-4">
-      <h3 className="font-semibold text-blue-700">Masks</h3>
-      <p className="mt-1 text-sm text-gray-500">
-        Nasal & Full Face Masks
-      </p>
-    </div>
-  </Link>
-
-  {/* Accessories */}
-  <Link
-    href="/category/accessory"
-    className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-  >
-    <div className="relative h-40 w-full">
-      <Image
-        src="/images/hero12.png"
-        alt="Accessories"
-        fill
-        className="object-cover transition-transform duration-500 group-hover:scale-105"
-      />
-    </div>
-
-    <div className="p-4">
-      <h3 className="font-semibold text-blue-700">Accessories</h3>
-      <p className="mt-1 text-sm text-gray-500">
-        Tubes, Filters & Cushions
-      </p>
-    </div>
-  </Link>
-
-  {/* Rental */}
-  <Link
-    href="/products/rental"
-    className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-  >
-    <div className="relative h-40 w-full">
-      <Image
-        src="/images/P9.webp"
-        alt="Rental"
-        fill
-        className="object-cover transition-transform duration-500 group-hover:scale-105"
-      />
-    </div>
-
-    <div className="p-4">
-      <h3 className="font-semibold text-blue-700">Rental</h3>
-      <p className="mt-1 text-sm text-gray-500">
-        CPAP & BiPAP Rentals
-      </p>
-    </div>
-  </Link>
-
-  {/* Sleep Therapy */}
-  <Link
-    href="/sleeptherapy"
-    className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-  >
-    <div className="relative h-40 w-full">
-      <Image
-        src="/images/blog2.webp"
-        alt="Sleep Therapy"
-        fill
-        className="object-cover transition-transform duration-500 group-hover:scale-105"
-      />
-    </div>
-
-    <div className="p-4">
-      <h3 className="font-semibold text-blue-700">Sleep Therapy</h3>
-      <p className="mt-1 text-sm text-gray-500">
-        Sleep Therapy Diagnosis
-      </p>
-    </div>
-  </Link>
+      {/* Name Below */}
+      <h3 className="mt-3 text-center text-sm sm:text-base font-semibold text-slate-800 group-hover:text-blue-600">
+        {item.name}
+      </h3>
+    </Link>
+  ))}
 
 </div>
     

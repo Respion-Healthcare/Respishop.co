@@ -18,8 +18,7 @@ export default function ProductCard({
   return (
     <Link
       href={`/products/${product.category}/${product.slug}`}
-      className="group relative overflow-hidden rounded-[28px] border border-blue-100 bg-white p-4 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(37,99,235,0.15)]"
-    >
+      className="group relative overflow-hidden rounded-[28px] border border-blue-100 bg-white p-3">
 
       {/* OFFER BADGE */}
       {product.offer && (
@@ -30,17 +29,16 @@ export default function ProductCard({
         </div>
       )}
 
-      {/* IMAGE */}
-      <div className="relative flex h-[260px] items-center justify-center overflow-hidden rounded-[24px] bg-gradient-to-br from-blue-50 to-white">
+{/* IMAGE */}
+<div className="relative flex aspect-square items-center justify-center overflow-hidden rounded-3xl bg-linear-to-br from-blue-50 to-white p-3">
+  <Image
+  src={product.images[0]}
+  alt={product.name}
+  fill
+  className="object-contain transition duration-500 group-hover:scale-110"
+/>
 
-        <Image
-          src={product.images[0]}
-          alt={product.name}
-          fill
-          className="object-contain p-5 transition duration-500 group-hover:scale-105"
-        />
-
-      </div>
+</div>
 
       {/* CONTENT */}
       <div className="mt-6">

@@ -98,7 +98,6 @@ export default function DealOfTheDay() {
 
   return (
     <section className="relative overflow-hidden py-10 sm:py-14 lg:py-24 bg-gradient-to-b from-[#f8fbff] via-[#eef6ff] to-[#f4f9ff]">
-
       {/* BACKGROUND BLUR */}
       <div className="absolute top-0 left-0 w-[350px] h-[350px] bg-blue-200/40 blur-[120px] rounded-full" />
 
@@ -233,20 +232,20 @@ export default function DealOfTheDay() {
                         {/* IMAGE */}
                         <div className="relative h-[170px] sm:h-[210px] lg:h-[240px] rounded-2xl bg-gradient-to-br from-blue-50 to-white flex items-center justify-center overflow-hidden">
 
-                          <motion.div
-                            whileHover={{ scale: 1.08 }}
-                            transition={{ duration: 0.4 }}
-                          >
-
-                           <Image
-                          src={product.images[0]}
-                          alt={product.name}
-                          width={170}
-                          height={170}
-                          className="object-contain w-[140px] sm:w-[170px] lg:w-[220px]"
-                        />
-
-                          </motion.div>
+                          {/* IMAGE */}
+<motion.div
+  whileHover={{ scale: 1.08 }}
+  transition={{ duration: 0.3 }}
+  className="relative flex items-center justify-center flex-shrink-0 w-[150px] h-[150px] sm:w-[220px] sm:h-[220px]"
+>
+  <Image
+    src={product.images[0]}
+    alt={product.name}
+    width={220}
+    height={220}
+    className="w-full h-full object-contain"
+  />
+</motion.div>
 
                         </div>
 
@@ -340,7 +339,7 @@ export default function DealOfTheDay() {
 
                   <Link
                     href={`/products/${product.category}/${product.slug}`}
-                    className="group relative flex items-center justify-between gap-5 rounded-[2rem] bg-white/85 backdrop-blur-xl border border-white/60 p-4 sm:p-5 shadow-[0_15px_50px_rgba(0,0,0,0.08)]">
+                    className="group relative flex items-center justify-between gap-8 rounded-[2rem] bg-white/85 backdrop-blur-xl border border-white/60 p-6 shadow-[0_15px_50px_rgba(0,0,0,0.08)]">
 
                     {/* SIDE GLOW */}
                     <div className="absolute top-0 left-0 h-full w-2 bg-gradient-to-b from-blue-500 to-cyan-400 rounded-full" />
@@ -404,22 +403,21 @@ export default function DealOfTheDay() {
                     </div>
 
                     {/* IMAGE */}
-                    <motion.div
-                      whileHover={{
-                        scale: 1.06,
-                      }}
-                      className="relative min-w-[90px] h-[90px] sm:min-w-[130px] sm:h-[130px] bg-gradient-to-br from-blue-50 to-white rounded-2xl p-4 shadow-md flex items-center justify-center"
-                    >
-
-                     <Image
-                      src={product.images[0]}
-                      alt={product.name}
-                      width={85}
-                      height={85}
-                      className="object-contain w-[75px] sm:w-[120px]"
-                    />
-
-                    </motion.div>
+<motion.div
+  whileHover={{ scale: 1.08 }}
+  transition={{ duration: 0.3 }}
+  className="flex items-center justify-center shrink-0
+             w-42.5 h-42.5
+             sm:w-62.5 sm:h-[250px]"
+>
+  <Image
+    src={product.images[0]}
+    alt={product.name}
+    width={250}
+    height={250}
+    className="w-full h-full object-contain"
+  />
+</motion.div>
 
                   </Link>
 

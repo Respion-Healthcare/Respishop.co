@@ -1,5 +1,3 @@
-// components/product/ProductGrid.tsx
-
 import ProductCard from "./ProductCard"
 
 type ProductGridProps = {

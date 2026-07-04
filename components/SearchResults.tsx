@@ -68,7 +68,7 @@ export default function SearchPage() {
                     {product.category.replace("-", " ")}
                   </span>
 
-                  <h2 className="font-semibold text-gray-900 line-clamp-2 min-h-[48px]">
+                  <h2 className="font-semibold text-gray-900 line-clamp-2 min-h-12">
                     {product.name}
                   </h2>
 
