@@ -123,12 +123,6 @@ export default function DealOfTheDay() {
               Deals Of The Day
             </h2>
 
-            <p className="mt-3 text-gray-600 text-sm sm:text-base lg:text-lg max-w-3xl leading-relaxed">
-              Discover premium CPAP, BiPAP, oxygen concentrators,
-              masks, and respiratory healthcare equipment with
-              exclusive limited-time pricing and fast delivery.
-            </p>
-
           </div>
 
           {/* TIMER */}
@@ -403,21 +397,21 @@ export default function DealOfTheDay() {
                     </div>
 
                     {/* IMAGE */}
-<motion.div
-  whileHover={{ scale: 1.08 }}
-  transition={{ duration: 0.3 }}
-  className="flex items-center justify-center shrink-0
-             w-42.5 h-42.5
-             sm:w-62.5 sm:h-[250px]"
->
-  <Image
-    src={product.images[0]}
-    alt={product.name}
-    width={250}
-    height={250}
-    className="w-full h-full object-contain"
-  />
-</motion.div>
+                    <motion.div
+                      whileHover={{ scale: 1.08 }}
+                      transition={{ duration: 0.3 }}
+                      className="flex items-center justify-center shrink-0
+                                w-42.5 h-42.5
+                                sm:w-62.5 sm:h-[250px]"
+                    >
+                      <Image
+                        src={product.images[0]}
+                        alt={product.name}
+                        width={250}
+                        height={250}
+                        className="w-full h-full object-contain"
+                      />
+                    </motion.div>
 
                   </Link>
 

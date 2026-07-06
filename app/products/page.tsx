@@ -125,10 +125,6 @@ export default function ProductsPage() {
   <h2 className="mt-4 text-3xl md:text-4xl font-bold text-slate-900">
     Find the Right Therapy Equipment
   </h2>
-
-  <p className="mt-3 text-slate-600">
-    Browse our range of CPAP, BiPAP, oxygen therapy devices and accessories from trusted brands.
-  </p>
 </div>
     <div className="max-w-7xl mx-auto px-4 py-12">
 
