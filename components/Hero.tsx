@@ -4,29 +4,86 @@ import { useEffect, useState } from "react"
 import Image from "next/image"
 import { AnimatePresence, motion } from "framer-motion"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import Link from "next/link"
 
-const heroImages = [
-  "/images/home01.jpg",
-  "/images/home02.jpg",
-  "/images/home03.jpg",
-  "/images/home04.jpg",
+const heroSlides = [
+  {
+    image: "/images/homebanners/main.jpg",
+    href: "/products",
+  },
+  {
+    image: "/images/homebanners/cpap1.jpg",
+    href: "/products/cpap-machine/airsense-10",
+  },
+  {
+    image: "/images/homebanners/mask1.jpg",
+    href: "/products/nasal-mask/airfit-n20-classic",
+  },
+  {
+    image: "/images/homebanners/bipap1.jpg",
+    href: "/products/bipap-machine/lumis-100-vpap-st",
+  },
+  {
+    image: "/images/homebanners/mask2.jpg",
+    href: "/products/nasal-mask/philips-dream-nasal-mask",
+  },
+  {
+    image: "/images/homebanners/cpap2.jpg",
+    href: "/products/cpap-machine/airsense-10",
+  },
+  {
+    image: "/images/homebanners/bipap2.jpg",
+    href: "/products/bipap-machine/resmed-lumis-150",
+  },
+  {
+    image: "/images/homebanners/mask6.jpg",
+    href: "/products/full-face-mask/philips-dreamware",
+  },
+  {
+    image: "/images/homebanners/cushion.jpg",
+    href: "/products/mask-cushion",
+  },
+  {
+    image: "/images/homebanners/bipap3.jpg",
+    href: "/products/bipap-machine/philips-bipap-pro",
+  },
+  {
+    image: "/images/homebanners/mask4.jpg",
+    href: "/products/full-face-mask/resmed-airfit-f20-full-face-mask",
+  },
+  {
+    image: "/images/homebanners/cpap3.jpg",
+    href: "/products/cpap-machine/philips-dreamstation",
+  },
+  {
+    image: "/images/homebanners/tube.jpg",
+    href: "/products/tubes-and-connectors",
+  },
+  {
+    image: "/images/homebanners/mask5.jpg",
+    href: "/products/full-face-mask/philips-amara",
+  },
+  {
+    image: "/images/homebanners/humidifier.jpg",
+    href: "/products/humidifier-bottle",
+  },
 ]
 
 export default function Hero() {
   const [currentImage, setCurrentImage] = useState(0)
 
   const nextSlide = () => {
-    setCurrentImage((prev) => (prev + 1) % heroImages.length)
+    setCurrentImage((prev) => (prev + 1) % heroSlides.length)
   }
 
   const prevSlide = () => {
     setCurrentImage((prev) =>
-      prev === 0 ? heroImages.length - 1 : prev - 1
+      prev === 0 ? heroSlides.length - 1 : prev - 1
     )
   }
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 15000)
+    const interval = setInterval(nextSlide, 5000)
     return () => clearInterval(interval)
   }, [])
 
@@ -42,30 +99,32 @@ export default function Hero() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.7 }}
           >
-            {/* Mobile */}
             <div className="block lg:hidden">
-              <Image
-                src={heroImages[currentImage]}
-                alt="Respishop"
-                width={1920}
-                height={850}
-                priority
-                sizes="100vw"
-                className="w-full h-auto"
-              />
-            </div>
+  <Link href={heroSlides[currentImage].href}>
+    <Image
+      src={heroSlides[currentImage].image}
+      alt="Respishop"
+      width={1920}
+      height={850}
+      priority
+      sizes="100vw"
+      className="w-full h-auto cursor-pointer"
+    />
+  </Link>
+</div>
 
-            {/* Desktop */}
-            <div className="relative hidden lg:block h-[calc(100vh-80px)]">
-              <Image
-                src={heroImages[currentImage]}
-                alt="Respishop"
-                fill
-                priority
-                sizes="100vw"
-                className="object-contain object-top"
-              />
-            </div>
+            <div className="relative hidden lg:block w-full h-[700px] bg-white">
+  <Link href={heroSlides[currentImage].href}>
+    <Image
+      src={heroSlides[currentImage].image}
+      alt="Respishop"
+      fill
+      priority
+      sizes="100vw"
+      className="object-contain object-center cursor-pointer"
+    />
+  </Link>
+</div>
           </motion.div>
         </AnimatePresence>
 
