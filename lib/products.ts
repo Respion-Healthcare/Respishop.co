@@ -1,3 +1,6 @@
+import HumidifierLayout from "@/components/category/HumidifierLayout"
+import { HandbagIcon } from "lucide-react"
+
 export type Product = {
   id: number
   slug: string
@@ -73,9 +76,9 @@ export const products: Product[] = [
 { id: 76, slug: "philips-dreamware", name: "Philips DreamWear Full Face Mask", price: 4250, category: "full-face-mask", description: "The Philips DreamWear Full Face Mask features an innovative top-of-head tube connection that allows users to sleep comfortably in any position. Its under-the-nose full face cushion helps prevent red marks on the bridge of the nose while providing an open field of vision for reading, watching TV, or wearing glasses before sleep. The hollow frame design delivers airflow through the frame itself, offering greater freedom of movement and a more natural sleeping experience. Designed for comfort and flexibility, the DreamWear Full Face Mask is ideal for active sleepers seeking effective CPAP therapy.", images: ["/images/Mask/Philips mask/Philips Respironics Dreamwear Full Face Mask1.jpg", "/images/Mask/Philips mask/Philips Respironics Dreamwear Full Face Mask2.jpg", "/images/Mask/Philips mask/Philips Respironics Dreamwear Full Face Mask3.jpg", "/images/Mask/Philips mask/Philips Respironics Dreamwear Full Face Mask4.jpg"], specifications: [{ label: "Brand", value: "Philips Respironics" }, { label: "Category", value: "Full Face CPAP Mask" }, { label: "Model", value: "DreamWear Full Face" }, { label: "Mask Type", value: "Minimal Contact Full Face Mask" }, { label: "Cushion Type", value: "Under-the-Nose Silicone Cushion" }, { label: "Tube Connection", value: "Top-of-Head Connection" }, { label: "Frame Design", value: "Hollow Airflow Frame" }, { label: "Headgear", value: "Soft Adjustable Headgear" }, { label: "Quick Release Elbow", value: "Yes" }, { label: "Field of Vision", value: "Open Design for Reading and Watching TV" }, { label: "Compatibility", value: "Compatible with Most CPAP and BiPAP Machines" }, { label: "Latex Free", value: "Yes" }, { label: "Available Sizes", value: "Small, Medium, Large" }, { label: "Ideal For", value: "Active Sleepers and Side Sleepers" }, { label: "Sleeping Position", value: "Back, Side, and Stomach Sleepers" }, { label: "Color", value: "Blue and White" }, { label: "Warranty", value: "As per Manufacturer Policy" }] },
 
 //nasal pillow mask
-{ id: 15, slug: "nasal-pillow-mask", name: "AirFit™ P30i Nasal Pillow Mask", price: 3500, category: "nasal-pillow-mask", description: "The ResMed AirFit™ P30i Nasal Pillow Mask is designed for CPAP users who want maximum freedom of movement and minimal facial contact during sleep therapy. Featuring a top-of-the-head tube connection and dual-wall nasal pillows, the P30i keeps tubing out of the way while providing a secure and comfortable seal. The SpringFit™ frame adapts naturally to different facial shapes, helping maintain stability throughout the night. Ideal for active sleepers, the mask allows users to comfortably sleep in multiple positions without compromising therapy effectiveness. Lightweight, quiet, and easy to maintain, the AirFit P30i delivers reliable CPAP therapy while enhancing overall comfort and convenience.", images: ["/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/1.webp", "/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/2.webp", "/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/3.webp", "/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/4.webp", "/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Nasal Pillow Mask" }, { label: "Mask Type", value: "Minimal Contact Nasal Pillow Mask" }, { label: "Cushion Type", value: "Dual-Wall Nasal Pillows" }, { label: "Frame Technology", value: "SpringFit™ Frame" }, { label: "Tube Connection", value: "Top-of-the-Head Design" }, { label: "Headgear", value: "Adjustable Soft Headgear" }, { label: "Airflow Path", value: "Integrated Frame Airflow" }, { label: "Compatibility", value: "CPAP, APAP & BiPAP Machines" }, { label: "Sleeping Positions", value: "Side, Back & Stomach Sleepers" }, { label: "Comfort Features", value: "Minimal Facial Contact" }, { label: "Air Leak Control", value: "Secure Nasal Pillow Seal" }, { label: "Ease of Cleaning", value: "Quick Disassembly Design" }, { label: "Recommended For", value: "Active Sleepers & Sleep Apnea Therapy" }, { label: "Latex Free", value: "Yes" }] },
-{ id: 38, slug: "airfit-p10", name: "AirFit™ P10", price: 3900, offer: { type: "percentage", value: 15 }, category: "nasal-pillow-mask", description: "The ResMed AirFit™ P10 Nasal Pillow Mask is one of the lightest and quietest CPAP masks available, designed to provide a comfortable and unobtrusive sleep therapy experience. Featuring ResMed's QuietAir™ woven-mesh vent technology, the P10 significantly reduces noise while gently dispersing exhaled air. Its dual-wall nasal pillows provide a secure seal with minimal facial contact, helping users enjoy effective therapy without discomfort. The lightweight elastic headgear offers simplicity and ease of use, making it an excellent choice for both new and experienced CPAP users seeking comfort, reliability, and freedom during sleep.", images: ["/images/Mask/Resmed AirFit™ P10 Nasal Pillow Mask.webp", "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Nasal Pillow Mask" }, { label: "Mask Type", value: "Ultra-Lightweight Nasal Pillow Mask" }, { label: "Cushion Type", value: "Dual-Wall Nasal Pillows" }, { label: "Vent Technology", value: "QuietAir™ Woven-Mesh Vent" }, { label: "Headgear", value: "QuickFit™ Elastic Headgear" }, { label: "Weight", value: "Ultra-Lightweight Design" }, { label: "Noise Reduction", value: "Ultra-Quiet Performance" }, { label: "Compatibility", value: "CPAP, APAP & BiPAP Machines" }, { label: "Air Leak Control", value: "Stable Nasal Pillow Seal" }, { label: "Facial Contact", value: "Minimal Contact Design" }, { label: "Ease of Cleaning", value: "Simple Component Assembly" }, { label: "Recommended For", value: "Sleep Apnea Therapy" }, { label: "Travel Friendly", value: "Yes" }, { label: "Latex Free", value: "Yes" }] },
-{ id: 39, slug: "airfit-p10-for-airmini", name: "AirFit™ P10 for AirMini™", price: 6200, offer: { type: "flat", value: 800 }, category: "nasal-pillow-mask", description: "The ResMed AirFit™ P10 for AirMini™ is a compact nasal pillow mask specifically engineered to work seamlessly with the ResMed AirMini™ Travel CPAP Device. Combining the proven comfort of the AirFit P10 design with HumidX™ waterless humidification technology, it delivers effective therapy without the need for a traditional humidifier. The lightweight mask features dual-wall nasal pillows and QuietAir™ vent technology to provide a secure seal and quiet operation. Designed for travelers and users seeking a portable therapy solution, the AirFit P10 for AirMini offers exceptional comfort, convenience, and performance in a compact package.", images: ["/images/Mask/Resmed AirFit™ P10 for AirMini™.webp", "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Nasal Pillow Mask" }, { label: "Mask Type", value: "Travel Nasal Pillow Mask" }, { label: "Compatibility", value: "Exclusive for AirMini™ CPAP Device" }, { label: "Cushion Type", value: "Dual-Wall Nasal Pillows" }, { label: "Humidification", value: "HumidX™ Waterless Humidification Compatible" }, { label: "Vent Technology", value: "QuietAir™ Vent Technology" }, { label: "Headgear", value: "QuickFit™ Elastic Headgear" }, { label: "Weight", value: "Ultra-Lightweight Design" }, { label: "Travel Friendly", value: "Yes" }, { label: "Noise Reduction", value: "Ultra-Quiet Performance" }, { label: "Air Leak Control", value: "Secure Nasal Pillow Seal" }, { label: "Ease of Cleaning", value: "Easy Maintenance Design" }, { label: "Recommended For", value: "Travel CPAP Therapy" }, { label: "Latex Free", value: "Yes" }] },
+{ id: 15, slug: "nasal-pillow-mask", name: "AirFit™ P30i Nasal Pillow Mask", price: 3500, category: "nasal-pillow-mask", description: "The ResMed AirFit™ P30i Nasal Pillow Mask is an advanced CPAP interface designed for users who prefer minimal facial contact while maintaining exceptional comfort and therapy performance. Its innovative top-of-the-head tube connection keeps the air tubing out of the way, allowing users to move freely throughout the night without feeling restricted. This unique design makes it especially suitable for active sleepers who frequently change sleeping positions, including side, back, and stomach sleepers. The lightweight SpringFit™ frame automatically adapts to different facial shapes, providing a secure yet gentle fit that remains stable during movement. Soft dual-wall nasal pillows create a reliable seal with minimal pressure, reducing the chances of air leaks while ensuring effective delivery of CPAP, APAP, or BiPAP therapy. The open-field design offers an unobstructed line of sight, making it comfortable for users who like to read, watch television, or wear glasses before bedtime.", images: ["/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/1.webp", "/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/2.webp", "/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/3.webp", "/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/4.webp", "/images/Mask/Resmed AirFit™ P30i Nasal Pillow Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Nasal Pillow Mask" }, { label: "Mask Type", value: "Minimal Contact Nasal Pillow Mask" }, { label: "Cushion Type", value: "Dual-Wall Nasal Pillows" }, { label: "Frame Technology", value: "SpringFit™ Frame" }, { label: "Tube Connection", value: "Top-of-the-Head Design" }, { label: "Headgear", value: "Adjustable Soft Headgear" }, { label: "Airflow Path", value: "Integrated Frame Airflow" }, { label: "Compatibility", value: "CPAP, APAP & BiPAP Machines" }, { label: "Sleeping Positions", value: "Side, Back & Stomach Sleepers" }, { label: "Comfort Features", value: "Minimal Facial Contact" }, { label: "Air Leak Control", value: "Secure Nasal Pillow Seal" }, { label: "Ease of Cleaning", value: "Quick Disassembly Design" }, { label: "Recommended For", value: "Active Sleepers & Sleep Apnea Therapy" }, { label: "Latex Free", value: "Yes" }] },
+{ id: 38, slug: "airfit-p10", name: "AirFit™ P10", price: 3900, offer: { type: "percentage", value: 15 }, category: "nasal-pillow-mask", description: "The ResMed AirFit™ P10 Nasal Pillow Mask is one of the lightest and quietest CPAP masks available, offering an exceptionally comfortable and unobtrusive solution for sleep apnea therapy. Designed with simplicity and performance in mind, the AirFit P10 features ultra-soft dual-wall nasal pillows that provide a secure seal while minimizing facial contact and pressure points. Its innovative QuietAir™ woven-mesh vent technology significantly reduces exhalation noise and gently diffuses airflow, creating a quieter and more comfortable sleeping environment for both the user and their partner. The lightweight QuickFit™ elastic headgear provides a stable fit without the need for complicated adjustments, making the mask easy to put on and remove. The minimal-contact design allows users to comfortably read, watch television, or wear glasses before going to sleep while reducing the feeling of bulk commonly associated with traditional CPAP masks.", images: ["/images/Mask/Resmed AirFit™ P10 Nasal Pillow Mask.webp", "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Nasal Pillow Mask" }, { label: "Mask Type", value: "Ultra-Lightweight Nasal Pillow Mask" }, { label: "Cushion Type", value: "Dual-Wall Nasal Pillows" }, { label: "Vent Technology", value: "QuietAir™ Woven-Mesh Vent" }, { label: "Headgear", value: "QuickFit™ Elastic Headgear" }, { label: "Weight", value: "Ultra-Lightweight Design" }, { label: "Noise Reduction", value: "Ultra-Quiet Performance" }, { label: "Compatibility", value: "CPAP, APAP & BiPAP Machines" }, { label: "Air Leak Control", value: "Stable Nasal Pillow Seal" }, { label: "Facial Contact", value: "Minimal Contact Design" }, { label: "Ease of Cleaning", value: "Simple Component Assembly" }, { label: "Recommended For", value: "Sleep Apnea Therapy" }, { label: "Travel Friendly", value: "Yes" }, { label: "Latex Free", value: "Yes" }] },
+{ id: 39, slug: "airfit-p10-for-airmini", name: "AirFit™ P10 for AirMini™", price: 6200, offer: { type: "flat", value: 800 }, category: "nasal-pillow-mask", description: "The ResMed AirFit™ P10 for AirMini™ is a compact, travel-friendly nasal pillow mask specifically engineered to deliver seamless performance with the ResMed AirMini™ Travel CPAP Device. Combining the proven comfort of the popular AirFit™ P10 design with advanced HumidX™ waterless humidification technology, this mask provides effective therapy without requiring a traditional heated humidifier, making it an ideal companion for travel and everyday portability. The lightweight construction and dual-wall nasal pillows create a secure, comfortable seal while maintaining minimal facial contact, helping users enjoy restful sleep without unnecessary pressure or discomfort. QuietAir™ vent technology reduces operational noise and softly disperses exhaled air, contributing to a peaceful sleeping environment for both the user and their partner. The QuickFit™ elastic headgear ensures a stable and comfortable fit.", images: ["/images/Mask/Resmed AirFit™ P10 for AirMini™.webp", "/images/Mask/Resmed AirFit F30i Full Face Mask/5.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "Nasal Pillow Mask" }, { label: "Mask Type", value: "Travel Nasal Pillow Mask" }, { label: "Compatibility", value: "Exclusive for AirMini™ CPAP Device" }, { label: "Cushion Type", value: "Dual-Wall Nasal Pillows" }, { label: "Humidification", value: "HumidX™ Waterless Humidification Compatible" }, { label: "Vent Technology", value: "QuietAir™ Vent Technology" }, { label: "Headgear", value: "QuickFit™ Elastic Headgear" }, { label: "Weight", value: "Ultra-Lightweight Design" }, { label: "Travel Friendly", value: "Yes" }, { label: "Noise Reduction", value: "Ultra-Quiet Performance" }, { label: "Air Leak Control", value: "Secure Nasal Pillow Seal" }, { label: "Ease of Cleaning", value: "Easy Maintenance Design" }, { label: "Recommended For", value: "Travel CPAP Therapy" }, { label: "Latex Free", value: "Yes" }] },
 //-------------------------------------------------------------------------------------------------------------
 
 //cpap
@@ -124,77 +127,546 @@ export const products: Product[] = [
 
 //accessories
 //connector and tubes 
-{ id: 18, slug: "tubes-and-connectors", name: "ClimateLineAir™ heated tube", price: 1200, category: "tubes-and-connectors", description: "Durable hose pipe.", images: ["/images/Accesories/Connector tubes/ClimateLineAir™ heated tube.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
-{ id: 44, slug: "slimline-tubes", name: "SLIMLINE TUBING™", price: 1200, category: "tubes-and-connectors", description: "Durable hose pipe.", images: ["/images/Accesories/Connector tubes/SLIMLINE TUBING™.jpg"], specifications: [{ label: "Category", value: "Accessory" }] },
-{ id: 45, slug: "grey-tubing", name: "Grey Tubing - Cuffed, STD tubing", price: 1200, category: "tubes-and-connectors", description: "Durable hose pipe.", images: ["/images/Accesories/Connector tubes/Grey Tubing - Cuffed, STD tubing.webp", "/images/Accesories/Connector tubes/Grey Tubing - Cuffed, STD tubing2.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
-{ id: 46, slug: "airoxy-tubes", name: "Resmed ClimateLine™ Air Oxy Heated Tubing", price: 1200, category: "tubes-and-connectors", description: "Durable hose pipe.", images: ["/images/Accesories/Connector tubes/Resmed ClimateLine™ Air Oxy Heated Tubing.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
-{ id: 47, slug: "maxoxy-tubes", name: "Resmed ClimateLine™ Max Oxy Heated Tubing", price: 1200, category: "tubes-and-connectors", description: "Durable hose pipe.", images: ["/images/Accesories/Connector tubes/Resmed ClimateLine™ Max Oxy Heated Tubing.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
+{ id: 18, slug: "tubes-and-connectors", name: "ClimateLineAir™ heated tube", price: 1200, category: "tubes-and-connectors", description: "The ResMed ClimateLineAir™ Heated Tube is an advanced CPAP tubing solution designed to provide greater comfort and improve the effectiveness of sleep apnea therapy. Engineered with integrated heating technology, the tube works seamlessly with compatible ResMed CPAP devices to maintain a consistent air temperature from the machine to the mask. This helps significantly reduce condensation and 'rainout,' ensuring uninterrupted airflow throughout the night. The lightweight and flexible design allows users to move comfortably while sleeping without compromising therapy performance. Its smooth interior promotes efficient airflow, while durable medical-grade materials ensure long-lasting reliability and easy daily maintenance. The ClimateLineAir™ Heated Tube automatically works with compatible climate control settings to optimize humidity and temperature, delivering a more comfortable breathing experience in varying room conditions.", images: ["/images/Accesories/Connector tubes/ClimateLineAir™ heated tube.webp"], specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "CPAP Heated Tubing" },
+  { label: "Product Type", value: "Heated Air Tube" },
+  { label: "Compatibility", value: "Compatible ResMed AirSense™ & AirCurve™ Devices" },
+  { label: "Heating Technology", value: "Integrated ClimateLineAir™ Heating" },
+  { label: "Climate Control", value: "Automatic Temperature & Humidity Control" },
+  { label: "Condensation Prevention", value: "Reduces Rainout" },
+  { label: "Material", value: "Medical-Grade Flexible Plastic" },
+  { label: "Tube Length", value: "Approx. 2 m (6 ft)" },
+  { label: "Connection Type", value: "Standard ResMed Connector" },
+  { label: "Reusable", value: "Yes" },
+  { label: "Easy to Clean", value: "Yes" }
+] },
+{ id: 44, slug: "slimline-tubes", name: "SLIMLINE TUBING™", price: 1200, category: "tubes-and-connectors", description: "The ResMed SlimLine™ Tubing is a lightweight and flexible CPAP air tube designed to enhance comfort while maintaining reliable airflow during sleep therapy. Its slim profile makes it easier to handle than traditional tubing while reducing drag on the mask, allowing users greater freedom of movement throughout the night. Constructed from durable, high-quality medical-grade materials, the tubing delivers consistent airflow for effective CPAP, APAP, and compatible BiPAP therapy. The lightweight design also makes it an excellent choice for frequent travelers and users who prefer a less bulky tubing option. Easy to connect, disconnect, and clean, the SlimLine™ Tubing helps simplify daily maintenance while ensuring long-lasting performance. Compatible with a wide range of ResMed CPAP devices, this premium tubing provides dependable therapy, improved comfort, and a better overall sleep experience.", images: ["/images/Accesories/Connector tubes/SLIMLINE TUBING™.jpg"],specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "CPAP Tubing" },
+  { label: "Product Type", value: "Slim Air Tube" },
+  { label: "Compatibility", value: "CPAP, APAP & Compatible BiPAP Machines" },
+  { label: "Tube Design", value: "Lightweight SlimLine™ Design" },
+  { label: "Material", value: "Medical-Grade Flexible Plastic" },
+  { label: "Tube Length", value: "Approx. 2 m (6 ft)" },
+  { label: "Diameter", value: "15 mm Slim Tube" },
+  { label: "Flexibility", value: "High Flexibility" },
+  { label: "Travel Friendly", value: "Yes" },
+  { label: "Reusable", value: "Yes" },
+  { label: "Easy Maintenance", value: "Quick Cleaning" }
+] },
+{ id: 45, slug: "grey-tubing", name: "Grey Tubing - Cuffed, STD tubing", price: 1200, category: "tubes-and-connectors", description: "The Grey Tubing – Cuffed Standard Tubing is a durable CPAP hose designed to deliver consistent airflow between compatible CPAP, APAP, or BiPAP machines and the user's mask. Manufactured from high-quality medical-grade materials, the tubing provides flexibility, strength, and reliable performance for daily sleep therapy. Its standard 22 mm cuffed connectors ensure secure compatibility with most CPAP masks and therapy devices, making installation quick and hassle-free. The flexible construction minimizes kinking while allowing users to change sleeping positions comfortably throughout the night. Smooth internal walls help maintain efficient airflow and reduce resistance for optimal therapy performance. Designed for easy cleaning and regular maintenance, this standard tubing offers excellent durability and dependable operation, making it an ideal replacement hose for everyday CPAP therapy.", images: ["/images/Accesories/Connector tubes/Grey Tubing - Cuffed, STD tubing.webp", "/images/Accesories/Connector tubes/Grey Tubing - Cuffed, STD tubing2.webp"], specifications: [
+  { label: "Brand", value: "Universal" },
+  { label: "Category", value: "CPAP Tubing" },
+  { label: "Product Type", value: "Standard Air Tube" },
+  { label: "Compatibility", value: "Most CPAP, APAP & BiPAP Machines" },
+  { label: "Connector Size", value: "22 mm Standard Cuffed Ends" },
+  { label: "Material", value: "Medical-Grade Flexible Plastic" },
+  { label: "Tube Length", value: "Approx. 1.8 m (6 ft)" },
+  { label: "Airflow", value: "Consistent Air Delivery" },
+  { label: "Reusable", value: "Yes" },
+  { label: "Easy Cleaning", value: "Yes" },
+  { label: "Latex Free", value: "Yes" },
+  { label: "Daily Use", value: "Recommended" }
+] },
+{ id: 46, slug: "airoxy-tubes", name: "Resmed ClimateLine™ Air Oxy Heated Tubing", price: 1200, category: "tubes-and-connectors", description: "The ResMed ClimateLine™ Air Oxy Heated Tubing is specially designed for CPAP therapy applications requiring supplemental oxygen delivery. Combining advanced heated tubing technology with oxygen compatibility, it helps maintain optimal air temperature while minimizing condensation inside the hose. This ensures a comfortable and uninterrupted therapy experience, even in varying environmental conditions. The integrated heating system works seamlessly with compatible ResMed CPAP devices to automatically regulate temperature and humidity, reducing rainout and enhancing overall comfort. Its durable, flexible construction allows users to sleep naturally while maintaining consistent airflow and oxygen delivery. Easy to install, clean, and maintain, the ClimateLine™ Air Oxy Heated Tubing is an excellent solution for patients who require both CPAP therapy and supplemental oxygen without sacrificing comfort or therapy effectiveness.", images: ["/images/Accesories/Connector tubes/Resmed ClimateLine™ Air Oxy Heated Tubing.webp"], specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Heated Oxygen Tubing" },
+  { label: "Product Type", value: "ClimateLine™ Air Oxy Tube" },
+  { label: "Compatibility", value: "Selected ResMed Therapy Devices" },
+  { label: "Oxygen Compatible", value: "Yes" },
+  { label: "Heating Technology", value: "Integrated Heated Tube" },
+  { label: "Climate Control", value: "Automatic" },
+  { label: "Condensation Prevention", value: "Yes" },
+  { label: "Tube Length", value: "Approx. 2 m (6 ft)" },
+  { label: "Material", value: "Medical-Grade Plastic" },
+  { label: "Reusable", value: "Yes" },
+  { label: "Easy Maintenance", value: "Yes" }
+]},
+{ id: 47, slug: "maxoxy-tubes", name: "Resmed ClimateLine™ Max Oxy Heated Tubing", price: 1200, category: "tubes-and-connectors", description: "The ResMed ClimateLine™ Max Oxy Heated Tubing is a premium heated breathing tube designed for CPAP therapy with higher supplemental oxygen requirements. Built with advanced heating technology, it helps maintain consistent air temperature while reducing condensation and moisture buildup within the tubing, ensuring reliable airflow throughout the night. The tubing is specifically engineered to support high-flow oxygen applications while remaining fully compatible with selected ResMed therapy devices. Its flexible, lightweight construction promotes comfortable movement during sleep, while durable medical-grade materials provide long-lasting performance and easy maintenance. Working alongside compatible climate control systems, the ClimateLine™ Max Oxy Heated Tubing automatically optimizes humidity and temperature to maximize therapy comfort. Ideal for users requiring enhanced oxygen delivery, this tubing provides dependable performance, improved comfort, and effective respiratory therapy every night.", images: ["/images/Accesories/Connector tubes/Resmed ClimateLine™ Max Oxy Heated Tubing.webp"], specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Heated Oxygen Tubing" },
+  { label: "Product Type", value: "ClimateLine™ Max Oxy Tube" },
+  { label: "Compatibility", value: "Selected ResMed Therapy Devices" },
+  { label: "Oxygen Support", value: "High-Flow Oxygen Compatible" },
+  { label: "Heating Technology", value: "Integrated Heated Tube" },
+  { label: "Climate Control", value: "Automatic" },
+  { label: "Condensation Prevention", value: "Reduces Rainout" },
+  { label: "Tube Length", value: "Approx. 2 m (6 ft)" },
+  { label: "Material", value: "Medical-Grade Plastic" },
+  { label: "Reusable", value: "Yes" },
+  { label: "Latex Free", value: "Yes" },
+  { label: "Easy Cleaning", value: "Yes" }
+] },
 //filter
-{ id: 28, slug: "airsense-filters-cleaners", name: "S9 / AirSense Filters (Pack of 6)", price: 1800, category: "filters-cleaners", description: "Filters & Cleaners", images: ["/images/Accesories/Filter/S9  AirSense Filters (Pack of 6).webp"], specifications: [{ label: "Category", value: "Accessory" }] },
-{ id: 48, slug: "airmini-filters-cleaners", name: "Resmed AirMini Filters (Pack of 6)", price: 1800, category: "filters-cleaners", description: "Filters & Cleaners", images: ["/images/Accesories/Filter/Resmed AirMini Filters (Pack of 6).jpg"], specifications: [{ label: "Category", value: "Accessory" }] },
+{ id: 28, slug: "airsense-filters-cleaners", name: "S9 / AirSense Filters (Pack of 6)", price: 1800, category: "filters-cleaners", description: "High-efficiency replacement filters designed for ResMed S9 and AirSense CPAP machines to help block dust, pollen, and airborne particles for cleaner airflow and reliable sleep therapy."
+, images: ["/images/Accesories/Filter/S9  AirSense Filters (Pack of 6).webp"],specifications: [
+
+{ label: "Brand", value: "ResMed Compatible" },
+
+{ label: "Category", value: "CPAP Filters" },
+
+{ label: "Compatibility", value: "ResMed S9 & AirSense Series" },
+
+{ label: "Filter Type", value: "Disposable Air Filter" },
+
+{ label: "Pack Size", value: "6 Filters" },
+
+{ label: "Function", value: "Dust & Particle Filtration" },
+
+{ label: "Material", value: "Non-Woven Fiber" },
+
+{ label: "Recommended Replacement", value: "Regularly As Needed" },
+
+{ label: "Reusable", value: "No" },
+
+{ label: "Easy Installation", value: "Yes" },
+
+{ label: "Therapy Support", value: "Improves Air Quality" },
+
+{ label: "Latex Free", value: "Yes" }
+
+]
+},
+{ id: 48, slug: "airmini-filters-cleaners", name: "Resmed AirMini Filters (Pack of 6)", price: 1800, category: "filters-cleaners", description: "Genuine-style replacement filters for the ResMed AirMini travel CPAP device that help remove dust and airborne particles while maintaining efficient airflow during portable sleep therapy."
+, images: ["/images/Accesories/Filter/Resmed AirMini Filters (Pack of 6).jpg"], specifications: [
+
+{ label: "Brand", value: "ResMed Compatible" },
+
+{ label: "Category", value: "Travel CPAP Filters" },
+
+{ label: "Compatibility", value: "ResMed AirMini" },
+
+{ label: "Filter Type", value: "Disposable Air Filter" },
+
+{ label: "Pack Size", value: "6 Filters" },
+
+{ label: "Function", value: "Dust & Particle Filtration" },
+
+{ label: "Material", value: "Non-Woven Fiber" },
+
+{ label: "Portable Use", value: "Yes" },
+
+{ label: "Recommended Replacement", value: "Regularly As Needed" },
+
+{ label: "Reusable", value: "No" },
+
+{ label: "Easy Installation", value: "Yes" },
+
+{ label: "Therapy Support", value: "Maintains Clean Airflow" },
+
+{ label: "Latex Free", value: "Yes" }
+
+]
+ },
+
 //humidifire and bottles
-{ id: 20, slug: "humidifier-pack-of-3", name: "Humid™ X Plus - Pack of 3 (2 Units)", price: 1500, category: "humidifier-bottle", description: "Humidifier bottle.",
+{ id: 20, slug: "humidifier-pack-of-3", name: "Humid™ X Plus - Pack of 3 (2 Units)", price: 1500, category: "humidifier-bottle", description: "The ResMed HumidX™ Plus Pack is a waterless humidification solution designed exclusively for compatible AirMini™ CPAP systems. It captures heat and moisture from each exhalation and returns it during inhalation, providing comfortable humidification without the need for a traditional water chamber. Ideal for dry or low-humidity environments, HumidX™ Plus enhances therapy comfort while remaining compact, lightweight, and travel-friendly.",
    images: ["/images/Accesories/Humidifier/Humid™ X Plus - Pack of 3 (2 Units)/1.webp", "/images/Accesories/Humidifier/Humid™ X Plus - Pack of 3 (2 Units)/2.webp", "/images/Accesories/Humidifier/Humid™ X Plus - Pack of 3 (2 Units)/3.webp", "/images/Accesories/Humidifier/Humid™ X Plus - Pack of 3 (2 Units)/4.webp",
    ], 
-   specifications: [{ label: "Category", value: "Accessory" }] },
-{ id: 49, slug: "humidifier-pack-of-6", name: "Humid™ X - Pack of 6", price: 1500, category: "humidifier-bottle", description: "Humidifier bottle.",
+   specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Humidification Accessory" },
+  { label: "Product Type", value: "Waterless Humidification Cartridge" },
+  { label: "Compatibility", value: "ResMed AirMini™ CPAP Device" },
+  { label: "Technology", value: "HumidX™ Plus Waterless Humidification" },
+  { label: "Pack Size", value: "Pack of 3 (2 Units)" },
+  { label: "Water Chamber Required", value: "No" },
+  { label: "Best For", value: "Dry & Low-Humidity Environments" },
+  { label: "Travel Friendly", value: "Yes" },
+  { label: "Reusable", value: "Limited Reusable Life" },
+  { label: "Easy Installation", value: "Yes" },
+  { label: "Latex Free", value: "Yes" }
+] },
+{ id: 49, slug: "humidifier-pack-of-6", name: "Humid™ X - Pack of 6", price: 1500, category: "humidifier-bottle", description: "The ResMed HumidX™ Pack of 6 provides convenient waterless humidification for compatible AirMini™ CPAP therapy. Using advanced heat and moisture exchange technology, HumidX™ delivers comfortable humidification without a traditional water chamber, making it ideal for travel and everyday use. Lightweight, compact, and easy to replace, it enhances therapy comfort while maintaining portability.",
    images: ["/images/Accesories/Humidifier/Humid™ X - Pack of 6/1.webp","/images/Accesories/Humidifier/Humid™ X - Pack of 6/2.webp","/images/Accesories/Humidifier/Humid™ X - Pack of 6/3.webp","/images/Accesories/Humidifier/Humid™ X - Pack of 6/4.webp"
-], specifications: [{ label: "Category", value: "Accessory" }] },
-{ id: 50, slug: "heated-humidifier", name: "Resmed H4i Heated Humidifier FOR STELLAR", price: 1500, category: "humidifier-bottle", description: "Humidifier bottle.", images: ["/images/Accesories/Humidifier/Resmed H4i Heated Humidifier FOR STELLAR.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
-{ id: 51, slug: "humidifier-clenable", name: "HumidAir™ Cleanable II", price: 1500, category: "humidifier-bottle", description: "Humidifier bottle.", images: ["/images/Accesories/Humidifier/HumidAir™ Cleanable II.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
+], specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Humidification Accessory" },
+  { label: "Product Type", value: "Waterless Humidification Cartridge" },
+  { label: "Compatibility", value: "ResMed AirMini™ CPAP Device" },
+  { label: "Technology", value: "HumidX™ Heat Moisture Exchange" },
+  { label: "Pack Size", value: "Pack of 6" },
+  { label: "Water Chamber Required", value: "No" },
+  { label: "Portable Use", value: "Yes" },
+  { label: "Travel Friendly", value: "Yes" },
+  { label: "Easy Replacement", value: "Yes" },
+  { label: "Disposable", value: "Replace As Recommended" },
+  { label: "Latex Free", value: "Yes" }
+]},
+{ id: 50, slug: "heated-humidifier", name: "Resmed H4i Heated Humidifier FOR STELLAR", price: 1500, category: "humidifier-bottle", description: "The ResMed H4i Heated Humidifier is designed to provide warm, humidified air for compatible ResMed Stellar ventilation systems, helping reduce dryness and irritation during respiratory therapy. Its integrated heated water chamber delivers consistent humidification to improve patient comfort while supporting effective long-term ventilation. The durable design allows easy cleaning and reliable daily performance in both home and clinical settings.", images: ["/images/Accesories/Humidifier/Resmed H4i Heated Humidifier FOR STELLAR.webp"], 
+ specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Heated Humidifier" },
+  { label: "Product Type", value: "Integrated Heated Humidifier" },
+  { label: "Compatibility", value: "ResMed Stellar Series" },
+  { label: "Humidification Type", value: "Heated Water Chamber" },
+  { label: "Purpose", value: "Reduces Airway Dryness" },
+  { label: "Heating System", value: "Integrated Heating Plate" },
+  { label: "Water Chamber", value: "Removable" },
+  { label: "Material", value: "Medical-Grade Components" },
+  { label: "Cleaning", value: "Easy Maintenance" },
+  { label: "Daily Use", value: "Recommended" },
+  { label: "Reusable", value: "Yes" }
+] },
+{ id: 51, slug: "humidifier-clenable", name: "HumidAir™ Cleanable II", price: 1500, category: "humidifier-bottle", description: "The ResMed HumidAir™ Cleanable II Water Tub is a durable replacement humidifier chamber designed for compatible AirSense™ and AirCurve™ therapy devices. Built from high-quality materials, it delivers effective heated humidification to reduce dryness and improve breathing comfort during CPAP therapy. The cleanable design allows repeated washing and disinfection, making it a practical and long-lasting solution for everyday use.", images: ["/images/Accesories/Humidifier/HumidAir™ Cleanable II.webp"], 
+  specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Humidifier Water Chamber" },
+  { label: "Product Type", value: "Cleanable Humidifier Tub" },
+  { label: "Compatibility", value: "ResMed AirSense™ & AirCurve™ Series" },
+  { label: "Humidification Type", value: "Heated Water Chamber" },
+  { label: "Material", value: "Durable Medical-Grade Plastic" },
+  { label: "Cleaning", value: "Washable & Disinfectable" },
+  { label: "Reusable", value: "Yes" },
+  { label: "Leak Resistant", value: "Yes" },
+  { label: "Easy Installation", value: "Yes" },
+  { label: "Daily Therapy", value: "Suitable" },
+  { label: "Latex Free", value: "Yes" }
+] },
 //frame and headgear
-{ id: 21, slug: "airfit-headgear", name: "Resmed AirFit™ F30 Headgear", price: 800, category: "mask-headgear", description: "Adjustable headgear.", images: ["/images/Accesories/Headgear/Resmed AirFit™ F30 Headgear.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
-{ id: 24, slug: "f30i-headgear", name: "Resmed AirFit™ F30i Headgear", price: 1100, category: "mask-headgear", description: "Mask frame.", images: ["/images/Accesories/Headgear/Resmed AirFit™ F30i Headgear.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
-{ id: 52, slug: "n20-headgear", name: "Resmed AirFit™ N20 Headgear", price: 1100, category: "mask-headgear", description: "Mask frame.", images: ["/images/Accesories/Headgear/Resmed AirFit™ N20 Headgear.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
-{ id: 53, slug: "p10-headgear", name: "Resmed AirFit™ P10 Headgear", price: 1100, category: "mask-headgear", description: "Mask frame.", images: ["/images/Accesories/Headgear/Resmed AirFit™ P10 Headgear.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
-{ id: 54, slug: "p30i-n30i-headgear", name: "Resmed AirFit™ P30i N30i Headgear", price: 1100, category: "mask-headgear", description: "Mask frame.", images: ["/images/Accesories/Headgear/Resmed AirFit™ P30i N30i Headgear.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
-{ id: 59, slug: "vent-airfit-headgear", name: "QuietAir vent for AirFit™ Mask", price: 1100, category: "mask-headgear", description: "Mask frame.", images: ["/images/Accesories/Mask frame and vents/QuietAir vent for AirFit™ Mask.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
-{ id: 60, slug: "sys-headgear", name: "Resmed AirFit™ F20 Frame SYS", price: 1100, category: "mask-headgear", description: "Mask frame.", images: ["/images/Accesories/Mask frame and vents/Resmed AirFit™ F20 Frame SYS.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
-{ id: 63, slug: "n20-sys-headgear", name: "Resmed AirFit™ N20 Frame SYS", price: 1100, category: "mask-headgear", description: "Mask frame.", images: ["/images/Accesories/Mask frame and vents/Resmed AirFit™ N20 Frame SYS.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
+{ id: 21, slug: "airfit-headgear", name: "Resmed AirFit™ F30 Headgear", price: 800, category: "mask-headgear", description: "The ResMed AirFit™ F30 Headgear is a genuine replacement headgear designed to provide a secure, comfortable fit for the AirFit™ F30 Full Face CPAP Mask. Made from soft, flexible materials with adjustable straps, it helps maintain a stable mask seal while reducing pressure points for enhanced comfort during sleep therapy.", images: ["/images/Accesories/Headgear/Resmed AirFit™ F30 Headgear.webp"], 
+  specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Mask Headgear" },
+  { label: "Compatibility", value: "ResMed AirFit™ F30 Full Face Mask" },
+  { label: "Material", value: "Soft Fabric & Elastic" },
+  { label: "Adjustable", value: "Yes" },
+  { label: "Comfort", value: "Soft & Secure Fit" },
+  { label: "Replacement Part", value: "Headgear Only" },
+  { label: "Reusable", value: "Yes" },
+  { label: "Easy Installation", value: "Yes" },
+  { label: "Latex Free", value: "Yes" }
+] },
+{ id: 24, slug: "f30i-headgear", name: "Resmed AirFit™ F30i Headgear", price: 1100, category: "mask-headgear", description: "The ResMed AirFit™ F30i Headgear is a replacement headgear designed specifically for the AirFit™ F30i Full Face Mask. Its soft fabric construction and adjustable straps provide a secure fit while supporting the mask's top-of-the-head tube design, allowing greater freedom of movement during sleep.", images: ["/images/Accesories/Headgear/Resmed AirFit™ F30i Headgear.webp"],
+   specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Mask Headgear" },
+  { label: "Compatibility", value: "ResMed AirFit™ F30i" },
+  { label: "Material", value: "Soft Elastic Fabric" },
+  { label: "Tube Design Support", value: "Top-of-the-Head Connection" },
+  { label: "Adjustable", value: "Yes" },
+  { label: "Replacement Part", value: "Headgear Only" },
+  { label: "Reusable", value: "Yes" },
+  { label: "Easy Fitting", value: "Yes" },
+  { label: "Latex Free", value: "Yes" }
+] },
+{ id: 52, slug: "n20-headgear", name: "Resmed AirFit™ N20 Headgear", price: 1100, category: "mask-headgear", description: "The ResMed AirFit™ N20 Headgear is a genuine replacement headgear designed for the AirFit™ N20 Nasal Mask. Featuring soft, breathable fabric and adjustable straps, it provides a stable fit while maintaining comfort throughout the night for effective CPAP therapy.", images: ["/images/Accesories/Headgear/Resmed AirFit™ N20 Headgear.webp"], 
+  specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Mask Headgear" },
+  { label: "Compatibility", value: "ResMed AirFit™ N20" },
+  { label: "Material", value: "Soft Breathable Fabric" },
+  { label: "Adjustable", value: "Yes" },
+  { label: "Comfort", value: "Secure & Comfortable Fit" },
+  { label: "Replacement Part", value: "Headgear Only" },
+  { label: "Reusable", value: "Yes" },
+  { label: "Easy Installation", value: "Yes" },
+  { label: "Latex Free", value: "Yes" }
+] },
+{ id: 53, slug: "p10-headgear", name: "Resmed AirFit™ P10 Headgear", price: 1100, category: "mask-headgear",description: "The ResMed AirFit™ P10 Headgear is a lightweight replacement headgear designed exclusively for the AirFit™ P10 Nasal Pillow Mask. Its elastic QuickFit™ design offers a secure and comfortable fit without complicated adjustments, making CPAP therapy simple and effective.", images: ["/images/Accesories/Headgear/Resmed AirFit™ P10 Headgear.webp"],
+  specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Mask Headgear" },
+  { label: "Compatibility", value: "ResMed AirFit™ P10" },
+  { label: "Headgear Type", value: "QuickFit™ Elastic Headgear" },
+  { label: "Material", value: "Soft Elastic Fabric" },
+  { label: "Lightweight", value: "Yes" },
+  { label: "Replacement Part", value: "Headgear Only" },
+  { label: "Reusable", value: "Yes" },
+  { label: "Easy Fitting", value: "Yes" },
+  { label: "Latex Free", value: "Yes" }
+]},
+{ id: 54, slug: "p30i-n30i-headgear", name: "Resmed AirFit™ P30i N30i Headgear", price: 1100, category: "mask-headgear", description: "The ResMed AirFit™ P30i / N30i Headgear is a replacement headgear compatible with both AirFit™ P30i and AirFit™ N30i masks. Designed with soft fabric and adjustable straps, it ensures a stable fit while supporting the masks' top-of-the-head tubing for unrestricted movement during sleep.", images: ["/images/Accesories/Headgear/Resmed AirFit™ P30i N30i Headgear.webp"],
+   specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Mask Headgear" },
+  { label: "Compatibility", value: "ResMed AirFit™ P30i & N30i" },
+  { label: "Material", value: "Soft Elastic Fabric" },
+  { label: "Top Tube Compatible", value: "Yes" },
+  { label: "Adjustable", value: "Yes" },
+  { label: "Replacement Part", value: "Headgear Only" },
+  { label: "Reusable", value: "Yes" },
+  { label: "Easy Installation", value: "Yes" },
+  { label: "Latex Free", value: "Yes" }
+] },
+{ id: 59, slug: "vent-airfit-headgear", name: "QuietAir vent for AirFit™ Mask", price: 1100, category: "mask-headgear",description: "The ResMed QuietAir™ Vent is a genuine replacement vent designed for compatible AirFit™ masks. Engineered to reduce noise and gently diffuse exhaled air, it enhances therapy comfort while creating a quieter sleeping environment for both users and their partners.", images: ["/images/Accesories/Mask frame and vents/QuietAir vent for AirFit™ Mask.webp"], 
+  specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Mask Vent" },
+  { label: "Compatibility", value: "Selected ResMed AirFit™ Masks" },
+  { label: "Product Type", value: "QuietAir™ Vent" },
+  { label: "Noise Reduction", value: "Yes" },
+  { label: "Air Diffusion", value: "Gentle Multi-Directional Venting" },
+  { label: "Replacement Part", value: "Vent Only" },
+  { label: "Easy Installation", value: "Yes" },
+  { label: "Reusable", value: "Yes" },
+  { label: "Latex Free", value: "Yes" }
+] },
+{ id: 60, slug: "sys-headgear", name: "Resmed AirFit™ F20 Frame SYS", price: 1100, category: "mask-headgear", description: "The ResMed AirFit™ F20 Frame SYS is a genuine replacement frame for the AirFit™ F20 Full Face Mask. Its lightweight, flexible design provides excellent stability while supporting a comfortable mask fit and maintaining an effective seal throughout CPAP therapy.", images: ["/images/Accesories/Mask frame and vents/Resmed AirFit™ F20 Frame SYS.webp"], 
+  specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Mask Frame" },
+  { label: "Compatibility", value: "ResMed AirFit™ F20" },
+  { label: "Product Type", value: "Replacement Frame" },
+  { label: "Material", value: "Flexible Medical-Grade Polymer" },
+  { label: "Lightweight", value: "Yes" },
+  { label: "Replacement Part", value: "Frame Only" },
+  { label: "Reusable", value: "Yes" },
+  { label: "Easy Assembly", value: "Yes" },
+  { label: "Latex Free", value: "Yes" }
+] },
+{ id: 63, slug: "n20-sys-headgear", name: "Resmed AirFit™ N20 Frame SYS", price: 1100, category: "mask-headgear", description: "The ResMed AirFit™ N20 Frame SYS is a genuine replacement frame for the AirFit™ N20 Nasal Mask. Designed with a lightweight and durable construction, it provides excellent support, comfort, and stability while ensuring reliable mask performance during CPAP therapy.", images: ["/images/Accesories/Mask frame and vents/Resmed AirFit™ N20 Frame SYS.webp"],
+   specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Mask Frame" },
+  { label: "Compatibility", value: "ResMed AirFit™ N20" },
+  { label: "Product Type", value: "Replacement Frame" },
+  { label: "Material", value: "Medical-Grade Polymer" },
+  { label: "Lightweight", value: "Yes" },
+  { label: "Replacement Part", value: "Frame Only" },
+  { label: "Reusable", value: "Yes" },
+  { label: "Easy Assembly", value: "Yes" },
+  { label: "Latex Free", value: "Yes" }
+] },
 //mask and cushioN
-{ id: 22, slug: "airfit-cushion", name: "Resmed AirFit™ F20 Cushion", price: 900, category: "mask-cushion", description: "Comfort cushion.", images: ["/images/Accesories/Cushion/Resmed AirFit™ F20 Cushion.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
-{ id: 27, slug: "f30-cushion", name: "Resmed AirFit™ F30 Cushion", price: 1800, category: "mask-cushion", description: "Hose Pipes & Tubes", images: ["/images/Accesories/Cushion/Resmed AirFit™ F30 Cushion.webp", "/images/Accesories/Cushion/Resmed AirFit™ F30 Cushion2.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
-{ id: 23, slug: "f30i-cushion", name: "Resmed AirFit™ F30i Cushion", price: 400, category: "mask-cushion", description: "Replacement clips.", images: ["/images/Accesories/Cushion/Resmed AirFit™ F30i Cushion.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
-{ id: 14, slug: "n20-cushion", name: "Resmed AirFit™ N20 Cushion", price: 2900, category: "mask-cushion", description: "Setup pack for AirMini.", images: ["/images/Accesories/Cushion/Resmed AirFit™ N20 Cushion.webp"], specifications: [{ label: "Brand", value: "ResMed" }, { label: "Category", value: "CPAP Accessory" }] },
-{ id: 17, slug: "n30i-cushion", name: "Resmed AirFit™ N30i Cushion", price: 3500, category: "mask-cushion", description: "Rental service.", images: ["/images/Accesories/Cushion/Resmed AirFit™ N30i Cushion.webp"], specifications: [{ label: "Type", value: "Rental" }] },
-{ id: 19, slug: "p30i-cushion", name: "Resmed AirFit™ P30i Cushion", price: 300, category: "mask-cushion", description: "Air filters.", images: ["/images/Accesories/Cushion/Resmed AirFit™ P30i Cushion.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
-{ id: 25, slug: "airtouch-f20I", name: "Resmed AirTouch F20 Cushion (Pack of 2)", price: 2000, category: "mask-cushion", description: "Accessories for AirSense 11.", images: ["/images/Accesories/Cushion/Resmed AirTouch F20 Cushion (Pack of 2).webp"], specifications: [{ label: "Category", value: "Accessory" }] },
+{ id: 22, slug: "airfit-cushion", name: "Resmed AirFit™ F20 Cushion", price: 900, category: "mask-cushion", description: "The ResMed AirFit™ F20 Cushion is a genuine replacement full face cushion designed to provide a soft, secure seal for the AirFit™ F20 CPAP mask. Made from high-quality silicone, it adapts to facial contours to minimize leaks, reduce pressure points, and deliver comfortable, effective sleep apnea therapy throughout the night.", images: ["/images/Accesories/Cushion/Resmed AirFit™ F20 Cushion.webp"],
+   specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Mask Cushion" },
+  { label: "Compatibility", value: "ResMed AirFit™ F20 Full Face Mask" },
+  { label: "Cushion Type", value: "Full Face Silicone Cushion" },
+  { label: "Material", value: "Medical-Grade Silicone" },
+  { label: "Seal Technology", value: "Adaptive Facial Seal" },
+  { label: "Comfort", value: "Soft & Flexible" },
+  { label: "Replacement Part", value: "Cushion Only" },
+  { label: "Reusable", value: "Yes" },
+  { label: "Latex Free", value: "Yes" }
+] },
+{ id: 27, slug: "f30-cushion", name: "Resmed AirFit™ F30 Cushion", price: 1800, category: "mask-cushion", description: "The ResMed AirFit™ F30 Cushion is a genuine replacement cushion for the AirFit™ F30 Full Face CPAP Mask. Its ultra-compact under-the-nose design provides a secure seal with minimal facial contact, helping reduce pressure and improve comfort while maintaining effective CPAP therapy.", images: ["/images/Accesories/Cushion/Resmed AirFit™ F30 Cushion.webp", "/images/Accesories/Cushion/Resmed AirFit™ F30 Cushion2.webp"],
+   specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Mask Cushion" },
+  { label: "Compatibility", value: "ResMed AirFit™ F30" },
+  { label: "Cushion Type", value: "Under-the-Nose Full Face Cushion" },
+  { label: "Material", value: "Medical-Grade Silicone" },
+  { label: "Minimal Contact", value: "Yes" },
+  { label: "Leak Control", value: "Secure Seal" },
+  { label: "Replacement Part", value: "Cushion Only" },
+  { label: "Reusable", value: "Yes" },
+  { label: "Latex Free", value: "Yes" }
+] },
+{ id: 23, slug: "f30i-cushion", name: "Resmed AirFit™ F30i Cushion", price: 400, category: "mask-cushion", description: "The ResMed AirFit™ F30i Cushion is a replacement under-the-nose full face cushion designed exclusively for the AirFit™ F30i mask. It provides a secure seal with minimal facial contact while supporting the mask's top-of-the-head tube design for greater comfort and freedom of movement.", images: ["/images/Accesories/Cushion/Resmed AirFit™ F30i Cushion.webp"],
+   specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Mask Cushion" },
+  { label: "Compatibility", value: "ResMed AirFit™ F30i" },
+  { label: "Cushion Type", value: "Under-the-Nose Full Face Cushion" },
+  { label: "Material", value: "Medical-Grade Silicone" },
+  { label: "Tube Design", value: "Top-of-the-Head Compatible" },
+  { label: "Leak Protection", value: "Secure Seal" },
+  { label: "Replacement Part", value: "Cushion Only" },
+  { label: "Reusable", value: "Yes" },
+  { label: "Latex Free", value: "Yes" }
+] },
+{ id: 14, slug: "n20-cushion", name: "Resmed AirFit™ N20 Cushion", price: 2900, category: "mask-cushion",description: "The ResMed AirFit™ N20 Cushion is a genuine replacement nasal cushion engineered to provide exceptional comfort and a reliable seal for the AirFit™ N20 CPAP mask. Its adaptive silicone design conforms naturally to facial contours, minimizing leaks while delivering effective and comfortable sleep therapy.", images: ["/images/Accesories/Cushion/Resmed AirFit™ N20 Cushion.webp"], 
+  specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Mask Cushion" },
+  { label: "Compatibility", value: "ResMed AirFit™ N20" },
+  { label: "Cushion Type", value: "Nasal Cushion" },
+  { label: "Material", value: "Medical-Grade Silicone" },
+  { label: "Seal Technology", value: "Adaptive Silicone Seal" },
+  { label: "Comfort", value: "Soft Cushion Design" },
+  { label: "Replacement Part", value: "Cushion Only" },
+  { label: "Reusable", value: "Yes" },
+  { label: "Latex Free", value: "Yes" }
+]},
+{ id: 17, slug: "n30i-cushion", name: "Resmed AirFit™ N30i Cushion", price: 3500, category: "mask-cushion",description: "The ResMed AirFit™ N30i Cushion is a replacement nasal cradle cushion designed for the AirFit™ N30i CPAP mask. Featuring a minimal-contact design, it rests comfortably beneath the nose while delivering a secure seal and supporting unrestricted movement throughout the night.", images: ["/images/Accesories/Cushion/Resmed AirFit™ N30i Cushion.webp"],
+   specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Mask Cushion" },
+  { label: "Compatibility", value: "ResMed AirFit™ N30i" },
+  { label: "Cushion Type", value: "Nasal Cradle Cushion" },
+  { label: "Material", value: "Medical-Grade Silicone" },
+  { label: "Minimal Contact", value: "Yes" },
+  { label: "Top Tube Compatible", value: "Yes" },
+  { label: "Replacement Part", value: "Cushion Only" },
+  { label: "Reusable", value: "Yes" },
+  { label: "Latex Free", value: "Yes" }
+] },
+{ id: 19, slug: "p30i-cushion", name: "Resmed AirFit™ P30i Cushion", price: 300, category: "mask-cushion", description: "The ResMed AirFit™ P30i Cushion is a genuine replacement nasal pillow cushion for the AirFit™ P30i CPAP mask. Featuring dual-wall nasal pillows, it provides a comfortable, stable seal with minimal facial contact while supporting the mask's top-of-the-head tube connection.", images: ["/images/Accesories/Cushion/Resmed AirFit™ P30i Cushion.webp"],
+   specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Mask Cushion" },
+  { label: "Compatibility", value: "ResMed AirFit™ P30i" },
+  { label: "Cushion Type", value: "Dual-Wall Nasal Pillow" },
+  { label: "Material", value: "Medical-Grade Silicone" },
+  { label: "Minimal Contact", value: "Yes" },
+  { label: "Leak Control", value: "Secure Nasal Seal" },
+  { label: "Replacement Part", value: "Cushion Only" },
+  { label: "Reusable", value: "Yes" },
+  { label: "Latex Free", value: "Yes" }
+] },
+{ id: 25, slug: "airtouch-f20I", name: "Resmed AirTouch F20 Cushion (Pack of 2)", price: 2000, category: "mask-cushion",description: "The ResMed AirTouch™ F20 Cushion (Pack of 2) features UltraSoft™ memory foam technology for exceptional comfort and an adaptive facial seal. Designed for the AirTouch™ F20 Full Face Mask, these replacement cushions help reduce facial pressure while maintaining effective CPAP therapy.", images: ["/images/Accesories/Cushion/Resmed AirTouch F20 Cushion (Pack of 2).webp"], 
+  specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Mask Cushion" },
+  { label: "Compatibility", value: "ResMed AirTouch™ F20" },
+  { label: "Cushion Type", value: "UltraSoft™ Memory Foam Cushion" },
+  { label: "Material", value: "Memory Foam" },
+  { label: "Pack Size", value: "Pack of 2" },
+  { label: "Comfort Technology", value: "UltraSoft™ Foam" },
+  { label: "Replacement Part", value: "Cushion Only" },
+  { label: "Disposable", value: "Replace As Recommended" },
+  { label: "Latex Free", value: "Yes" }
+] },
 //Mask pad clip
-{ id: 26, slug: "n20-accessories", name: "Resmed N20 Mask Magnet Clips (2PK)", price: 1800, category: "mask-clips", description: "Accessories for Resmed N20 Mask ", images: ["/images/Accesories/Mask Pad Clips/1.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
-{ id: 55, slug: "p10-accessories", name: "Resmed P10 Mask Headgear Clips (10PK)", price: 1800, category: "mask-clips", description: "Accessories for Resmed N20 Mask ", images: ["/images/Accesories/Mask Pad Clips/2.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
-{ id: 57, slug: "n20pk-accessories", name: "Resmed N20 Mask Magnet Clips (2PK)", price: 1800, category: "mask-clips", description: "Accessories for Resmed N20 Mask ", images: ["/images/Accesories/Mask Pad Clips/3.webp", "/images/Accesories/Mask Pad Clips/4.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
-{ id: 58, slug: "airmini-accessories", name: "Resmed N20 Mask Magnet Clips (2PK)", price: 1800, category: "mask-clips", description: "Accessories for Resmed N20 Mask ", images: ["/images/Accesories/Mask Pad Clips/5.webp"], specifications: [{ label: "Category", value: "Accessory" }] },
+{ id: 26, slug: "n20-accessories", name: "Resmed N20 Mask Magnet Clips (2PK)", price: 1800, category: "mask-clips", description: "Accessories for Resmed N20 Mask ", images: ["/images/Accesories/Mask Pad Clips/1.webp"], 
+  specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Mask Clips" },
+  { label: "Compatibility", value: "ResMed AirFit™ N20 Nasal Mask" },
+  { label: "Product Type", value: "Magnetic Headgear Clips" },
+  { label: "Pack Size", value: "2 Clips" },
+  { label: "Attachment Type", value: "Magnetic" },
+  { label: "Installation", value: "Quick Snap-On Design" },
+  { label: "Replacement Part", value: "Clips Only" },
+  { label: "Reusable", value: "Yes" },
+  { label: "Material", value: "Medical-Grade Plastic & Magnet" }
+] },
+{ id: 55, slug: "p10-accessories", name: "Resmed P10 Mask Headgear Clips (10PK)", price: 1800, category: "mask-clips",description: "The ResMed P10 Mask Headgear Clips (10 Pack) are replacement clips designed for the AirFit™ P10 Nasal Pillow Mask. These durable clips help secure the headgear in place, ensuring a stable and comfortable fit during CPAP therapy while making routine maintenance and replacement simple.", images: ["/images/Accesories/Mask Pad Clips/2.webp"],
+  specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Mask Headgear Clips" },
+  { label: "Compatibility", value: "ResMed AirFit™ P10" },
+  { label: "Product Type", value: "Headgear Clips" },
+  { label: "Pack Size", value: "10 Clips" },
+  { label: "Material", value: "Durable Medical-Grade Plastic" },
+  { label: "Easy Installation", value: "Yes" },
+  { label: "Replacement Part", value: "Clips Only" },
+  { label: "Reusable", value: "Yes" },
+  { label: "Lightweight", value: "Yes" }
+] },
+{ id: 57, slug: "n20pk-accessories", name: "Resmed N20 Mask Magnet Clips (2PK)", price: 1800, category: "mask-clips", description: "The ResMed N20 Mask Magnet Clips (2 Pack) are genuine replacement magnetic clips engineered for compatible AirFit™ N20 CPAP masks. Designed for effortless attachment and removal, they provide a secure headgear connection while enhancing user convenience and maintaining optimal mask stability throughout therapy.", images: ["/images/Accesories/Mask Pad Clips/3.webp", "/images/Accesories/Mask Pad Clips/4.webp"], 
+ specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Mask Clips" },
+  { label: "Compatibility", value: "ResMed AirFit™ N20 Nasal Mask" },
+  { label: "Product Type", value: "Magnetic Replacement Clips" },
+  { label: "Pack Size", value: "2 Clips" },
+  { label: "Attachment Type", value: "Magnetic" },
+  { label: "Secure Lock", value: "Yes" },
+  { label: "Replacement Part", value: "Clips Only" },
+  { label: "Reusable", value: "Yes" },
+  { label: "Easy Installation", value: "Yes" }
+] },
+{ id: 58, slug: "airmini-accessories", name: "Resmed N20 Mask Magnet Clips (2PK)", price: 1800, category: "mask-clips", description: "The ResMed AirMini™ Replacement Accessory is a genuine replacement component designed for compatible AirMini™ CPAP systems. Manufactured to ResMed quality standards, it helps maintain reliable performance, ensures a secure fit, and supports comfortable, uninterrupted sleep therapy whether at home or while traveling.", images: ["/images/Accesories/Mask Pad Clips/5.webp"], 
+ specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "CPAP Accessory" },
+  { label: "Compatibility", value: "ResMed AirMini™ System" },
+  { label: "Product Type", value: "Replacement Accessory" },
+  { label: "Material", value: "Medical-Grade Components" },
+  { label: "Installation", value: "Easy Replacement" },
+  { label: "Travel Friendly", value: "Yes" },
+  { label: "Replacement Part", value: "Accessory Only" },
+  { label: "Reusable", value: "Yes" },
+  { label: "Genuine Fit", value: "Designed for AirMini™" }
+] },
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 //Rental
-{ id: 61, slug: "rental-airsence", name: "Rental AirSense™ 11 AutoSet™ Tripack 4G with 1 Mask", price: 6900, category: "rental", description: "Mask frame.", 
+{ id: 61, slug: "rental-airsence", name: "Rental AirSense™ 11 AutoSet™ Tripack 4G with 1 Mask", price: 6900, category: "rental", description: "The Rental AirSense™ 11 AutoSet™ Tripack 4G with 1 Mask provides a complete CPAP therapy solution for patients who need short-term or long-term treatment without purchasing a device. This rental package includes the advanced AirSense™ 11 AutoSet™ machine with integrated humidifier, ClimateLineAir™ heated tubing, and one compatible CPAP mask for immediate use. Featuring intelligent AutoSet™ pressure adjustment, built-in 4G connectivity, and user-friendly controls, it delivers personalized and comfortable sleep apnea therapy while allowing healthcare providers to monitor treatment remotely. Ideal for home use, travel, post-surgical recovery, or trial therapy.", 
   images: ["/images/Devices/AirSense™ 11 AutoSet™ (Single Pack)/1.webp", "/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/2.1.webp", "/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/3.1.webp", "/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/4.webp"
-  ], specifications: [{ label: "Category", value: "Accessory" }] },
+  ],specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "CPAP Rental" },
+  { label: "Machine Type", value: "Auto CPAP" },
+  { label: "Model", value: "AirSense™ 11 AutoSet™" },
+  { label: "Package Includes", value: "Machine, Humidifier, ClimateLineAir™ Tube & 1 Mask" },
+  { label: "Connectivity", value: "Built-in 4G" },
+  { label: "Humidifier", value: "Integrated" },
+  { label: "Pressure Mode", value: "AutoSet™" },
+  { label: "Rental Option", value: "Short & Long Term Available" },
+  { label: "Suitable For", value: "Sleep Apnea Therapy" },
+  { label: "Home Use", value: "Yes" },
+  { label: "Clinical Monitoring", value: "Remote Compatible" }
+] },
 
-{ id: 62, slug: "lumis-100", name: "Lumis™ 100 VPAP ST Non- Invasive Ventilator", price: 4500, category: "rental", description: "Mask frame.", 
+{ id: 62, slug: "lumis-100", name: "Lumis™ 100 VPAP ST Non- Invasive Ventilator", price: 4500, category: "rental",description: "The ResMed Lumis™ 100 VPAP ST Non-Invasive Ventilator is available on rent for patients requiring advanced bilevel ventilation therapy. Designed for individuals with chronic respiratory insufficiency, neuromuscular disorders, COPD, and other breathing conditions, it delivers spontaneous and timed pressure support with an integrated backup rate. The device features intelligent synchronization technology, integrated humidification compatibility, and user-friendly controls to provide reliable respiratory support in both home and clinical environments.", 
   images: [  
     "/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/1.webp", "/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/2.webp", "/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/3.webp", "/images/Devices/Lumis™ 100 VPAP ST Non- Invasive Ventilator/4.webp"
-  ], specifications: [{ label: "Category", value: "Accessory" }] },
+  ], specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "Ventilator Rental" },
+  { label: "Machine Type", value: "BiLevel Ventilator (ST)" },
+  { label: "Model", value: "Lumis™ 100 VPAP ST" },
+  { label: "Therapy Mode", value: "Spontaneous / Timed (ST)" },
+  { label: "Backup Rate", value: "Yes" },
+  { label: "Humidifier Compatible", value: "Yes" },
+  { label: "Display", value: "Color LCD" },
+  { label: "Rental Option", value: "Available" },
+  { label: "Suitable For", value: "Respiratory Support Therapy" },
+  { label: "Home & Clinical Use", value: "Yes" },
+  { label: "Brand Warranty", value: "As Per Rental Terms" }
+] },
 
-{ id: 89, slug: "lumis-150", name: "Resmed AirCurve 10 VAuto BIPAP – Best Auto BIPAP", price: 5900, category: "rental", description: "Intelligent bilevel ventilator with backup rate and advanced respiratory support..", 
+{ id: 89, slug: "lumis-150", name: "Resmed AirCurve 10 VAuto BIPAP – Best Auto BIPAP", price: 5900, category: "rental", description: "The ResMed AirCurve™ 10 VAuto BiPAP is available for rent and delivers advanced automatic bilevel pressure therapy for patients with obstructive sleep apnea who require higher pressure support than traditional CPAP. Featuring intelligent VAuto technology, Easy-Breathe waveform, integrated humidification support, and cloud connectivity, the device automatically adjusts inspiratory and expiratory pressures for greater comfort and effective treatment throughout the night.", 
    images: ["/images/Devices/Lumis™ 150 VPAP ST-A Non- Invasive Ventilator.webp",
   ], specifications: [
-    { label: "Brand", value: "ResMed" },
-    { label: "Connectivity", value: "Cloud Connected" }]
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "BiPAP Rental" },
+  { label: "Machine Type", value: "Auto BiLevel (VAuto)" },
+  { label: "Model", value: "AirCurve™ 10 VAuto" },
+  { label: "Therapy Mode", value: "Automatic BiLevel Therapy" },
+  { label: "Connectivity", value: "Cloud Connected" },
+  { label: "Humidifier Compatible", value: "Yes" },
+  { label: "Pressure Relief", value: "Easy-Breathe Technology" },
+  { label: "Rental Option", value: "Available" },
+  { label: "Suitable For", value: "Obstructive Sleep Apnea" },
+  { label: "Home Use", value: "Yes" },
+  { label: "Display", value: "Color LCD" }
+]
   },
 
-{ id: 90, slug: "airsense-10", name: "AirSense™ 11 AutoSet™ 4G Tripack", price: 4900, category: "rental", description: "Advanced CPAP machine", 
+{ id: 90, slug: "airsense-10", name: "AirSense™ 11 AutoSet™ 4G Tripack", price: 4900, category: "rental", description: "The ResMed AirSense™ 11 AutoSet™ 4G Tripack is available for rent and offers a complete auto-adjusting CPAP therapy solution for patients with obstructive sleep apnea. Equipped with an integrated humidifier, ClimateLineAir™ heated tubing, intelligent AutoSet™ algorithm, and built-in 4G connectivity, the device delivers comfortable and personalized therapy while enabling remote treatment monitoring by healthcare providers.", 
   images: ["/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/1.webp", "/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/2.1.webp", "/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/3.1.webp",  "/images/Devices/AirSense™ 11 AutoSet™ 4G Tripack - With Humidifier and ClimateLineAir™ Tube/4.webp"
         ], 
-        specifications: [{ label: "Brand", value: "ResMed" }, { label: "Type", value: "Auto CPAP" }] 
-      },
+        specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "CPAP Rental" },
+  { label: "Machine Type", value: "Auto CPAP" },
+  { label: "Model", value: "AirSense™ 11 AutoSet™" },
+  { label: "Package", value: "Tripack with Humidifier & Heated Tube" },
+  { label: "Connectivity", value: "Built-in 4G" },
+  { label: "Humidifier", value: "Integrated" },
+  { label: "Pressure Mode", value: "AutoSet™" },
+  { label: "Rental Option", value: "Available" },
+  { label: "Suitable For", value: "Sleep Apnea Therapy" },
+  { label: "Home Use", value: "Yes" },
+  { label: "ClimateLineAir™", value: "Included" }
+]
+  },
 
-  { id: 91, slug: "airstart-10", name: "AirStart™ 10 APAP", price: 3900, category: "rental", description: "Advanced CPAP machine", 
+  { id: 91, slug: "airstart-10", name: "AirStart™ 10 APAP", price: 3900, category: "rental", description: "The ResMed AirStart™ 10 APAP is available on rent and provides reliable automatic positive airway pressure therapy for patients with obstructive sleep apnea. Designed for simplicity and comfort, it automatically adjusts pressure levels based on the user's breathing patterns while offering integrated humidification compatibility and easy operation. The compact design makes it suitable for both home therapy and temporary rental needs." ,
   images: ["/images/Devices/AirStart™ 10 APAP with humidification and tube/1.webp","/images/Devices/AirStart™ 10 APAP with humidification and tube/2.webp", "/images/Devices/AirStart™ 10 APAP with humidification and tube/3.webp", "/images/Devices/AirStart™ 10 APAP with humidification and tube/4.webp"],
-      specifications: [{ label: "Brand", value: "ResMed" }, { label: "Connectivity", value: "4G Enabled" }] },
-
-
+      specifications: [
+  { label: "Brand", value: "ResMed" },
+  { label: "Category", value: "CPAP Rental" },
+  { label: "Machine Type", value: "Auto CPAP (APAP)" },
+  { label: "Model", value: "AirStart™ 10 APAP" },
+  { label: "Therapy Mode", value: "Automatic Pressure Adjustment" },
+  { label: "Humidifier Compatible", value: "Yes" },
+  { label: "Connectivity", value: "4G Enabled" },
+  { label: "Display", value: "LCD Screen" },
+  { label: "Rental Option", value: "Available" },
+  { label: "Suitable For", value: "Sleep Apnea Therapy" },
+  { label: "Home Use", value: "Yes" },
+  { label: "Easy Operation", value: "Yes" }
+]
+  }
 ]
 // LAST 91
