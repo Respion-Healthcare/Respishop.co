@@ -68,7 +68,7 @@ export default function ProductBannerGrid() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, margin: "-100px" }}
-        className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8"
+        className="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-8"
       >
         {bannerProducts.map((slug, index) => {
           const product = allProducts.find((p) => p.slug === slug)

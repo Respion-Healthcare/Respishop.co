@@ -2,10 +2,13 @@ import { products } from "@/lib/products"
 import Image from "next/image"
 import Link from "next/link"
 import type { Metadata } from "next"
+import { notFound } from "next/navigation"
 
 export async function generateMetadata({ params }: any): Promise<Metadata> {
   const { slug } = await params
-
+if (!["mask", "accessory"].includes(slug)) {
+  notFound()
+}
   const formattedName = slug.replace(/-/g, " ")
 
 if (slug === "mask") {
@@ -127,7 +130,7 @@ console.log("Products Found:", filteredProducts.length)
   return (
     <div className="
 min-h-screen
-bg-gradient-to-br
+bg-linear-to-br
 from-slate-50
 via-blue-50
 to-cyan-50
@@ -137,7 +140,7 @@ md:p-10
       {/* PAGE TITLE */}
       <div className="max-w-7xl mx-auto">
 
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 via-sky-500 to-cyan-400 p-10 md:p-16 mb-12">
+      <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-blue-600 via-sky-500 to-cyan-400 p-10 md:p-16 mb-12">
   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.25),transparent_40%)]" />
 
   <div className="relative z-10 max-w-3xl">
@@ -214,34 +217,27 @@ md:p-10
                 key={product.id}
                 href={`/products/${product.category}/${product.slug}`}
                className="
-                          group
-                          relative
-                          overflow-hidden
-                          rounded-3xl
-                          border border-blue-100
-                          bg-white
-                          p-4
-                          shadow-sm
-                          transition-all
-                          duration-500
-                          hover:-translate-y-2
-                          hover:border-blue-300
-                          hover:shadow-[0_20px_50px_rgba(59,130,246,0.25)]">
-
-                <div className="relative h-56 overflow-hidden rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50">
-                  <Image
-                    src={product.images[0]}
-                    alt={product.name}
-                    fill
-                  className="
-object-contain
-p-4
-transition-transform
+group
+relative
+overflow-hidden
+rounded-3xl
+border border-blue-100
+bg-white
+p-3
+transition-all
 duration-500
-group-hover:scale-110
-"
-                  />
-                </div>
+hover:-translate-y-2
+hover:border-blue-300
+hover:shadow-[0_20px_50px_rgba(59,130,246,0.25)]
+">
+                <div className="relative h-48 sm:h-52 overflow-hidden rounded-2xl bg-linear-to-br from-blue-50 to-cyan-50">
+ <Image
+  src={product.images[0]}
+  alt={product.name}
+  fill
+  className="object-contain scale-125 transition duration-500 group-hover:scale-[1.35]"
+/>
+</div>
 
                 <h2 className="mt-4 text-sm md:text-base font-medium text-gray-800 line-clamp-2">
                   {product.name}
@@ -249,18 +245,18 @@ group-hover:scale-110
 
                 <p className="mt-3 text-xl font-bold text-blue-600 transition-colors duration-300 group-hover:text-cyan-600">
                   ₹{product.price > 0
-  ? `₹${product.price.toLocaleString()}`
-  : "Contact for Price"}
-                </p>
-<div className="mt-4 flex items-center justify-between">
-  <span className="text-sm text-slate-500">
-    View Details
-  </span>
+                  ? `₹${product.price.toLocaleString()}`
+                  : "Contact for Price"}
+                                </p>
+                <div className="mt-4 flex items-center justify-between">
+                  <span className="text-sm text-slate-500">
+                    View Details
+                  </span>
 
-  <span className="rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold text-white transition-all duration-300 group-hover:bg-cyan-600">
-    Explore
-  </span>
-</div>
+                  <span className="rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold text-white transition-all duration-300 group-hover:bg-cyan-600">
+                    Explore
+                  </span>
+                </div>
               </Link>
 
             ))}
@@ -270,17 +266,17 @@ group-hover:scale-110
 
         {/* SEO CONTENT */}
         <div className="
-mt-20
-rounded-3xl
-border
-border-blue-100
-bg-gradient-to-br
-from-white
-to-blue-50
-p-8
-md:p-12
-shadow-sm
-">
+              mt-20
+              rounded-3xl
+              border
+              border-blue-100
+              bg-linear-to-br
+              from-white
+              to-blue-50
+              p-8
+              md:p-12
+              shadow-sm
+              ">
 
  {/* MASK CATEGORY CONTENT */}
 {slug === "mask" && (
@@ -339,7 +335,7 @@ shadow-sm
 
     </div>
 
-    <div className="rounded-3xl bg-gradient-to-r from-blue-600 to-cyan-500 p-8 text-white">
+    <div className="rounded-3xl bg-linear-to-r from-blue-600 to-cyan-500 p-8 text-white">
 
       <h3 className="text-2xl font-bold mb-6">
         Popular Mask Types
@@ -516,7 +512,7 @@ shadow-sm
       <p className="mb-4">
         Explore our{" "}
         <Link
-          href="/category/cpap-machine"
+          href="/products/cpap-machine"
           className="text-blue-600 underline"
         >
           CPAP Machines Collection

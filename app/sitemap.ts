@@ -58,36 +58,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }))
 
-  // ✅ CATEGORY PAGES
-  const categories = [...new Set(allProducts.map((p) => p.category))]
-
-  const categoryPages = categories.map((cat) => ({
-    url: `${baseUrl}/category/${cat}`,
-    lastModified: currentDate,
-    changeFrequency: "weekly" as const,
-    priority: 0.8,
-  }))
-
   // ✅ BLOG PAGES
-  const blogSlugs = [
-    "best-cpap-machine-in-india",
-    "cpap-machine-price-in-bhubaneswar",
-    "oxygen-concentrator-price-in-india",
-  ]
+const blogSlugs = [
+  "best-cpap-machine-in-india",
+  "cpap-machine-price-in-bhubaneswar",
+  "oxygen-concentrator-price-in-india",
+  "what-is-cpap-machine",
+  "cpap-machine-price-in-india",
+  "cpap-machine-side-effects-and-solutions",
+  "resmed-airsense-10-vs-airsense-11",
+  "bipap-machine-price-in-kolkata",
+]
 
-  const blogPages = blogSlugs.map((slug) => ({
-    url: `${baseUrl}/blog/${slug}`,
-    lastModified: currentDate,
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-  }))
+const blogPages = blogSlugs.map((slug) => ({
+  url: `${baseUrl}/blog/${slug}`,
+  lastModified: currentDate,
+  changeFrequency: "monthly" as const,
+  priority: 0.7,
+}))
 
   // ✅ FINAL SITEMAP
   return [
     ...staticPages,
     ...seoPages,
     ...productPages,
-    ...categoryPages,
     ...blogPages,
   ]
 }

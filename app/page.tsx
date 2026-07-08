@@ -33,8 +33,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="bg-linear-to-b from-blue-50 via-white to-blue-100 min-h-screen">
-
+    <main className="min-h-screen w-full overflow-x-hidden bg-gradient-to-b from-blue-50 via-white to-blue-100">
       {/* SEO H1 */}
       <h1 className="sr-only">
         Buy CPAP, BiPAP Machines & Oxygen Concentrators in India
@@ -42,18 +41,23 @@ export default function Home() {
 
       <Hero />
 
-      <ProductBannerGrid />
+      <section className="space-y-10 sm:space-y-12 md:space-y-16">
+        <DealOfTheDay />
 
-      <ShopCategories />
+        <ProductBannerGrid />
 
-      <BestSellingSection />
-  <TrustBadges />
-      <DealOfTheDay />
+        <ShopCategories />
 
-      <AuthorizedPartners />
+        <BestSellingSection />
 
-      <ReviewsSection />
-<FloatingContactButtons />
+        <TrustBadges />
+
+        <AuthorizedPartners />
+
+        <ReviewsSection />
+      </section>
+
+      <FloatingContactButtons />
     </main>
   )
 }

@@ -28,40 +28,6 @@ export const metadata: Metadata = {
   },
 }
 
-/* ---------------- FILTERS ---------------- */
-
-const cpapProducts = products.filter(
-  (p) => p.category === "cpap-machine"
-)
-
-const bipapProducts = products.filter(
-  (p) => p.category === "bipap-machine"
-)
-
-const maskProducts = products.filter(
-  (p) =>
-    p.category === "nasal-mask" ||
-    p.category === "full-face-mask" ||
-    p.category === "nasal-pillow-mask"
-)
-
-const oxygenProducts = products.filter(
-  (p) => p.category === "oxygen-concentrator"
-)
-
-const accessoryProducts = products.filter(
-  (p) =>
-    p.category === "tubes-and-connectors" ||
-    p.category === "filters-cleaners" ||
-    p.category === "humidifier-bottle" ||
-    p.category === "mask-headgear" ||
-    p.category === "mask-cushion" ||
-    p.category === "mask-clips"
-)
-
-const rentalProducts = products.filter(
-  (p) => p.category === "rental"
-)
 
 /* ---------------- COMPONENT ---------------- */
 
@@ -150,87 +116,172 @@ function ProductSection({
 export default function ProductsPage() {
   return (
   <main className="min-h-screen bg-gradient-to-b from-slate-50 via-blue-50 to-slate-50">
+    
+   <div className="text-center mb-8">
+  <span className="inline-block px-4 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-medium">
+    Respiratory Care Solutions
+  </span>
+
+  <h2 className="mt-4 text-3xl md:text-4xl font-bold text-slate-900">
+    Find the Right Therapy Equipment
+  </h2>
+</div>
     <div className="max-w-7xl mx-auto px-4 py-12">
 
-      {/* HERO SECTION (NEW PREMIUM LOOK) */}
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-10 mb-14 shadow-xl">
+  {/* CATEGORY HIGHLIGHTS */}
+<div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-6 mb-14">
 
-        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_20%_20%,white,transparent_40%)]"></div>
-
-        <h1 className="text-3xl md:text-5xl font-bold relative z-10">
-          CPAP, BiPAP & Oxygen Therapy Devices
-        </h1>
-
-        <p className="mt-4 max-w-2xl text-blue-100 relative z-10">
-          Premium respiratory care equipment including CPAP machines, BiPAP ventilators,
-          oxygen concentrators, masks and accessories — trusted by hospitals & home users.
-        </p>
-
-        <div className="mt-6 flex gap-4 relative z-10">
-          <div className="bg-white/15 backdrop-blur px-4 py-2 rounded-full text-sm">
-            ✔ Trusted Brands
-          </div>
-          <div className="bg-white/15 backdrop-blur px-4 py-2 rounded-full text-sm">
-            ✔ Fast Delivery
-          </div>
-          <div className="bg-white/15 backdrop-blur px-4 py-2 rounded-full text-sm">
-            ✔ Medical Grade
-          </div>
-        </div>
+  {[
+    {
+      name: "CPAP",
+      href: "/products/cpap-machine",
+      image: "/images/banner2.jpg",
+    },
+    {
+      name: "BiPAP",
+      href: "/products/bipap-machine",
+      image: "/images/Devices/Bipap Machiene/BMC G3 B25vt BIPAP Device with Humidifier and Mask2.webp",
+    },
+    {
+      name: "Oxygen",
+      href: "/products/oxygen-concentrator",
+      image: "/images/Oc/evox1.jpg",
+    },
+    {
+      name: "Masks",
+      href: "/category/mask",
+      image: "/images/banner1.webp",
+    },
+    {
+      name: "Accessories",
+      href: "/category/accessory",
+      image: "/images/hero12.png",
+    },
+    {
+      name: "Rental",
+      href: "/products/rental",
+      image: "/images/P9.webp",
+    },
+    {
+      name: "Sleep Therapy",
+      href: "/sleeptherapy",
+      image: "/images/blog2.webp",
+    },
+  ].map((item) => (
+    <Link
+      key={item.name}
+      href={item.href}
+      className="group flex flex-col items-center"
+    >
+      {/* Circle Image */}
+      <div className="relative h-28 w-28 sm:h-32 sm:w-32 overflow-hidden rounded-full border-4 border-blue-100 shadow-md transition duration-300 group-hover:scale-105 group-hover:border-blue-500">
+        <Image
+          src={item.image}
+          alt={item.name}
+          fill
+          className="object-cover"
+        />
       </div>
 
-      {/* SECTIONS WRAPPED IN CARDS */}
-      <div className="space-y-10">
+      {/* Name Below */}
+      <h3 className="mt-3 text-center text-sm sm:text-base font-semibold text-slate-800 group-hover:text-blue-600">
+        {item.name}
+      </h3>
+    </Link>
+  ))}
 
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
-          <ProductSection
-            title="CPAP Machines"
-            description="Automatic CPAP devices for sleep apnea treatment and breathing therapy."
-            items={cpapProducts}
-          />
-        </div>
+</div>
+    
+    <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-600 p-8 text-white mb-12">
 
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
-          <ProductSection
-            title="BiPAP Machines"
-            description="Advanced BiPAP ventilators for respiratory support and therapy."
-            items={bipapProducts}
-          />
-        </div>
+  <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,white,transparent_40%)]" />
 
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
-          <ProductSection
-            title="CPAP & BiPAP Masks"
-            description="Nasal masks, full face masks and nasal pillow masks for CPAP therapy."
-            items={maskProducts}
-          />
-        </div>
+  <div className="relative z-10">
+    <h2 className="text-2xl font-bold">
+      India's Trusted Sleep Therapy Store
+    </h2>
 
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
-          <ProductSection
-            title="Oxygen Concentrators"
-            description="Portable and home oxygen concentrators for medical oxygen therapy."
-            items={oxygenProducts}
-          />
-        </div>
+    <p className="mt-2 text-blue-100">
+      CPAP, BiPAP, Oxygen Concentrators & Accessories from top brands.
+    </p>
 
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
-          <ProductSection
-            title="CPAP Accessories"
-            description="Tubes, filters, humidifiers, cushions, headgear and mask parts."
-            items={accessoryProducts}
-          />
-        </div>
+    <div className="flex flex-wrap gap-3 mt-5">
+      <span className="bg-white/20 px-4 py-2 rounded-full">
+        ✔ ResMed Authorized
+      </span>
 
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
-          <ProductSection
-            title="Rental Devices"
-            description="CPAP and BiPAP machines available for rent in India."
-            items={rentalProducts}
-          />
-        </div>
+      <span className="bg-white/20 px-4 py-2 rounded-full">
+        ✔ Fast Shipping
+      </span>
 
-      </div>
+      <span className="bg-white/20 px-4 py-2 rounded-full">
+        ✔ Expert Support
+      </span>
+    </div>
+  </div>
+
+</div>
+    {/* BEST SELLING PRODUCTS */}
+  <div className="mt-10 pt-8 border-t border-blue-100">
+
+                  <div className="flex items-center justify-between mb-6">
+                    <div>
+                      <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                      Best Selling Products
+                    </h2>
+
+                    <p className="text-gray-500 mt-2">
+                      Most trusted sleep therapy & respiratory care products
+                    </p>
+                    </div>
+
+                    <Link
+                      href="/products"
+                      className="text-blue-600 font-medium hover:underline"
+                    >
+                      View All →
+                    </Link>
+                  </div>
+
+                  <div className="grid grid-cols-3 gap-4">
+
+                    {[
+                      {
+                        name: "Resmed AirFit N20",
+                        href: "/products/nasal-mask/resmed-airfit-n20-nasal-mask",
+                      },
+                      {
+                        name: "AirSense 10 AutoSet",
+                        href: "/products/cpap-machine/resmed-airsense-10-autoset-tripack",
+                      },
+                      {
+                        name: "Lumis 100 VPAP ST",
+                        href: "/products/bipap-machine/lumis-100-vpap-st",
+                      },
+                      {
+                        name: "AirMini AutoSet",
+                        href: "/products/cpap-machine/airmini-autoset-cpap-device",
+                      },
+                      {
+                        name: "AirFit F20 Full Face",
+                        href: "/products/full-face-mask/resmed-airfit-f20-full-face-mask",
+                      },
+                      {
+                        name: "AirSense 11 AutoSet",
+                        href: "/products/cpap-machine/airsense-11-autoset-single-pack",
+                      },
+                    ].map((item, index) => (
+                      <Link
+                        key={index}
+                        href={item.href}
+                        className="rounded-2xl border border-blue-100 bg-blue-50/60 hover:bg-blue-600 hover:text-white transition-all duration-300 p-4 text-sm font-medium text-gray-700"
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+
+                  </div>
+                </div>
     </div>
   </main>
 )

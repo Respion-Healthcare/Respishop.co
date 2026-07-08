@@ -37,7 +37,7 @@ export default function AuthorizedPartners() {
   }
 
   return (
-    <section className="relative overflow-hidden py-24">
+    <section className="relative overflow-hidden py-12 sm:py-16 lg:py-24">
       {/* SEO Schema */}
       <script
         type="application/ld+json"
@@ -58,11 +58,11 @@ export default function AuthorizedPartners() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center">
-          <span className="inline-flex items-center rounded-full border border-cyan-200 bg-white/70 px-4 py-2 text-sm font-semibold text-cyan-700 backdrop-blur-md">
+          <span className="inline-flex items-center rounded-full border border-cyan-200 bg-white/70 px-3 py-1.5 text-[11px] sm:px-4 sm:py-2 sm:text-sm font-semibold text-cyan-700 backdrop-blur-md">
             🤝 Authorized Medical Equipment Partners
           </span>
 
-          <h2 className="mt-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+          <h2 className="mt-5 text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
             <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-sky-600 bg-clip-text text-transparent">
               Authorized Partners for CPAP, BiPAP &
               <br />
@@ -70,7 +70,7 @@ export default function AuthorizedPartners() {
             </span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-4xl text-lg leading-relaxed text-slate-600">
+          <p className="mx-auto mt-4 max-w-4xl text-sm sm:text-base lg:text-lg leading-relaxed text-slate-600 px-2 sm:px-0">
             Respishop is an authorized partner and trusted supplier of leading
             respiratory care brands including ResMed, Oxymed, BMC, Philips and
             Nidek. We provide genuine CPAP machines, BiPAP machines, oxygen
@@ -80,22 +80,24 @@ export default function AuthorizedPartners() {
         </div>
 
         {/* Partner Cards */}
-        <div className="mt-20 grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-5">
+        <div className="mt-10 sm:mt-14 lg:mt-20 grid grid-cols-3 gap-3 sm:gap-5 lg:gap-6 lg:grid-cols-5">
           {partners.map((partner) => (
             <div
               key={partner.name}
-              className="
-                group relative overflow-hidden rounded-3xl
+              className={`
+                group relative overflow-hidden rounded-2xl sm:rounded-3xl
                 border border-cyan-100/70
                 bg-white/70
-                p-8
+                p-4 sm:p-6 lg:p-8
                 backdrop-blur-xl
-                shadow-[0_10px_40px_rgba(14,165,233,0.08)]
+                shadow-[0_10px_30px_rgba(14,165,233,0.08)]
                 transition-all duration-500
-                hover:-translate-y-3
+                hover:-translate-y-2 lg:hover:-translate-y-3
                 hover:border-cyan-300
                 hover:shadow-[0_20px_60px_rgba(14,165,233,0.25)]
-              "
+                ${partner.name === "Philips" ? "col-start-1 sm:col-auto" : ""}
+                ${partner.name === "Nidek" ? "col-start-2 sm:col-auto" : ""}
+              `}
             >
               {/* Animated Top Border */}
               <div className="absolute left-0 top-0 h-1 w-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-sky-500 transition-all duration-500 group-hover:w-full" />
@@ -106,7 +108,7 @@ export default function AuthorizedPartners() {
               </div>
 
               {/* Logo */}
-              <div className="relative flex h-24 items-center justify-center">
+              <div className="relative flex h-16 sm:h-20 lg:h-24 items-center justify-center">
                 <Image
                   src={partner.logo}
                   alt={`${partner.name} Authorized Partner Logo - CPAP, BiPAP and Oxygen Therapy Equipment`}
@@ -117,8 +119,8 @@ export default function AuthorizedPartners() {
               </div>
 
               {/* Partner Name */}
-              <div className="relative mt-5 text-center">
-                <h3 className="font-semibold text-slate-700 transition-all duration-300 group-hover:text-cyan-600">
+              <div className="relative mt-3 sm:mt-5 text-center">
+                <h3 className="text-sm sm:text-base font-semibold text-slate-700 transition-all duration-300 group-hover:text-cyan-600">
                   {partner.name}
                 </h3>
               </div>
@@ -127,9 +129,9 @@ export default function AuthorizedPartners() {
         </div>
 
         {/* Trust Badge */}
-        <div className="mt-16 flex justify-center">
-          <div className="rounded-2xl border border-cyan-200 bg-gradient-to-r from-cyan-50 to-blue-50 px-8 py-5 shadow-lg backdrop-blur-md">
-            <p className="text-center text-sm text-slate-700">
+        <div className="mt-10 sm:mt-14 lg:mt-16 flex justify-center">
+          <div className="rounded-xl sm:rounded-2xl border border-cyan-200 bg-gradient-to-r from-cyan-50 to-blue-50 px-4 sm:px-8 py-4 sm:py-5 shadow-lg backdrop-blur-md">
+            <p className="text-center text-xs sm:text-sm leading-relaxed text-slate-700">
               Trusted supplier of
               <span className="mx-2 font-bold text-cyan-600">
                 CPAP Machines, BiPAP Machines, Oxygen Concentrators &

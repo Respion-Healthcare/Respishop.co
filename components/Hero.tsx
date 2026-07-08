@@ -1,220 +1,149 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useEffect, useState } from "react"
 import Image from "next/image"
+import { AnimatePresence, motion } from "framer-motion"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 import Link from "next/link"
-import { motion, useMotionValue, useTransform } from "framer-motion"
 
-/* ---------- TILT HOOK ---------- */
-function useTilt() {
-  const x = useMotionValue(0)
-  const y = useMotionValue(0)
-
-  const rotateX = useTransform(y, [-60, 60], [12, -12])
-  const rotateY = useTransform(x, [-60, 60], [-12, 12])
-
-  function handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
-    const rect = e.currentTarget.getBoundingClientRect()
-    const centerX = rect.width / 2
-    const centerY = rect.height / 2
-
-    x.set(e.clientX - rect.left - centerX)
-    y.set(e.clientY - rect.top - centerY)
-  }
-
-  function reset() {
-    x.set(0)
-    y.set(0)
-  }
-
-  return { rotateX, rotateY, handleMouseMove, reset }
-}
-
-/* ---------- TYPEWRITER ---------- */
-function useTypewriter(text: string, speed = 40) {
-  const [displayed, setDisplayed] = useState("")
-
-  useEffect(() => {
-    let i = 0
-    const interval = setInterval(() => {
-      setDisplayed(text.slice(0, i))
-      i++
-      if (i > text.length) clearInterval(interval)
-    }, speed)
-
-    return () => clearInterval(interval)
-  }, [text, speed])
-
-  return displayed
-}
-
-/* ---------- GLOW ---------- */
-function useGlow() {
-  const x = useMotionValue(0)
-  const y = useMotionValue(0)
-
-  function handleMove(e: React.MouseEvent<HTMLDivElement>) {
-    const rect = e.currentTarget.getBoundingClientRect()
-    x.set(e.clientX - rect.left)
-    y.set(e.clientY - rect.top)
-  }
-
-  return { x, y, handleMove }
-}
+const heroSlides = [
+  {
+    image: "/images/homebanners/main.jpg",
+    href: "/products",
+  },
+  {
+    image: "/images/homebanners/cpap1.jpg",
+    href: "/products/cpap-machine/airsense-10",
+  },
+  {
+    image: "/images/homebanners/mask1.jpg",
+    href: "/products/nasal-mask/airfit-n20-classic",
+  },
+  {
+    image: "/images/homebanners/bipap1.jpg",
+    href: "/products/bipap-machine/lumis-100-vpap-st",
+  },
+  {
+    image: "/images/homebanners/mask2.jpg",
+    href: "/products/nasal-mask/philips-dream-nasal-mask",
+  },
+  {
+    image: "/images/homebanners/cpap2.jpg",
+    href: "/products/cpap-machine/airsense-10",
+  },
+  {
+    image: "/images/homebanners/bipap2.jpg",
+    href: "/products/bipap-machine/resmed-lumis-150",
+  },
+  {
+    image: "/images/homebanners/mask6.jpg",
+    href: "/products/full-face-mask/philips-dreamware",
+  },
+  {
+    image: "/images/homebanners/cushion.jpg",
+    href: "/products/mask-cushion",
+  },
+  {
+    image: "/images/homebanners/bipap3.jpg",
+    href: "/products/bipap-machine/philips-bipap-pro",
+  },
+  {
+    image: "/images/homebanners/mask4.jpg",
+    href: "/products/full-face-mask/resmed-airfit-f20-full-face-mask",
+  },
+  {
+    image: "/images/homebanners/cpap3.jpg",
+    href: "/products/cpap-machine/philips-dreamstation",
+  },
+  {
+    image: "/images/homebanners/tube.jpg",
+    href: "/products/tubes-and-connectors",
+  },
+  {
+    image: "/images/homebanners/mask5.jpg",
+    href: "/products/full-face-mask/philips-amara",
+  },
+  {
+    image: "/images/homebanners/humidifier.jpg",
+    href: "/products/humidifier-bottle",
+  },
+]
 
 export default function Hero() {
-  const [activeCard, setActiveCard] = useState<number | null>(null)
+  const [currentImage, setCurrentImage] = useState(0)
 
-  const typedText = useTypewriter(
-    "Cutting-edge solutions for modern medical technology, designed to improve patient care and everyday comfort."
-  )
+  const nextSlide = () => {
+    setCurrentImage((prev) => (prev + 1) % heroSlides.length)
+  }
 
-  const tilt1 = useTilt()
-  const tilt2 = useTilt()
-  const tilt3 = useTilt()
-  const tilt4 = useTilt()
-  const tilt5 = useTilt()
+  const prevSlide = () => {
+    setCurrentImage((prev) =>
+      prev === 0 ? heroSlides.length - 1 : prev - 1
+    )
+  }
 
-  const glow = useGlow()
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 5000)
+    return () => clearInterval(interval)
+  }, [])
 
   return (
-    <section className="relative bg-linear-to-br from-blue-50 via-white to-blue-100 w-full overflow-visible">
+    <section className="w-full overflow-hidden">
+      <div className="relative">
 
-      {/* BACKGROUND BLOBS */}
-      <div className="absolute top-10 right-10 w-62.5 sm:w-125 h-62.5 sm:h-125 bg-blue-300 blur-[120px] opacity-30 rounded-full" />
-      <div className="absolute bottom-10 left-10 w-[200px] sm:w-[400px] h-[200px] sm:h-[400px] bg-blue-200 blur-[100px] opacity-30 rounded-full" />
-
-      <div className="max-w-[1400px] xl:max-w-[1600px] mx-auto px-6 sm:px-12 lg:px-16 xl:px-20 py-16 lg:py-24 grid lg:grid-cols-[1.1fr_1.4fr] gap-16 items-center">
-
-        {/* LEFT */}
-        <div className="flex flex-col justify-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-3xl sm:text-5xl lg:text-7xl xl:text-8xl font-serif text-blue-600 leading-tight"
-          >
-            Respishop <br /> Healthcare
-          </motion.h1>
-
-          <p className="mt-6 text-gray-600 text-base sm:text-lg lg:text-xl max-w-md leading-relaxed min-h-[80px]">
-            {typedText}
-            <span className="animate-pulse">|</span>
-          </p>
-
+        <AnimatePresence mode="wait">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="mt-10 w-full flex justify-center lg:justify-start"
+            key={currentImage}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.7 }}
           >
-            <Image
-              src="/images/home1.png"
-              alt="Medical Equipment"
-              width={420}
-              height={380}
-              className="w-full max-w-xs sm:max-w-sm md:max-w-md rounded-2xl shadow-xl hover:scale-105 transition"
-            />
-          </motion.div>
-
-          <Link
-            href="/products/cpap/resmed-airsense-10-autoset-tripack"
-            className="mt-6 w-fit bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full hover:scale-105 hover:bg-blue-700 transition shadow-lg"
-          >
-            Explore Now
-          </Link>
-        </div>
-
-      {/* RIGHT */}
-<div className="relative w-full">
-
-{/* ✅ MOBILE VIEW */}
-{/* <div className="lg:hidden mt-10 flex justify-center">
-  <div className="grid grid-cols-2 gap-3 w-full max-w-sm">
-
-    <div className="col-span-2 relative h-[170px] rounded-2xl overflow-hidden shadow-lg">
-      <Image src="/images/hero12.png" fill alt="" className="object-cover" />
-    </div>
-
-    <div className="relative h-[120px] rounded-2xl overflow-hidden shadow-lg">
-      <Image src="/images/hero13.png" fill alt="" className="object-cover" />
-    </div>
-
-    <div className="relative h-[120px] rounded-2xl overflow-hidden shadow-lg">
-      <Image src="/images/hero11.png" fill alt="" className="object-cover" />
-    </div>
-
-    <div className="relative h-[120px] rounded-2xl overflow-hidden shadow-lg">
-      <Image src="/images/hero14.png" fill alt="" className="object-cover" />
-    </div>
-
-    <div className="relative h-[120px] rounded-2xl overflow-hidden shadow-lg">
-      <Image src="/images/hero14.png" fill alt="" className="object-cover" />
-    </div>
-
-  </div>
-</div> */}
-
-  {/* ✅ DESKTOP VIEW */}
-  <div className="hidden lg:flex relative h-[820px] items-center justify-center">
-
-    <div className="relative w-[780px] h-[820px]">
-
-      {[
-        { id: 1, img: "/images/hero12.png", cls: "top-0 left-16 w-[500px] h-[280px]", tilt: tilt1 },
-        { id: 2, img: "/images/hero13.png", cls: "top-[260px] left-0 w-[320px] h-[260px]", tilt: tilt2 },
-        { id: 3, img: "/images/hero11.png", cls: "top-[200px] left-[240px] w-[420px] h-[520px]", tilt: tilt3 },
-        { id: 4, img: "/images/Blogs/best cpap.png", cls: "bottom-0 right-10 w-[360px] h-[240px]", tilt: tilt4 },
-
-        // ✅ BIG BACKGROUND RECTANGLE
-        {
-          id: 5,
-          img: "/images/hero14.png",
-          cls: "top-[140px] right-[-120px] w-[600px] h-[360px]",
-          tilt: tilt5,
-        },
-
-      ].map(({ id, img, cls, tilt }) => (
-        <motion.div
-          key={id}
-          onMouseEnter={() => setActiveCard(id)}
-          onMouseLeave={() => {
-            setActiveCard(null)
-            tilt.reset()
-          }}
-          onMouseMove={(e) => {
-            tilt.handleMouseMove(e)
-            glow.handleMove(e)
-          }}
-          style={{ rotateX: tilt.rotateX, rotateY: tilt.rotateY }}
-          animate={{ y: [0, -12 - id * 2, 0] }}
-          transition={{ duration: 4 + id, repeat: Infinity }}
-          className={`absolute ${cls} rounded-3xl overflow-hidden shadow-2xl transition-all
-            ${
-              activeCard === id
-                ? "z-50 scale-105"
-                : id === 5
-                ? "z-10 opacity-95"
-                : "z-20"
-            }
-          `}
-        >
-
-          {/* GLOW */}
-          {activeCard === id && (
-            <motion.div
-              className="pointer-events-none absolute inset-0"
-              style={{
-                background: `radial-gradient(450px circle at ${glow.x.get()}px ${glow.y.get()}px, rgba(37,99,235,0.25), transparent 70%)`,
-              }}
-            />
-          )}
-
-          <Image src={img} fill alt="" className="object-cover" />
-        </motion.div>
-      ))}
-
-    </div>
-  </div>
+            <div className="block lg:hidden">
+  <Link href={heroSlides[currentImage].href}>
+    <Image
+      src={heroSlides[currentImage].image}
+      alt="Respishop"
+      width={1920}
+      height={850}
+      priority
+      sizes="100vw"
+      className="w-full h-auto cursor-pointer"
+    />
+  </Link>
 </div>
+
+            <div className="relative hidden lg:block w-full h-[700px] bg-white">
+  <Link href={heroSlides[currentImage].href}>
+    <Image
+      src={heroSlides[currentImage].image}
+      alt="Respishop"
+      fill
+      priority
+      sizes="100vw"
+      className="object-contain object-center cursor-pointer"
+    />
+  </Link>
+</div>
+          </motion.div>
+        </AnimatePresence>
+
+       {/* Left Arrow - Desktop Only */}
+<button
+  onClick={prevSlide}
+  className="hidden lg:flex absolute left-6 top-1/2 -translate-y-1/2 z-20 items-center justify-center rounded-full bg-white/90 p-3 shadow-lg hover:bg-white transition"
+>
+  <ChevronLeft className="h-7 w-7 text-gray-800" />
+</button>
+
+{/* Right Arrow - Desktop Only */}
+<button
+  onClick={nextSlide}
+  className="hidden lg:flex absolute right-6 top-1/2 -translate-y-1/2 z-20 items-center justify-center rounded-full bg-white/90 p-3 shadow-lg hover:bg-white transition"
+>
+  <ChevronRight className="h-7 w-7 text-gray-800" />
+</button>
+
       </div>
     </section>
   )

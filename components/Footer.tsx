@@ -36,7 +36,7 @@ export default function Footer() {
             <div className="flex gap-5 pt-2">
 
               <a
-                href="https://facebook.com/"
+                href="https://www.facebook.com/profile.php?id=61576509153350"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Respishop Facebook"
@@ -54,7 +54,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://instagram.com/"
+                href="https://www.instagram.com/respishop_official/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Respishop Instagram"
@@ -85,7 +85,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  href="/category/cpap-machine"
+                  href="/products/cpap-machine"
                   className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300"
                 >
                   CPAP Machines
@@ -94,7 +94,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  href="/category/bipap-machine"
+                  href="/products/bipap-machine"
                   className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300"
                 >
                   BiPAP Machines
@@ -103,7 +103,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  href="/category/full-face-mask"
+                  href="/category/mask"
                   className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300"
                 >
                   CPAP Masks
@@ -160,7 +160,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  href="/return-policy"
+                  href="/return"
                   className="block px-2 py-1 rounded-md text-gray-600 hover:text-blue-700 hover:bg-blue-50 transition-all duration-300"
                 >
                   Return Policy
@@ -219,7 +219,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-blue-100 py-3 text-center text-sm text-gray-500 bg-[#f3f8ff]">
-        © 2026 Respishop. All Rights Reserved.
+        © 2025 Respishop. All Rights Reserved.
       </div>
     </footer>
   )
