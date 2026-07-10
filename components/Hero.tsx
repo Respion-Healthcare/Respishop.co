@@ -40,10 +40,6 @@ const heroSlides = [
     href: "/products/full-face-mask/philips-dreamware",
   },
   {
-    image: "/images/homebanners/cushion.jpg",
-    href: "/products/mask-cushion",
-  },
-  {
     image: "/images/homebanners/bipap3.jpg",
     href: "/products/bipap-machine/philips-bipap-pro",
   },
@@ -56,16 +52,8 @@ const heroSlides = [
     href: "/products/cpap-machine/philips-dreamstation",
   },
   {
-    image: "/images/homebanners/tube.jpg",
-    href: "/products/tubes-and-connectors",
-  },
-  {
     image: "/images/homebanners/mask5.jpg",
     href: "/products/full-face-mask/philips-amara",
-  },
-  {
-    image: "/images/homebanners/humidifier.jpg",
-    href: "/products/humidifier-bottle",
   },
 ]
 
