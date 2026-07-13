@@ -117,7 +117,7 @@ export default function BestSellingSection() {
   }
 
   return (
-    <section className="w-full px-6 lg:px-20 py-20 bg-blue-50/40">
+    <section className="w-full px-6 lg:px-20 py-20 bg-[#EAF8FC]/40">
 
       {/* HEADER */}
       <div className="flex justify-between items-center mb-12">
@@ -128,7 +128,7 @@ export default function BestSellingSection() {
 
         <Link
           href="/products"
-          className="text-gray-600 hover:text-blue-600 transition"
+          className="text-gray-600 hover:text-[#0391B6] transition"
         >
           View all products →
         </Link>
@@ -232,8 +232,8 @@ export default function BestSellingSection() {
                   className={`absolute bottom-3 right-3 p-2 rounded-full transition-all duration-300 z-20 shadow-md
                     ${
                       isAdded
-                        ? "bg-blue-600 text-white scale-110"
-                        : "bg-gray-200 text-gray-700 hover:bg-blue-600 hover:text-white"
+                        ? "bg-[#0391B6] text-white scale-110"
+                        : "bg-gray-200 text-gray-700 hover:bg-[#0391B6] hover:text-white"
                     }
                   `}
                 >

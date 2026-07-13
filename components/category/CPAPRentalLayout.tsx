@@ -28,7 +28,7 @@ export default function CPAPRentalLayout({ products }: Props) {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-sky-900 to-cyan-900" />
         <div className="absolute inset-0 opacity-20">
           <div className="absolute left-[-100px] top-[-100px] h-[420px] w-[420px] rounded-full bg-cyan-400 blur-3xl" />
-          <div className="absolute bottom-[-100px] right-[-100px] h-[420px] w-[420px] rounded-full bg-blue-500 blur-3xl" />
+          <div className="absolute bottom-[-100px] right-[-100px] h-[420px] w-[420px] rounded-full bg-[#EAF8FC]0 blur-3xl" />
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 md:px-6">
@@ -145,7 +145,7 @@ export default function CPAPRentalLayout({ products }: Props) {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
 
           <div className="group rounded-[30px] bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-3 hover:shadow-2xl">
-            <CalendarClock size={40} className="text-blue-600" />
+            <CalendarClock size={40} className="text-[#0391B6]" />
             <h3 className="mt-6 text-2xl font-black text-slate-900">
               Flexible Plans
             </h3>
@@ -194,13 +194,13 @@ export default function CPAPRentalLayout({ products }: Props) {
 
           <div className="mb-16 text-center">
 
-            <p className="text-sm font-bold uppercase tracking-[0.3em] text-blue-700">
+            <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#0391B6]">
               Rental Process
             </p>
 
             <h2 className="mt-5 text-4xl font-black text-slate-900">
               Simple CPAP & BiPAP
-              <span className="block text-blue-700">
+              <span className="block text-[#0391B6]">
                 Rental Experience
               </span>
             </h2>
@@ -210,7 +210,7 @@ export default function CPAPRentalLayout({ products }: Props) {
           <div className="grid gap-8 md:grid-cols-3">
 
             <div className="rounded-[32px] border border-slate-100 bg-slate-50 p-10">
-              <Clock3 size={42} className="text-blue-600" />
+              <Clock3 size={42} className="text-[#0391B6]" />
               <h3 className="mt-6 text-2xl font-black text-slate-900">
                 Choose Rental Duration
               </h3>
@@ -246,7 +246,7 @@ export default function CPAPRentalLayout({ products }: Props) {
 
      
       {/* SEO CONTENT */}
-      <section className="border-t border-blue-100 bg-white py-24">
+      <section className="border-t border-[#BFEAF3] bg-white py-24">
 
         <div className="mx-auto max-w-5xl px-4 md:px-6">
 

@@ -130,7 +130,7 @@ const scroll = (direction: "left" | "right") => {
             {/* LEFT */}
             <div className="max-w-3xl">
 
-              <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase mb-6">
+              <div className="inline-flex items-center gap-2 bg-blue-100 text-[#0391B6] px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase mb-6">
 
                 <ShieldCheck size={14} />
 
@@ -159,7 +159,7 @@ const scroll = (direction: "left" | "right") => {
               <button
                 onClick={() => scroll("left")}
                 aria-label="Scroll Left Reviews"
-                className="group h-10 w-10 sm:h-12 sm:w-12 lg:h-14 lg:w-14 rounded-full bg-white/80 backdrop-blur-xl border border-white shadow-xl hover:bg-blue-600 hover:text-white transition-all duration-300 flex items-center justify-center"
+                className="group h-10 w-10 sm:h-12 sm:w-12 lg:h-14 lg:w-14 rounded-full bg-white/80 backdrop-blur-xl border border-white shadow-xl hover:bg-[#0391B6] hover:text-white transition-all duration-300 flex items-center justify-center"
               >
                 <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition" />
               </button>
@@ -167,7 +167,7 @@ const scroll = (direction: "left" | "right") => {
               <button
                 onClick={() => scroll("right")}
                 aria-label="Scroll Right Reviews"
-                className="group h-10 w-10 sm:h-12 sm:w-12 lg:h-14 lg:w-14 rounded-full bg-white/80 backdrop-blur-xl border border-white shadow-xl hover:bg-blue-600 hover:text-white transition-all duration-300 flex items-center justify-center"
+                className="group h-10 w-10 sm:h-12 sm:w-12 lg:h-14 lg:w-14 rounded-full bg-white/80 backdrop-blur-xl border border-white shadow-xl hover:bg-[#0391B6] hover:text-white transition-all duration-300 flex items-center justify-center"
               >
                 <ChevronRight className="w-5 h-5 group-hover:scale-110 transition" />
               </button>
@@ -268,7 +268,7 @@ lg:flex-none
               {item.name}
             </h3>
 
-            <p className="text-xs sm:text-sm text-blue-600 font-medium mt-1">
+            <p className="text-xs sm:text-sm text-[#0391B6] font-medium mt-1">
               Verified Customer
             </p>
           </div>

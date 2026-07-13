@@ -31,7 +31,7 @@ export default function HumidifierLayout({
 
           <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-cyan-400 blur-3xl" />
 
-          <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-blue-500 blur-3xl" />
+          <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#EAF8FC]0 blur-3xl" />
 
         </div>
 
@@ -176,7 +176,7 @@ export default function HumidifierLayout({
 
             <Moon
               size={40}
-              className="text-blue-600"
+              className="text-[#0391B6]"
             />
 
             <h3 className="mt-6 text-2xl font-black text-slate-900">

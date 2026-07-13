@@ -62,7 +62,7 @@ export default function ContactPage() {
           {/* LEFT CONTENT */}
           <div>
 
-            <span className="inline-block bg-blue-100 text-blue-700 px-5 py-2 rounded-full text-sm font-medium mb-6">
+            <span className="inline-block bg-[#EAF8FC] text-[#0391B6] px-5 py-2 rounded-full text-sm font-medium mb-6">
               Contact Respishop
             </span>
 
@@ -84,7 +84,7 @@ export default function ContactPage() {
               {/* ADDRESS */}
               <div className="flex items-start gap-5">
                 <div className="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center shrink-0">
-                  <MapPin className="text-blue-600 w-7 h-7" />
+                  <MapPin className="text-[#0391B6] w-7 h-7" />
                 </div>
 
                 <div>
@@ -105,7 +105,7 @@ export default function ContactPage() {
               {/* PHONE */}
               <div className="flex items-start gap-5">
                 <div className="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center shrink-0">
-                  <Phone className="text-blue-600 w-7 h-7" />
+                  <Phone className="text-[#0391B6] w-7 h-7" />
                 </div>
 
                 <div>
@@ -119,7 +119,7 @@ export default function ContactPage() {
 
                   <a
                     href="tel:+919148733700"
-                    className="text-blue-600 font-semibold text-lg hover:underline"
+                    className="text-[#0391B6] font-semibold text-lg hover:underline"
                   >
                     +91 9148733700
                   </a>
@@ -129,7 +129,7 @@ export default function ContactPage() {
               {/* EMAIL */}
               <div className="flex items-start gap-5">
                 <div className="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center shrink-0">
-                  <Mail className="text-blue-600 w-7 h-7" />
+                  <Mail className="text-[#0391B6] w-7 h-7" />
                 </div>
 
                 <div>
@@ -143,7 +143,7 @@ export default function ContactPage() {
 
                   <a
                     href="mailto:respishop.in@gmail.com"
-                    className="text-blue-600 font-semibold hover:underline break-all"
+                    className="text-[#0391B6] font-semibold hover:underline break-all"
                   >
                     respishop.in@gmail.com
                   </a>

@@ -92,7 +92,7 @@ function ProductSection({
                 </h3>
 
                 <div className="mt-2 flex gap-2 items-center">
-                  <span className="text-blue-600 font-bold">
+                  <span className="text-[#0391B6] font-bold">
                     ₹{finalPrice.toLocaleString("en-IN")}
                   </span>
 
@@ -118,7 +118,7 @@ export default function ProductsPage() {
   <main className="min-h-screen bg-gradient-to-b from-slate-50 via-blue-50 to-slate-50">
     
    <div className="text-center mb-8">
-  <span className="inline-block px-4 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-medium">
+  <span className="inline-block px-4 py-1 rounded-full bg-blue-100 text-[#0391B6] text-sm font-medium">
     Respiratory Care Solutions
   </span>
 
@@ -174,7 +174,7 @@ export default function ProductsPage() {
       className="group flex flex-col items-center"
     >
       {/* Circle Image */}
-      <div className="relative h-28 w-28 sm:h-32 sm:w-32 overflow-hidden rounded-full border-4 border-blue-100 shadow-md transition duration-300 group-hover:scale-105 group-hover:border-blue-500">
+      <div className="relative h-28 w-28 sm:h-32 sm:w-32 overflow-hidden rounded-full border-4 border-[#BFEAF3] shadow-md transition duration-300 group-hover:scale-105 group-hover:border-blue-500">
         <Image
           src={item.image}
           alt={item.name}
@@ -184,7 +184,7 @@ export default function ProductsPage() {
       </div>
 
       {/* Name Below */}
-      <h3 className="mt-3 text-center text-sm sm:text-base font-semibold text-slate-800 group-hover:text-blue-600">
+      <h3 className="mt-3 text-center text-sm sm:text-base font-semibold text-slate-800 group-hover:text-[#0391B6]">
         {item.name}
       </h3>
     </Link>
@@ -222,7 +222,7 @@ export default function ProductsPage() {
 
 </div>
     {/* BEST SELLING PRODUCTS */}
-  <div className="mt-10 pt-8 border-t border-blue-100">
+  <div className="mt-10 pt-8 border-t border-[#BFEAF3]">
 
                   <div className="flex items-center justify-between mb-6">
                     <div>
@@ -237,7 +237,7 @@ export default function ProductsPage() {
 
                     <Link
                       href="/products"
-                      className="text-blue-600 font-medium hover:underline"
+                      className="text-[#0391B6] font-medium hover:underline"
                     >
                       View All →
                     </Link>
@@ -274,7 +274,7 @@ export default function ProductsPage() {
                       <Link
                         key={index}
                         href={item.href}
-                        className="rounded-2xl border border-blue-100 bg-blue-50/60 hover:bg-blue-600 hover:text-white transition-all duration-300 p-4 text-sm font-medium text-gray-700"
+                        className="rounded-2xl border border-[#BFEAF3] bg-[#EAF8FC]/60 hover:bg-[#0391B6] hover:text-white transition-all duration-300 p-4 text-sm font-medium text-gray-700"
                       >
                         {item.name}
                       </Link>

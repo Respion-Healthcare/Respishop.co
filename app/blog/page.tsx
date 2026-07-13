@@ -178,7 +178,7 @@ export default function BlogPage() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
 
-                <span className="absolute top-4 left-4 bg-blue-600 text-white text-xs px-4 py-1 rounded-full">
+                <span className="absolute top-4 left-4 bg-[#0391B6] text-white text-xs px-4 py-1 rounded-full">
                   {blog.category}
                 </span>
               </div>
@@ -189,7 +189,7 @@ export default function BlogPage() {
                   <time>{blog.date}</time> • {blog.readTime}
                 </div>
 
-                <h2 className="text-xl font-semibold text-gray-800 mb-3 group-hover:text-blue-600">
+                <h2 className="text-xl font-semibold text-gray-800 mb-3 group-hover:text-[#0391B6]">
                   {blog.title}
                 </h2>
 
@@ -199,7 +199,7 @@ export default function BlogPage() {
 
                 <Link
                   href={`/blog/${blog.slug}`}
-                  className="text-blue-600 font-medium hover:underline"
+                  className="text-[#0391B6] font-medium hover:underline"
                 >
                   Read More →
                 </Link>
@@ -222,7 +222,7 @@ export default function BlogPage() {
 
         <p>
           Browse our{" "}
-          <Link href="/products/cpap-machine" className="text-blue-600 underline">
+          <Link href="/products/cpap-machine" className="text-[#0391B6] underline">
             CPAP machines collection
           </Link>{" "}
           for the latest products and offers in India.

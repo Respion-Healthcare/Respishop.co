@@ -118,7 +118,7 @@ export default function LoginPage() {
             <div>
               <div className="flex justify-between items-center mb-1.5">
                 <label className="text-xs text-gray-500 font-medium block">Password</label>
-                <a href="#" className="text-[11px] text-blue-600 hover:underline font-semibold">Forgot Password?</a>
+                <a href="#" className="text-[11px] text-[#0391B6] hover:underline font-semibold">Forgot Password?</a>
               </div>
               <div className="relative">
                 <Lock className="w-4 h-4 text-gray-400 absolute left-4 top-3.5" />
@@ -136,7 +136,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-blue-600 hover:bg-blue-700 hover:shadow-lg text-white font-semibold py-3.5 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2 text-sm shadow-md disabled:bg-blue-400 mt-6"
+              className="w-full bg-[#0391B6] hover:bg-[#027A99] hover:shadow-lg text-white font-semibold py-3.5 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2 text-sm shadow-md disabled:bg-blue-400 mt-6"
             >
               {loading ? (
                 <>
@@ -155,7 +155,7 @@ export default function LoginPage() {
             <button
               type="button"
               onClick={() => router.push("/account/register")}
-              className="text-blue-600 hover:underline font-bold ml-0.5"
+              className="text-[#0391B6] hover:underline font-bold ml-0.5"
             >
               Create an account
             </button>

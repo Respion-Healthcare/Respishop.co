@@ -66,7 +66,7 @@ const faqs = [
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950 to-cyan-900" />
-        <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-blue-500/20 blur-3xl" />
+        <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-[#EAF8FC]0/20 blur-3xl" />
         <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-cyan-500/20 blur-3xl" />
 
         <div className="relative mx-auto max-w-7xl px-4 py-28 md:px-6">
@@ -114,13 +114,13 @@ const faqs = [
       {/* PRODUCTS */}
       <section className="mx-auto max-w-7xl px-4 py-24 md:px-6">
         <div className="mb-12">
-          <p className="text-sm font-bold uppercase tracking-[0.3em] text-blue-700">
+          <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#0391B6]">
             Sleep Therapy Solutions
           </p>
 
           <h2 className="mt-4 text-5xl font-black text-slate-900">
             CPAP Machine
-            <span className="block text-blue-700">Collection</span>
+            <span className="block text-[#0391B6]">Collection</span>
           </h2>
         </div>
 
@@ -132,7 +132,7 @@ const faqs = [
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <div className="grid gap-8 lg:grid-cols-3">
             <div className="rounded-[32px] border bg-white p-8 shadow-sm">
-              <Activity className="text-blue-600" size={42} />
+              <Activity className="text-[#0391B6]" size={42} />
               <h3 className="mt-6 text-2xl font-black">Smart Therapy</h3>
               <p className="mt-4 text-slate-600">
                 Advanced algorithms automatically respond to breathing patterns.
@@ -250,8 +250,8 @@ const faqs = [
 
       <div className="mt-16 grid gap-8 md:grid-cols-3">
 
-        <div className="rounded-3xl bg-blue-50 p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
-          <Activity className="text-blue-600" size={40} />
+        <div className="rounded-3xl bg-[#EAF8FC] p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+          <Activity className="text-[#0391B6]" size={40} />
           <h3 className="mt-5 text-xl font-black">
             Smart Pressure Control
           </h3>

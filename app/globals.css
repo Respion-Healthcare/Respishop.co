@@ -4,10 +4,11 @@
   --background: #ffffff;
   --foreground: #171717;
 
-  /* Premium Blue Accent Palette */
-  --accent-blue: #2563eb;
-  --accent-blue-soft: #3b82f6;
-  --accent-blue-light: #eff6ff;
+
+ /* Respishop Brand Teal */
+--accent-blue: #0391B6;
+--accent-blue-soft: #0A98BF;
+--accent-blue-light: #EAF8FC;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -34,7 +35,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: radial-gradient(circle at 1px 1px, rgba(37, 99, 235, 0.05) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, rgba(3, 145, 182, 0.05) 1px, transparent 0);
   background-size: 40px 40px;
   pointer-events: none;
   z-index: -1;
@@ -48,7 +49,7 @@ body::after {
   right: -200px;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.08), transparent 70%);
+  background: radial-gradient(circle, rgba(3,145,182,.08), transparent 70%);
   filter: blur(120px);
   z-index: -1;
   pointer-events: none;
@@ -105,7 +106,7 @@ body::after {
 }
 
 .animate-fadeIn {
-  animation: fadeIn 0.8s ease forwards;
+  animation: fadeIn 1s ease forwards;
 }
 
 /* Animation Delays */
@@ -132,7 +133,7 @@ body::after {
 
 .hover-lift:hover {
   transform: translateY(-6px);
-  box-shadow: 0 15px 40px rgba(37, 99, 235, 0.12);
+  box-shadow: 0 15px 40px rgba(3,145,182,.12);
 }
 
 /* Subtle Link Hover Background */
@@ -163,7 +164,7 @@ body::after {
       var(--accent-blue-soft),
       transparent);
   transition: width 0.4s ease;
-  filter: drop-shadow(0 0 6px rgba(37, 99, 235, 0.6));
+  filter: drop-shadow(0 0 6px rgba(3,145,182,.6));
 }
 
 .link-glow:hover::after {

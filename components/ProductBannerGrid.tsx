@@ -31,10 +31,11 @@ export default function ProductBannerGrid() {
   const bannerProducts = [
   "resmed-airfit-f20-full-face-mask",
   "lumis-100-vpap-st",
-  "resmed-lumis™-150",
+  "airsense-11-autoset-single-pack",
+  "lumis-150-invasive-ventilator",
   "airmini-autoset-cpap-device",
   "resmed-airsense-10-autoset-tripack",
-  "airsense-11-autoset-single-pack",
+  
 ]
 
   return (
@@ -48,7 +49,7 @@ export default function ProductBannerGrid() {
         transition={{ duration: 0.6 }}
         className="max-w-3xl mb-10 lg:mb-16"
       >
-        <span className="inline-block bg-blue-100 text-blue-700 text-xs sm:text-sm font-semibold px-4 py-1 rounded-full mb-4">
+        <span className="inline-block bg-[#EAF8FC] text-[#0391B6] text-xs sm:text-sm font-semibold px-4 py-1 rounded-full mb-4">
           Featured Collection
         </span>
 

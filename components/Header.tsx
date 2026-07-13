@@ -93,7 +93,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-xl border-b border-blue-100 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-xl border-b border-[#BFEAF3] transition-all duration-300 ${
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -103,7 +103,7 @@ export default function Header() {
         <Link
   href="/"
   aria-label="Respishop Home"
-  className="text-4xl font-serif font-semibold text-blue-700 tracking-tight"
+  className="text-4xl font-serif font-semibold text-[#0391B6] tracking-tight"
 >
   <span className="sr-only">
     Respishop - CPAP & BiPAP Machines India
@@ -119,7 +119,7 @@ export default function Header() {
         >
           <Link
             href="/"
-            className="hover:text-blue-600 transition"
+            className="hover:text-[#0391B6] transition"
           >
             Home
           </Link>
@@ -130,7 +130,7 @@ export default function Header() {
               onClick={() =>
                 setProductsOpen(!productsOpen)
               }
-              className="flex items-center gap-1 hover:text-blue-600 transition"
+              className="flex items-center gap-1 hover:text-[#0391B6] transition"
             >
               Products
 
@@ -142,7 +142,7 @@ export default function Header() {
             </button>
 
             {productsOpen && (
-              <div className="absolute left-1/2 -translate-x-1/2 top-[58px] w-[980px] rounded-[32px] border border-blue-100 bg-white/95 backdrop-blur-2xl shadow-[0_20px_80px_rgba(37,99,235,0.15)] p-10">
+              <div className="absolute left-1/2 -translate-x-1/2 top-[58px] w-[980px] rounded-[32px] border border-[#BFEAF3] bg-white/95 backdrop-blur-2xl shadow-[0_20px_80px_rgba(37,99,235,0.15)] p-10">
 
                 {/* TOP GRID */}
                 <div className="grid grid-cols-4 gap-10">
@@ -155,7 +155,7 @@ export default function Header() {
                       }
                       className="flex items-center justify-between w-full mb-5"
                     >
-                      <h3 className="font-semibold text-blue-700 text-lg">
+                      <h3 className="font-semibold text-[#0391B6] text-lg">
                         Masks
                       </h3>
 
@@ -173,7 +173,7 @@ export default function Header() {
                         <li>
                           <Link
                             href="/products/nasal-mask"
-                            className="hover:text-blue-600 transition"
+                            className="hover:text-[#0391B6] transition"
                           >
                             Nasal Mask
                           </Link>
@@ -182,7 +182,7 @@ export default function Header() {
                         <li>
                           <Link
                             href="/products/nasal-pillow-mask"
-                            className="hover:text-blue-600 transition"
+                            className="hover:text-[#0391B6] transition"
                           >
                             Nasal Pillow Mask
                           </Link>
@@ -191,7 +191,7 @@ export default function Header() {
                         <li>
                           <Link
                             href="/products/full-face-mask"
-                            className="hover:text-blue-600 transition"
+                            className="hover:text-[#0391B6] transition"
                           >
                             Full Face Mask
                           </Link>
@@ -208,7 +208,7 @@ export default function Header() {
                       }
                       className="flex items-center justify-between w-full mb-5"
                     >
-                      <h3 className="font-semibold text-blue-700 text-lg">
+                      <h3 className="font-semibold text-[#0391B6] text-lg">
                         Sleep Apnea Devices
                       </h3>
 
@@ -226,7 +226,7 @@ export default function Header() {
                         <li>
                           <Link
                             href="/products/cpap-machine"
-                            className="hover:text-blue-600 transition"
+                            className="hover:text-[#0391B6] transition"
                           >
                             CPAP Machines
                           </Link>
@@ -235,7 +235,7 @@ export default function Header() {
                         <li>
                           <Link
                             href="/products/bipap-machine"
-                            className="hover:text-blue-600 transition"
+                            className="hover:text-[#0391B6] transition"
                           >
                             BiPAP Machines
                           </Link>
@@ -244,7 +244,7 @@ export default function Header() {
                         <li>
                           <Link
                             href="/products/oxygen-concentrator"
-                            className="hover:text-blue-600 transition"
+                            className="hover:text-[#0391B6] transition"
                           >
                             Oxygen Concentrators
                           </Link>
@@ -261,7 +261,7 @@ export default function Header() {
                       }
                       className="flex items-center justify-between w-full mb-5"
                     >
-                      <h3 className="font-semibold text-blue-700 text-lg">
+                      <h3 className="font-semibold text-[#0391B6] text-lg">
                         Accessories
                       </h3>
 
@@ -279,7 +279,7 @@ export default function Header() {
                         <li>
                           <Link
                             href="/products/tubes-and-connectors"
-                            className="hover:text-blue-600 transition"
+                            className="hover:text-[#0391B6] transition"
                           >
                           Tubes & Connectors 
                           </Link>
@@ -288,7 +288,7 @@ export default function Header() {
                         <li>
                           <Link
                             href="/products/filters-cleaners"
-                            className="hover:text-blue-600 transition"
+                            className="hover:text-[#0391B6] transition"
                           >
                             Filters & Cleaners
                           </Link>
@@ -297,7 +297,7 @@ export default function Header() {
                         <li>
                           <Link
                             href="/products/humidifier-bottle"
-                            className="hover:text-blue-600 transition"
+                            className="hover:text-[#0391B6] transition"
                           >
                             Humidifiers & Bottles
                           </Link>
@@ -306,7 +306,7 @@ export default function Header() {
                         <li>
                           <Link
                             href="/products/mask-headgear"
-                            className="hover:text-blue-600 transition"
+                            className="hover:text-[#0391B6] transition"
                           >
                             Frames & Headgear
                           </Link>
@@ -315,7 +315,7 @@ export default function Header() {
                         <li>
                           <Link
                             href="/products/mask-cushion"
-                            className="hover:text-blue-600 transition"
+                            className="hover:text-[#0391B6] transition"
                           >
                             Mask Cushions
                           </Link>
@@ -324,7 +324,7 @@ export default function Header() {
                         <li>
                           <Link
                             href="/products/mask-clips"
-                            className="hover:text-blue-600 transition"
+                            className="hover:text-[#0391B6] transition"
                           >
                             Mask Pad & Clips
                           </Link>
@@ -341,7 +341,7 @@ export default function Header() {
                       }
                       className="flex items-center justify-between w-full mb-5"
                     >
-                      <h3 className="font-semibold text-blue-700 text-lg">
+                      <h3 className="font-semibold text-[#0391B6] text-lg">
                         CPAP / BiPAP Rental
                       </h3>
 
@@ -359,7 +359,7 @@ export default function Header() {
                         <li>
                           <Link
                             href="/products/rental"
-                            className="hover:text-blue-600 transition"
+                            className="hover:text-[#0391B6] transition"
                           >
                             CPAP Rental
                           </Link>
@@ -368,7 +368,7 @@ export default function Header() {
                         <li>
                           <Link
                             href="/products/rental"
-                            className="hover:text-blue-600 transition"
+                            className="hover:text-[#0391B6] transition"
                           >
                             BiPAP Rental
                           </Link>
@@ -379,7 +379,7 @@ export default function Header() {
                 </div>
 
                 {/* BEST SELLERS */}
-                <div className="mt-10 pt-8 border-t border-blue-100">
+                <div className="mt-10 pt-8 border-t border-[#BFEAF3]">
 
                   <div className="flex items-center justify-between mb-6">
                     <div>
@@ -395,7 +395,7 @@ export default function Header() {
 
                     <Link
                       href="/products"
-                      className="text-blue-600 font-medium hover:underline"
+                      className="text-[#0391B6] font-medium hover:underline"
                     >
                       View All →
                     </Link>
@@ -432,7 +432,7 @@ export default function Header() {
                       <Link
                         key={index}
                         href={item.href}
-                        className="rounded-2xl border border-blue-100 bg-blue-50/60 hover:bg-blue-600 hover:text-white transition-all duration-300 p-4 text-sm font-medium text-gray-700"
+                        className="rounded-2xl border border-[#BFEAF3] bg-[#EAF8FC]/60 hover:bg-[#0391B6] hover:text-white transition-all duration-300 p-4 text-sm font-medium text-gray-700"
                       >
                         {item.name}
                       </Link>
@@ -446,21 +446,21 @@ export default function Header() {
 
           <Link
             href="/about"
-            className="hover:text-blue-600 transition"
+            className="hover:text-[#0391B6] transition"
           >
             About Us
           </Link>
 
           <Link
             href="/contact"
-            className="hover:text-blue-600 transition"
+            className="hover:text-[#0391B6] transition"
           >
             Contact
           </Link>
 
           <Link
             href="/blog"
-            className="hover:text-blue-600 transition"
+            className="hover:text-[#0391B6] transition"
           >
             Blogs
           </Link>
@@ -492,19 +492,19 @@ export default function Header() {
 
           <Link
             href="/wishlist"
-            className="hover:text-blue-600 transition"
+            className="hover:text-[#0391B6] transition"
           >
             <Heart className="w-6 h-6" />
           </Link>
 
           <Link
             href="/cart"
-            className="relative hover:text-blue-600 transition"
+            className="relative hover:text-[#0391B6] transition"
           >
             <ShoppingBag className="w-6 h-6" />
 
             {cartCount > 0 && (
-              <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+              <span className="absolute -top-2 -right-2 bg-[#0391B6] text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
                 {cartCount}
               </span>
             )}
@@ -512,7 +512,7 @@ export default function Header() {
 
           <Link
             href="/account"
-            className="hover:text-blue-600 transition"
+            className="hover:text-[#0391B6] transition"
           >
             <User className="w-6 h-6" />
           </Link>
@@ -615,7 +615,7 @@ export default function Header() {
                 <ShoppingBag className="w-5 h-5" />
 
                 {cartCount > 0 && (
-                  <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs px-1 rounded-full">
+                  <span className="absolute -top-2 -right-2 bg-[#0391B6] text-white text-xs px-1 rounded-full">
                     {cartCount}
                   </span>
                 )}

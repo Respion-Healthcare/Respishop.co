@@ -11,7 +11,7 @@ export default function ProductHero({
 }: ProductHeroProps) {
 
   return (
-    <section className="relative overflow-hidden rounded-[40px] bg-gradient-to-br from-blue-700 via-blue-600 to-cyan-500 px-6 py-14 md:px-12 md:py-20 text-white shadow-[0_20px_80px_rgba(37,99,235,0.35)]">
+    <section className="relative overflow-hidden rounded-[40px] bg-gradient-to-br from-blue-700 via-[#0391B6] to-cyan-500 px-6 py-14 md:px-12 md:py-20 text-white shadow-[0_20px_80px_rgba(37,99,235,0.35)]">
 
       {/* BACKGROUND */}
       <div className="absolute inset-0 opacity-10 bg-[url('/images/pattern.png')] bg-cover"></div>

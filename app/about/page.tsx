@@ -185,7 +185,7 @@ export default function AboutPage() {
             {/* LEFT */}
             <div>
 
-              <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-xs font-semibold mb-5">
+              <div className="inline-flex items-center gap-2 bg-blue-100 text-[#0391B6] px-4 py-2 rounded-full text-xs font-semibold mb-5">
                 Trusted Respiratory Healthcare
               </div>
 
@@ -228,7 +228,7 @@ export default function AboutPage() {
 </p>
 
   <div className="mt-5 flex flex-wrap gap-3">
-    <span className="rounded-full bg-blue-100 text-blue-700 px-4 py-2 text-sm font-medium">
+    <span className="rounded-full bg-blue-100 text-[#0391B6] px-4 py-2 text-sm font-medium">
       ✓ Fast Shipping
     </span>
 
@@ -250,7 +250,7 @@ export default function AboutPage() {
 
               <div className="absolute -inset-5 bg-gradient-to-tr from-blue-200/60 via-cyan-100/50 to-white rounded-3xl lg:rounded-3xl lg:rounded-[35px] p-4 sm:p-6 lg:p-8 p-4 sm:p-6 lg:p-8 blur-3xl opacity-80"></div>
 
-              <div className="absolute top-4 sm:p-5 left-5 z-20 bg-white/90 backdrop-blur-xl text-blue-700 px-5 py-2 rounded-full shadow-xl text-xs font-bold border border-white">
+              <div className="absolute top-4 sm:p-5 left-5 z-20 bg-white/90 backdrop-blur-xl text-[#0391B6] px-5 py-2 rounded-full shadow-xl text-xs font-bold border border-white">
                 Trusted Since 2025
               </div>
 
@@ -281,7 +281,7 @@ export default function AboutPage() {
 
               <div>
 
-                <div className="inline-flex bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-xs font-semibold mb-5">
+                <div className="inline-flex bg-blue-100 text-[#0391B6] px-4 py-2 rounded-full text-xs font-semibold mb-5">
                   About Respishop
                 </div>
 
@@ -318,7 +318,7 @@ export default function AboutPage() {
               <div className="grid gap-4">
 
                 {/* CARD */}
-                <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-white p-4 sm:p-5 border border-blue-100 hover:-translate-y-1 transition duration-500 hover:shadow-xl">
+                <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-white p-4 sm:p-5 border border-[#BFEAF3] hover:-translate-y-1 transition duration-500 hover:shadow-xl">
 
                   <div className="flex gap-4 items-start">
 
@@ -449,7 +449,7 @@ export default function AboutPage() {
 
                 <div className="mb-6">
 
-                  <div className="inline-flex bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-xs font-semibold mb-4">
+                  <div className="inline-flex bg-blue-100 text-[#0391B6] px-4 py-2 rounded-full text-xs font-semibold mb-4">
                     Contact Information
                   </div>
 
@@ -469,11 +469,11 @@ export default function AboutPage() {
                     className="block rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 p-4 sm:p-5 hover:shadow-lg hover:-translate-y-1 transition duration-300"
                   >
 
-                    <p className="text-blue-600 font-semibold mb-2 text-sm">
+                    <p className="text-[#0391B6] font-semibold mb-2 text-sm">
                       Call Us
                     </p>
 
-                    <p className="text-xl font-black text-gray-900 hover:text-blue-600 transition">
+                    <p className="text-xl font-black text-gray-900 hover:text-[#0391B6] transition">
                       +91 9148733700
                     </p>
 
@@ -490,11 +490,11 @@ export default function AboutPage() {
                     className="block rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 p-4 sm:p-5 hover:shadow-lg hover:-translate-y-1 transition duration-300"
                   >
 
-                    <p className="text-blue-600 font-semibold mb-2 text-sm">
+                    <p className="text-[#0391B6] font-semibold mb-2 text-sm">
                       Email
                     </p>
 
-                    <p className="text-base font-semibold text-gray-800 break-all hover:text-blue-600 transition">
+                    <p className="text-base font-semibold text-gray-800 break-all hover:text-[#0391B6] transition">
                       respishop.in@gmail.com
                     </p>
 
@@ -503,7 +503,7 @@ export default function AboutPage() {
 
                   <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 p-4 sm:p-5">
 
-                    <p className="text-blue-600 font-semibold mb-2 text-sm">
+                    <p className="text-[#0391B6] font-semibold mb-2 text-sm">
                       Address
                     </p>
 

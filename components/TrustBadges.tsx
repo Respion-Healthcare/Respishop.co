@@ -3,7 +3,7 @@ export default function TrustBadges() {
     <section className="py-10 px-6 lg:px-20 bg-white">
       <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-5">
 
-        <div className="rounded-3xl border border-blue-100 bg-blue-50 p-6 text-center shadow-sm">
+        <div className="rounded-3xl border border-[#BFEAF3] bg-[#EAF8FC] p-6 text-center shadow-sm">
           <div className="text-3xl mb-3">✅</div>
 
           <h3 className="font-semibold text-gray-900">
@@ -15,7 +15,7 @@ export default function TrustBadges() {
           </p>
         </div>
 
-        <div className="rounded-3xl border border-blue-100 bg-blue-50 p-6 text-center shadow-sm">
+        <div className="rounded-3xl border border-[#BFEAF3] bg-[#EAF8FC] p-6 text-center shadow-sm">
           <div className="text-3xl mb-3">🧾</div>
 
           <h3 className="font-semibold text-gray-900">
@@ -27,7 +27,7 @@ export default function TrustBadges() {
           </p>
         </div>
 
-        <div className="rounded-3xl border border-blue-100 bg-blue-50 p-6 text-center shadow-sm">
+        <div className="rounded-3xl border border-[#BFEAF3] bg-[#EAF8FC] p-6 text-center shadow-sm">
           <div className="text-3xl mb-3">💳</div>
 
           <h3 className="font-semibold text-gray-900">
@@ -39,7 +39,7 @@ export default function TrustBadges() {
           </p>
         </div>
 
-        <div className="rounded-3xl border border-blue-100 bg-blue-50 p-6 text-center shadow-sm">
+        <div className="rounded-3xl border border-[#BFEAF3] bg-[#EAF8FC] p-6 text-center shadow-sm">
           <div className="text-3xl mb-3">🚚</div>
 
           <h3 className="font-semibold text-gray-900">

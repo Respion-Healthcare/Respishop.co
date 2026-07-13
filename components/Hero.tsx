@@ -8,14 +8,6 @@ import Link from "next/link"
 
 const heroSlides = [
   {
-    image: "/images/homebanners/main.jpg",
-    href: "/products",
-  },
-  {
-    image: "/images/homebanners/cpap1.jpg",
-    href: "/products/cpap-machine/airsense-10",
-  },
-  {
     image: "/images/homebanners/mask1.jpg",
     href: "/products/nasal-mask/airfit-n20-classic",
   },
@@ -24,20 +16,8 @@ const heroSlides = [
     href: "/products/bipap-machine/lumis-100-vpap-st",
   },
   {
-    image: "/images/homebanners/mask2.jpg",
-    href: "/products/nasal-mask/philips-dream-nasal-mask",
-  },
-  {
-    image: "/images/homebanners/cpap2.jpg",
-    href: "/products/cpap-machine/airsense-10",
-  },
-  {
     image: "/images/homebanners/bipap2.jpg",
     href: "/products/bipap-machine/resmed-lumis-150",
-  },
-  {
-    image: "/images/homebanners/mask6.jpg",
-    href: "/products/full-face-mask/philips-dreamware",
   },
   {
     image: "/images/homebanners/bipap3.jpg",

@@ -163,8 +163,8 @@ md:p-10
 </div>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
 
-  <div className="rounded-2xl bg-white p-5 shadow-sm border border-blue-100">
-    <p className="text-3xl font-bold text-blue-600">
+  <div className="rounded-2xl bg-white p-5 shadow-sm border border-[#BFEAF3]">
+    <p className="text-3xl font-bold text-[#0391B6]">
       {filteredProducts.length}+
     </p>
     <p className="text-gray-600 text-sm">
@@ -172,8 +172,8 @@ md:p-10
     </p>
   </div>
 
-  <div className="rounded-2xl bg-white p-5 shadow-sm border border-blue-100">
-    <p className="text-3xl font-bold text-blue-600">
+  <div className="rounded-2xl bg-white p-5 shadow-sm border border-[#BFEAF3]">
+    <p className="text-3xl font-bold text-[#0391B6]">
       100%
     </p>
     <p className="text-gray-600 text-sm">
@@ -181,8 +181,8 @@ md:p-10
     </p>
   </div>
 
-  <div className="rounded-2xl bg-white p-5 shadow-sm border border-blue-100">
-    <p className="text-3xl font-bold text-blue-600">
+  <div className="rounded-2xl bg-white p-5 shadow-sm border border-[#BFEAF3]">
+    <p className="text-3xl font-bold text-[#0391B6]">
       PAN India
     </p>
     <p className="text-gray-600 text-sm">
@@ -190,8 +190,8 @@ md:p-10
     </p>
   </div>
 
-  <div className="rounded-2xl bg-white p-5 shadow-sm border border-blue-100">
-    <p className="text-3xl font-bold text-blue-600">
+  <div className="rounded-2xl bg-white p-5 shadow-sm border border-[#BFEAF3]">
+    <p className="text-3xl font-bold text-[#0391B6]">
       Expert
     </p>
     <p className="text-gray-600 text-sm">
@@ -221,7 +221,7 @@ group
 relative
 overflow-hidden
 rounded-3xl
-border border-blue-100
+border border-[#BFEAF3]
 bg-white
 p-3
 transition-all
@@ -243,7 +243,7 @@ hover:shadow-[0_20px_50px_rgba(59,130,246,0.25)]
                   {product.name}
                 </h2>
 
-                <p className="mt-3 text-xl font-bold text-blue-600 transition-colors duration-300 group-hover:text-cyan-600">
+                <p className="mt-3 text-xl font-bold text-[#0391B6] transition-colors duration-300 group-hover:text-cyan-600">
                   ₹{product.price > 0
                   ? `₹${product.price.toLocaleString()}`
                   : "Contact for Price"}
@@ -253,7 +253,7 @@ hover:shadow-[0_20px_50px_rgba(59,130,246,0.25)]
                     View Details
                   </span>
 
-                  <span className="rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold text-white transition-all duration-300 group-hover:bg-cyan-600">
+                  <span className="rounded-full bg-[#0391B6] px-3 py-1 text-xs font-semibold text-white transition-all duration-300 group-hover:bg-cyan-600">
                     Explore
                   </span>
                 </div>
@@ -269,7 +269,7 @@ hover:shadow-[0_20px_50px_rgba(59,130,246,0.25)]
               mt-20
               rounded-3xl
               border
-              border-blue-100
+              border-[#BFEAF3]
               bg-linear-to-br
               from-white
               to-blue-50
@@ -283,7 +283,7 @@ hover:shadow-[0_20px_50px_rgba(59,130,246,0.25)]
   <div className="space-y-10">
 
     <div className="text-center max-w-4xl mx-auto">
-      <span className="inline-flex rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700">
+      <span className="inline-flex rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-[#0391B6]">
         CPAP & BiPAP Masks
       </span>
 
@@ -301,7 +301,7 @@ hover:shadow-[0_20px_50px_rgba(59,130,246,0.25)]
 
     <div className="grid md:grid-cols-3 gap-6">
 
-      <div className="rounded-3xl bg-white p-6 shadow-sm border border-blue-100">
+      <div className="rounded-3xl bg-white p-6 shadow-sm border border-[#BFEAF3]">
         <div className="mb-4 text-4xl">😴</div>
         <h3 className="text-xl font-semibold mb-3">
           Better Sleep Comfort
@@ -312,7 +312,7 @@ hover:shadow-[0_20px_50px_rgba(59,130,246,0.25)]
         </p>
       </div>
 
-      <div className="rounded-3xl bg-white p-6 shadow-sm border border-blue-100">
+      <div className="rounded-3xl bg-white p-6 shadow-sm border border-[#BFEAF3]">
         <div className="mb-4 text-4xl">💨</div>
         <h3 className="text-xl font-semibold mb-3">
           Improved Therapy
@@ -323,7 +323,7 @@ hover:shadow-[0_20px_50px_rgba(59,130,246,0.25)]
         </p>
       </div>
 
-      <div className="rounded-3xl bg-white p-6 shadow-sm border border-blue-100">
+      <div className="rounded-3xl bg-white p-6 shadow-sm border border-[#BFEAF3]">
         <div className="mb-4 text-4xl">✔️</div>
         <h3 className="text-xl font-semibold mb-3">
           Trusted Quality
@@ -374,7 +374,7 @@ hover:shadow-[0_20px_50px_rgba(59,130,246,0.25)]
 
     </div>
 
-    <div className="rounded-3xl border border-blue-100 bg-white p-8">
+    <div className="rounded-3xl border border-[#BFEAF3] bg-white p-8">
 
       <h3 className="text-2xl font-bold text-gray-900 mb-4">
         Complete Your Sleep Therapy Setup
@@ -387,7 +387,7 @@ hover:shadow-[0_20px_50px_rgba(59,130,246,0.25)]
 
       <Link
         href="/category/accessory"
-        className="inline-flex rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
+        className="inline-flex rounded-xl bg-[#0391B6] px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
       >
         Explore Accessories →
       </Link>
@@ -401,7 +401,7 @@ hover:shadow-[0_20px_50px_rgba(59,130,246,0.25)]
   <div className="space-y-10">
 
     <div className="text-center max-w-4xl mx-auto">
-      <span className="inline-flex rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700">
+      <span className="inline-flex rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-[#0391B6]">
         CPAP & BiPAP Accessories
       </span>
 
@@ -418,7 +418,7 @@ hover:shadow-[0_20px_50px_rgba(59,130,246,0.25)]
 
     <div className="grid md:grid-cols-3 gap-6">
 
-      <div className="rounded-3xl bg-white p-6 shadow-sm border border-blue-100">
+      <div className="rounded-3xl bg-white p-6 shadow-sm border border-[#BFEAF3]">
         <div className="mb-4 text-4xl">🫧</div>
         <h3 className="font-semibold text-xl mb-3">
           Better Hygiene
@@ -429,7 +429,7 @@ hover:shadow-[0_20px_50px_rgba(59,130,246,0.25)]
         </p>
       </div>
 
-      <div className="rounded-3xl bg-white p-6 shadow-sm border border-blue-100">
+      <div className="rounded-3xl bg-white p-6 shadow-sm border border-[#BFEAF3]">
         <div className="mb-4 text-4xl">😴</div>
         <h3 className="font-semibold text-xl mb-3">
           Enhanced Comfort
@@ -440,7 +440,7 @@ hover:shadow-[0_20px_50px_rgba(59,130,246,0.25)]
         </p>
       </div>
 
-      <div className="rounded-3xl bg-white p-6 shadow-sm border border-blue-100">
+      <div className="rounded-3xl bg-white p-6 shadow-sm border border-[#BFEAF3]">
         <div className="mb-4 text-4xl">⚙️</div>
         <h3 className="font-semibold text-xl mb-3">
           Longer Equipment Life
@@ -481,7 +481,7 @@ hover:shadow-[0_20px_50px_rgba(59,130,246,0.25)]
 
     </div>
 
-    <div className="rounded-3xl border border-blue-100 bg-white p-8">
+    <div className="rounded-3xl border border-[#BFEAF3] bg-white p-8">
 
       <h3 className="text-2xl font-bold text-gray-900 mb-4">
         Find Compatible Masks & Accessories
@@ -495,7 +495,7 @@ hover:shadow-[0_20px_50px_rgba(59,130,246,0.25)]
 
       <Link
         href="/category/mask"
-        className="inline-flex rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
+        className="inline-flex rounded-xl bg-[#0391B6] px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
       >
         Explore CPAP & BiPAP Masks →
       </Link>
@@ -513,7 +513,7 @@ hover:shadow-[0_20px_50px_rgba(59,130,246,0.25)]
         Explore our{" "}
         <Link
           href="/products/cpap-machine"
-          className="text-blue-600 underline"
+          className="text-[#0391B6] underline"
         >
           CPAP Machines Collection
         </Link>{" "}
@@ -533,7 +533,7 @@ hover:shadow-[0_20px_50px_rgba(59,130,246,0.25)]
         Browse our{" "}
         <Link
           href="/category/mask"
-          className="text-blue-600 underline"
+          className="text-[#0391B6] underline"
         >
           CPAP & BiPAP Masks Collection
         </Link>{" "}

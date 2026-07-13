@@ -9,7 +9,7 @@ export default function FloatingContactButtons() {
         href="tel:+919148733700"
         className="
           flex items-center gap-3
-          bg-blue-600 hover:bg-blue-700
+          bg-[#0391B6] hover:bg-[#027A99]
           text-white
           px-5 py-3
           rounded-full
@@ -31,15 +31,15 @@ export default function FloatingContactButtons() {
         target="_blank"
         rel="noopener noreferrer"
         className="
-          flex items-center gap-3
-          bg-green-500 hover:bg-green-600
-          text-white
-          px-5 py-3
-          rounded-full
-          shadow-2xl
-          transition-all duration-300
-          hover:scale-105
-        "
+  flex items-center gap-3
+  bg-[#25D366] hover:bg-[#1DA851]
+  text-white
+  px-5 py-3
+  rounded-full
+  shadow-2xl
+  transition-all duration-300
+  hover:scale-105 hover:shadow-[0_10px_30px_rgba(37,211,102,0.35)]
+"
       >
         <span className="text-lg">💬</span>
 

@@ -64,11 +64,11 @@ export default function ShopCategories() {
         {/* HEADER */}
         <div className="max-w-2xl mx-auto text-center mb-14 lg:mb-16">
 
-          <span className="inline-block bg-blue-100 text-blue-700 text-xs sm:text-sm font-semibold px-4 py-1 rounded-full mb-4">
+          <span className="inline-block bg-[#EAF8FC] text-[#0391B6] text-xs sm:text-sm font-semibold px-4 py-1 rounded-full mb-4">
             Browse Categories
           </span>
 
-          <h2 className="text-4xl lg:text-5xl font-serif text-blue-700 tracking-tight">
+          <h2 className="text-4xl lg:text-5xl font-serif text-[#0391B6] tracking-tight">
             Shop by Category
           </h2>
 
@@ -110,7 +110,7 @@ export default function ShopCategories() {
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-950/80 via-black/20 to-transparent opacity-90 transition duration-500" />
 
                   {/* GLOW */}
-                  <div className="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/10 transition duration-500" />
+                  <div className="absolute inset-0 bg-[#EAF8FC]0/0 group-hover:bg-[#EAF8FC]0/10 transition duration-500" />
 
                   {/* TEXT */}
                   <div className="absolute bottom-5 left-5 right-5">

@@ -796,7 +796,7 @@ Whether you need therapy for a few days, a month, or want to try a CPAP before p
 our flexible rental plans make respiratory care simple and affordable.
 </p>
 
-<div class="bg-blue-50 border-l-4 border-blue-600 rounded-xl p-5 my-8">
+<div class="bg-[#EAF8FC] border-l-4 border-blue-600 rounded-xl p-5 my-8">
 <h3>🚚 Fast Delivery Available</h3>
 
 <ul>

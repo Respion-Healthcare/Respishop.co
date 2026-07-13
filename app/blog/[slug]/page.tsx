@@ -151,7 +151,7 @@ p-8 md:p-10">
     {blog.title}
   </span>
 </div>
-      <p className="inline-block bg-blue-500 text-white px-4 py-1 rounded-full text-sm mb-4">
+      <p className="inline-block bg-[#0391B6]/20 text-white px-4 py-1 rounded-full text-sm mb-4">
         Respishop Blog
       </p>
 
@@ -169,14 +169,14 @@ p-8 md:p-10">
 
         <Link
           href="/products/cpap-machine"
-          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold transition"
+          className="bg-[#0391B6] hover:bg-[#027A99] text-white px-6 py-3 rounded-full font-semibold transition"
         >
           Explore Products
         </Link>
 
         <Link
           href="/contact"
-          className="bg-white text-blue-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
+          className="bg-white text-[#0391B6] px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
         >
           Talk to Expert
         </Link>
@@ -210,7 +210,7 @@ prose-p:text-slate-700
 
 prose-li:leading-8
 
-prose-a:text-blue-600
+prose-a:text-[#0391B6]
 prose-a:no-underline
 hover:prose-a:underline
 
@@ -228,7 +228,7 @@ dangerouslySetInnerHTML={{ __html: blog.content }}
           />
 </div>
          {/* PREMIUM CTA */}
-<div className="mt-12 rounded-[30px] bg-gradient-to-r from-blue-700 via-blue-600 to-cyan-500 p-8 md:p-10 text-white shadow-2xl">
+<div className="mt-12 rounded-[30px] bg-gradient-to-r from-blue-700 via-[#0391B6] to-cyan-500 p-8 md:p-10 text-white shadow-2xl">
 
   <h3 className="text-3xl font-bold mb-4">
     Looking for a CPAP Machine?
@@ -243,7 +243,7 @@ dangerouslySetInnerHTML={{ __html: blog.content }}
 
     <Link
       href="/products/cpap-machine"
-      className="bg-white text-blue-700 px-6 py-3 rounded-full font-semibold hover:scale-105 transition"
+      className="bg-white text-[#0391B6] px-6 py-3 rounded-full font-semibold hover:scale-105 transition"
     >
       Browse CPAP Machines →
     </Link>
@@ -278,7 +278,7 @@ dangerouslySetInnerHTML={{ __html: blog.content }}
 
       <Link
         href="/contact"
-        className="block text-center bg-white text-blue-700 rounded-xl py-3 font-semibold hover:bg-gray-100 transition"
+        className="block text-center bg-white text-[#0391B6] rounded-xl py-3 font-semibold hover:bg-gray-100 transition"
       >
         📞 Talk to Expert
       </Link>
@@ -319,7 +319,7 @@ className="rounded-xl object-cover"
                   <p className="text-sm font-medium">
                     {p.name}
                   </p>
-                  <p className="text-xs text-blue-600">
+                  <p className="text-xs text-[#0391B6]">
                     View Product →
                   </p>
                 </div>

@@ -15,7 +15,7 @@ export default function ProductGrid({
 
         <div>
 
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#0391B6]">
             Premium Collection
           </p>
 
@@ -25,7 +25,7 @@ export default function ProductGrid({
 
         </div>
 
-        <div className="hidden md:flex items-center rounded-2xl border border-blue-100 bg-blue-50 px-5 py-3 text-sm font-medium text-blue-700">
+        <div className="hidden md:flex items-center rounded-2xl border border-[#BFEAF3] bg-[#EAF8FC] px-5 py-3 text-sm font-medium text-[#0391B6]">
           {products.length} Products Available
         </div>
 

@@ -14,7 +14,7 @@ export default function SleepTherapyPage() {
 
         <div className="text-center">
 
-          <span className="inline-block rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700">
+          <span className="inline-block rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-[#0391B6]">
             Sleep Therapy & Diagnosis
           </span>
 
@@ -71,7 +71,7 @@ export default function SleepTherapyPage() {
 
         </div>
 
-        <div className="mt-16 rounded-3xl bg-blue-600 p-10 text-center text-white">
+        <div className="mt-16 rounded-3xl bg-[#0391B6] p-10 text-center text-white">
 
           <h2 className="text-3xl font-bold">
             Need Help Choosing the Right Therapy?
@@ -85,7 +85,7 @@ export default function SleepTherapyPage() {
 
             <a
               href="tel:9148733700"
-              className="rounded-full bg-white px-8 py-3 font-semibold text-blue-600"
+              className="rounded-full bg-white px-8 py-3 font-semibold text-[#0391B6]"
             >
               Call: +91 91487 33700
             </a>

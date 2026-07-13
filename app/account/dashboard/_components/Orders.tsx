@@ -72,7 +72,7 @@ export default function OrdersPage({ orders: propOrders, loading: propLoading }:
   if (!orders || orders.length === 0) {
     return (
       <div className="py-16 text-center bg-white rounded-3xl border border-gray-100">
-        <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 mx-auto mb-4">
+        <div className="w-16 h-16 rounded-full bg-[#EAF8FC] flex items-center justify-center text-[#0391B6] mx-auto mb-4">
           <Package className="w-8 h-8" />
         </div>
         <h3 className="text-base font-semibold text-gray-700 mb-1">No orders found</h3>
@@ -98,7 +98,7 @@ export default function OrdersPage({ orders: propOrders, loading: propLoading }:
         };
       case "shipped":
         return {
-          bg: "bg-blue-50 text-blue-700 border-blue-100",
+          bg: "bg-[#EAF8FC] text-[#0391B6] border-[#BFEAF3]",
           icon: <Truck className="w-3.5 h-3.5" />,
           label: "Shipped"
         };
@@ -124,7 +124,7 @@ export default function OrdersPage({ orders: propOrders, loading: propLoading }:
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-gray-50">
               <div className="space-y-1">
                 <div className="flex items-center gap-2">
-                  <span className="text-xs font-mono font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-lg uppercase">
+                  <span className="text-xs font-mono font-bold text-[#0391B6] bg-[#EAF8FC] px-2.5 py-1 rounded-lg uppercase">
                     #{order._id.slice(-8).toUpperCase()}
                   </span>
                   <span className={`flex items-center gap-1 text-[11px] font-semibold px-2.5 py-1 rounded-full border ${badge.bg}`}>

@@ -374,7 +374,7 @@ export default function Dashboard() {
         {/* Sidebar Navigation */}
         <aside className="bg-white/80 backdrop-blur-md border border-gray-100 rounded-3xl p-6 w-full lg:w-64 flex-shrink-0 shadow-sm hover-lift duration-300">
           <div className="flex items-center gap-3 mb-8 px-2">
-            <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 shadow-inner">
+            <div className="w-12 h-12 rounded-2xl bg-[#EAF8FC] flex items-center justify-center text-[#0391B6] shadow-inner">
               <UserIcon className="w-6 h-6" />
             </div>
             <div>
@@ -398,8 +398,8 @@ export default function Dashboard() {
                   onClick={() => setActiveTab(tab.key)}
                   className={`flex items-center gap-3 w-full text-left px-4 py-3 rounded-2xl transition-all duration-300 text-sm font-medium ${
                     isActive
-                      ? "bg-blue-600 text-white shadow-md shadow-blue-500/20 translate-x-1"
-                      : "text-gray-600 hover:bg-blue-50/50 hover:text-blue-600"
+                      ? "bg-[#0391B6] text-white shadow-md shadow-blue-500/20 translate-x-1"
+                      : "text-gray-600 hover:bg-[#EAF8FC]/50 hover:text-[#0391B6]"
                   }`}
                 >
                   <Icon className="w-4.5 h-4.5" />
@@ -440,7 +440,7 @@ export default function Dashboard() {
               {/* Stats Grid */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm flex items-center gap-4 hover-lift">
-                  <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-2xl bg-[#EAF8FC] text-[#0391B6] flex items-center justify-center">
                     <ShoppingBag className="w-6 h-6" />
                   </div>
                   <div>
@@ -478,7 +478,7 @@ export default function Dashboard() {
                     <h3 className="font-semibold text-gray-800 text-base">Account Summary</h3>
                     <button 
                       onClick={() => setActiveTab("account")} 
-                      className="text-xs text-blue-600 hover:underline font-medium"
+                      className="text-xs text-[#0391B6] hover:underline font-medium"
                     >
                       Edit
                     </button>
@@ -510,7 +510,7 @@ export default function Dashboard() {
                     <h3 className="font-semibold text-gray-800 text-base">Default Address</h3>
                     <button 
                       onClick={() => setActiveTab("address")} 
-                      className="text-xs text-blue-600 hover:underline font-medium"
+                      className="text-xs text-[#0391B6] hover:underline font-medium"
                     >
                       Manage
                     </button>
@@ -531,7 +531,7 @@ export default function Dashboard() {
                       <p className="text-sm text-gray-400 italic">No default address saved yet.</p>
                       <button 
                         onClick={() => { setActiveTab("address"); handleOpenAddAddress(); }}
-                        className="mt-3 text-xs bg-blue-50 text-blue-600 px-3 py-1.5 rounded-xl font-medium hover:bg-blue-100 transition"
+                        className="mt-3 text-xs bg-[#EAF8FC] text-[#0391B6] px-3 py-1.5 rounded-xl font-medium hover:bg-blue-100 transition"
                       >
                         Add Address
                       </button>
@@ -550,7 +550,7 @@ export default function Dashboard() {
                   <h2 className="text-xl font-bold text-gray-800">Order History</h2>
                   <p className="text-xs text-gray-400 mt-0.5">Track and view receipts for all past purchases</p>
                 </div>
-                <span className="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">
+                <span className="bg-[#EAF8FC] text-[#0391B6] text-xs font-semibold px-3 py-1 rounded-full">
                   {orders.length} {orders.length === 1 ? "order" : "orders"}
                 </span>
               </div>
@@ -696,7 +696,7 @@ export default function Dashboard() {
                         name="isDefault"
                         checked={addressForm.isDefault}
                         onChange={(e) => setAddressForm({ ...addressForm, isDefault: e.target.checked })}
-                        className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 h-4 w-4"
+                        className="rounded border-gray-300 text-[#0391B6] focus:ring-blue-500 h-4 w-4"
                       />
                       <label htmlFor="isDefault" className="text-sm text-gray-600 font-medium cursor-pointer">
                         Set as default shipping address
@@ -707,7 +707,7 @@ export default function Dashboard() {
                       <button
                         type="submit"
                         disabled={savingAddress}
-                        className="bg-blue-600 text-white px-6 py-3 rounded-2xl text-sm font-semibold hover:bg-blue-700 hover:shadow-md transition disabled:bg-blue-400"
+                        className="bg-[#0391B6] text-white px-6 py-3 rounded-2xl text-sm font-semibold hover:bg-blue-700 hover:shadow-md transition disabled:bg-blue-400"
                       >
                         {savingAddress ? "Saving Address..." : "Save Address"}
                       </button>
@@ -731,7 +731,7 @@ export default function Dashboard() {
                     </div>
                     <button
                       onClick={handleOpenAddAddress}
-                      className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-2.5 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300"
+                      className="flex items-center gap-2 bg-[#0391B6] hover:bg-[#027A99] text-white text-xs font-semibold px-4 py-2.5 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300"
                     >
                       <Plus className="w-4 h-4" /> Add Address
                     </button>
@@ -739,14 +739,14 @@ export default function Dashboard() {
 
                   {!user?.addresses || user.addresses.length === 0 ? (
                     <div className="text-center py-16">
-                      <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 mx-auto mb-4">
+                      <div className="w-16 h-16 rounded-full bg-[#EAF8FC] flex items-center justify-center text-[#0391B6] mx-auto mb-4">
                         <MapPin className="w-8 h-8" />
                       </div>
                       <h3 className="text-base font-semibold text-gray-700 mb-1">No addresses saved yet</h3>
                       <p className="text-sm text-gray-400 max-w-xs mx-auto mb-6">Create saved addresses to fast-track your checkout and order processes.</p>
                       <button
                         onClick={handleOpenAddAddress}
-                        className="bg-blue-50 text-blue-600 px-5 py-2.5 rounded-2xl text-sm font-semibold hover:bg-blue-100 transition"
+                        className="bg-[#EAF8FC] text-[#0391B6] px-5 py-2.5 rounded-2xl text-sm font-semibold hover:bg-blue-100 transition"
                       >
                         Add Your First Address
                       </button>
@@ -758,12 +758,12 @@ export default function Dashboard() {
                           key={addr._id}
                           className={`border rounded-3xl p-6 flex flex-col justify-between hover-lift transition-all duration-300 relative ${
                             addr.isDefault 
-                              ? "border-blue-600 bg-blue-50/5/30" 
+                              ? "border-blue-600 bg-[#EAF8FC]/5/30" 
                               : "border-gray-100 bg-white"
                           }`}
                         >
                           {addr.isDefault && (
-                            <span className="absolute top-4 right-4 bg-blue-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                            <span className="absolute top-4 right-4 bg-[#0391B6] text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
                               Default
                             </span>
                           )}
@@ -789,7 +789,7 @@ export default function Dashboard() {
                           <div className="flex items-center gap-4 border-t border-gray-100 pt-4 mt-6">
                             <button
                               onClick={() => handleOpenEditAddress(addr)}
-                              className="flex items-center gap-1 text-xs text-gray-500 hover:text-blue-600 font-semibold transition"
+                              className="flex items-center gap-1 text-xs text-gray-500 hover:text-[#0391B6] font-semibold transition"
                             >
                               <Edit2 className="w-3.5 h-3.5" /> Edit
                             </button>
@@ -802,7 +802,7 @@ export default function Dashboard() {
                             {!addr.isDefault && (
                               <button
                                 onClick={() => addr._id && handleSetDefaultAddress(addr._id)}
-                                className="ml-auto text-xs text-blue-600 hover:underline font-semibold transition"
+                                className="ml-auto text-xs text-[#0391B6] hover:underline font-semibold transition"
                               >
                                 Set as Default
                               </button>
@@ -873,7 +873,7 @@ export default function Dashboard() {
                   <button
                     type="submit"
                     disabled={savingProfile}
-                    className="bg-blue-600 text-white px-6 py-3 rounded-2xl text-sm font-semibold hover:bg-blue-700 hover:shadow-md transition-all duration-300 disabled:bg-blue-400"
+                    className="bg-[#0391B6] text-white px-6 py-3 rounded-2xl text-sm font-semibold hover:bg-blue-700 hover:shadow-md transition-all duration-300 disabled:bg-blue-400"
                   >
                     {savingProfile ? "Saving Details..." : "Save Changes"}
                   </button>

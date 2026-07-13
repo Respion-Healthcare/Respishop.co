@@ -64,7 +64,7 @@ export default function BiPAPLayout({
 
   {/* GLOW EFFECTS */}
   <div className="absolute left-0 top-0 h-[500px] w-[500px] rounded-full bg-cyan-500/10 blur-3xl" />
-  <div className="absolute bottom-0 right-0 h-[400px] w-[400px] rounded-full bg-blue-600/10 blur-3xl" />
+  <div className="absolute bottom-0 right-0 h-[400px] w-[400px] rounded-full bg-[#0391B6]/10 blur-3xl" />
 
   <div className="mx-auto max-w-7xl px-4 py-14 md:px-6">
 
@@ -141,7 +141,7 @@ export default function BiPAPLayout({
             <div className="group rounded-3xl border border-blue-400/10 bg-blue-400/5 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/30">
               <div className="flex items-center gap-4">
 
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-500 text-white">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#EAF8FC]0 text-white">
                   <Stethoscope size={26} />
                 </div>
 
@@ -271,7 +271,7 @@ export default function BiPAPLayout({
               </p>
             </div>
 
-            <div className="rounded-3xl bg-blue-50 p-6">
+            <div className="rounded-3xl bg-[#EAF8FC] p-6">
               <h3 className="text-xl font-bold text-slate-900">
                 Advanced Respiratory Care
               </h3>

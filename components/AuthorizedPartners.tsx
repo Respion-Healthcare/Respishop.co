@@ -51,7 +51,7 @@ export default function AuthorizedPartners() {
 
       <div className="absolute -left-32 top-0 h-[400px] w-[400px] rounded-full bg-cyan-400/20 blur-3xl" />
 
-      <div className="absolute right-0 top-20 h-[350px] w-[350px] rounded-full bg-blue-500/20 blur-3xl" />
+      <div className="absolute right-0 top-20 h-[350px] w-[350px] rounded-full bg-[#EAF8FC]0/20 blur-3xl" />
 
       <div className="absolute bottom-0 left-1/2 h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-sky-400/20 blur-3xl" />
 
@@ -63,7 +63,7 @@ export default function AuthorizedPartners() {
           </span>
 
           <h2 className="mt-5 text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
-            <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-sky-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-600 via-[#0391B6] to-sky-600 bg-clip-text text-transparent">
               Authorized Partners for CPAP, BiPAP &
               <br />
               Oxygen Therapy Equipment

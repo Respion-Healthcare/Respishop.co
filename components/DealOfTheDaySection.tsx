@@ -152,7 +152,7 @@ export default function DealOfTheDay() {
               <div className="flex items-center gap-2">
 
                 <ShieldCheck
-                  className="text-blue-600"
+                  className="text-[#0391B6]"
                   size={20}
                 />
 
@@ -167,14 +167,14 @@ export default function DealOfTheDay() {
 
                 <button
                   onClick={() => scroll("left")}
-                  className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white shadow-md hover:bg-blue-600 hover:text-white transition flex items-center justify-center"
+                  className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white shadow-md hover:bg-[#027A99] hover:text-white transition-all duration-300 flex items-center justify-center"
                 >
                   <ChevronLeft size={16} />
                 </button>
 
                 <button
                   onClick={() => scroll("right")}
-                  className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white shadow-md hover:bg-blue-600 hover:text-white transition flex items-center justify-center"
+                  className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white shadow-md hover:bg-[#027A99] hover:text-white transition-all duration-300 flex items-center justify-center"
                 >
                   <ChevronRight size={16} />
                 </button>
@@ -246,7 +246,7 @@ export default function DealOfTheDay() {
                         {/* CONTENT */}
                         <div className="mt-5">
 
-                          <p className="text-xs uppercase tracking-wider text-blue-600 font-semibold">
+                          <p className="text-xs uppercase tracking-wider text-[#0391B6] font-semibold">
                             {product.category}
                           </p>
 
@@ -276,7 +276,7 @@ export default function DealOfTheDay() {
                           {/* PRICE */}
                           <div className="flex items-center gap-3 mt-4 flex-wrap">
 
-                            <span className="text-xl sm:text-2xl font-bold text-blue-700">
+                            <span className="text-xl sm:text-2xl font-bold text-[#0391B6]">
                               ₹
                               {finalPrice.toLocaleString(
                                 "en-IN"
@@ -295,7 +295,7 @@ export default function DealOfTheDay() {
                           </div>
 
                           {/* BUTTON */}
-                          <button className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-2.5 sm:py-3 rounded-xl text-sm sm:text-base font-semibold transition-all duration-300 shadow-md">
+                          <button className="mt-4 w-full bg-[#0391B6] hover:bg-[#027A99] text-white py-2.5 sm:py-3 rounded-xl text-sm sm:text-base font-semibold transition-all duration-300 shadow-md">
                             View Product
                           </button>
 
@@ -342,7 +342,7 @@ export default function DealOfTheDay() {
                     <div className="flex-1 pl-3">
 
                       {/* CATEGORY */}
-                      <span className="inline-flex bg-blue-100 text-blue-700 text-[11px] px-3 py-1 rounded-full font-semibold uppercase tracking-wide">
+                      <span className="inline-flex bg-blue-100 text-[#0391B6] text-[11px] px-3 py-1 rounded-full font-semibold uppercase tracking-wide">
                         {product.category}
                       </span>
 
@@ -371,7 +371,7 @@ export default function DealOfTheDay() {
                       {/* PRICE */}
                       <div className="mt-4 flex items-center gap-3 flex-wrap">
 
-                        <p className="text-2xl sm:text-3xl font-bold text-blue-700">
+                        <p className="text-2xl sm:text-3xl font-bold text-[#0391B6]">
                           ₹
                           {getFinalPrice(
                             product
@@ -390,7 +390,7 @@ export default function DealOfTheDay() {
                       </div>
 
                       {/* BUTTON */}
-                      <button className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 text-sm sm:text-base rounded-full font-semibold transition-all duration-300 shadow-md">
+                      <button className="mt-4 bg-[#0391B6] hover:bg-[#027A99] text-white px-4 py-2 text-sm sm:text-base rounded-full font-semibold transition-all duration-300 shadow-md">
                         Shop Now
                       </button>
 

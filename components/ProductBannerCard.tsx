@@ -34,12 +34,12 @@ export default function ProductBannerCard({ product }: Props) {
       sold: 430,
     },
 
-    "resmed-lumis-150-vpap-st": {
-      rating: 4.8,
-      reviews: 267,
-      sold: 510,
-      bestseller: true,
-    },
+   "lumis-150-invasive-ventilator": {
+  rating: 4.8,
+  reviews: 267,
+  sold: 510,
+  bestseller: true,
+},
 
     "airmini-autoset-cpap-device": {
       rating: 4.6,
@@ -166,8 +166,8 @@ export default function ProductBannerCard({ product }: Props) {
           </div>
 
           {/* BUTTON */}
-          <button
-  className="mt-3 w-full bg-blue-600 hover:bg-blue-700
+         <button
+  className="mt-3 w-full bg-[#0391B6] hover:bg-[#027A99]
              text-white font-medium text-sm sm:text-base
              py-2 sm:py-3 rounded-lg sm:rounded-xl
              transition-all duration-300 shadow-md"

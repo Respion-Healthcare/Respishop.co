@@ -1,6 +1,6 @@
 export default function ProductTrustBox() {
   return (
-    <div className="mt-6 rounded-3xl border border-blue-100 bg-blue-50 p-5 space-y-4">
+    <div className="mt-6 rounded-3xl border border-[#BFEAF3] bg-[#EAF8FC] p-5 space-y-4">
 
       <div className="flex items-center gap-3 text-sm text-gray-700">
         <span className="text-lg">✅</span>

@@ -18,11 +18,11 @@ export default function ProductCard({
   return (
     <Link
       href={`/products/${product.category}/${product.slug}`}
-      className="group relative overflow-hidden rounded-[28px] border border-blue-100 bg-white p-3">
+      className="group relative overflow-hidden rounded-[28px] border border-[#BFEAF3] bg-white p-3">
 
       {/* OFFER BADGE */}
       {product.offer && (
-        <div className="absolute left-4 top-4 z-20 rounded-full bg-blue-600 px-4 py-1 text-xs font-semibold text-white shadow-lg">
+        <div className="absolute left-4 top-4 z-20 rounded-full bg-[#0391B6] px-4 py-1 text-xs font-semibold text-white shadow-lg">
           {product.offer.type === "percentage"
             ? `${product.offer.value}% OFF`
             : `₹${product.offer.value} OFF`}
@@ -49,7 +49,7 @@ export default function ProductCard({
             {product.name}
           </h3>
 
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white transition duration-300 group-hover:rotate-45">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#0391B6] text-white transition duration-300 group-hover:rotate-45">
             <ArrowUpRight size={18} />
           </div>
 
@@ -57,7 +57,7 @@ export default function ProductCard({
 
         <div className="mt-4 flex items-center gap-3">
 
-          <span className="text-2xl font-bold text-blue-700">
+          <span className="text-2xl font-bold text-[#0391B6]">
             ₹{finalPrice.toLocaleString("en-IN")}
           </span>
 

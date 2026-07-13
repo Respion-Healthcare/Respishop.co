@@ -265,7 +265,7 @@ export default function CheckoutPage() {
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <button
               onClick={() => router.push("/account/dashboard")}
-              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 px-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 text-sm"
+              className="flex-1 bg-[#0391B6] hover:bg-[#027A99] text-white font-semibold py-3.5 px-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 text-sm"
             >
               Go to Dashboard <ArrowRight className="w-4 h-4" />
             </button>
@@ -286,7 +286,7 @@ export default function CheckoutPage() {
     return (
       <div className="min-h-screen bg-gray-50/30 flex items-center justify-center pt-24 px-4">
         <div className="text-center max-w-sm space-y-6">
-          <div className="w-20 h-20 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center mx-auto">
+          <div className="w-20 h-20 rounded-full bg-[#EAF8FC] text-[#0391B6] flex items-center justify-center mx-auto">
             <ShoppingCart className="w-10 h-10" />
           </div>
           <div>
@@ -295,7 +295,7 @@ export default function CheckoutPage() {
           </div>
           <button
             onClick={() => router.push("/products")}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 px-6 rounded-2xl shadow-md transition text-sm"
+            className="w-full bg-[#0391B6] hover:bg-[#027A99] text-white font-semibold py-3.5 px-6 rounded-2xl shadow-md transition text-sm"
           >
             Browse Products
           </button>
@@ -308,7 +308,7 @@ export default function CheckoutPage() {
     <div className="min-h-screen bg-gray-50/50 pt-28 pb-20 px-4 md:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="mb-8">
-          <p className="text-xs uppercase tracking-widest text-blue-600 font-bold mb-1">Secure Checkout</p>
+          <p className="text-xs uppercase tracking-widest text-[#0391B6] font-bold mb-1">Secure Checkout</p>
           <h1 className="text-3xl font-extrabold text-gray-900 tracking-tight">Complete Your Order</h1>
         </div>
 
@@ -335,7 +335,7 @@ export default function CheckoutPage() {
             {isLoggedIn && savedAddresses.length > 0 && (
               <div className="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm">
                 <h3 className="text-sm font-semibold text-gray-800 mb-3.5 flex items-center gap-1.5 border-b border-gray-50 pb-2.5">
-                  <MapPin className="w-4.5 h-4.5 text-blue-600" />
+                  <MapPin className="w-4.5 h-4.5 text-[#0391B6]" />
                   Select Saved Shipping Address
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -344,7 +344,7 @@ export default function CheckoutPage() {
                       key={addr._id}
                       type="button"
                       onClick={() => handleSelectSavedAddress(addr)}
-                      className="text-left p-4 rounded-2xl border border-gray-100 bg-gray-50/20 hover:border-blue-500 hover:bg-blue-50/10 hover:shadow-sm transition-all duration-300 space-y-1.5 relative group"
+                      className="text-left p-4 rounded-2xl border border-gray-100 bg-gray-50/20 hover:border-blue-500 hover:bg-[#EAF8FC]/10 hover:shadow-sm transition-all duration-300 space-y-1.5 relative group"
                     >
                       <div className="flex items-center justify-between font-semibold text-sm text-gray-800">
                         <span className="flex items-center gap-1">
@@ -352,7 +352,7 @@ export default function CheckoutPage() {
                           {addr.firstName} {addr.lastName}
                         </span>
                         {addr.isDefault && (
-                          <span className="bg-blue-600 text-white text-[8px] font-bold px-1.5 py-0.5 rounded-md uppercase">Default</span>
+                          <span className="bg-[#0391B6] text-white text-[8px] font-bold px-1.5 py-0.5 rounded-md uppercase">Default</span>
                         )}
                       </div>
                       <p className="text-xs text-gray-500 line-clamp-1">{addr.address1}</p>
@@ -507,7 +507,7 @@ export default function CheckoutPage() {
                     type="radio"
                     checked={payment === "cod"}
                     onChange={() => setPayment("cod")}
-                    className="rounded-full border-gray-300 text-blue-600 focus:ring-blue-500 h-4.5 w-4.5"
+                    className="rounded-full border-gray-300 text-[#0391B6] focus:ring-blue-500 h-4.5 w-4.5"
                   />
                   Cash on Delivery
                 </label>
@@ -520,10 +520,10 @@ export default function CheckoutPage() {
                   id="agree"
                   checked={agree}
                   onChange={(e) => setAgree(e.target.checked)}
-                  className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 h-4.5 w-4.5 mt-0.5"
+                  className="rounded border-gray-300 text-[#0391B6] focus:ring-blue-500 h-4.5 w-4.5 mt-0.5"
                 />
                 <label htmlFor="agree" className="text-xs text-gray-500 leading-normal cursor-pointer font-light">
-                  I have read and agree to the website <span className="text-blue-600 hover:underline">terms and conditions</span> *
+                  I have read and agree to the website <span className="text-[#0391B6] hover:underline">terms and conditions</span> *
                 </label>
               </div>
             </div>
@@ -533,7 +533,7 @@ export default function CheckoutPage() {
           <div className="space-y-6">
             <div className="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm h-fit sticky top-28 space-y-6">
               <h2 className="text-lg font-bold text-gray-800 border-b border-gray-50 pb-2 flex items-center gap-2">
-                <ShoppingBag className="w-5 h-5 text-blue-600" />
+                <ShoppingBag className="w-5 h-5 text-[#0391B6]" />
                 Order Summary
               </h2>
               
@@ -560,7 +560,7 @@ export default function CheckoutPage() {
 
               <div className="border-t border-gray-100 pt-4 flex justify-between items-baseline">
                 <span className="font-bold text-gray-800 text-base">Total</span>
-                <span className="text-2xl font-extrabold text-blue-600">
+                <span className="text-2xl font-extrabold text-[#0391B6]">
                   ₹{total.toLocaleString("en-IN")}
                 </span>
               </div>
@@ -568,7 +568,7 @@ export default function CheckoutPage() {
               <button
                 onClick={placeOrder}
                 disabled={loading}
-                className="w-full bg-blue-600 hover:bg-blue-700 hover:shadow-lg text-white font-semibold py-4 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2 disabled:bg-blue-400 text-sm shadow-md"
+                className="w-full bg-[#0391B6] hover:bg-[#027A99] hover:shadow-lg text-white font-semibold py-4 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2 disabled:bg-blue-400 text-sm shadow-md"
               >
                 {loading ? (
                   <>

@@ -195,7 +195,7 @@ export default function RegisterPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-blue-600 hover:bg-blue-700 hover:shadow-lg text-white font-semibold py-3.5 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2 text-sm shadow-md disabled:bg-blue-400 mt-6"
+              className="w-full bg-[#0391B6] hover:bg-[#027A99] hover:shadow-lg text-white font-semibold py-3.5 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2 text-sm shadow-md disabled:bg-blue-400 mt-6"
             >
               {loading ? (
                 <>
@@ -214,7 +214,7 @@ export default function RegisterPage() {
             <button
               type="button"
               onClick={() => router.push("/account/login")}
-              className="text-blue-600 hover:underline font-bold ml-0.5"
+              className="text-[#0391B6] hover:underline font-bold ml-0.5"
             >
               Log in instead
             </button>

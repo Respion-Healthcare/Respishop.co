@@ -26,7 +26,7 @@ export default function SearchPage() {
         <p className="mt-2 text-gray-600">
           {filteredProducts.length} product
           {filteredProducts.length !== 1 ? "s" : ""} found for{" "}
-          <span className="font-semibold text-blue-600">
+          <span className="font-semibold text-[#0391B6]">
             "{query}"
           </span>
         </p>
@@ -64,7 +64,7 @@ export default function SearchPage() {
                 </div>
 
                 <div className="p-4">
-                  <span className="inline-block text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded-full mb-3 capitalize">
+                  <span className="inline-block text-xs bg-[#EAF8FC] text-[#0391B6] px-2 py-1 rounded-full mb-3 capitalize">
                     {product.category.replace("-", " ")}
                   </span>
 
@@ -73,7 +73,7 @@ export default function SearchPage() {
                   </h2>
 
                   <div className="flex items-center gap-2 mt-3">
-                    <p className="text-lg font-bold text-blue-600">
+                    <p className="text-lg font-bold text-[#0391B6]">
                       ₹{finalPrice.toLocaleString("en-IN")}
                     </p>
 
