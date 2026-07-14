@@ -8,6 +8,18 @@ import Link from "next/link"
 
 const heroSlides = [
   {
+    image: "/images/homebanners/ban2.png",
+    href: "/products/cpap-machine/resmed-airsense-10-autoset-tripack",
+  },
+  {
+    image: "/images/homebanners/ban3.png",
+    href: "/products/cpap-machine/airsense-10-autoset-tripack-4G",
+  },
+  {
+    image: "/images/homebanners/ban1.png",
+    href: "/products/cpap-machine/airstart-10-with-humidification-and-tube",
+  },
+  {
     image: "/images/homebanners/mask1.jpg",
     href: "/products/nasal-mask/airfit-n20-classic",
   },
